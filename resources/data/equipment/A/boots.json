@@ -2,72 +2,90 @@
     {
         "Type": "Equipment",
         "Class": "Boots",
-        "ImplicitType": "A",
+        "DefenseType": "A",
         "Name": "Iron Greaves",
+        "ImplicitType": "",
+        "ImplicitValue": "",
         "DropLevel": 1,
         "MaxLevel": false
     },
     {
         "Type": "Equipment",
         "Class": "Boots",
-        "ImplicitType": "A",
+        "DefenseType": "A",
         "Name": "Steel Greaves",
+        "ImplicitType": "",
+        "ImplicitValue": "",
         "DropLevel": 9,
         "MaxLevel": false
     },
     {
         "Type": "Equipment",
         "Class": "Boots",
-        "ImplicitType": "A",
+        "DefenseType": "A",
         "Name": "Plated Greaves",
+        "ImplicitType": "",
+        "ImplicitValue": "",
         "DropLevel": 23,
         "MaxLevel": false
     },
     {
         "Type": "Equipment",
         "Class": "Boots",
-        "ImplicitType": "A",
+        "DefenseType": "A",
         "Name": "Reinforced Greaves",
+        "ImplicitType": "",
+        "ImplicitValue": "",
         "DropLevel": 33,
         "MaxLevel": false
     },
     {
         "Type": "Equipment",
         "Class": "Boots",
-        "ImplicitType": "A",
+        "DefenseType": "A",
         "Name": "Antique Greaves",
+        "ImplicitType": "",
+        "ImplicitValue": "",
         "DropLevel": 37,
         "MaxLevel": false
     },
     {
         "Type": "Equipment",
         "Class": "Boots",
-        "ImplicitType": "A",
+        "DefenseType": "A",
         "Name": "Ancient Greaves",
+        "ImplicitType": "",
+        "ImplicitValue": "",
         "DropLevel": 46,
         "MaxLevel": false
     },
     {
         "Type": "Equipment",
         "Class": "Boots",
-        "ImplicitType": "A",
+        "DefenseType": "A",
         "Name": "Goliath Greaves",
+        "ImplicitType": "",
+        "ImplicitValue": "",
         "DropLevel": 54,
         "MaxLevel": false
     },
     {
         "Type": "Equipment",
         "Class": "Boots",
-        "ImplicitType": "A",
+        "DefenseType": "A",
         "Name": "Vaal Greaves",
+        "ImplicitType": "",
+        "ImplicitValue": "",
         "DropLevel": 62,
         "MaxLevel": true
     },
     {
         "Type": "Equipment",
         "Class": "Boots",
-        "ImplicitType": "A",
+        "DefenseType": "A",
         "Name": "Titan Greaves",
+        "ImplicitType": "",
+        "ImplicitValue": "",
         "DropLevel": 68,
         "MaxLevel": true
     }

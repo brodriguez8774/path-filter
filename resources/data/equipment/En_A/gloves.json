@@ -2,64 +2,80 @@
     {
         "Type": "Equipment",
         "Class": "Gloves",
-        "ImplicitType": "En/A",
+        "DefenseType": "En/A",
         "Name": "Chain Gloves",
+        "ImplicitType": "",
+        "ImplicitValue": "",
         "DropLevel": 7,
         "MaxLevel": false
     },
     {
         "Type": "Equipment",
         "Class": "Gloves",
-        "ImplicitType": "En/A",
+        "DefenseType": "En/A",
         "Name": "Ringmail Gloves",
+        "ImplicitType": "",
+        "ImplicitValue": "",
         "DropLevel": 19,
         "MaxLevel": false
     },
     {
         "Type": "Equipment",
         "Class": "Gloves",
-        "ImplicitType": "En/A",
+        "DefenseType": "En/A",
         "Name": "Mesh Gloves",
+        "ImplicitType": "",
+        "ImplicitValue": "",
         "DropLevel": 32,
         "MaxLevel": false
     },
     {
         "Type": "Equipment",
         "Class": "Gloves",
-        "ImplicitType": "En/A",
+        "DefenseType": "En/A",
         "Name": "Riveted Gloves",
+        "ImplicitType": "",
+        "ImplicitValue": "",
         "DropLevel": 37,
         "MaxLevel": false
     },
     {
         "Type": "Equipment",
         "Class": "Gloves",
-        "ImplicitType": "En/A",
+        "DefenseType": "En/A",
         "Name": "Zealot Gloves",
+        "ImplicitType": "",
+        "ImplicitValue": "",
         "DropLevel": 43,
         "MaxLevel": false
     },
     {
         "Type": "Equipment",
         "Class": "Gloves",
-        "ImplicitType": "En/A",
+        "DefenseType": "En/A",
         "Name": "Soldier Gloves",
+        "ImplicitType": "",
+        "ImplicitValue": "",
         "DropLevel": 51,
         "MaxLevel": false
     },
     {
         "Type": "Equipment",
         "Class": "Gloves",
-        "ImplicitType": "En/A",
+        "DefenseType": "En/A",
         "Name": "Legion Gloves",
+        "ImplicitType": "",
+        "ImplicitValue": "",
         "DropLevel": 57,
         "MaxLevel": false
     },
     {
         "Type": "Equipment",
         "Class": "Gloves",
-        "ImplicitType": "En/A",
+        "DefenseType": "En/A",
         "Name": "Crusader Gloves",
+        "ImplicitType": "",
+        "ImplicitValue": "",
         "DropLevel": 66,
         "MaxLevel": true
     }

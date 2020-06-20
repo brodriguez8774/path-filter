@@ -2,80 +2,100 @@
     {
         "Type": "Equipment",
         "Class": "Gloves",
-        "ImplicitType": "Ev",
+        "DefenseType": "Ev",
         "Name": "Rawhide Gloves",
+        "ImplicitType": "",
+        "ImplicitValue": "",
         "DropLevel": 3,
         "MaxLevel": false
     },
     {
         "Type": "Equipment",
         "Class": "Gloves",
-        "ImplicitType": "Ev",
+        "DefenseType": "Ev",
         "Name": "Goathide Gloves",
+        "ImplicitType": "",
+        "ImplicitValue": "",
         "DropLevel": 9,
         "MaxLevel": false
     },
     {
         "Type": "Equipment",
         "Class": "Gloves",
-        "ImplicitType": "Ev",
+        "DefenseType": "Ev",
         "Name": "Deerskin Gloves",
+        "ImplicitType": "",
+        "ImplicitValue": "",
         "DropLevel": 21,
         "MaxLevel": false
     },
     {
         "Type": "Equipment",
         "Class": "Gloves",
-        "ImplicitType": "Ev",
+        "DefenseType": "Ev",
         "Name": "Nubuck Gloves",
+        "ImplicitType": "",
+        "ImplicitValue": "",
         "DropLevel": 33,
         "MaxLevel": false
     },
     {
         "Type": "Equipment",
         "Class": "Gloves",
-        "ImplicitType": "Ev",
+        "DefenseType": "Ev",
         "Name": "Eelskin Gloves",
+        "ImplicitType": "",
+        "ImplicitValue": "",
         "DropLevel": 38,
         "MaxLevel": false
     },
     {
         "Type": "Equipment",
         "Class": "Gloves",
-        "ImplicitType": "Ev",
+        "DefenseType": "Ev",
         "Name": "Sharkskin Gloves",
+        "ImplicitType": "",
+        "ImplicitValue": "",
         "DropLevel": 45,
         "MaxLevel": false
     },
     {
         "Type": "Equipment",
         "Class": "Gloves",
-        "ImplicitType": "Ev",
+        "DefenseType": "Ev",
         "Name": "Shagreen Gloves",
+        "ImplicitType": "",
+        "ImplicitValue": "",
         "DropLevel": 54,
         "MaxLevel": false
     },
     {
         "Type": "Equipment",
         "Class": "Gloves",
-        "ImplicitType": "Ev",
+        "DefenseType": "Ev",
         "Name": "Stealth Gloves",
+        "ImplicitType": "",
+        "ImplicitValue": "",
         "DropLevel": 62,
         "MaxLevel": true
     },
     {
         "Type": "Equipment",
         "Class": "Gloves",
-        "ImplicitType": "Ev",
+        "DefenseType": "Ev",
         "Name": "Gripped Gloves",
+        "ImplicitType": "",
+        "ImplicitValue": "",
         "DropLevel": 70,
         "MaxLevel": true
     },
     {
         "Type": "Equipment",
         "Class": "Gloves",
-        "ImplicitType": "Ev",
+        "DefenseType": "Ev",
         "Name": "Slink Gloves",
+        "ImplicitType": "",
+        "ImplicitValue": "",
         "DropLevel": 70,
         "MaxLevel": true
     }

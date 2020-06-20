@@ -2,64 +2,80 @@
     {
         "Type": "Equipment",
         "Class": "Gloves",
-        "ImplicitType": "A/En",
+        "DefenseType": "A/Ev",
         "Name": "Fishscale Gauntlets",
+        "ImplicitType": "",
+        "ImplicitValue": "",
         "DropLevel": 4,
         "MaxLevel": false
     },
     {
         "Type": "Equipment",
         "Class": "Gloves",
-        "ImplicitType": "A/En",
+        "DefenseType": "A/Ev",
         "Name": "Ironscale Gauntlets",
+        "ImplicitType": "",
+        "ImplicitValue": "",
         "DropLevel": 15,
         "MaxLevel": false
     },
     {
         "Type": "Equipment",
         "Class": "Gloves",
-        "ImplicitType": "A/En",
+        "DefenseType": "A/Ev",
         "Name": "Bronzescale Gauntlets",
+        "ImplicitType": "",
+        "ImplicitValue": "",
         "DropLevel": 27,
         "MaxLevel": false
     },
     {
         "Type": "Equipment",
         "Class": "Gloves",
-        "ImplicitType": "A/En",
+        "DefenseType": "A/Ev",
         "Name": "Steelscale Gauntlets",
+        "ImplicitType": "",
+        "ImplicitValue": "",
         "DropLevel": 36,
         "MaxLevel": false
     },
     {
         "Type": "Equipment",
         "Class": "Gloves",
-        "ImplicitType": "A/En",
+        "DefenseType": "A/Ev",
         "Name": "Serpentscale Gauntlets",
+        "ImplicitType": "",
+        "ImplicitValue": "",
         "DropLevel": 43,
         "MaxLevel": false
     },
     {
         "Type": "Equipment",
         "Class": "Gloves",
-        "ImplicitType": "A/En",
+        "DefenseType": "A/Ev",
         "Name": "Wyrmscale Gauntlets",
+        "ImplicitType": "",
+        "ImplicitValue": "",
         "DropLevel": 49,
         "MaxLevel": false
     },
     {
         "Type": "Equipment",
         "Class": "Gloves",
-        "ImplicitType": "A/En",
+        "DefenseType": "A/Ev",
         "Name": "Hydrascale Gauntlets",
+        "ImplicitType": "",
+        "ImplicitValue": "",
         "DropLevel": 59,
         "MaxLevel": false
     },
     {
         "Type": "Equipment",
         "Class": "Gloves",
-        "ImplicitType": "A/En",
+        "DefenseType": "A/Ev",
         "Name": "Dragonscale Gauntlets",
+        "ImplicitType": "",
+        "ImplicitValue": "",
         "DropLevel": 67,
         "MaxLevel": true
     }

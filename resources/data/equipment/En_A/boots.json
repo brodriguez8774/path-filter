@@ -2,72 +2,90 @@
     {
         "Type": "Equipment",
         "Class": "Boots",
-        "ImplicitType": "En/A",
+        "DefenseType": "En/A",
         "Name": "Chain Boots",
+        "ImplicitType": "",
+        "ImplicitValue": "",
         "DropLevel": 5,
         "MaxLevel": false
     },
     {
         "Type": "Equipment",
         "Class": "Boots",
-        "ImplicitType": "En/A",
+        "DefenseType": "En/A",
         "Name": "Ringmail Boots",
+        "ImplicitType": "",
+        "ImplicitValue": "",
         "DropLevel": 13,
         "MaxLevel": false
     },
     {
         "Type": "Equipment",
         "Class": "Boots",
-        "ImplicitType": "En/A",
+        "DefenseType": "En/A",
         "Name": "Mesh Boots",
+        "ImplicitType": "",
+        "ImplicitValue": "",
         "DropLevel": 28,
         "MaxLevel": false
     },
     {
         "Type": "Equipment",
         "Class": "Boots",
-        "ImplicitType": "En/A",
+        "DefenseType": "En/A",
         "Name": "Riveted Boots",
+        "ImplicitType": "",
+        "ImplicitValue": "",
         "DropLevel": 36,
         "MaxLevel": false
     },
     {
         "Type": "Equipment",
         "Class": "Boots",
-        "ImplicitType": "En/A",
+        "DefenseType": "En/A",
         "Name": "Zealot Boots",
+        "ImplicitType": "",
+        "ImplicitValue": "",
         "DropLevel": 40,
         "MaxLevel": false
     },
     {
         "Type": "Equipment",
         "Class": "Boots",
-        "ImplicitType": "En/A",
+        "DefenseType": "En/A",
         "Name": "Soldier Boots",
+        "ImplicitType": "",
+        "ImplicitValue": "",
         "DropLevel": 49,
         "MaxLevel": false
     },
     {
         "Type": "Equipment",
         "Class": "Boots",
-        "ImplicitType": "En/A",
+        "DefenseType": "En/A",
         "Name": "Legion Boots",
+        "ImplicitType": "",
+        "ImplicitValue": "",
         "DropLevel": 58,
         "MaxLevel": false
     },
     {
         "Type": "Equipment",
         "Class": "Boots",
-        "ImplicitType": "En/A",
+        "DefenseType": "En/A",
         "Name": "Crusader Boots",
+        "ImplicitType": "",
+        "ImplicitValue": "",
         "DropLevel": 64,
         "MaxLevel": true
     },
     {
         "Type": "Equipment",
         "Class": "Boots",
-        "ImplicitType": "En/A",
+        "DefenseType": "En/A",
         "Name": "Two-Toned Boots",
+        "ImplicitType": "",
+        "ImplicitValue": "",
         "DropLevel": 70,
         "MaxLevel": true
     }

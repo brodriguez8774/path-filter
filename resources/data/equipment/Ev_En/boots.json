@@ -2,80 +2,100 @@
     {
         "Type": "Equipment",
         "Class": "Boots",
-        "ImplicitType": "Ev/En",
+        "DefenseType": "Ev/En",
         "Name": "Wrapped Boots",
+        "ImplicitType": "",
+        "ImplicitValue": "",
         "DropLevel": 6,
         "MaxLevel": false
     },
     {
         "Type": "Equipment",
         "Class": "Boots",
-        "ImplicitType": "Ev/En",
+        "DefenseType": "Ev/En",
         "Name": "Strapped Boots",
+        "ImplicitType": "",
+        "ImplicitValue": "",
         "DropLevel": 16,
         "MaxLevel": false
     },
     {
         "Type": "Equipment",
         "Class": "Boots",
-        "ImplicitType": "Ev/En",
+        "DefenseType": "Ev/En",
         "Name": "Clasped Boots",
+        "ImplicitType": "",
+        "ImplicitValue": "",
         "DropLevel": 27,
         "MaxLevel": false
     },
     {
         "Type": "Equipment",
         "Class": "Boots",
-        "ImplicitType": "Ev/En",
+        "DefenseType": "Ev/En",
         "Name": "Shackled Boots",
+        "ImplicitType": "",
+        "ImplicitValue": "",
         "DropLevel": 34,
         "MaxLevel": false
     },
     {
         "Type": "Equipment",
         "Class": "Boots",
-        "ImplicitType": "Ev/En",
+        "DefenseType": "Ev/En",
         "Name": "Trapper Boots",
+        "ImplicitType": "",
+        "ImplicitValue": "",
         "DropLevel": 41,
         "MaxLevel": false
     },
     {
         "Type": "Equipment",
         "Class": "Boots",
-        "ImplicitType": "Ev/En",
+        "DefenseType": "Ev/En",
         "Name": "Ambush Boots",
+        "ImplicitType": "",
+        "ImplicitValue": "",
         "DropLevel": 47,
         "MaxLevel": false
     },
     {
         "Type": "Equipment",
         "Class": "Boots",
-        "ImplicitType": "Ev/En",
+        "DefenseType": "Ev/En",
         "Name": "Carnal Boots",
+        "ImplicitType": "",
+        "ImplicitValue": "",
         "DropLevel": 55,
         "MaxLevel": false
     },
     {
         "Type": "Equipment",
         "Class": "Boots",
-        "ImplicitType": "Ev/En",
+        "DefenseType": "Ev/En",
         "Name": "Assassin's Boots",
+        "ImplicitType": "",
+        "ImplicitValue": "",
         "DropLevel": 63,
         "MaxLevel": false
     },
     {
         "Type": "Equipment",
         "Class": "Boots",
-        "ImplicitType": "Ev/En",
+        "DefenseType": "Ev/En",
         "Name": "Murder Boots",
+        "ImplicitType": "",
+        "ImplicitValue": "",
         "DropLevel": 69,
         "MaxLevel": true
     },
     {
         "Type": "Equipment",
         "Class": "Boots",
-        "ImplicitType": "Ev/En",
+        "DefenseType": "Ev/En",
         "Name": "Two-Toned Boots",
+        "ImplicitType": "",
+        "ImplicitValue": "",
         "DropLevel": 70,
         "MaxLevel": true
     }

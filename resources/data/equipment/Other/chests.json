@@ -2,8 +2,10 @@
     {
         "Type": "Equipment",
         "Slot": "Chest",
-        "ImplicitType": "A/Ev/En",
+        "DefenseType": "A/Ev/En",
         "Name": "Sacrificial Garb",
+        "ImplicitType": "",
+        "ImplicitValue": "",
         "DropLevel": 72,
         "MaxLevel": true
     }

@@ -2,88 +2,110 @@
     {
         "Type": "Equipment",
         "Class": "Helmet",
-        "ImplicitType": "A",
+        "DefenseType": "A",
         "Name": "Iron Hat",
+        "ImplicitType": "",
+        "ImplicitValue": "",
         "DropLevel": 1,
         "MaxLevel": false
     },
         {
         "Type": "Equipment",
         "Class": "Helmet",
-        "ImplicitType": "A",
+        "DefenseType": "A",
         "Name": "Cone Helmet",
+        "ImplicitType": "",
+        "ImplicitValue": "",
         "DropLevel": 7,
         "MaxLevel": false
     },
     {
         "Type": "Equipment",
         "Class": "Helmet",
-        "ImplicitType": "A",
+        "DefenseType": "A",
         "Name": "Barbute Helmet",
+        "ImplicitType": "",
+        "ImplicitValue": "",
         "DropLevel": 18,
         "MaxLevel": false
     },
     {
         "Type": "Equipment",
         "Class": "Helmet",
-        "ImplicitType": "A",
+        "DefenseType": "A",
         "Name": "Close Helmet",
+        "ImplicitType": "",
+        "ImplicitValue": "",
         "DropLevel": 26,
         "MaxLevel": false
     },
     {
         "Type": "Equipment",
         "Class": "Helmet",
-        "ImplicitType": "A",
+        "DefenseType": "A",
         "Name": "Gladiator Helmet",
+        "ImplicitType": "",
+        "ImplicitValue": "",
         "DropLevel": 35,
         "MaxLevel": false
     },
     {
         "Type": "Equipment",
         "Class": "Helmet",
-        "ImplicitType": "A",
+        "DefenseType": "A",
         "Name": "Reaver Helmet",
+        "ImplicitType": "",
+        "ImplicitValue": "",
         "DropLevel": 40,
         "MaxLevel": false
     },
     {
         "Type": "Equipment",
         "Class": "Helmet",
-        "ImplicitType": "A",
+        "DefenseType": "A",
         "Name": "Siege Helmet",
+        "ImplicitType": "",
+        "ImplicitValue": "",
         "DropLevel": 48,
         "MaxLevel": false
     },
     {
         "Type": "Equipment",
         "Class": "Helmet",
-        "ImplicitType": "A",
+        "DefenseType": "A",
         "Name": "Samite Helmet",
+        "ImplicitType": "",
+        "ImplicitValue": "",
         "DropLevel": 55,
         "MaxLevel": false
     },
     {
         "Type": "Equipment",
         "Class": "Helmet",
-        "ImplicitType": "A",
+        "DefenseType": "A",
         "Name": "Ezomyte Burgonet",
+        "ImplicitType": "",
+        "ImplicitValue": "",
         "DropLevel": 60,
         "MaxLevel": false
     },
     {
         "Type": "Equipment",
         "Class": "Helmet",
-        "ImplicitType": "A",
+        "DefenseType": "A",
         "Name": "Royal Burgonet",
+        "ImplicitType": "",
+        "ImplicitValue": "",
         "DropLevel": 65,
         "MaxLevel": true
     },
     {
         "Type": "Equipment",
         "Class": "Helmet",
-        "ImplicitType": "A",
+        "DefenseType": "A",
         "Name": "Eternal Burgonet",
+        "ImplicitType": "",
+        "ImplicitValue": "",
         "DropLevel": 69,
         "MaxLevel": true
     }

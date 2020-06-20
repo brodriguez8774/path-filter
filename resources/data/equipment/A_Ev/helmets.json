@@ -2,80 +2,100 @@
     {
         "Type": "Equipment",
         "Class": "Helmet",
-        "ImplicitType": "A/Ev",
+        "DefenseType": "A/Ev",
         "Name": "Battered Helm",
+        "ImplicitType": "",
+        "ImplicitValue": "",
         "DropLevel": 4,
         "MaxLevel": false
     },
     {
         "Type": "Equipment",
         "Class": "Helmet",
-        "ImplicitType": "A/Ev",
+        "DefenseType": "A/Ev",
         "Name": "Sallet",
+        "ImplicitType": "",
+        "ImplicitValue": "",
         "DropLevel": 13,
         "MaxLevel": false
     },
     {
         "Type": "Equipment",
         "Class": "Helmet",
-        "ImplicitType": "A/Ev",
+        "DefenseType": "A/Ev",
         "Name": "Visored Sallet",
+        "ImplicitType": "",
+        "ImplicitValue": "",
         "DropLevel": 23,
         "MaxLevel": false
     },
     {
         "Type": "Equipment",
         "Class": "Helmet",
-        "ImplicitType": "A/Ev",
+        "DefenseType": "A/Ev",
         "Name": "Gilded Sallet",
+        "ImplicitType": "",
+        "ImplicitValue": "",
         "DropLevel": 33,
         "MaxLevel": false
     },
     {
         "Type": "Equipment",
         "Class": "Helmet",
-        "ImplicitType": "A/Ev",
+        "DefenseType": "A/Ev",
         "Name": "Secutor Helm",
+        "ImplicitType": "",
+        "ImplicitValue": "",
         "DropLevel": 36,
         "MaxLevel": false
     },
     {
         "Type": "Equipment",
         "Class": "Helmet",
-        "ImplicitType": "A/Ev",
+        "DefenseType": "A/Ev",
         "Name": "Fencer Helm",
+        "ImplicitType": "",
+        "ImplicitValue": "",
         "DropLevel": 43,
         "MaxLevel": false
     },
     {
         "Type": "Equipment",
         "Class": "Helmet",
-        "ImplicitType": "A/Ev",
+        "DefenseType": "A/Ev",
         "Name": "Lacquered Helmet",
+        "ImplicitType": "",
+        "ImplicitValue": "",
         "DropLevel": 51,
         "MaxLevel": false
     },
     {
         "Type": "Equipment",
         "Class": "Helmet",
-        "ImplicitType": "A/Ev",
+        "DefenseType": "A/Ev",
         "Name": "Fluted Bascinet",
+        "ImplicitType": "",
+        "ImplicitValue": "",
         "DropLevel": 58,
         "MaxLevel": false
     },
     {
         "Type": "Equipment",
         "Class": "Helmet",
-        "ImplicitType": "A/Ev",
+        "DefenseType": "A/Ev",
         "Name": "Pig-Faced Bascinet",
+        "ImplicitType": "",
+        "ImplicitValue": "",
         "DropLevel": 63,
         "MaxLevel": true
     },
     {
         "Type": "Equipment",
         "Class": "Helmet",
-        "ImplicitType": "A/Ev",
+        "DefenseType": "A/Ev",
         "Name": "Nightmare Bascinet",
+        "ImplicitType": "",
+        "ImplicitValue": "",
         "DropLevel": 67,
         "MaxLevel": true
     }

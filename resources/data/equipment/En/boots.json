@@ -2,72 +2,90 @@
     {
         "Type": "Equipment",
         "Class": "Boots",
-        "ImplicitType": "En",
+        "DefenseType": "En",
         "Name": "Wool Shoes",
+        "ImplicitType": "",
+        "ImplicitValue": "",
         "DropLevel": 3,
         "MaxLevel": false
     },
     {
         "Type": "Equipment",
         "Class": "Boots",
-        "ImplicitType": "En",
+        "DefenseType": "En",
         "Name": "Velvet Slippers",
+        "ImplicitType": "",
+        "ImplicitValue": "",
         "DropLevel": 9,
         "MaxLevel": false
     },
     {
         "Type": "Equipment",
         "Class": "Boots",
-        "ImplicitType": "En",
+        "DefenseType": "En",
         "Name": "Silk Slippers",
+        "ImplicitType": "",
+        "ImplicitValue": "",
         "DropLevel": 22,
         "MaxLevel": false
     },
     {
         "Type": "Equipment",
         "Class": "Boots",
-        "ImplicitType": "En",
+        "DefenseType": "En",
         "Name": "Scholar Boots",
+        "ImplicitType": "",
+        "ImplicitValue": "",
         "DropLevel": 32,
         "MaxLevel": false
     },
     {
         "Type": "Equipment",
         "Class": "Boots",
-        "ImplicitType": "En",
+        "DefenseType": "En",
         "Name": "Satin Slippers",
+        "ImplicitType": "",
+        "ImplicitValue": "",
         "DropLevel": 38,
         "MaxLevel": false
     },
     {
         "Type": "Equipment",
         "Class": "Boots",
-        "ImplicitType": "En",
+        "DefenseType": "En",
         "Name": "Samite Slippers",
+        "ImplicitType": "",
+        "ImplicitValue": "",
         "DropLevel": 44,
         "MaxLevel": false
     },
     {
         "Type": "Equipment",
         "Class": "Boots",
-        "ImplicitType": "En",
+        "DefenseType": "En",
         "Name": "Conjurer Boots",
+        "ImplicitType": "",
+        "ImplicitValue": "",
         "DropLevel": 53,
         "MaxLevel": false
     },
     {
         "Type": "Equipment",
         "Class": "Boots",
-        "ImplicitType": "En",
+        "DefenseType": "En",
         "Name": "Arcanist Slippers",
+        "ImplicitType": "",
+        "ImplicitValue": "",
         "DropLevel": 61,
         "MaxLevel": true
     },
     {
         "Type": "Equipment",
         "Class": "Boots",
-        "ImplicitType": "En",
+        "DefenseType": "En",
         "Name": "Sorcerer Boots",
+        "ImplicitType": "",
+        "ImplicitValue": "",
         "DropLevel": 67,
         "MaxLevel": true
     }

@@ -2,80 +2,100 @@
     {
         "Type": "Equipment",
         "Class": "Gloves",
-        "ImplicitType": "A",
+        "DefenseType": "A",
         "Name": "Iron Gauntlets",
+        "ImplicitType": "",
+        "ImplicitValue": "",
         "DropLevel": 1,
         "MaxLevel": false
     },
     {
         "Type": "Equipment",
         "Class": "Gloves",
-        "ImplicitType": "A",
+        "DefenseType": "A",
         "Name": "Plated Gauntlets",
+        "ImplicitType": "",
+        "ImplicitValue": "",
         "DropLevel": 11,
         "MaxLevel": false
     },
     {
         "Type": "Equipment",
         "Class": "Gloves",
-        "ImplicitType": "A",
+        "DefenseType": "A",
         "Name": "Bronze Gauntlets",
+        "ImplicitType": "",
+        "ImplicitValue": "",
         "DropLevel": 23,
         "MaxLevel": false
     },
     {
         "Type": "Equipment",
         "Class": "Gloves",
-        "ImplicitType": "A",
+        "DefenseType": "A",
         "Name": "Steel Gauntlets",
+        "ImplicitType": "",
+        "ImplicitValue": "",
         "DropLevel": 35,
         "MaxLevel": false
     },
     {
         "Type": "Equipment",
         "Class": "Gloves",
-        "ImplicitType": "A",
+        "DefenseType": "A",
         "Name": "Antique Gauntlets",
+        "ImplicitType": "",
+        "ImplicitValue": "",
         "DropLevel": 39,
         "MaxLevel": false
     },
     {
         "Type": "Equipment",
         "Class": "Gloves",
-        "ImplicitType": "A",
+        "DefenseType": "A",
         "Name": "Ancient Gauntlets",
+        "ImplicitType": "",
+        "ImplicitValue": "",
         "DropLevel": 47,
         "MaxLevel": false
     },
     {
         "Type": "Equipment",
         "Class": "Gloves",
-        "ImplicitType": "A",
+        "DefenseType": "A",
         "Name": "Goliath Gauntlets",
+        "ImplicitType": "",
+        "ImplicitValue": "",
         "DropLevel": 53,
         "MaxLevel": false
     },
     {
         "Type": "Equipment",
         "Class": "Gloves",
-        "ImplicitType": "A",
+        "DefenseType": "A",
         "Name": "Vaal Gauntlets",
+        "ImplicitType": "",
+        "ImplicitValue": "",
         "DropLevel": 63,
         "MaxLevel": true
     },
     {
         "Type": "Equipment",
         "Class": "Gloves",
-        "ImplicitType": "A",
+        "DefenseType": "A",
         "Name": "Titan Gauntlets",
+        "ImplicitType": "",
+        "ImplicitValue": "",
         "DropLevel": 69,
         "MaxLevel": true
     },
     {
         "Type": "Equipment",
         "Class": "Gloves",
-        "ImplicitType": "A",
+        "DefenseType": "A",
         "Name": "Spiked Gloves",
+        "ImplicitType": "",
+        "ImplicitValue": "",
         "DropLevel": 70,
         "MaxLevel": true
     }

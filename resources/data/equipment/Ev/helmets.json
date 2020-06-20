@@ -2,88 +2,110 @@
     {
         "Type": "Equipment",
         "Class": "Helmet",
-        "ImplicitType": "Ev",
+        "DefenseType": "Ev",
         "Name": "Vine Circlet",
+        "ImplicitType": "",
+        "ImplicitValue": "",
         "DropLevel": 3,
         "MaxLevel": false
     },
     {
         "Type": "Equipment",
         "Class": "Helmet",
-        "ImplicitType": "Ev",
+        "DefenseType": "Ev",
         "Name": "Iron Circlet",
+        "ImplicitType": "",
+        "ImplicitValue": "",
         "DropLevel": 8,
         "MaxLevel": false
     },
     {
         "Type": "Equipment",
         "Class": "Helmet",
-        "ImplicitType": "Ev",
+        "DefenseType": "Ev",
         "Name": "Torture Cage",
+        "ImplicitType": "",
+        "ImplicitValue": "",
         "DropLevel": 17,
         "MaxLevel": false
     },
     {
         "Type": "Equipment",
         "Class": "Helmet",
-        "ImplicitType": "Ev",
+        "DefenseType": "Ev",
         "Name": "Tribal Circlet",
+        "ImplicitType": "",
+        "ImplicitValue": "",
         "DropLevel": 26,
         "MaxLevel": false
     },
     {
         "Type": "Equipment",
         "Class": "Helmet",
-        "ImplicitType": "Ev",
+        "DefenseType": "Ev",
         "Name": "Bone Circlet",
+        "ImplicitType": "",
+        "ImplicitValue": "",
         "DropLevel": 34,
         "MaxLevel": false
     },
     {
         "Type": "Equipment",
         "Class": "Helmet",
-        "ImplicitType": "Ev",
+        "DefenseType": "Ev",
         "Name": "Lunaris Circlet",
+        "ImplicitType": "",
+        "ImplicitValue": "",
         "DropLevel": 39,
         "MaxLevel": false
     },
     {
         "Type": "Equipment",
         "Class": "Helmet",
-        "ImplicitType": "Ev",
+        "DefenseType": "Ev",
         "Name": "Steel Circlet",
+        "ImplicitType": "",
+        "ImplicitValue": "",
         "DropLevel": 48,
         "MaxLevel": false
     },
     {
         "Type": "Equipment",
         "Class": "Helmet",
-        "ImplicitType": "Ev",
+        "DefenseType": "Ev",
         "Name": "Necromancer Circlet",
+        "ImplicitType": "",
+        "ImplicitValue": "",
         "DropLevel": 54,
         "MaxLevel": false
     },
     {
         "Type": "Equipment",
         "Class": "Helmet",
-        "ImplicitType": "Ev",
+        "DefenseType": "Ev",
         "Name": "Solaris Circlet",
+        "ImplicitType": "",
+        "ImplicitValue": "",
         "DropLevel": 59,
         "MaxLevel": false
     },
     {
         "Type": "Equipment",
         "Class": "Helmet",
-        "ImplicitType": "Ev",
+        "DefenseType": "Ev",
         "Name": "Mind Cage",
+        "ImplicitType": "",
+        "ImplicitValue": "",
         "DropLevel": 65,
         "MaxLevel": true
     },
     {
         "Type": "Equipment",
         "Class": "Helmet",
-        "ImplicitType": "Ev",
+        "DefenseType": "Ev",
         "Name": "Hubris Circlet",
+        "ImplicitType": "",
+        "ImplicitValue": "",
         "DropLevel": 69,
         "MaxLevel": true
     }

@@ -2,64 +2,80 @@
     {
         "Type": "Equipment",
         "Class": "Gloves",
-        "ImplicitType": "Ev/En",
+        "DefenseType": "Ev/En",
         "Name": "Wrapped Mitts",
+        "ImplicitType": "",
+        "ImplicitValue": "",
         "DropLevel": 5,
         "MaxLevel": false
     },
     {
         "Type": "Equipment",
         "Class": "Gloves",
-        "ImplicitType": "Ev/En",
+        "DefenseType": "Ev/En",
         "Name": "Strapped Mitts",
+        "ImplicitType": "",
+        "ImplicitValue": "",
         "DropLevel": 16,
         "MaxLevel": false
     },
     {
         "Type": "Equipment",
         "Class": "Gloves",
-        "ImplicitType": "Ev/En",
+        "DefenseType": "Ev/En",
         "Name": "Clasped Mitts",
+        "ImplicitType": "",
+        "ImplicitValue": "",
         "DropLevel": 31,
         "MaxLevel": false
     },
     {
         "Type": "Equipment",
         "Class": "Gloves",
-        "ImplicitType": "Ev/En",
+        "DefenseType": "Ev/En",
         "Name": "Trapper Mitts",
+        "ImplicitType": "",
+        "ImplicitValue": "",
         "DropLevel": 36,
         "MaxLevel": false
     },
     {
         "Type": "Equipment",
         "Class": "Gloves",
-        "ImplicitType": "Ev/En",
+        "DefenseType": "Ev/En",
         "Name": "Ambush Mitts",
+        "ImplicitType": "",
+        "ImplicitValue": "",
         "DropLevel": 45,
         "MaxLevel": false
     },
     {
         "Type": "Equipment",
         "Class": "Gloves",
-        "ImplicitType": "Ev/En",
+        "DefenseType": "Ev/En",
         "Name": "Carnal Mitts",
+        "ImplicitType": "",
+        "ImplicitValue": "",
         "DropLevel": 50,
         "MaxLevel": false
     },
     {
         "Type": "Equipment",
         "Class": "Gloves",
-        "ImplicitType": "Ev/En",
+        "DefenseType": "Ev/En",
         "Name": "Assassin's Mitts",
+        "ImplicitType": "",
+        "ImplicitValue": "",
         "DropLevel": 58,
         "MaxLevel": false
     },
     {
         "Type": "Equipment",
         "Class": "Gloves",
-        "ImplicitType": "Ev/En",
+        "DefenseType": "Ev/En",
         "Name": "Murder Mitts",
+        "ImplicitType": "",
+        "ImplicitValue": "",
         "DropLevel": 67,
         "MaxLevel": true
     }

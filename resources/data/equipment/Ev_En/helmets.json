@@ -2,88 +2,110 @@
     {
         "Type": "Equipment",
         "Class": "Helmet",
-        "ImplicitType": "Ev/En",
+        "DefenseType": "Ev/En",
         "Name": "Scare Mask",
+        "ImplicitType": "",
+        "ImplicitValue": "",
         "DropLevel": 4,
         "MaxLevel": false
     },
     {
         "Type": "Equipment",
         "Class": "Helmet",
-        "ImplicitType": "Ev/En",
+        "DefenseType": "Ev/En",
         "Name": "Plague Mask",
+        "ImplicitType": "",
+        "ImplicitValue": "",
         "DropLevel": 10,
         "MaxLevel": false
     },
     {
         "Type": "Equipment",
         "Class": "Helmet",
-        "ImplicitType": "Ev/En",
+        "DefenseType": "Ev/En",
         "Name": "Iron Mask",
+        "ImplicitType": "",
+        "ImplicitValue": "",
         "DropLevel": 17,
         "MaxLevel": false
     },
     {
         "Type": "Equipment",
         "Class": "Helmet",
-        "ImplicitType": "Ev/En",
+        "DefenseType": "Ev/En",
         "Name": "Festival Mask",
+        "ImplicitType": "",
+        "ImplicitValue": "",
         "DropLevel": 28,
         "MaxLevel": false
     },
     {
         "Type": "Equipment",
         "Class": "Helmet",
-        "ImplicitType": "Ev/En",
+        "DefenseType": "Ev/En",
         "Name": "Golden Mask",
+        "ImplicitType": "",
+        "ImplicitValue": "",
         "DropLevel": 35,
         "MaxLevel": false
     },
     {
         "Type": "Equipment",
         "Class": "Helmet",
-        "ImplicitType": "Ev/En",
+        "DefenseType": "Ev/En",
         "Name": "Raven Mask",
+        "ImplicitType": "",
+        "ImplicitValue": "",
         "DropLevel": 38,
         "MaxLevel": false
     },
     {
         "Type": "Equipment",
         "Class": "Helmet",
-        "ImplicitType": "Ev/En",
+        "DefenseType": "Ev/En",
         "Name": "Callous Mask",
+        "ImplicitType": "",
+        "ImplicitValue": "",
         "DropLevel": 45,
         "MaxLevel": false
     },
     {
         "Type": "Equipment",
         "Class": "Helmet",
-        "ImplicitType": "Ev/En",
+        "DefenseType": "Ev/En",
         "Name": "Regicide Mask",
+        "ImplicitType": "",
+        "ImplicitValue": "",
         "DropLevel": 52,
         "MaxLevel": false
     },
     {
         "Type": "Equipment",
         "Class": "Helmet",
-        "ImplicitType": "Ev/En",
+        "DefenseType": "Ev/En",
         "Name": "Harlequin Mask",
+        "ImplicitType": "",
+        "ImplicitValue": "",
         "DropLevel": 57,
         "MaxLevel": false
     },
     {
         "Type": "Equipment",
         "Class": "Helmet",
-        "ImplicitType": "Ev/En",
+        "DefenseType": "Ev/En",
         "Name": "Vaal Mask",
+        "ImplicitType": "",
+        "ImplicitValue": "",
         "DropLevel": 62,
         "MaxLevel": true
     },
     {
         "Type": "Equipment",
         "Class": "Helmet",
-        "ImplicitType": "Ev/En",
+        "DefenseType": "Ev/En",
         "Name": "Deicide Mask",
+        "ImplicitType": "",
+        "ImplicitValue": "",
         "DropLevel": 67,
         "MaxLevel": true
     }

@@ -2,72 +2,90 @@
     {
         "Type": "Equipment",
         "Class": "Boots",
-        "ImplicitType": "Ev",
+        "DefenseType": "Ev",
         "Name": "Rawhide Boots",
+        "ImplicitType": "",
+        "ImplicitValue": "",
         "DropLevel": 3,
         "MaxLevel": false
     },
     {
         "Type": "Equipment",
         "Class": "Boots",
-        "ImplicitType": "Ev",
+        "DefenseType": "Ev",
         "Name": "Goathide Boots",
+        "ImplicitType": "",
+        "ImplicitValue": "",
         "DropLevel": 12,
         "MaxLevel": false
     },
     {
         "Type": "Equipment",
         "Class": "Boots",
-        "ImplicitType": "Ev",
+        "DefenseType": "Ev",
         "Name": "Deerskin Boots",
+        "ImplicitType": "",
+        "ImplicitValue": "",
         "DropLevel": 22,
         "MaxLevel": false
     },
     {
         "Type": "Equipment",
         "Class": "Boots",
-        "ImplicitType": "Ev",
+        "DefenseType": "Ev",
         "Name": "Nubuck Boots",
+        "ImplicitType": "",
+        "ImplicitValue": "",
         "DropLevel": 34,
         "MaxLevel": false
     },
     {
         "Type": "Equipment",
         "Class": "Boots",
-        "ImplicitType": "Ev",
+        "DefenseType": "Ev",
         "Name": "Eelskin Boots",
+        "ImplicitType": "",
+        "ImplicitValue": "",
         "DropLevel": 39,
         "MaxLevel": false
     },
     {
         "Type": "Equipment",
         "Class": "Boots",
-        "ImplicitType": "Ev",
+        "DefenseType": "Ev",
         "Name": "Sharkskin Boots",
+        "ImplicitType": "",
+        "ImplicitValue": "",
         "DropLevel": 44,
         "MaxLevel": false
     },
     {
         "Type": "Equipment",
         "Class": "Boots",
-        "ImplicitType": "Ev",
+        "DefenseType": "Ev",
         "Name": "Shagreen Boots",
+        "ImplicitType": "",
+        "ImplicitValue": "",
         "DropLevel": 55,
         "MaxLevel": false
     },
     {
         "Type": "Equipment",
         "Class": "Boots",
-        "ImplicitType": "Ev",
+        "DefenseType": "Ev",
         "Name": "Stealth Boots",
+        "ImplicitType": "",
+        "ImplicitValue": "",
         "DropLevel": 62,
         "MaxLevel": true
     },
     {
         "Type": "Equipment",
         "Class": "Boots",
-        "ImplicitType": "Ev",
+        "DefenseType": "Ev",
         "Name": "Slink Boots",
+        "ImplicitType": "",
+        "ImplicitValue": "",
         "DropLevel": 69,
         "MaxLevel": true
     }

@@ -2,80 +2,100 @@
     {
         "Type": "Equipment",
         "Class": "Helmet",
-        "ImplicitType": "En",
+        "DefenseType": "En",
         "Name": "Leather Cap",
+        "ImplicitType": "",
+        "ImplicitValue": "",
         "DropLevel": 3,
         "MaxLevel": false
     },
     {
         "Type": "Equipment",
         "Class": "Helmet",
-        "ImplicitType": "En",
+        "DefenseType": "En",
         "Name": "Tricorne",
+        "ImplicitType": "",
+        "ImplicitValue": "",
         "DropLevel": 10,
         "MaxLevel": false
     },
     {
         "Type": "Equipment",
         "Class": "Helmet",
-        "ImplicitType": "En",
+        "DefenseType": "En",
         "Name": "Leather Hood",
+        "ImplicitType": "",
+        "ImplicitValue": "",
         "DropLevel": 20,
         "MaxLevel": false
     },
     {
         "Type": "Equipment",
         "Class": "Helmet",
-        "ImplicitType": "En",
+        "DefenseType": "En",
         "Name": "Wolf Pelt",
+        "ImplicitType": "",
+        "ImplicitValue": "",
         "DropLevel": 30,
         "MaxLevel": false
     },
     {
         "Type": "Equipment",
         "Class": "Helmet",
-        "ImplicitType": "En",
+        "DefenseType": "En",
         "Name": "Hunter Hood",
+        "ImplicitType": "",
+        "ImplicitValue": "",
         "DropLevel": 41,
         "MaxLevel": false
     },
     {
         "Type": "Equipment",
         "Class": "Helmet",
-        "ImplicitType": "En",
+        "DefenseType": "En",
         "Name": "Noble Tricorne",
+        "ImplicitType": "",
+        "ImplicitValue": "",
         "DropLevel": 47,
         "MaxLevel": false
     },
     {
         "Type": "Equipment",
         "Class": "Helmet",
-        "ImplicitType": "En",
+        "DefenseType": "En",
         "Name": "Ursine Pelt",
+        "ImplicitType": "",
+        "ImplicitValue": "",
         "DropLevel": 55,
         "MaxLevel": false
     },
     {
         "Type": "Equipment",
         "Class": "Helmet",
-        "ImplicitType": "En",
+        "DefenseType": "En",
         "Name": "Silken Hood",
+        "ImplicitType": "",
+        "ImplicitValue": "",
         "DropLevel": 60,
         "MaxLevel": false
     },
     {
         "Type": "Equipment",
         "Class": "Helmet",
-        "ImplicitType": "En",
+        "DefenseType": "En",
         "Name": "Sinner Tricorne",
+        "ImplicitType": "",
+        "ImplicitValue": "",
         "DropLevel": 64,
         "MaxLevel": true
     },
     {
         "Type": "Equipment",
         "Class": "Helmet",
-        "ImplicitType": "En",
+        "DefenseType": "En",
         "Name": "Lion Pelt",
+        "ImplicitType": "",
+        "ImplicitValue": "",
         "DropLevel": 70,
         "MaxLevel": true
     }

@@ -2,72 +2,90 @@
     {
         "Type": "Equipment",
         "Class": "Boots",
-        "ImplicitType": "A/Ev",
+        "DefenseType": "A/Ev",
         "Name": "Leatherscale Boots",
+        "ImplicitType": "",
+        "ImplicitValue": "",
         "DropLevel": 6,
         "MaxLevel": false
     },
     {
         "Type": "Equipment",
         "Class": "Boots",
-        "ImplicitType": "A/Ev",
+        "DefenseType": "A/Ev",
         "Name": "Ironscale Boots",
+        "ImplicitType": "",
+        "ImplicitValue": "",
         "DropLevel": 18,
         "MaxLevel": false
     },
     {
         "Type": "Equipment",
         "Class": "Boots",
-        "ImplicitType": "A/Ev",
+        "DefenseType": "A/Ev",
         "Name": "Bronzescale Boots",
+        "ImplicitType": "",
+        "ImplicitValue": "",
         "DropLevel": 30,
         "MaxLevel": false
     },
     {
         "Type": "Equipment",
         "Class": "Boots",
-        "ImplicitType": "A/Ev",
+        "DefenseType": "A/Ev",
         "Name": "Steelscale Boots",
+        "ImplicitType": "",
+        "ImplicitValue": "",
         "DropLevel": 36,
         "MaxLevel": false
     },
     {
         "Type": "Equipment",
         "Class": "Boots",
-        "ImplicitType": "A/Ev",
+        "DefenseType": "A/Ev",
         "Name": "Serpentscale Boots",
+        "ImplicitType": "",
+        "ImplicitValue": "",
         "DropLevel": 42,
         "MaxLevel": false
     },
     {
         "Type": "Equipment",
         "Class": "Boots",
-        "ImplicitType": "A/Ev",
+        "DefenseType": "A/Ev",
         "Name": "Wyrmscale Boots",
+        "ImplicitType": "",
+        "ImplicitValue": "",
         "DropLevel": 51,
         "MaxLevel": false
     },
     {
         "Type": "Equipment",
         "Class": "Boots",
-        "ImplicitType": "A/Ev",
+        "DefenseType": "A/Ev",
         "Name": "Hydrascale Boots",
+        "ImplicitType": "",
+        "ImplicitValue": "",
         "DropLevel": 59,
         "MaxLevel": false
     },
     {
         "Type": "Equipment",
         "Class": "Boots",
-        "ImplicitType": "A/Ev",
+        "DefenseType": "A/Ev",
         "Name": "Dragonscale Boots",
+        "ImplicitType": "",
+        "ImplicitValue": "",
         "DropLevel": 65,
         "MaxLevel": true
     },
     {
         "Type": "Equipment",
         "Class": "Boots",
-        "ImplicitType": "A/Ev",
+        "DefenseType": "A/Ev",
         "Name": "Two-Toned Boots",
+        "ImplicitType": "",
+        "ImplicitValue": "",
         "DropLevel": 70,
         "MaxLevel": true
     }

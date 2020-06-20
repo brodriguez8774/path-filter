@@ -2,80 +2,100 @@
     {
         "Type": "Equipment",
         "Class": "Gloves",
-        "ImplicitType": "En",
+        "DefenseType": "En",
         "Name": "Wool Gloves",
+        "ImplicitType": "",
+        "ImplicitValue": "",
         "DropLevel": 3,
         "MaxLevel": false
     },
     {
         "Type": "Equipment",
         "Class": "Gloves",
-        "ImplicitType": "En",
+        "DefenseType": "En",
         "Name": "Velvet Gloves",
+        "ImplicitType": "",
+        "ImplicitValue": "",
         "DropLevel": 12,
         "MaxLevel": false
     },
     {
         "Type": "Equipment",
         "Class": "Gloves",
-        "ImplicitType": "En",
+        "DefenseType": "En",
         "Name": "Silk Gloves",
+        "ImplicitType": "",
+        "ImplicitValue": "",
         "DropLevel": 25,
         "MaxLevel": false
     },
     {
         "Type": "Equipment",
         "Class": "Gloves",
-        "ImplicitType": "En",
+        "DefenseType": "En",
         "Name": "Embroidered Gloves",
+        "ImplicitType": "",
+        "ImplicitValue": "",
         "DropLevel": 36,
         "MaxLevel": false
     },
     {
         "Type": "Equipment",
         "Class": "Gloves",
-        "ImplicitType": "En",
+        "DefenseType": "En",
         "Name": "Satin Gloves",
+        "ImplicitType": "",
+        "ImplicitValue": "",
         "DropLevel": 41,
         "MaxLevel": false
     },
     {
         "Type": "Equipment",
         "Class": "Gloves",
-        "ImplicitType": "En",
+        "DefenseType": "En",
         "Name": "Samite Gloves",
+        "ImplicitType": "",
+        "ImplicitValue": "",
         "DropLevel": 47,
         "MaxLevel": false
     },
     {
         "Type": "Equipment",
         "Class": "Gloves",
-        "ImplicitType": "En",
+        "DefenseType": "En",
         "Name": "Conjurer Gloves",
+        "ImplicitType": "",
+        "ImplicitValue": "",
         "DropLevel": 55,
         "MaxLevel": false
     },
     {
         "Type": "Equipment",
         "Class": "Gloves",
-        "ImplicitType": "En",
+        "DefenseType": "En",
         "Name": "Arcanist Gloves",
+        "ImplicitType": "",
+        "ImplicitValue": "",
         "DropLevel": 60,
         "MaxLevel": true
     },
     {
         "Type": "Equipment",
         "Class": "Gloves",
-        "ImplicitType": "En",
+        "DefenseType": "En",
         "Name": "Sorcerer Gloves",
+        "ImplicitType": "",
+        "ImplicitValue": "",
         "DropLevel": 69,
         "MaxLevel": true
     },
     {
         "Type": "Equipment",
         "Class": "Gloves",
-        "ImplicitType": "En",
+        "DefenseType": "En",
         "Name": "Fingerless Silk Gloves",
+        "ImplicitType": "",
+        "ImplicitValue": "",
         "DropLevel": 70,
         "MaxLevel": true
     }
