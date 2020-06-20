@@ -1,0 +1,18 @@
+
+# Do not track local environment settings.
+.venv/
+.vscode/
+.idea/
+.vs/
+env/
+temp/
+venv/
+
+
+# Do not track python cache files.
+*.pyc
+
+
+# Do not track local environment logs.
+*.log
+*.log.*
