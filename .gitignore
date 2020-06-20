@@ -16,3 +16,8 @@ venv/
 # Do not track local environment logs.
 *.log
 *.log.*
+
+
+# Do not track generated files.
+generated_filters/
+*.filter
