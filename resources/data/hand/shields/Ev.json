@@ -1,0 +1,130 @@
+[
+    {
+        "Type": "Equipment",
+        "Class": "Shield",
+        "ImplicitType": "Ev",
+        "Name": "Goathide Buckler",
+        "DropLevel": 2,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Class": "Shield",
+        "ImplicitType": "Ev",
+        "Name": "Pine Buckler",
+        "DropLevel": 8,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Class": "Shield",
+        "ImplicitType": "Ev",
+        "Name": "Painted Buckler",
+        "DropLevel": 16,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Class": "Shield",
+        "ImplicitType": "Ev",
+        "Name": "Hammered Buckler",
+        "DropLevel": 23,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Class": "Shield",
+        "ImplicitType": "Ev",
+        "Name": "War Buckler",
+        "DropLevel": 29,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Class": "Shield",
+        "ImplicitType": "Ev",
+        "Name": "Gilded Buckler",
+        "DropLevel": 34,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Class": "Shield",
+        "ImplicitType": "Ev",
+        "Name": "Oak Buckler",
+        "DropLevel": 38,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Class": "Shield",
+        "ImplicitType": "Ev",
+        "Name": "Enameled Buckler",
+        "DropLevel": 42,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Class": "Shield",
+        "ImplicitType": "Ev",
+        "Name": "Corrugated Buckler",
+        "DropLevel": 46,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Class": "Shield",
+        "ImplicitType": "Ev",
+        "Name": "Battle Buckler",
+        "DropLevel": 50,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Class": "Shield",
+        "ImplicitType": "Ev",
+        "Name": "Golden Buckler",
+        "DropLevel": 54,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Class": "Shield",
+        "ImplicitType": "Ev",
+        "Name": "Ironwood Buckler",
+        "DropLevel": 57,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Class": "Shield",
+        "ImplicitType": "Ev",
+        "Name": "Lacquered Buckler",
+        "DropLevel": 60,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Class": "Shield",
+        "ImplicitType": "Ev",
+        "Name": "Vaal Buckler",
+        "DropLevel": 63,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Class": "Shield",
+        "ImplicitType": "Ev",
+        "Name": "Crusader Buckler",
+        "DropLevel": 66,
+        "MaxLevel": true
+    },
+    {
+        "Type": "Equipment",
+        "Class": "Shield",
+        "ImplicitType": "Ev",
+        "Name": "Imperial Buckler",
+        "DropLevel": 69,
+        "MaxLevel": true
+    }
+]

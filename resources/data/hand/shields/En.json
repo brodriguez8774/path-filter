@@ -1,0 +1,130 @@
+[
+    {
+        "Type": "Equipment",
+        "Class": "Shield",
+        "ImplicitType": "En",
+        "Name": "Twig Spirit Shield",
+        "DropLevel": 3,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Class": "Shield",
+        "ImplicitType": "En",
+        "Name": "Yew Spirit Shield",
+        "DropLevel": 9,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Class": "Shield",
+        "ImplicitType": "En",
+        "Name": "Bone Spirit Shield",
+        "DropLevel": 15,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Class": "Shield",
+        "ImplicitType": "En",
+        "Name": "Tarnished Spirit Shield",
+        "DropLevel": 23,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Class": "Shield",
+        "ImplicitType": "En",
+        "Name": "Jingling Spirit Shield",
+        "DropLevel": 28,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Class": "Shield",
+        "ImplicitType": "En",
+        "Name": "Brass Spirit Shield",
+        "DropLevel": 33,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Class": "Shield",
+        "ImplicitType": "En",
+        "Name": "Walnut Spirit Shield",
+        "DropLevel": 37,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Class": "Shield",
+        "ImplicitType": "En",
+        "Name": "Ivory Spirit Shield",
+        "DropLevel": 41,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Class": "Shield",
+        "ImplicitType": "En",
+        "Name": "Ancient Spirit Shield",
+        "DropLevel": 45,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Class": "Shield",
+        "ImplicitType": "En",
+        "Name": "Chiming Spirit Shield",
+        "DropLevel": 49,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Class": "Shield",
+        "ImplicitType": "En",
+        "Name": "Thorium Spirit Shield",
+        "DropLevel": 53,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Class": "Shield",
+        "ImplicitType": "En",
+        "Name": "Lacewood Spirit Shield",
+        "DropLevel": 56,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Class": "Shield",
+        "ImplicitType": "En",
+        "Name": "Fossilised Spirit Shield",
+        "DropLevel": 59,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Class": "Shield",
+        "ImplicitType": "En",
+        "Name": "Vaal Spirit Shield",
+        "DropLevel": 62,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Class": "Shield",
+        "ImplicitType": "En",
+        "Name": "Harmonic Spirit Shield",
+        "DropLevel": 65,
+        "MaxLevel": true
+    },
+    {
+        "Type": "Equipment",
+        "Class": "Shield",
+        "ImplicitType": "En",
+        "Name": "Titanium Spirit Shield",
+        "DropLevel": 68,
+        "MaxLevel": true
+    }
+]

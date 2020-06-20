@@ -1,0 +1,106 @@
+[
+    {
+        "Type": "Equipment",
+        "Class": "Shield",
+        "ImplicitType": "Ev/En",
+        "Name": "Spiked Bundle",
+        "DropLevel": 5,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Class": "Shield",
+        "ImplicitType": "Ev/En",
+        "Name": "Driftwood Spiked Shield",
+        "DropLevel": 12,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Class": "Shield",
+        "ImplicitType": "Ev/En",
+        "Name": "Alloyed Spiked Shield",
+        "DropLevel": 20,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Class": "Shield",
+        "ImplicitType": "Ev/En",
+        "Name": "Burnished Spiked Shield",
+        "DropLevel": 27,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Class": "Shield",
+        "ImplicitType": "Ev/En",
+        "Name": "Ornate Spiked Shield",
+        "DropLevel": 33,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Class": "Shield",
+        "ImplicitType": "Ev/En",
+        "Name": "Redwood Spiked Shield",
+        "DropLevel": 39,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Class": "Shield",
+        "ImplicitType": "Ev/En",
+        "Name": "Compound Spiked Shield",
+        "DropLevel": 45,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Class": "Shield",
+        "ImplicitType": "Ev/En",
+        "Name": "Polished Spiked Shield",
+        "DropLevel": 49,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Class": "Shield",
+        "ImplicitType": "Ev/En",
+        "Name": "Sovereign Spiked Shield",
+        "DropLevel": 54,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Class": "Shield",
+        "ImplicitType": "Ev/En",
+        "Name": "Alder Spiked Shield",
+        "DropLevel": 58,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Class": "Shield",
+        "ImplicitType": "Ev/En",
+        "Name": "Ezomyte Spiked Shield",
+        "DropLevel": 62,
+        "MaxLevel": true
+    },
+    {
+        "Type": "Equipment",
+        "Class": "Shield",
+        "ImplicitType": "Ev/En",
+        "Name": "Mirrored Spiked Shield",
+        "DropLevel": 66,
+        "MaxLevel": true
+    },
+    {
+        "Type": "Equipment",
+        "Class": "Shield",
+        "ImplicitType": "Ev/En",
+        "Name": "Supreme Spiked Shield",
+        "DropLevel": 70,
+        "MaxLevel": true
+    }
+]

@@ -1,0 +1,138 @@
+[
+    {
+        "Type": "Equipment",
+        "Class": "Shield",
+        "ImplicitType": "A",
+        "Name": "Splintered Tower Shield",
+        "DropLevel": 1,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Class": "Shield",
+        "ImplicitType": "A",
+        "Name": "Corroded Tower Shield",
+        "DropLevel": 5,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Class": "Shield",
+        "ImplicitType": "A",
+        "Name": "Rawhide Tower Shield",
+        "DropLevel": 11,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Class": "Shield",
+        "ImplicitType": "A",
+        "Name": "Cedar Tower Shield",
+        "DropLevel": 17,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Class": "Shield",
+        "ImplicitType": "A",
+        "Name": "Copper Tower Shield",
+        "DropLevel": 24,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Class": "Shield",
+        "ImplicitType": "A",
+        "Name": "Reinforced Tower Shield",
+        "DropLevel": 30,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Class": "Shield",
+        "ImplicitType": "A",
+        "Name": "Painted Tower Shield",
+        "DropLevel": 35,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Class": "Shield",
+        "ImplicitType": "A",
+        "Name": "Buckskin Tower Shield",
+        "DropLevel": 39,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Class": "Shield",
+        "ImplicitType": "A",
+        "Name": "Mahogany Tower Shield",
+        "DropLevel": 43,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Class": "Shield",
+        "ImplicitType": "A",
+        "Name": "Bronze Tower Shield",
+        "DropLevel": 47,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Class": "Shield",
+        "ImplicitType": "A",
+        "Name": "Girded Tower Shield",
+        "DropLevel": 51,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Class": "Shield",
+        "ImplicitType": "A",
+        "Name": "Crested Tower Shield",
+        "DropLevel": 55,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Class": "Shield",
+        "ImplicitType": "A",
+        "Name": "Shagreen Tower Shield",
+        "DropLevel": 58,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Class": "Shield",
+        "ImplicitType": "A",
+        "Name": "Ebony Tower Shield",
+        "DropLevel": 61,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Class": "Shield",
+        "ImplicitType": "A",
+        "Name": "Ezomyte Tower Shield",
+        "DropLevel": 64,
+        "MaxLevel": true
+    },
+    {
+        "Type": "Equipment",
+        "Class": "Shield",
+        "ImplicitType": "A",
+        "Name": "Colossal Tower Shield",
+        "DropLevel": 67,
+        "MaxLevel": true
+    },
+    {
+        "Type": "Equipment",
+        "Class": "Shield",
+        "ImplicitType": "A",
+        "Name": "Pinnacle Tower Shield",
+        "DropLevel": 70,
+        "MaxLevel": true
+    }
+]

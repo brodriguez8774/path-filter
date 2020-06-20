@@ -1,0 +1,106 @@
+[
+    {
+        "Type": "Equipment",
+        "Class": "Shield",
+        "ImplicitType": "A/Ev",
+        "Name": "Rotted Round Shield",
+        "DropLevel": 5,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Class": "Shield",
+        "ImplicitType": "A/Ev",
+        "Name": "Fir Round Shield",
+        "DropLevel": 12,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Class": "Shield",
+        "ImplicitType": "A/Ev",
+        "Name": "Studded Round Shield",
+        "DropLevel": 20,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Class": "Shield",
+        "ImplicitType": "A/Ev",
+        "Name": "Scarlet Round Shield",
+        "DropLevel": 27,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Class": "Shield",
+        "ImplicitType": "A/Ev",
+        "Name": "Splendid Round Shield",
+        "DropLevel": 33,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Class": "Shield",
+        "ImplicitType": "A/Ev",
+        "Name": "Maple Round Shield",
+        "DropLevel": 39,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Class": "Shield",
+        "ImplicitType": "A/Ev",
+        "Name": "Spiked Round Shield",
+        "DropLevel": 45,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Class": "Shield",
+        "ImplicitType": "A/Ev",
+        "Name": "Crimson Round Shield",
+        "DropLevel": 49,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Class": "Shield",
+        "ImplicitType": "A/Ev",
+        "Name": "Baroque Round Shield",
+        "DropLevel": 54,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Class": "Shield",
+        "ImplicitType": "A/Ev",
+        "Name": "Teak Round Shield",
+        "DropLevel": 58,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Class": "Shield",
+        "ImplicitType": "A/Ev",
+        "Name": "Spiny Round Shield",
+        "DropLevel": 62,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Class": "Shield",
+        "ImplicitType": "A/Ev",
+        "Name": "Cardinal Round Shield",
+        "DropLevel": 66,
+        "MaxLevel": true
+    },
+    {
+        "Type": "Equipment",
+        "Class": "Shield",
+        "ImplicitType": "A/Ev",
+        "Name": "Elegant Round Shield",
+        "DropLevel": 70,
+        "MaxLevel": true
+    }
+]

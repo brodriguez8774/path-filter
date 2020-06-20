@@ -1,0 +1,106 @@
+[
+    {
+        "Type": "Equipment",
+        "Class": "Shield",
+        "ImplicitType": "En/A",
+        "Name": "Plank Kite Shield",
+        "DropLevel": 7,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Class": "Shield",
+        "ImplicitType": "En/A",
+        "Name": "Linden Kite Shield",
+        "DropLevel": 13,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Class": "Shield",
+        "ImplicitType": "En/A",
+        "Name": "Reinforced Kite Shield",
+        "DropLevel": 20,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Class": "Shield",
+        "ImplicitType": "En/A",
+        "Name": "Layered Kite Shield",
+        "DropLevel": 27,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Class": "Shield",
+        "ImplicitType": "En/A",
+        "Name": "Ceremonial Kite Shield",
+        "DropLevel": 34,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Class": "Shield",
+        "ImplicitType": "En/A",
+        "Name": "Etched Kite Shield",
+        "DropLevel": 40,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Class": "Shield",
+        "ImplicitType": "En/A",
+        "Name": "Steel Kite Shield",
+        "DropLevel": 46,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Class": "Shield",
+        "ImplicitType": "En/A",
+        "Name": "Laminated Kite Shield",
+        "DropLevel": 50,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Class": "Shield",
+        "ImplicitType": "En/A",
+        "Name": "Angelic Kite Shield",
+        "DropLevel": 55,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Class": "Shield",
+        "ImplicitType": "En/A",
+        "Name": "Branded Kite Shield",
+        "DropLevel": 59,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Class": "Shield",
+        "ImplicitType": "En/A",
+        "Name": "Champion Kite Shield",
+        "DropLevel": 62,
+        "MaxLevel": true
+    },
+    {
+        "Type": "Equipment",
+        "Class": "Shield",
+        "ImplicitType": "En/A",
+        "Name": "Mosaic Kite Shield",
+        "DropLevel": 65,
+        "MaxLevel": true
+    },
+    {
+        "Type": "Equipment",
+        "Class": "Shield",
+        "ImplicitType": "En/A",
+        "Name": "Archon Kite Shield",
+        "DropLevel": 68,
+        "MaxLevel": true
+    }
+]
