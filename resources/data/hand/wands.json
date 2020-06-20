@@ -1,0 +1,162 @@
+[
+    {
+        "Type": "Equipment",
+        "Class": "Wand",
+        "ImplicitType": "Spell Damage",
+        "Name": "Driftwood Wand",
+        "DropLevel": 1,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Class": "Wand",
+        "ImplicitType": "Spell Damage",
+        "Name": "Goat's Horn",
+        "DropLevel": 6,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Class": "Wand",
+        "ImplicitType": "Spell Damage",
+        "Name": "Carved Wand",
+        "DropLevel": 12,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Class": "Wand",
+        "ImplicitType": "Spell Damage",
+        "Name": "Quartz Wand",
+        "DropLevel": 18,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Class": "Wand",
+        "ImplicitType": "Spell Damage",
+        "Name": "Spiraled Wand",
+        "DropLevel": 24,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Class": "Wand",
+        "ImplicitType": "Spell Damage",
+        "Name": "Sage Wand",
+        "DropLevel": 30,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Class": "Wand",
+        "ImplicitType": "Cast Speed",
+        "Name": "Pagan Wand",
+        "DropLevel": 34,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Class": "Wand",
+        "ImplicitType": "Spell Damage",
+        "Name": "Faun's Horn",
+        "DropLevel": 35,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Class": "Wand",
+        "ImplicitType": "Spell Damage",
+        "Name": "Engraved Wand",
+        "DropLevel": 40,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Class": "Wand",
+        "ImplicitType": "Spell Damage",
+        "Name": "Crystal Wand",
+        "DropLevel": 45,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Class": "Wand",
+        "ImplicitType": "Spell Damage",
+        "Name": "Serpent Wand",
+        "DropLevel": 49,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Class": "Wand",
+        "ImplicitType": "Spell Damage",
+        "Name": "Omen Wand",
+        "DropLevel": 53,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Class": "Wand",
+        "ImplicitType": "Cast Speed",
+        "Name": "Heathen Wand",
+        "DropLevel": 55,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Class": "Wand",
+        "ImplicitType": "Spell Damage",
+        "Name": "Demon's Horn",
+        "DropLevel": 56,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Class": "Wand",
+        "ImplicitType": "Spell Damage",
+        "Name": "Imbued Wand",
+        "DropLevel": 59,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Class": "Wand",
+        "ImplicitType": "Spell Damage",
+        "Name": "Opal Wand",
+        "DropLevel": 62,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Class": "Wand",
+        "ImplicitType": "Spell Damage",
+        "Name": "Tornado Wand",
+        "DropLevel": 65,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Class": "Wand",
+        "ImplicitType": "Spell Damage",
+        "Name": "Prophecy Wand",
+        "DropLevel": 68,
+        "MaxLevel": true
+    },
+    {
+        "Type": "Equipment",
+        "Class": "Wand",
+        "ImplicitType": "Cast Speed",
+        "Name": "Profane Wand",
+        "DropLevel": 70,
+        "MaxLevel": true
+    },
+    {
+        "Type": "Equipment",
+        "Class": "Wand",
+        "ImplicitType": "Minion Modifiers",
+        "Name": "Convoking Wand",
+        "DropLevel": 72,
+        "MaxLevel": true
+    }
+]
