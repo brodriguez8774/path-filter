@@ -14,8 +14,9 @@ logger = init_logging.get_logger(__name__)
 
 class WeaponParser():
 
-    def __init__(self, filter_file, weapon_types, defense_types):
+    def __init__(self, filter_file, parse_num, weapon_types, defense_types):
         self.filter_file = filter_file
+        self.pars_num = parse_num
         self.weapon_types = weapon_types
         self.defense_types = defense_types
 

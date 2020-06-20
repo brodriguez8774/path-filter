@@ -91,6 +91,7 @@ if __name__ == '__main__':
         pass    # Folder already exists. This is fine.
 
     # Create filter.
+    parse_num = 0
     with open('generated_filters/{0}'.format(file_name), "w") as filter_file:
         filter_file.write('\n')
         filter_file.write('# ======================= #\n')
@@ -103,10 +104,12 @@ if __name__ == '__main__':
         filter_file.write('\n\n')
 
         # Generate Weapon Filtering.
-        WeaponParser(filter_file, weapons, defense)
+        parse_num += 1
+        WeaponParser(filter_file, parse_num, weapons, defense)
 
         # Generate Defense Filtering.
-        DefenseParser(filter_file, defense)
+        parse_num += 1
+        DefenseParser(filter_file, parse_num, defense)
 
     logger.info('')
     logger.info('Created filter at "./generated_filters/{0}"'.format(file_name))
