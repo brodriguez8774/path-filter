@@ -16,5 +16,5 @@ class AccessoryParser():
 
     def __init__(self, filter_file, parse_num, accessory_types):
         self.filter_file = filter_file
-        self.parse_num = parse_num
         self.accessory_types = accessory_types
+        self.parse_num = parse_num

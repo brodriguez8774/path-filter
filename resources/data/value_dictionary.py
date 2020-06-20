@@ -18,6 +18,9 @@ value_dict = {
     'En': '10 3 48',
     'En/A': '48 3 48',
 
+    # Custom other colors.
+    'weapon': '75 75 75',
+
     # Font values.
     'default_font_size': 20,
 }
