@@ -1,7 +1,7 @@
 [
     {
         "Type": "Equipment",
-        "Slot": "Chest",
+        "Class": "Chest",
         "ImplicitType": "En/A",
         "Name": "Chainmail Vest",
         "DropLevel": 4,
@@ -9,7 +9,7 @@
     },
     {
         "Type": "Equipment",
-        "Slot": "Chest",
+        "Class": "Chest",
         "ImplicitType": "En/A",
         "Name": "Chainmail Tunic",
         "DropLevel": 8,
@@ -17,7 +17,7 @@
     },
     {
         "Type": "Equipment",
-        "Slot": "Chest",
+        "Class": "Chest",
         "ImplicitType": "En/A",
         "Name": "Ringmail Coat",
         "DropLevel": 17,
@@ -25,7 +25,7 @@
     },
     {
         "Type": "Equipment",
-        "Slot": "Chest",
+        "Class": "Chest",
         "ImplicitType": "En/A",
         "Name": "Chainmail Doublet",
         "DropLevel": 21,
@@ -33,7 +33,7 @@
     },
     {
         "Type": "Equipment",
-        "Slot": "Chest",
+        "Class": "Chest",
         "ImplicitType": "En/A",
         "Name": "Full Ringmail",
         "DropLevel": 28,
@@ -41,7 +41,7 @@
     },
     {
         "Type": "Equipment",
-        "Slot": "Chest",
+        "Class": "Chest",
         "ImplicitType": "En/A",
         "Name": "Full Chainmail",
         "DropLevel": 32,
@@ -49,7 +49,7 @@
     },
     {
         "Type": "Equipment",
-        "Slot": "Chest",
+        "Class": "Chest",
         "ImplicitType": "En/A",
         "Name": "Holy Chainmail",
         "DropLevel": 35,
@@ -57,7 +57,7 @@
     },
     {
         "Type": "Equipment",
-        "Slot": "Chest",
+        "Class": "Chest",
         "ImplicitType": "En/A",
         "Name": "Latticed Ringmail",
         "DropLevel": 39,
@@ -65,7 +65,7 @@
     },
     {
         "Type": "Equipment",
-        "Slot": "Chest",
+        "Class": "Chest",
         "ImplicitType": "En/A",
         "Name": "Crusader Chainmail",
         "DropLevel": 43,
@@ -73,7 +73,7 @@
     },
     {
         "Type": "Equipment",
-        "Slot": "Chest",
+        "Class": "Chest",
         "ImplicitType": "En/A",
         "Name": "Ornate Ringmail",
         "DropLevel": 47,
@@ -81,7 +81,7 @@
     },
     {
         "Type": "Equipment",
-        "Slot": "Chest",
+        "Class": "Chest",
         "ImplicitType": "En/A",
         "Name": "Chain Hauberk",
         "DropLevel": 51,
@@ -89,7 +89,7 @@
     },
     {
         "Type": "Equipment",
-        "Slot": "Chest",
+        "Class": "Chest",
         "ImplicitType": "En/A",
         "Name": "Devout Chainmail",
         "DropLevel": 55,
@@ -97,7 +97,7 @@
     },
     {
         "Type": "Equipment",
-        "Slot": "Chest",
+        "Class": "Chest",
         "ImplicitType": "En/A",
         "Name": "Loricated Ringmail",
         "DropLevel": 58,
@@ -105,7 +105,7 @@
     },
     {
         "Type": "Equipment",
-        "Slot": "Chest",
+        "Class": "Chest",
         "ImplicitType": "En/A",
         "Name": "Conquest Chainmail",
         "DropLevel": 61,
@@ -113,7 +113,7 @@
     },
     {
         "Type": "Equipment",
-        "Slot": "Chest",
+        "Class": "Chest",
         "ImplicitType": "En/A",
         "Name": "Elegant Ringmail",
         "DropLevel": 64,
@@ -121,7 +121,7 @@
     },
     {
         "Type": "Equipment",
-        "Slot": "Chest",
+        "Class": "Chest",
         "ImplicitType": "En/A",
         "Name": "Saint's Hauberk",
         "DropLevel": 67,
@@ -129,7 +129,7 @@
     },
     {
         "Type": "Equipment",
-        "Slot": "Chest",
+        "Class": "Chest",
         "ImplicitType": "En/A",
         "Name": "Saintly Chainmail",
         "DropLevel": 70,

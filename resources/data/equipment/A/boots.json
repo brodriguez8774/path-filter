@@ -1,7 +1,7 @@
 [
     {
         "Type": "Equipment",
-        "Slot": "Boots",
+        "Class": "Boots",
         "ImplicitType": "A",
         "Name": "Iron Greaves",
         "DropLevel": 1,
@@ -9,7 +9,7 @@
     },
     {
         "Type": "Equipment",
-        "Slot": "Boots",
+        "Class": "Boots",
         "ImplicitType": "A",
         "Name": "Steel Greaves",
         "DropLevel": 9,
@@ -17,7 +17,7 @@
     },
     {
         "Type": "Equipment",
-        "Slot": "Boots",
+        "Class": "Boots",
         "ImplicitType": "A",
         "Name": "Plated Greaves",
         "DropLevel": 23,
@@ -25,7 +25,7 @@
     },
     {
         "Type": "Equipment",
-        "Slot": "Boots",
+        "Class": "Boots",
         "ImplicitType": "A",
         "Name": "Reinforced Greaves",
         "DropLevel": 33,
@@ -33,7 +33,7 @@
     },
     {
         "Type": "Equipment",
-        "Slot": "Boots",
+        "Class": "Boots",
         "ImplicitType": "A",
         "Name": "Antique Greaves",
         "DropLevel": 37,
@@ -41,7 +41,7 @@
     },
     {
         "Type": "Equipment",
-        "Slot": "Boots",
+        "Class": "Boots",
         "ImplicitType": "A",
         "Name": "Ancient Greaves",
         "DropLevel": 46,
@@ -49,7 +49,7 @@
     },
     {
         "Type": "Equipment",
-        "Slot": "Boots",
+        "Class": "Boots",
         "ImplicitType": "A",
         "Name": "Goliath Greaves",
         "DropLevel": 54,
@@ -57,7 +57,7 @@
     },
     {
         "Type": "Equipment",
-        "Slot": "Boots",
+        "Class": "Boots",
         "ImplicitType": "A",
         "Name": "Vaal Greaves",
         "DropLevel": 62,
@@ -65,7 +65,7 @@
     },
     {
         "Type": "Equipment",
-        "Slot": "Boots",
+        "Class": "Boots",
         "ImplicitType": "A",
         "Name": "Titan Greaves",
         "DropLevel": 68,

@@ -1,7 +1,7 @@
 [
     {
         "Type": "Equipment",
-        "Slot": "Gloves",
+        "Class": "Gloves",
         "ImplicitType": "Ev",
         "Name": "Rawhide Gloves",
         "DropLevel": 3,
@@ -9,7 +9,7 @@
     },
     {
         "Type": "Equipment",
-        "Slot": "Gloves",
+        "Class": "Gloves",
         "ImplicitType": "Ev",
         "Name": "Goathide Gloves",
         "DropLevel": 9,
@@ -17,7 +17,7 @@
     },
     {
         "Type": "Equipment",
-        "Slot": "Gloves",
+        "Class": "Gloves",
         "ImplicitType": "Ev",
         "Name": "Deerskin Gloves",
         "DropLevel": 21,
@@ -25,7 +25,7 @@
     },
     {
         "Type": "Equipment",
-        "Slot": "Gloves",
+        "Class": "Gloves",
         "ImplicitType": "Ev",
         "Name": "Nubuck Gloves",
         "DropLevel": 33,
@@ -33,7 +33,7 @@
     },
     {
         "Type": "Equipment",
-        "Slot": "Gloves",
+        "Class": "Gloves",
         "ImplicitType": "Ev",
         "Name": "Eelskin Gloves",
         "DropLevel": 38,
@@ -41,7 +41,7 @@
     },
     {
         "Type": "Equipment",
-        "Slot": "Gloves",
+        "Class": "Gloves",
         "ImplicitType": "Ev",
         "Name": "Sharkskin Gloves",
         "DropLevel": 45,
@@ -49,7 +49,7 @@
     },
     {
         "Type": "Equipment",
-        "Slot": "Gloves",
+        "Class": "Gloves",
         "ImplicitType": "Ev",
         "Name": "Shagreen Gloves",
         "DropLevel": 54,
@@ -57,7 +57,7 @@
     },
     {
         "Type": "Equipment",
-        "Slot": "Gloves",
+        "Class": "Gloves",
         "ImplicitType": "Ev",
         "Name": "Stealth Gloves",
         "DropLevel": 62,
@@ -65,7 +65,7 @@
     },
     {
         "Type": "Equipment",
-        "Slot": "Gloves",
+        "Class": "Gloves",
         "ImplicitType": "Ev",
         "Name": "Gripped Gloves",
         "DropLevel": 70,
@@ -73,7 +73,7 @@
     },
     {
         "Type": "Equipment",
-        "Slot": "Gloves",
+        "Class": "Gloves",
         "ImplicitType": "Ev",
         "Name": "Slink Gloves",
         "DropLevel": 70,

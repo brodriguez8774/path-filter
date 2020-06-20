@@ -1,7 +1,7 @@
 [
     {
         "Type": "Equipment",
-        "Slot": "Helmet",
+        "Class": "Helmet",
         "ImplicitType": "Ev/En",
         "Name": "Scare Mask",
         "DropLevel": 4,
@@ -9,7 +9,7 @@
     },
     {
         "Type": "Equipment",
-        "Slot": "Helmet",
+        "Class": "Helmet",
         "ImplicitType": "Ev/En",
         "Name": "Plague Mask",
         "DropLevel": 10,
@@ -17,7 +17,7 @@
     },
     {
         "Type": "Equipment",
-        "Slot": "Helmet",
+        "Class": "Helmet",
         "ImplicitType": "Ev/En",
         "Name": "Iron Mask",
         "DropLevel": 17,
@@ -25,7 +25,7 @@
     },
     {
         "Type": "Equipment",
-        "Slot": "Helmet",
+        "Class": "Helmet",
         "ImplicitType": "Ev/En",
         "Name": "Festival Mask",
         "DropLevel": 28,
@@ -33,7 +33,7 @@
     },
     {
         "Type": "Equipment",
-        "Slot": "Helmet",
+        "Class": "Helmet",
         "ImplicitType": "Ev/En",
         "Name": "Golden Mask",
         "DropLevel": 35,
@@ -41,7 +41,7 @@
     },
     {
         "Type": "Equipment",
-        "Slot": "Helmet",
+        "Class": "Helmet",
         "ImplicitType": "Ev/En",
         "Name": "Raven Mask",
         "DropLevel": 38,
@@ -49,7 +49,7 @@
     },
     {
         "Type": "Equipment",
-        "Slot": "Helmet",
+        "Class": "Helmet",
         "ImplicitType": "Ev/En",
         "Name": "Callous Mask",
         "DropLevel": 45,
@@ -57,7 +57,7 @@
     },
     {
         "Type": "Equipment",
-        "Slot": "Helmet",
+        "Class": "Helmet",
         "ImplicitType": "Ev/En",
         "Name": "Regicide Mask",
         "DropLevel": 52,
@@ -65,7 +65,7 @@
     },
     {
         "Type": "Equipment",
-        "Slot": "Helmet",
+        "Class": "Helmet",
         "ImplicitType": "Ev/En",
         "Name": "Harlequin Mask",
         "DropLevel": 57,
@@ -73,7 +73,7 @@
     },
     {
         "Type": "Equipment",
-        "Slot": "Helmet",
+        "Class": "Helmet",
         "ImplicitType": "Ev/En",
         "Name": "Vaal Mask",
         "DropLevel": 62,
@@ -81,7 +81,7 @@
     },
     {
         "Type": "Equipment",
-        "Slot": "Helmet",
+        "Class": "Helmet",
         "ImplicitType": "Ev/En",
         "Name": "Deicide Mask",
         "DropLevel": 67,

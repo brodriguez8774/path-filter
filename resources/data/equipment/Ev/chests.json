@@ -1,7 +1,7 @@
 [
     {
         "Type": "Equipment",
-        "Slot": "Chest",
+        "Class": "Chest",
         "ImplicitType": "Ev",
         "Name": "Shabby Jerkin",
         "DropLevel": 2,
@@ -9,7 +9,7 @@
     },
     {
         "Type": "Equipment",
-        "Slot": "Chest",
+        "Class": "Chest",
         "ImplicitType": "Ev",
         "Name": "Strapped Leather",
         "DropLevel": 9,
@@ -17,7 +17,7 @@
     },
     {
         "Type": "Equipment",
-        "Slot": "Chest",
+        "Class": "Chest",
         "ImplicitType": "Ev",
         "Name": "Buckskin Tunic",
         "DropLevel": 17,
@@ -25,7 +25,7 @@
     },
     {
         "Type": "Equipment",
-        "Slot": "Chest",
+        "Class": "Chest",
         "ImplicitType": "Ev",
         "Name": "Wild Leather",
         "DropLevel": 25,
@@ -33,7 +33,7 @@
     },
     {
         "Type": "Equipment",
-        "Slot": "Chest",
+        "Class": "Chest",
         "ImplicitType": "Ev",
         "Name": "Full Leather",
         "DropLevel": 28,
@@ -41,7 +41,7 @@
     },
     {
         "Type": "Equipment",
-        "Slot": "Chest",
+        "Class": "Chest",
         "ImplicitType": "Ev",
         "Name": "Sun Leather",
         "DropLevel": 32,
@@ -49,7 +49,7 @@
     },
     {
         "Type": "Equipment",
-        "Slot": "Chest",
+        "Class": "Chest",
         "ImplicitType": "Ev",
         "Name": "Thief's Garb",
         "DropLevel": 35,
@@ -57,7 +57,7 @@
     },
     {
         "Type": "Equipment",
-        "Slot": "Chest",
+        "Class": "Chest",
         "ImplicitType": "Ev",
         "Name": "Eelskin Tunic",
         "DropLevel": 37,
@@ -65,7 +65,7 @@
     },
     {
         "Type": "Equipment",
-        "Slot": "Chest",
+        "Class": "Chest",
         "ImplicitType": "Ev",
         "Name": "Frontier Leather",
         "DropLevel": 41,
@@ -73,7 +73,7 @@
     },
     {
         "Type": "Equipment",
-        "Slot": "Chest",
+        "Class": "Chest",
         "ImplicitType": "Ev",
         "Name": "Glorious Leather",
         "DropLevel": 45,
@@ -81,7 +81,7 @@
     },
     {
         "Type": "Equipment",
-        "Slot": "Chest",
+        "Class": "Chest",
         "ImplicitType": "Ev",
         "Name": "Coronal Leather",
         "DropLevel": 49,
@@ -89,7 +89,7 @@
     },
     {
         "Type": "Equipment",
-        "Slot": "Chest",
+        "Class": "Chest",
         "ImplicitType": "Ev",
         "Name": "Cutthroat's Garb",
         "DropLevel": 53,
@@ -97,7 +97,7 @@
     },
     {
         "Type": "Equipment",
-        "Slot": "Chest",
+        "Class": "Chest",
         "ImplicitType": "Ev",
         "Name": "Sharkskin Tunic",
         "DropLevel": 56,
@@ -105,7 +105,7 @@
     },
     {
         "Type": "Equipment",
-        "Slot": "Chest",
+        "Class": "Chest",
         "ImplicitType": "Ev",
         "Name": "Destiny Leather",
         "DropLevel": 59,
@@ -113,7 +113,7 @@
     },
     {
         "Type": "Equipment",
-        "Slot": "Chest",
+        "Class": "Chest",
         "ImplicitType": "Ev",
         "Name": "Exquisite Leather",
         "DropLevel": 62,
@@ -121,7 +121,7 @@
     },
     {
         "Type": "Equipment",
-        "Slot": "Chest",
+        "Class": "Chest",
         "ImplicitType": "Ev",
         "Name": "Zodiac Leather",
         "DropLevel": 65,
@@ -129,7 +129,7 @@
     },
     {
         "Type": "Equipment",
-        "Slot": "Chest",
+        "Class": "Chest",
         "ImplicitType": "Ev",
         "Name": "Assassin's Garb",
         "DropLevel": 68,

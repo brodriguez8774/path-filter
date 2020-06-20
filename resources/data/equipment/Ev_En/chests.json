@@ -1,7 +1,7 @@
 [
     {
         "Type": "Equipment",
-        "Slot": "Chest",
+        "Class": "Chest",
         "ImplicitType": "Ev/En",
         "Name": "Padded Vest",
         "DropLevel": 4,
@@ -9,7 +9,7 @@
     },
     {
         "Type": "Equipment",
-        "Slot": "Chest",
+        "Class": "Chest",
         "ImplicitType": "Ev/En",
         "Name": "Oiled Vest",
         "DropLevel": 9,
@@ -17,7 +17,7 @@
     },
     {
         "Type": "Equipment",
-        "Slot": "Chest",
+        "Class": "Chest",
         "ImplicitType": "Ev/En",
         "Name": "Padded Jacket",
         "DropLevel": 18,
@@ -25,7 +25,7 @@
     },
     {
         "Type": "Equipment",
-        "Slot": "Chest",
+        "Class": "Chest",
         "ImplicitType": "Ev/En",
         "Name": "Oiled Coat",
         "DropLevel": 22,
@@ -33,7 +33,7 @@
     },
     {
         "Type": "Equipment",
-        "Slot": "Chest",
+        "Class": "Chest",
         "ImplicitType": "Ev/En",
         "Name": "Scarlet Raiment",
         "DropLevel": 28,
@@ -41,7 +41,7 @@
     },
     {
         "Type": "Equipment",
-        "Slot": "Chest",
+        "Class": "Chest",
         "ImplicitType": "Ev/En",
         "Name": "Waxed Garb",
         "DropLevel": 32,
@@ -49,7 +49,7 @@
     },
     {
         "Type": "Equipment",
-        "Slot": "Chest",
+        "Class": "Chest",
         "ImplicitType": "Ev/En",
         "Name": "Bone Armour",
         "DropLevel": 35,
@@ -57,7 +57,7 @@
     },
     {
         "Type": "Equipment",
-        "Slot": "Chest",
+        "Class": "Chest",
         "ImplicitType": "Ev/En",
         "Name": "Quilted Jacket",
         "DropLevel": 40,
@@ -65,7 +65,7 @@
     },
     {
         "Type": "Equipment",
-        "Slot": "Chest",
+        "Class": "Chest",
         "ImplicitType": "Ev/En",
         "Name": "Sleek Coat",
         "DropLevel": 44,
@@ -73,7 +73,7 @@
     },
     {
         "Type": "Equipment",
-        "Slot": "Chest",
+        "Class": "Chest",
         "ImplicitType": "Ev/En",
         "Name": "Crimson Raiment",
         "DropLevel": 48,
@@ -81,7 +81,7 @@
     },
     {
         "Type": "Equipment",
-        "Slot": "Chest",
+        "Class": "Chest",
         "ImplicitType": "Ev/En",
         "Name": "Lacquered Garb",
         "DropLevel": 52,
@@ -89,7 +89,7 @@
     },
     {
         "Type": "Equipment",
-        "Slot": "Chest",
+        "Class": "Chest",
         "ImplicitType": "Ev/En",
         "Name": "Crypt Armour",
         "DropLevel": 56,
@@ -97,7 +97,7 @@
     },
     {
         "Type": "Equipment",
-        "Slot": "Chest",
+        "Class": "Chest",
         "ImplicitType": "Ev/En",
         "Name": "Sentinel Jacket",
         "DropLevel": 59,
@@ -105,7 +105,7 @@
     },
     {
         "Type": "Equipment",
-        "Slot": "Chest",
+        "Class": "Chest",
         "ImplicitType": "Ev/En",
         "Name": "Varnished Coat",
         "DropLevel": 62,
@@ -113,7 +113,7 @@
     },
     {
         "Type": "Equipment",
-        "Slot": "Chest",
+        "Class": "Chest",
         "ImplicitType": "Ev/En",
         "Name": "Blood Raiment",
         "DropLevel": 65,
@@ -121,7 +121,7 @@
     },
     {
         "Type": "Equipment",
-        "Slot": "Chest",
+        "Class": "Chest",
         "ImplicitType": "Ev/En",
         "Name": "Sadist Garb",
         "DropLevel": 68,
@@ -129,7 +129,7 @@
     },
     {
         "Type": "Equipment",
-        "Slot": "Chest",
+        "Class": "Chest",
         "ImplicitType": "Ev/En",
         "Name": "Carnal Armour",
         "DropLevel": 71,

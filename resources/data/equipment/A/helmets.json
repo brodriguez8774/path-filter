@@ -1,7 +1,7 @@
 [
     {
         "Type": "Equipment",
-        "Slot": "Helmet",
+        "Class": "Helmet",
         "ImplicitType": "A",
         "Name": "Iron Hat",
         "DropLevel": 1,
@@ -9,7 +9,7 @@
     },
         {
         "Type": "Equipment",
-        "Slot": "Helmet",
+        "Class": "Helmet",
         "ImplicitType": "A",
         "Name": "Cone Helmet",
         "DropLevel": 7,
@@ -17,7 +17,7 @@
     },
     {
         "Type": "Equipment",
-        "Slot": "Helmet",
+        "Class": "Helmet",
         "ImplicitType": "A",
         "Name": "Barbute Helmet",
         "DropLevel": 18,
@@ -25,7 +25,7 @@
     },
     {
         "Type": "Equipment",
-        "Slot": "Helmet",
+        "Class": "Helmet",
         "ImplicitType": "A",
         "Name": "Close Helmet",
         "DropLevel": 26,
@@ -33,7 +33,7 @@
     },
     {
         "Type": "Equipment",
-        "Slot": "Helmet",
+        "Class": "Helmet",
         "ImplicitType": "A",
         "Name": "Gladiator Helmet",
         "DropLevel": 35,
@@ -41,7 +41,7 @@
     },
     {
         "Type": "Equipment",
-        "Slot": "Helmet",
+        "Class": "Helmet",
         "ImplicitType": "A",
         "Name": "Reaver Helmet",
         "DropLevel": 40,
@@ -49,7 +49,7 @@
     },
     {
         "Type": "Equipment",
-        "Slot": "Helmet",
+        "Class": "Helmet",
         "ImplicitType": "A",
         "Name": "Siege Helmet",
         "DropLevel": 48,
@@ -57,7 +57,7 @@
     },
     {
         "Type": "Equipment",
-        "Slot": "Helmet",
+        "Class": "Helmet",
         "ImplicitType": "A",
         "Name": "Samite Helmet",
         "DropLevel": 55,
@@ -65,7 +65,7 @@
     },
     {
         "Type": "Equipment",
-        "Slot": "Helmet",
+        "Class": "Helmet",
         "ImplicitType": "A",
         "Name": "Ezomyte Burgonet",
         "DropLevel": 60,
@@ -73,7 +73,7 @@
     },
     {
         "Type": "Equipment",
-        "Slot": "Helmet",
+        "Class": "Helmet",
         "ImplicitType": "A",
         "Name": "Royal Burgonet",
         "DropLevel": 65,
@@ -81,7 +81,7 @@
     },
     {
         "Type": "Equipment",
-        "Slot": "Helmet",
+        "Class": "Helmet",
         "ImplicitType": "A",
         "Name": "Eternal Burgonet",
         "DropLevel": 69,

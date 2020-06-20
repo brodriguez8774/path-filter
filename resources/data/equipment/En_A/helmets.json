@@ -1,7 +1,7 @@
 [
     {
         "Type": "Equipment",
-        "Slot": "Helmet",
+        "Class": "Helmet",
         "ImplicitType": "En/A",
         "Name": "Rusted Coif",
         "DropLevel": 5,
@@ -9,7 +9,7 @@
     },
     {
         "Type": "Equipment",
-        "Slot": "Helmet",
+        "Class": "Helmet",
         "ImplicitType": "En/A",
         "Name": "Soldier Helmet",
         "DropLevel": 12,
@@ -17,7 +17,7 @@
     },
     {
         "Type": "Equipment",
-        "Slot": "Helmet",
+        "Class": "Helmet",
         "ImplicitType": "En/A",
         "Name": "Great Helmet",
         "DropLevel": 22,
@@ -25,14 +25,14 @@
     },
     {
         "Type": "Equipment",
-        "Slot": "Helmet",
+        "Class": "Helmet",
         "ImplicitType": "En/A",
         "Name": "Crusader Helmet",
         "DropLevel": 31
     },
     {
         "Type": "Equipment",
-        "Slot": "Helmet",
+        "Class": "Helmet",
         "ImplicitType": "En/A",
         "Name": "Aventail Helmet",
         "DropLevel": 37,
@@ -40,7 +40,7 @@
     },
     {
         "Type": "Equipment",
-        "Slot": "Helmet",
+        "Class": "Helmet",
         "ImplicitType": "En/A",
         "Name": "Zealot Helmet",
         "DropLevel": 44,
@@ -48,7 +48,7 @@
     },
     {
         "Type": "Equipment",
-        "Slot": "Helmet",
+        "Class": "Helmet",
         "ImplicitType": "En/A",
         "Name": "Great Crown",
         "DropLevel": 53,
@@ -56,7 +56,7 @@
     },
     {
         "Type": "Equipment",
-        "Slot": "Helmet",
+        "Class": "Helmet",
         "ImplicitType": "En/A",
         "Name": "Magistrate Crown",
         "DropLevel": 58,
@@ -64,7 +64,7 @@
     },
     {
         "Type": "Equipment",
-        "Slot": "Helmet",
+        "Class": "Helmet",
         "ImplicitType": "En/A",
         "Name": "Prophet Crown",
         "DropLevel": 63,
@@ -72,7 +72,7 @@
     },
     {
         "Type": "Equipment",
-        "Slot": "Helmet",
+        "Class": "Helmet",
         "ImplicitType": "En/A",
         "Name": "Praetor Crown",
         "DropLevel": 68,
@@ -80,7 +80,7 @@
     },
     {
         "Type": "Equipment",
-        "Slot": "Helmet",
+        "Class": "Helmet",
         "ImplicitType": "En/A",
         "Name": "Bone Helmet",
         "DropLevel": 73,

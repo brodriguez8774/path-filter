@@ -1,7 +1,7 @@
 [
     {
         "Type": "Equipment",
-        "Slot": "Gloves",
+        "Class": "Gloves",
         "ImplicitType": "A/En",
         "Name": "Fishscale Gauntlets",
         "DropLevel": 4,
@@ -9,7 +9,7 @@
     },
     {
         "Type": "Equipment",
-        "Slot": "Gloves",
+        "Class": "Gloves",
         "ImplicitType": "A/En",
         "Name": "Ironscale Gauntlets",
         "DropLevel": 15,
@@ -17,7 +17,7 @@
     },
     {
         "Type": "Equipment",
-        "Slot": "Gloves",
+        "Class": "Gloves",
         "ImplicitType": "A/En",
         "Name": "Bronzescale Gauntlets",
         "DropLevel": 27,
@@ -25,7 +25,7 @@
     },
     {
         "Type": "Equipment",
-        "Slot": "Gloves",
+        "Class": "Gloves",
         "ImplicitType": "A/En",
         "Name": "Steelscale Gauntlets",
         "DropLevel": 36,
@@ -33,7 +33,7 @@
     },
     {
         "Type": "Equipment",
-        "Slot": "Gloves",
+        "Class": "Gloves",
         "ImplicitType": "A/En",
         "Name": "Serpentscale Gauntlets",
         "DropLevel": 43,
@@ -41,7 +41,7 @@
     },
     {
         "Type": "Equipment",
-        "Slot": "Gloves",
+        "Class": "Gloves",
         "ImplicitType": "A/En",
         "Name": "Wyrmscale Gauntlets",
         "DropLevel": 49,
@@ -49,7 +49,7 @@
     },
     {
         "Type": "Equipment",
-        "Slot": "Gloves",
+        "Class": "Gloves",
         "ImplicitType": "A/En",
         "Name": "Hydrascale Gauntlets",
         "DropLevel": 59,
@@ -57,7 +57,7 @@
     },
     {
         "Type": "Equipment",
-        "Slot": "Gloves",
+        "Class": "Gloves",
         "ImplicitType": "A/En",
         "Name": "Dragonscale Gauntlets",
         "DropLevel": 67,

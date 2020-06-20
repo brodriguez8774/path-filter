@@ -1,7 +1,7 @@
 [
     {
         "Type": "Equipment",
-        "Slot": "Helmet",
+        "Class": "Helmet",
         "ImplicitType": "Ev",
         "Name": "Vine Circlet",
         "DropLevel": 3,
@@ -9,7 +9,7 @@
     },
     {
         "Type": "Equipment",
-        "Slot": "Helmet",
+        "Class": "Helmet",
         "ImplicitType": "Ev",
         "Name": "Iron Circlet",
         "DropLevel": 8,
@@ -17,7 +17,7 @@
     },
     {
         "Type": "Equipment",
-        "Slot": "Helmet",
+        "Class": "Helmet",
         "ImplicitType": "Ev",
         "Name": "Torture Cage",
         "DropLevel": 17,
@@ -25,7 +25,7 @@
     },
     {
         "Type": "Equipment",
-        "Slot": "Helmet",
+        "Class": "Helmet",
         "ImplicitType": "Ev",
         "Name": "Tribal Circlet",
         "DropLevel": 26,
@@ -33,7 +33,7 @@
     },
     {
         "Type": "Equipment",
-        "Slot": "Helmet",
+        "Class": "Helmet",
         "ImplicitType": "Ev",
         "Name": "Bone Circlet",
         "DropLevel": 34,
@@ -41,7 +41,7 @@
     },
     {
         "Type": "Equipment",
-        "Slot": "Helmet",
+        "Class": "Helmet",
         "ImplicitType": "Ev",
         "Name": "Lunaris Circlet",
         "DropLevel": 39,
@@ -49,7 +49,7 @@
     },
     {
         "Type": "Equipment",
-        "Slot": "Helmet",
+        "Class": "Helmet",
         "ImplicitType": "Ev",
         "Name": "Steel Circlet",
         "DropLevel": 48,
@@ -57,7 +57,7 @@
     },
     {
         "Type": "Equipment",
-        "Slot": "Helmet",
+        "Class": "Helmet",
         "ImplicitType": "Ev",
         "Name": "Necromancer Circlet",
         "DropLevel": 54,
@@ -65,7 +65,7 @@
     },
     {
         "Type": "Equipment",
-        "Slot": "Helmet",
+        "Class": "Helmet",
         "ImplicitType": "Ev",
         "Name": "Solaris Circlet",
         "DropLevel": 59,
@@ -73,7 +73,7 @@
     },
     {
         "Type": "Equipment",
-        "Slot": "Helmet",
+        "Class": "Helmet",
         "ImplicitType": "Ev",
         "Name": "Mind Cage",
         "DropLevel": 65,
@@ -81,7 +81,7 @@
     },
     {
         "Type": "Equipment",
-        "Slot": "Helmet",
+        "Class": "Helmet",
         "ImplicitType": "Ev",
         "Name": "Hubris Circlet",
         "DropLevel": 69,

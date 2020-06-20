@@ -1,7 +1,7 @@
 [
     {
         "Type": "Equipment",
-        "Slot": "Helmet",
+        "Class": "Helmet",
         "ImplicitType": "En",
         "Name": "Leather Cap",
         "DropLevel": 3,
@@ -9,7 +9,7 @@
     },
     {
         "Type": "Equipment",
-        "Slot": "Helmet",
+        "Class": "Helmet",
         "ImplicitType": "En",
         "Name": "Tricorne",
         "DropLevel": 10,
@@ -17,7 +17,7 @@
     },
     {
         "Type": "Equipment",
-        "Slot": "Helmet",
+        "Class": "Helmet",
         "ImplicitType": "En",
         "Name": "Leather Hood",
         "DropLevel": 20,
@@ -25,7 +25,7 @@
     },
     {
         "Type": "Equipment",
-        "Slot": "Helmet",
+        "Class": "Helmet",
         "ImplicitType": "En",
         "Name": "Wolf Pelt",
         "DropLevel": 30,
@@ -33,7 +33,7 @@
     },
     {
         "Type": "Equipment",
-        "Slot": "Helmet",
+        "Class": "Helmet",
         "ImplicitType": "En",
         "Name": "Hunter Hood",
         "DropLevel": 41,
@@ -41,7 +41,7 @@
     },
     {
         "Type": "Equipment",
-        "Slot": "Helmet",
+        "Class": "Helmet",
         "ImplicitType": "En",
         "Name": "Noble Tricorne",
         "DropLevel": 47,
@@ -49,7 +49,7 @@
     },
     {
         "Type": "Equipment",
-        "Slot": "Helmet",
+        "Class": "Helmet",
         "ImplicitType": "En",
         "Name": "Ursine Pelt",
         "DropLevel": 55,
@@ -57,7 +57,7 @@
     },
     {
         "Type": "Equipment",
-        "Slot": "Helmet",
+        "Class": "Helmet",
         "ImplicitType": "En",
         "Name": "Silken Hood",
         "DropLevel": 60,
@@ -65,7 +65,7 @@
     },
     {
         "Type": "Equipment",
-        "Slot": "Helmet",
+        "Class": "Helmet",
         "ImplicitType": "En",
         "Name": "Sinner Tricorne",
         "DropLevel": 64,
@@ -73,7 +73,7 @@
     },
     {
         "Type": "Equipment",
-        "Slot": "Helmet",
+        "Class": "Helmet",
         "ImplicitType": "En",
         "Name": "Lion Pelt",
         "DropLevel": 70,

@@ -1,7 +1,7 @@
 [
     {
         "Type": "Equipment",
-        "Slot": "Boots",
+        "Class": "Boots",
         "ImplicitType": "Ev",
         "Name": "Rawhide Boots",
         "DropLevel": 3,
@@ -9,7 +9,7 @@
     },
     {
         "Type": "Equipment",
-        "Slot": "Boots",
+        "Class": "Boots",
         "ImplicitType": "Ev",
         "Name": "Goathide Boots",
         "DropLevel": 12,
@@ -17,7 +17,7 @@
     },
     {
         "Type": "Equipment",
-        "Slot": "Boots",
+        "Class": "Boots",
         "ImplicitType": "Ev",
         "Name": "Deerskin Boots",
         "DropLevel": 22,
@@ -25,7 +25,7 @@
     },
     {
         "Type": "Equipment",
-        "Slot": "Boots",
+        "Class": "Boots",
         "ImplicitType": "Ev",
         "Name": "Nubuck Boots",
         "DropLevel": 34,
@@ -33,7 +33,7 @@
     },
     {
         "Type": "Equipment",
-        "Slot": "Boots",
+        "Class": "Boots",
         "ImplicitType": "Ev",
         "Name": "Eelskin Boots",
         "DropLevel": 39,
@@ -41,7 +41,7 @@
     },
     {
         "Type": "Equipment",
-        "Slot": "Boots",
+        "Class": "Boots",
         "ImplicitType": "Ev",
         "Name": "Sharkskin Boots",
         "DropLevel": 44,
@@ -49,7 +49,7 @@
     },
     {
         "Type": "Equipment",
-        "Slot": "Boots",
+        "Class": "Boots",
         "ImplicitType": "Ev",
         "Name": "Shagreen Boots",
         "DropLevel": 55,
@@ -57,7 +57,7 @@
     },
     {
         "Type": "Equipment",
-        "Slot": "Boots",
+        "Class": "Boots",
         "ImplicitType": "Ev",
         "Name": "Stealth Boots",
         "DropLevel": 62,
@@ -65,7 +65,7 @@
     },
     {
         "Type": "Equipment",
-        "Slot": "Boots",
+        "Class": "Boots",
         "ImplicitType": "Ev",
         "Name": "Slink Boots",
         "DropLevel": 69,
