@@ -7,12 +7,13 @@ import argparse, os
 
 # User Imports.
 from resources import logging as init_logging
+from resources.parsers.accessories import AccessoryParser
+from resources.parsers.defense import DefenseParser
+from resources.parsers.weapons import WeaponParser
 
 
 # Initialize Logger.
 logger = init_logging.get_logger(__name__)
-
-
 
 
 if __name__ == '__main__':
@@ -100,6 +101,12 @@ if __name__ == '__main__':
         filter_file.write('#     Weapons: {0}\n'.format(weapons))
         filter_file.write('#     Defense: {0}\n'.format(defense))
         filter_file.write('\n\n')
+
+        # Generate Weapon Filtering.
+        WeaponParser(filter_file, weapons, defense)
+
+        # Generate Defense Filtering.
+        DefenseParser(filter_file, defense)
 
     logger.info('')
     logger.info('Created filter at "./generated_filters/{0}"'.format(file_name))
