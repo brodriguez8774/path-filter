@@ -1,0 +1,138 @@
+[
+    {
+        "Type": "Equipment",
+        "Slot": "Chest",
+        "ImplicitType": "A",
+        "Name": "Plate Vest",
+        "DropLevel": 1,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Slot": "Chest",
+        "ImplicitType": "A",
+        "Name": "Chestplate",
+        "DropLevel": 6,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Slot": "Chest",
+        "ImplicitType": "A",
+        "Name": "Copper Plate",
+        "DropLevel": 17,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Slot": "Chest",
+        "ImplicitType": "A",
+        "Name": "War Plate",
+        "DropLevel": 21,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Slot": "Chest",
+        "ImplicitType": "A",
+        "Name": "Full Plate",
+        "DropLevel": 28,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Slot": "Chest",
+        "ImplicitType": "A",
+        "Name": "Arena Plate",
+        "DropLevel": 32,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Slot": "Chest",
+        "ImplicitType": "A",
+        "Name": "Lordly Plate",
+        "DropLevel": 35,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Slot": "Chest",
+        "ImplicitType": "A",
+        "Name": "Bronze Plate",
+        "DropLevel": 37,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Slot": "Chest",
+        "ImplicitType": "A",
+        "Name": "Battle Plate",
+        "DropLevel": 41,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Slot": "Chest",
+        "ImplicitType": "A",
+        "Name": "Sun Plate",
+        "DropLevel": 45,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Slot": "Chest",
+        "ImplicitType": "A",
+        "Name": "Colosseum Plate",
+        "DropLevel": 49,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Slot": "Chest",
+        "ImplicitType": "A",
+        "Name": "Majestic Plate",
+        "DropLevel": 53,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Slot": "Chest",
+        "ImplicitType": "A",
+        "Name": "Golden Plate",
+        "DropLevel": 56,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Slot": "Chest",
+        "ImplicitType": "A",
+        "Name": "Crusader Plate",
+        "DropLevel": 59,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Slot": "Chest",
+        "ImplicitType": "A",
+        "Name": "Astral Plate",
+        "DropLevel": 62,
+        "MaxLevel": true
+    },
+    {
+        "Type": "Equipment",
+        "Slot": "Chest",
+        "ImplicitType": "A",
+        "Name": "Gladiator Plate",
+        "DropLevel": 65,
+        "MaxLevel": true
+    },
+    {
+        "Type": "Equipment",
+        "Slot": "Chest",
+        "ImplicitType": "A",
+        "Name": "Glorious Plate",
+        "DropLevel": 68,
+        "MaxLevel": true
+    }
+]

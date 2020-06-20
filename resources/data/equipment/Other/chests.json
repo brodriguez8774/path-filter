@@ -1,0 +1,10 @@
+[
+    {
+        "Type": "Equipment",
+        "Slot": "Chest",
+        "ImplicitType": "A/Ev/En",
+        "Name": "Sacrificial Garb",
+        "DropLevel": 72,
+        "MaxLevel": true
+    }
+]

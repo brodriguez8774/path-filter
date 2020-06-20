@@ -1,0 +1,74 @@
+[
+    {
+        "Type": "Equipment",
+        "Slot": "Boots",
+        "ImplicitType": "En/A",
+        "Name": "Chain Boots",
+        "DropLevel": 5,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Slot": "Boots",
+        "ImplicitType": "En/A",
+        "Name": "Ringmail Boots",
+        "DropLevel": 13,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Slot": "Boots",
+        "ImplicitType": "En/A",
+        "Name": "Mesh Boots",
+        "DropLevel": 28,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Slot": "Boots",
+        "ImplicitType": "En/A",
+        "Name": "Riveted Boots",
+        "DropLevel": 36,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Slot": "Boots",
+        "ImplicitType": "En/A",
+        "Name": "Zealot Boots",
+        "DropLevel": 40,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Slot": "Boots",
+        "ImplicitType": "En/A",
+        "Name": "Soldier Boots",
+        "DropLevel": 49,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Slot": "Boots",
+        "ImplicitType": "En/A",
+        "Name": "Legion Boots",
+        "DropLevel": 58,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Slot": "Boots",
+        "ImplicitType": "En/A",
+        "Name": "Crusader Boots",
+        "DropLevel": 64,
+        "MaxLevel": true
+    },
+    {
+        "Type": "Equipment",
+        "Slot": "Boots",
+        "ImplicitType": "En/A",
+        "Name": "Two-Toned Boots",
+        "DropLevel": 70,
+        "MaxLevel": true
+    }
+]

@@ -1,0 +1,138 @@
+[
+    {
+        "Type": "Equipment",
+        "Slot": "Chest",
+        "ImplicitType": "Ev",
+        "Name": "Shabby Jerkin",
+        "DropLevel": 2,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Slot": "Chest",
+        "ImplicitType": "Ev",
+        "Name": "Strapped Leather",
+        "DropLevel": 9,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Slot": "Chest",
+        "ImplicitType": "Ev",
+        "Name": "Buckskin Tunic",
+        "DropLevel": 17,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Slot": "Chest",
+        "ImplicitType": "Ev",
+        "Name": "Wild Leather",
+        "DropLevel": 25,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Slot": "Chest",
+        "ImplicitType": "Ev",
+        "Name": "Full Leather",
+        "DropLevel": 28,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Slot": "Chest",
+        "ImplicitType": "Ev",
+        "Name": "Sun Leather",
+        "DropLevel": 32,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Slot": "Chest",
+        "ImplicitType": "Ev",
+        "Name": "Thief's Garb",
+        "DropLevel": 35,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Slot": "Chest",
+        "ImplicitType": "Ev",
+        "Name": "Eelskin Tunic",
+        "DropLevel": 37,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Slot": "Chest",
+        "ImplicitType": "Ev",
+        "Name": "Frontier Leather",
+        "DropLevel": 41,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Slot": "Chest",
+        "ImplicitType": "Ev",
+        "Name": "Glorious Leather",
+        "DropLevel": 45,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Slot": "Chest",
+        "ImplicitType": "Ev",
+        "Name": "Coronal Leather",
+        "DropLevel": 49,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Slot": "Chest",
+        "ImplicitType": "Ev",
+        "Name": "Cutthroat's Garb",
+        "DropLevel": 53,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Slot": "Chest",
+        "ImplicitType": "Ev",
+        "Name": "Sharkskin Tunic",
+        "DropLevel": 56,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Slot": "Chest",
+        "ImplicitType": "Ev",
+        "Name": "Destiny Leather",
+        "DropLevel": 59,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Slot": "Chest",
+        "ImplicitType": "Ev",
+        "Name": "Exquisite Leather",
+        "DropLevel": 62,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Slot": "Chest",
+        "ImplicitType": "Ev",
+        "Name": "Zodiac Leather",
+        "DropLevel": 65,
+        "MaxLevel": true
+    },
+    {
+        "Type": "Equipment",
+        "Slot": "Chest",
+        "ImplicitType": "Ev",
+        "Name": "Assassin's Garb",
+        "DropLevel": 68,
+        "MaxLevel": true
+    }
+]

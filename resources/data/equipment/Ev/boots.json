@@ -1,0 +1,74 @@
+[
+    {
+        "Type": "Equipment",
+        "Slot": "Boots",
+        "ImplicitType": "Ev",
+        "Name": "Rawhide Boots",
+        "DropLevel": 3,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Slot": "Boots",
+        "ImplicitType": "Ev",
+        "Name": "Goathide Boots",
+        "DropLevel": 12,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Slot": "Boots",
+        "ImplicitType": "Ev",
+        "Name": "Deerskin Boots",
+        "DropLevel": 22,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Slot": "Boots",
+        "ImplicitType": "Ev",
+        "Name": "Nubuck Boots",
+        "DropLevel": 34,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Slot": "Boots",
+        "ImplicitType": "Ev",
+        "Name": "Eelskin Boots",
+        "DropLevel": 39,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Slot": "Boots",
+        "ImplicitType": "Ev",
+        "Name": "Sharkskin Boots",
+        "DropLevel": 44,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Slot": "Boots",
+        "ImplicitType": "Ev",
+        "Name": "Shagreen Boots",
+        "DropLevel": 55,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Slot": "Boots",
+        "ImplicitType": "Ev",
+        "Name": "Stealth Boots",
+        "DropLevel": 62,
+        "MaxLevel": true
+    },
+    {
+        "Type": "Equipment",
+        "Slot": "Boots",
+        "ImplicitType": "Ev",
+        "Name": "Slink Boots",
+        "DropLevel": 69,
+        "MaxLevel": true
+    }
+]

@@ -1,0 +1,74 @@
+[
+    {
+        "Type": "Equipment",
+        "Slot": "Boots",
+        "ImplicitType": "En",
+        "Name": "Wool Shoes",
+        "DropLevel": 3,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Slot": "Boots",
+        "ImplicitType": "En",
+        "Name": "Velvet Slippers",
+        "DropLevel": 9,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Slot": "Boots",
+        "ImplicitType": "En",
+        "Name": "Silk Slippers",
+        "DropLevel": 22,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Slot": "Boots",
+        "ImplicitType": "En",
+        "Name": "Scholar Boots",
+        "DropLevel": 32,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Slot": "Boots",
+        "ImplicitType": "En",
+        "Name": "Satin Slippers",
+        "DropLevel": 38,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Slot": "Boots",
+        "ImplicitType": "En",
+        "Name": "Samite Slippers",
+        "DropLevel": 44,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Slot": "Boots",
+        "ImplicitType": "En",
+        "Name": "Conjurer Boots",
+        "DropLevel": 53,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Slot": "Boots",
+        "ImplicitType": "En",
+        "Name": "Arcanist Slippers",
+        "DropLevel": 61,
+        "MaxLevel": true
+    },
+    {
+        "Type": "Equipment",
+        "Slot": "Boots",
+        "ImplicitType": "En",
+        "Name": "Sorcerer Boots",
+        "DropLevel": 67,
+        "MaxLevel": true
+    }
+]

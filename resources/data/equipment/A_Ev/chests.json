@@ -1,0 +1,138 @@
+[
+    {
+        "Type": "Equipment",
+        "Slot": "Chest",
+        "ImplicitType": "A/Ev",
+        "Name": "Scale Vest",
+        "DropLevel": 4,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Slot": "Chest",
+        "ImplicitType": "A/Ev",
+        "Name": "Light Brigandine",
+        "DropLevel": 8,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Slot": "Chest",
+        "ImplicitType": "A/Ev",
+        "Name": "Scale Doublet",
+        "DropLevel": 17,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Slot": "Chest",
+        "ImplicitType": "A/Ev",
+        "Name": "Infantry Brigandine",
+        "DropLevel": 21,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Slot": "Chest",
+        "ImplicitType": "A/Ev",
+        "Name": "Full Scale Armour",
+        "DropLevel": 28,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Slot": "Chest",
+        "ImplicitType": "A/Ev",
+        "Name": "Soldier's Brigandine",
+        "DropLevel": 32,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Slot": "Chest",
+        "ImplicitType": "A/Ev",
+        "Name": "Field Lamellar",
+        "DropLevel": 35,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Slot": "Chest",
+        "ImplicitType": "A/Ev",
+        "Name": "Wyrmscale Doublet",
+        "DropLevel": 38,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Slot": "Chest",
+        "ImplicitType": "A/Ev",
+        "Name": "Hussar Brigandine",
+        "DropLevel": 42,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Slot": "Chest",
+        "ImplicitType": "A/Ev",
+        "Name": "Full Wyrmscale",
+        "DropLevel": 46,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Slot": "Chest",
+        "ImplicitType": "A/Ev",
+        "Name": "Commander's Brigandine",
+        "DropLevel": 50,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Slot": "Chest",
+        "ImplicitType": "A/Ev",
+        "Name": "Battle Lamellar",
+        "DropLevel": 54,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Slot": "Chest",
+        "ImplicitType": "A/Ev",
+        "Name": "Dragonscale Doublet",
+        "DropLevel": 57,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Slot": "Chest",
+        "ImplicitType": "A/Ev",
+        "Name": "Desert Brigandine",
+        "DropLevel": 60,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Slot": "Chest",
+        "ImplicitType": "A/Ev",
+        "Name": "Full Dragonscale",
+        "DropLevel": 63,
+        "MaxLevel": true
+    },
+    {
+        "Type": "Equipment",
+        "Slot": "Chest",
+        "ImplicitType": "A/Ev",
+        "Name": "General's Brigandine",
+        "DropLevel": 66,
+        "MaxLevel": true
+    },
+    {
+        "Type": "Equipment",
+        "Slot": "Chest",
+        "ImplicitType": "A/Ev",
+        "Name": "Triumphant Lamellar",
+        "DropLevel": 69,
+        "MaxLevel": true
+    }
+]

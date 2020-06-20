@@ -1,0 +1,90 @@
+[
+    {
+        "Type": "Equipment",
+        "Slot": "Helmet",
+        "ImplicitType": "Ev",
+        "Name": "Vine Circlet",
+        "DropLevel": 3,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Slot": "Helmet",
+        "ImplicitType": "Ev",
+        "Name": "Iron Circlet",
+        "DropLevel": 8,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Slot": "Helmet",
+        "ImplicitType": "Ev",
+        "Name": "Torture Cage",
+        "DropLevel": 17,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Slot": "Helmet",
+        "ImplicitType": "Ev",
+        "Name": "Tribal Circlet",
+        "DropLevel": 26,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Slot": "Helmet",
+        "ImplicitType": "Ev",
+        "Name": "Bone Circlet",
+        "DropLevel": 34,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Slot": "Helmet",
+        "ImplicitType": "Ev",
+        "Name": "Lunaris Circlet",
+        "DropLevel": 39,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Slot": "Helmet",
+        "ImplicitType": "Ev",
+        "Name": "Steel Circlet",
+        "DropLevel": 48,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Slot": "Helmet",
+        "ImplicitType": "Ev",
+        "Name": "Necromancer Circlet",
+        "DropLevel": 54,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Slot": "Helmet",
+        "ImplicitType": "Ev",
+        "Name": "Solaris Circlet",
+        "DropLevel": 59,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Slot": "Helmet",
+        "ImplicitType": "Ev",
+        "Name": "Mind Cage",
+        "DropLevel": 65,
+        "MaxLevel": true
+    },
+    {
+        "Type": "Equipment",
+        "Slot": "Helmet",
+        "ImplicitType": "Ev",
+        "Name": "Hubris Circlet",
+        "DropLevel": 69,
+        "MaxLevel": true
+    }
+]

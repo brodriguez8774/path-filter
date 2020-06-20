@@ -1,0 +1,82 @@
+[
+    {
+        "Type": "Equipment",
+        "Slot": "Gloves",
+        "ImplicitType": "En",
+        "Name": "Wool Gloves",
+        "DropLevel": 3,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Slot": "Gloves",
+        "ImplicitType": "En",
+        "Name": "Velvet Gloves",
+        "DropLevel": 12,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Slot": "Gloves",
+        "ImplicitType": "En",
+        "Name": "Silk Gloves",
+        "DropLevel": 25,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Slot": "Gloves",
+        "ImplicitType": "En",
+        "Name": "Embroidered Gloves",
+        "DropLevel": 36,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Slot": "Gloves",
+        "ImplicitType": "En",
+        "Name": "Satin Gloves",
+        "DropLevel": 41,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Slot": "Gloves",
+        "ImplicitType": "En",
+        "Name": "Samite Gloves",
+        "DropLevel": 47,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Slot": "Gloves",
+        "ImplicitType": "En",
+        "Name": "Conjurer Gloves",
+        "DropLevel": 55,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Slot": "Gloves",
+        "ImplicitType": "En",
+        "Name": "Arcanist Gloves",
+        "DropLevel": 60,
+        "MaxLevel": true
+    },
+    {
+        "Type": "Equipment",
+        "Slot": "Gloves",
+        "ImplicitType": "En",
+        "Name": "Sorcerer Gloves",
+        "DropLevel": 69,
+        "MaxLevel": true
+    },
+    {
+        "Type": "Equipment",
+        "Slot": "Gloves",
+        "ImplicitType": "En",
+        "Name": "Fingerless Silk Gloves",
+        "DropLevel": 70,
+        "MaxLevel": true
+    }
+]

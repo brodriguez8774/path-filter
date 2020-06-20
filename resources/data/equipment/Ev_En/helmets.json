@@ -1,0 +1,90 @@
+[
+    {
+        "Type": "Equipment",
+        "Slot": "Helmet",
+        "ImplicitType": "Ev/En",
+        "Name": "Scare Mask",
+        "DropLevel": 4,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Slot": "Helmet",
+        "ImplicitType": "Ev/En",
+        "Name": "Plague Mask",
+        "DropLevel": 10,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Slot": "Helmet",
+        "ImplicitType": "Ev/En",
+        "Name": "Iron Mask",
+        "DropLevel": 17,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Slot": "Helmet",
+        "ImplicitType": "Ev/En",
+        "Name": "Festival Mask",
+        "DropLevel": 28,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Slot": "Helmet",
+        "ImplicitType": "Ev/En",
+        "Name": "Golden Mask",
+        "DropLevel": 35,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Slot": "Helmet",
+        "ImplicitType": "Ev/En",
+        "Name": "Raven Mask",
+        "DropLevel": 38,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Slot": "Helmet",
+        "ImplicitType": "Ev/En",
+        "Name": "Callous Mask",
+        "DropLevel": 45,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Slot": "Helmet",
+        "ImplicitType": "Ev/En",
+        "Name": "Regicide Mask",
+        "DropLevel": 52,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Slot": "Helmet",
+        "ImplicitType": "Ev/En",
+        "Name": "Harlequin Mask",
+        "DropLevel": 57,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Slot": "Helmet",
+        "ImplicitType": "Ev/En",
+        "Name": "Vaal Mask",
+        "DropLevel": 62,
+        "MaxLevel": true
+    },
+    {
+        "Type": "Equipment",
+        "Slot": "Helmet",
+        "ImplicitType": "Ev/En",
+        "Name": "Deicide Mask",
+        "DropLevel": 67,
+        "MaxLevel": true
+    }
+]

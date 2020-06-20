@@ -1,0 +1,82 @@
+[
+    {
+        "Type": "Equipment",
+        "Slot": "Boots",
+        "ImplicitType": "Ev/En",
+        "Name": "Wrapped Boots",
+        "DropLevel": 6,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Slot": "Boots",
+        "ImplicitType": "Ev/En",
+        "Name": "Strapped Boots",
+        "DropLevel": 16,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Slot": "Boots",
+        "ImplicitType": "Ev/En",
+        "Name": "Clasped Boots",
+        "DropLevel": 27,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Slot": "Boots",
+        "ImplicitType": "Ev/En",
+        "Name": "Shackled Boots",
+        "DropLevel": 34,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Slot": "Boots",
+        "ImplicitType": "Ev/En",
+        "Name": "Trapper Boots",
+        "DropLevel": 41,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Slot": "Boots",
+        "ImplicitType": "Ev/En",
+        "Name": "Ambush Boots",
+        "DropLevel": 47,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Slot": "Boots",
+        "ImplicitType": "Ev/En",
+        "Name": "Carnal Boots",
+        "DropLevel": 55,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Slot": "Boots",
+        "ImplicitType": "Ev/En",
+        "Name": "Assassin's Boots",
+        "DropLevel": 63,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Slot": "Boots",
+        "ImplicitType": "Ev/En",
+        "Name": "Murder Boots",
+        "DropLevel": 69,
+        "MaxLevel": true
+    },
+    {
+        "Type": "Equipment",
+        "Slot": "Boots",
+        "ImplicitType": "Ev/En",
+        "Name": "Two-Toned Boots",
+        "DropLevel": 70,
+        "MaxLevel": true
+    }
+]

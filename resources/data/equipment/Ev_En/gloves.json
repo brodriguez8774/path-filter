@@ -1,0 +1,66 @@
+[
+    {
+        "Type": "Equipment",
+        "Slot": "Gloves",
+        "ImplicitType": "Ev/En",
+        "Name": "Wrapped Mitts",
+        "DropLevel": 5,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Slot": "Gloves",
+        "ImplicitType": "Ev/En",
+        "Name": "Strapped Mitts",
+        "DropLevel": 16,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Slot": "Gloves",
+        "ImplicitType": "Ev/En",
+        "Name": "Clasped Mitts",
+        "DropLevel": 31,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Slot": "Gloves",
+        "ImplicitType": "Ev/En",
+        "Name": "Trapper Mitts",
+        "DropLevel": 36,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Slot": "Gloves",
+        "ImplicitType": "Ev/En",
+        "Name": "Ambush Mitts",
+        "DropLevel": 45,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Slot": "Gloves",
+        "ImplicitType": "Ev/En",
+        "Name": "Carnal Mitts",
+        "DropLevel": 50,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Slot": "Gloves",
+        "ImplicitType": "Ev/En",
+        "Name": "Assassin's Mitts",
+        "DropLevel": 58,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Slot": "Gloves",
+        "ImplicitType": "Ev/En",
+        "Name": "Murder Mitts",
+        "DropLevel": 67,
+        "MaxLevel": true
+    }
+]

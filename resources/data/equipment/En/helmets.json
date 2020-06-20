@@ -1,0 +1,82 @@
+[
+    {
+        "Type": "Equipment",
+        "Slot": "Helmet",
+        "ImplicitType": "En",
+        "Name": "Leather Cap",
+        "DropLevel": 3,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Slot": "Helmet",
+        "ImplicitType": "En",
+        "Name": "Tricorne",
+        "DropLevel": 10,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Slot": "Helmet",
+        "ImplicitType": "En",
+        "Name": "Leather Hood",
+        "DropLevel": 20,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Slot": "Helmet",
+        "ImplicitType": "En",
+        "Name": "Wolf Pelt",
+        "DropLevel": 30,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Slot": "Helmet",
+        "ImplicitType": "En",
+        "Name": "Hunter Hood",
+        "DropLevel": 41,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Slot": "Helmet",
+        "ImplicitType": "En",
+        "Name": "Noble Tricorne",
+        "DropLevel": 47,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Slot": "Helmet",
+        "ImplicitType": "En",
+        "Name": "Ursine Pelt",
+        "DropLevel": 55,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Slot": "Helmet",
+        "ImplicitType": "En",
+        "Name": "Silken Hood",
+        "DropLevel": 60,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Slot": "Helmet",
+        "ImplicitType": "En",
+        "Name": "Sinner Tricorne",
+        "DropLevel": 64,
+        "MaxLevel": true
+    },
+    {
+        "Type": "Equipment",
+        "Slot": "Helmet",
+        "ImplicitType": "En",
+        "Name": "Lion Pelt",
+        "DropLevel": 70,
+        "MaxLevel": true
+    }
+]

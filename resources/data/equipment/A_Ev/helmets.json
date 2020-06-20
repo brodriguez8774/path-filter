@@ -1,0 +1,82 @@
+[
+    {
+        "Type": "Equipment",
+        "Slot": "Helmet",
+        "ImplicitType": "A/Ev",
+        "Name": "Battered Helm",
+        "DropLevel": 4,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Slot": "Helmet",
+        "ImplicitType": "A/Ev",
+        "Name": "Sallet",
+        "DropLevel": 13,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Slot": "Helmet",
+        "ImplicitType": "A/Ev",
+        "Name": "Visored Sallet",
+        "DropLevel": 23,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Slot": "Helmet",
+        "ImplicitType": "A/Ev",
+        "Name": "Gilded Sallet",
+        "DropLevel": 33,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Slot": "Helmet",
+        "ImplicitType": "A/Ev",
+        "Name": "Secutor Helm",
+        "DropLevel": 36,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Slot": "Helmet",
+        "ImplicitType": "A/Ev",
+        "Name": "Fencer Helm",
+        "DropLevel": 43,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Slot": "Helmet",
+        "ImplicitType": "A/Ev",
+        "Name": "Lacquered Helmet",
+        "DropLevel": 51,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Slot": "Helmet",
+        "ImplicitType": "A/Ev",
+        "Name": "Fluted Bascinet",
+        "DropLevel": 58,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Slot": "Helmet",
+        "ImplicitType": "A/Ev",
+        "Name": "Pig-Faced Bascinet",
+        "DropLevel": 63,
+        "MaxLevel": true
+    },
+    {
+        "Type": "Equipment",
+        "Slot": "Helmet",
+        "ImplicitType": "A/Ev",
+        "Name": "Nightmare Bascinet",
+        "DropLevel": 67,
+        "MaxLevel": true
+    }
+]

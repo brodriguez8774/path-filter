@@ -1,0 +1,138 @@
+[
+    {
+        "Type": "Equipment",
+        "Slot": "Chest",
+        "ImplicitType": "En",
+        "Name": "Simple Robe",
+        "DropLevel": 1,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Slot": "Chest",
+        "ImplicitType": "En",
+        "Name": "Silken Vest",
+        "DropLevel": 11,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Slot": "Chest",
+        "ImplicitType": "En",
+        "Name": "Scholar's Robe",
+        "DropLevel":18 ,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Slot": "Chest",
+        "ImplicitType": "En",
+        "Name": "Silken Garb",
+        "DropLevel": 25,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Slot": "Chest",
+        "ImplicitType": "En",
+        "Name": "Mage's Vestment",
+        "DropLevel": 28,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Slot": "Chest",
+        "ImplicitType": "En",
+        "Name": "Silk Robe",
+        "DropLevel": 32,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Slot": "Chest",
+        "ImplicitType": "En",
+        "Name": "Cabalist Regalia",
+        "DropLevel": 35,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Slot": "Chest",
+        "ImplicitType": "En",
+        "Name": "Sage's Robe",
+        "DropLevel": 37,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Slot": "Chest",
+        "ImplicitType": "En",
+        "Name": "Silken Wrap",
+        "DropLevel": 41,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Slot": "Chest",
+        "ImplicitType": "En",
+        "Name": "Conjurer's Vestment",
+        "DropLevel": 45,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Slot": "Chest",
+        "ImplicitType": "En",
+        "Name": "Spidersilk Robe",
+        "DropLevel": 49,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Slot": "Chest",
+        "ImplicitType": "En",
+        "Name": "Destroyer Regalia",
+        "DropLevel": 53,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Slot": "Chest",
+        "ImplicitType": "En",
+        "Name": "Savant's Robe",
+        "DropLevel": 56,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Slot": "Chest",
+        "ImplicitType": "En",
+        "Name": "Necromancer Silks",
+        "DropLevel": 59,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Slot": "Chest",
+        "ImplicitType": "En",
+        "Name": "Occultist's Vestment",
+        "DropLevel": 62,
+        "MaxLevel": true
+    },
+    {
+        "Type": "Equipment",
+        "Slot": "Chest",
+        "ImplicitType": "En",
+        "Name": "Widowsilk Robe",
+        "DropLevel": 65,
+        "MaxLevel": true
+    },
+    {
+        "Type": "Equipment",
+        "Slot": "Chest",
+        "ImplicitType": "En",
+        "Name": "Vaal Regalia",
+        "DropLevel": 68,
+        "MaxLevel": true
+    }
+]

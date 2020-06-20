@@ -1,0 +1,90 @@
+[
+    {
+        "Type": "Equipment",
+        "Slot": "Helmet",
+        "ImplicitType": "A",
+        "Name": "Iron Hat",
+        "DropLevel": 1,
+        "MaxLevel": false
+    },
+        {
+        "Type": "Equipment",
+        "Slot": "Helmet",
+        "ImplicitType": "A",
+        "Name": "Cone Helmet",
+        "DropLevel": 7,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Slot": "Helmet",
+        "ImplicitType": "A",
+        "Name": "Barbute Helmet",
+        "DropLevel": 18,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Slot": "Helmet",
+        "ImplicitType": "A",
+        "Name": "Close Helmet",
+        "DropLevel": 26,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Slot": "Helmet",
+        "ImplicitType": "A",
+        "Name": "Gladiator Helmet",
+        "DropLevel": 35,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Slot": "Helmet",
+        "ImplicitType": "A",
+        "Name": "Reaver Helmet",
+        "DropLevel": 40,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Slot": "Helmet",
+        "ImplicitType": "A",
+        "Name": "Siege Helmet",
+        "DropLevel": 48,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Slot": "Helmet",
+        "ImplicitType": "A",
+        "Name": "Samite Helmet",
+        "DropLevel": 55,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Slot": "Helmet",
+        "ImplicitType": "A",
+        "Name": "Ezomyte Burgonet",
+        "DropLevel": 60,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Slot": "Helmet",
+        "ImplicitType": "A",
+        "Name": "Royal Burgonet",
+        "DropLevel": 65,
+        "MaxLevel": true
+    },
+    {
+        "Type": "Equipment",
+        "Slot": "Helmet",
+        "ImplicitType": "A",
+        "Name": "Eternal Burgonet",
+        "DropLevel": 69,
+        "MaxLevel": true
+    }
+]

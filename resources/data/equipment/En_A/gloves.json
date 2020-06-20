@@ -1,0 +1,66 @@
+[
+    {
+        "Type": "Equipment",
+        "Slot": "Gloves",
+        "ImplicitType": "En/A",
+        "Name": "Chain Gloves",
+        "DropLevel": 7,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Slot": "Gloves",
+        "ImplicitType": "En/A",
+        "Name": "Ringmail Gloves",
+        "DropLevel": 19,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Slot": "Gloves",
+        "ImplicitType": "En/A",
+        "Name": "Mesh Gloves",
+        "DropLevel": 32,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Slot": "Gloves",
+        "ImplicitType": "En/A",
+        "Name": "Riveted Gloves",
+        "DropLevel": 37,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Slot": "Gloves",
+        "ImplicitType": "En/A",
+        "Name": "Zealot Gloves",
+        "DropLevel": 43,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Slot": "Gloves",
+        "ImplicitType": "En/A",
+        "Name": "Soldier Gloves",
+        "DropLevel": 51,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Slot": "Gloves",
+        "ImplicitType": "En/A",
+        "Name": "Legion Gloves",
+        "DropLevel": 57,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Slot": "Gloves",
+        "ImplicitType": "En/A",
+        "Name": "Crusader Gloves",
+        "DropLevel": 66,
+        "MaxLevel": true
+    }
+]

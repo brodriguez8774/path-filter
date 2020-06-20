@@ -1,0 +1,74 @@
+[
+    {
+        "Type": "Equipment",
+        "Slot": "Boots",
+        "ImplicitType": "A/Ev",
+        "Name": "Leatherscale Boots",
+        "DropLevel": 6,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Slot": "Boots",
+        "ImplicitType": "A/Ev",
+        "Name": "Ironscale Boots",
+        "DropLevel": 18,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Slot": "Boots",
+        "ImplicitType": "A/Ev",
+        "Name": "Bronzescale Boots",
+        "DropLevel": 30,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Slot": "Boots",
+        "ImplicitType": "A/Ev",
+        "Name": "Steelscale Boots",
+        "DropLevel": 36,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Slot": "Boots",
+        "ImplicitType": "A/Ev",
+        "Name": "Serpentscale Boots",
+        "DropLevel": 42,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Slot": "Boots",
+        "ImplicitType": "A/Ev",
+        "Name": "Wyrmscale Boots",
+        "DropLevel": 51,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Slot": "Boots",
+        "ImplicitType": "A/Ev",
+        "Name": "Hydrascale Boots",
+        "DropLevel": 59,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Slot": "Boots",
+        "ImplicitType": "A/Ev",
+        "Name": "Dragonscale Boots",
+        "DropLevel": 65,
+        "MaxLevel": true
+    },
+    {
+        "Type": "Equipment",
+        "Slot": "Boots",
+        "ImplicitType": "A/Ev",
+        "Name": "Two-Toned Boots",
+        "DropLevel": 70,
+        "MaxLevel": true
+    }
+]

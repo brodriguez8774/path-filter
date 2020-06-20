@@ -1,0 +1,82 @@
+[
+    {
+        "Type": "Equipment",
+        "Slot": "Gloves",
+        "ImplicitType": "A",
+        "Name": "Iron Gauntlets",
+        "DropLevel": 1,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Slot": "Gloves",
+        "ImplicitType": "A",
+        "Name": "Plated Gauntlets",
+        "DropLevel": 11,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Slot": "Gloves",
+        "ImplicitType": "A",
+        "Name": "Bronze Gauntlets",
+        "DropLevel": 23,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Slot": "Gloves",
+        "ImplicitType": "A",
+        "Name": "Steel Gauntlets",
+        "DropLevel": 35,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Slot": "Gloves",
+        "ImplicitType": "A",
+        "Name": "Antique Gauntlets",
+        "DropLevel": 39,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Slot": "Gloves",
+        "ImplicitType": "A",
+        "Name": "Ancient Gauntlets",
+        "DropLevel": 47,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Slot": "Gloves",
+        "ImplicitType": "A",
+        "Name": "Goliath Gauntlets",
+        "DropLevel": 53,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Equipment",
+        "Slot": "Gloves",
+        "ImplicitType": "A",
+        "Name": "Vaal Gauntlets",
+        "DropLevel": 63,
+        "MaxLevel": true
+    },
+    {
+        "Type": "Equipment",
+        "Slot": "Gloves",
+        "ImplicitType": "A",
+        "Name": "Titan Gauntlets",
+        "DropLevel": 69,
+        "MaxLevel": true
+    },
+    {
+        "Type": "Equipment",
+        "Slot": "Gloves",
+        "ImplicitType": "A",
+        "Name": "Spiked Gloves",
+        "DropLevel": 70,
+        "MaxLevel": true
+    }
+]
