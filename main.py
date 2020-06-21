@@ -43,6 +43,12 @@ if __name__ == '__main__':
         help='Use to define desired weapon types to show. Default shows all types.',
     )
     parser.add_argument(
+        '--shield_type',
+        nargs='+',
+        choices=defense_choices,
+        help='Used to define desired shield types to show. Default shows all types.'
+    )
+    parser.add_argument(
         '--debug',
         action='store_true',
         help='Runs program in debug mode.',
@@ -51,11 +57,13 @@ if __name__ == '__main__':
     # Attempt to parse passed args.
     args = parser.parse_args()
 
+    # Get program debug value.
     if args.debug:
         debug = True
     else:
         debug = False
 
+    # Get filter file name.
     if args.name is None:
         # Use default name.
         file_name = 'path.filter'
@@ -72,6 +80,7 @@ if __name__ == '__main__':
         if not file_name.endswith(".filter"):
             file_name += '.filter'
 
+    # Get defense types to filter on.
     if args.defense is None:
         # Default to showing all defense types.
         defense = defense_choices
@@ -79,6 +88,7 @@ if __name__ == '__main__':
         # Show user-specified defense types.
         defense = args.defense
 
+    # Get weapon types to filter on.
     if args.weapons is None:
         # Default to showing all weapon types.
         weapons = weapon_choices
@@ -86,11 +96,21 @@ if __name__ == '__main__':
         # Show user-specified weapon types.
         weapons = args.weapons
 
+    # Get shield types to filter on.
+    if args.shield_type is None:
+        # Default to showing all shield types.
+        shield_type = defense_choices
+    else:
+        # Show user-specified shield types.
+        shield_type = args.shield_type
+
     # Display args.
     logger.info('')
     logger.info('Creating filter:')
     logger.info('    Filter Name: "{0}"'.format(file_name))
     logger.info('    Weapon Types: {0}'.format(weapons))
+    if 'Shields' in weapons:
+        logger.info('    Shield Types: {0}'.format(shield_type))
     logger.info('    Defense Types: {0}'.format(defense))
     logger.info('')
 
@@ -115,7 +135,7 @@ if __name__ == '__main__':
 
         # Generate Weapon Filtering.
         parse_num += 1
-        WeaponParser(filter_file, parse_num, weapons, defense, debug=debug)
+        WeaponParser(filter_file, parse_num, weapons, shield_type, debug=debug)
 
         # Generate Defense Filtering.
         parse_num += 1

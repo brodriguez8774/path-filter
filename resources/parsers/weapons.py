@@ -16,17 +16,17 @@ logger = init_logging.get_logger(__name__)
 
 class WeaponParser():
 
-    def __init__(self, filter_file, parse_num, weapon_types, defense_types, debug=False):
+    def __init__(self, filter_file, parse_num, weapon_types, shield_types, debug=False):
         self.filter_file = filter_file
         self.weapon_types = weapon_types
-        self.defense_types = defense_types
+        self.shield_types = shield_types
         self.parse_num = parse_num
         self.parse_subnum = 0
         self.debug = debug
 
         if self.debug:
             logger.info('weapon_types: {0}'.format(self.weapon_types))
-            logger.info('defense_types: {0}'.format(self.defense_types))
+            logger.info('defense_types: {0}'.format(self.shield_types))
 
         # Handle for all present weapon types. Note that parse order is order that values show up in filter.
         if 'Bows' in self.weapon_types:
@@ -265,7 +265,7 @@ class WeaponParser():
         self.filter_file.write('# -------------------------- #\n')
         self.filter_file.write('\n')
 
-        if 'A' in self.defense_types:
+        if 'A' in self.shield_types:
             # Parse Armor shields.
             subsubnum += 1
 
@@ -282,7 +282,7 @@ class WeaponParser():
                     # Parse item.
                     self.parse_item(item)
 
-        if 'A/Ev' in self.defense_types:
+        if 'A/Ev' in self.shield_types:
             # Parse Armor/Evasion shields.
             subsubnum += 1
 
@@ -299,7 +299,7 @@ class WeaponParser():
                     # Parse item.
                     self.parse_item(item)
 
-        if 'Ev' in self.defense_types:
+        if 'Ev' in self.shield_types:
             # Parse Evasion shields.
             subsubnum += 1
 
@@ -316,7 +316,7 @@ class WeaponParser():
                     # Parse item.
                     self.parse_item(item)
 
-        if 'Ev/En' in self.defense_types:
+        if 'Ev/En' in self.shield_types:
             # Parse Evasion/Energy Shield shields.
             subsubnum += 1
 
@@ -333,7 +333,7 @@ class WeaponParser():
                     # Parse item.
                     self.parse_item(item)
 
-        if 'En' in self.defense_types:
+        if 'En' in self.shield_types:
             # Parse Energy Shield shields.
             subsubnum += 1
 
@@ -350,7 +350,7 @@ class WeaponParser():
                     # Parse item.
                     self.parse_item(item)
 
-        if 'A/En' in self.defense_types:
+        if 'A/En' in self.shield_types:
             # Parse Armor/Energy Shield shields.
             subsubnum += 1
 
