@@ -1,6 +1,6 @@
 [
     {
-        "Type": "Equipment",
+        "Type": "Weapon",
         "Class": "Wand",
         "Name": "Driftwood Wand",
         "Damage": [5, 9],
@@ -10,7 +10,7 @@
         "MaxLevel": false
     },
     {
-        "Type": "Equipment",
+        "Type": "Weapon",
         "Class": "Wand",
         "Name": "Goat's Horn",
         "Damage": [9, 16],
@@ -20,7 +20,7 @@
         "MaxLevel": false
     },
     {
-        "Type": "Equipment",
+        "Type": "Weapon",
         "Class": "Wand",
         "Name": "Carved Wand",
         "Damage": [9, 17],
@@ -30,7 +30,7 @@
         "MaxLevel": false
     },
     {
-        "Type": "Equipment",
+        "Type": "Weapon",
         "Class": "Wand",
         "Name": "Quartz Wand",
         "Damage": [14, 27],
@@ -40,7 +40,7 @@
         "MaxLevel": false
     },
     {
-        "Type": "Equipment",
+        "Type": "Weapon",
         "Class": "Wand",
         "Name": "Spiraled Wand",
         "Damage": [12, 37],
@@ -50,7 +50,7 @@
         "MaxLevel": false
     },
     {
-        "Type": "Equipment",
+        "Type": "Weapon",
         "Class": "Wand",
         "Name": "Sage Wand",
         "Damage": [23, 42],
@@ -60,7 +60,7 @@
         "MaxLevel": false
     },
     {
-        "Type": "Equipment",
+        "Type": "Weapon",
         "Class": "Wand",
         "Name": "Pagan Wand",
         "Damage": [22, 40],
@@ -70,7 +70,7 @@
         "MaxLevel": false
     },
     {
-        "Type": "Equipment",
+        "Type": "Weapon",
         "Class": "Wand",
         "Name": "Faun's Horn",
         "Damage": [26, 48],
@@ -80,7 +80,7 @@
         "MaxLevel": false
     },
     {
-        "Type": "Equipment",
+        "Type": "Weapon",
         "Class": "Wand",
         "Name": "Engraved Wand",
         "Damage": [21, 38],
@@ -90,7 +90,7 @@
         "MaxLevel": false
     },
     {
-        "Type": "Equipment",
+        "Type": "Weapon",
         "Class": "Wand",
         "Name": "Crystal Wand",
         "Damage": [28, 52],
@@ -100,7 +100,7 @@
         "MaxLevel": false
     },
     {
-        "Type": "Equipment",
+        "Type": "Weapon",
         "Class": "Wand",
         "Name": "Serpent Wand",
         "Damage": [21, 64],
@@ -110,7 +110,7 @@
         "MaxLevel": false
     },
     {
-        "Type": "Equipment",
+        "Type": "Weapon",
         "Class": "Wand",
         "Name": "Omen Wand",
         "Damage": [33, 61],
@@ -120,7 +120,7 @@
         "MaxLevel": false
     },
     {
-        "Type": "Equipment",
+        "Type": "Weapon",
         "Class": "Wand",
         "Name": "Heathen Wand",
         "Damage": [31, 57],
@@ -130,7 +130,7 @@
         "MaxLevel": false
     },
     {
-        "Type": "Equipment",
+        "Type": "Weapon",
         "Class": "Wand",
         "Name": "Demon's Horn",
         "Damage": [38, 70],
@@ -140,7 +140,7 @@
         "MaxLevel": false
     },
     {
-        "Type": "Equipment",
+        "Type": "Weapon",
         "Class": "Wand",
         "Name": "Imbued Wand",
         "Damage": [28, 53],
@@ -150,7 +150,7 @@
         "MaxLevel": false
     },
     {
-        "Type": "Equipment",
+        "Type": "Weapon",
         "Class": "Wand",
         "Name": "Opal Wand",
         "Damage": [35, 65],
@@ -160,7 +160,7 @@
         "MaxLevel": false
     },
     {
-        "Type": "Equipment",
+        "Type": "Weapon",
         "Class": "Wand",
         "Name": "Tornado Wand",
         "Damage": [25, 75],
@@ -170,7 +170,7 @@
         "MaxLevel": false
     },
     {
-        "Type": "Equipment",
+        "Type": "Weapon",
         "Class": "Wand",
         "Name": "Prophecy Wand",
         "Damage": [35, 64],
@@ -180,7 +180,7 @@
         "MaxLevel": true
     },
     {
-        "Type": "Equipment",
+        "Type": "Weapon",
         "Class": "Wand",
         "Name": "Profane Wand",
         "Damage": [33, 61],
@@ -190,7 +190,7 @@
         "MaxLevel": true
     },
     {
-        "Type": "Equipment",
+        "Type": "Weapon",
         "Class": "Wand",
         "Name": "Convoking Wand",
         "Damage": [30, 56],
