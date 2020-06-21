@@ -16,13 +16,15 @@ logger = init_logging.get_logger(__name__)
 
 class DefenseParser():
 
-    def __init__(self, filter_file, parse_num, defense_types):
+    def __init__(self, filter_file, parse_num, defense_types, debug=False):
         self.filter_file = filter_file
         self.defense_types = defense_types
         self.parse_num = str(parse_num).zfill(3)
         self.parse_subnum = 0
+        self.debug = debug
 
-        logger.info('defense_types: {0}'.format(self.defense_types))
+        if self.debug:
+            logger.info('defense_types: {0}'.format(self.defense_types))
 
         # Handle for all present weapon types. Note that parse order is order that values show up in filter.
         if 'A' in self.defense_types:
@@ -265,7 +267,8 @@ class DefenseParser():
         """
         Parses all "Armor" type defense equipment.
         """
-        logger.info('Parsing Armor defenses.')
+        if self.debug:
+            logger.info('Parsing Armor defenses.')
 
         parse_subnum = str(self.parse_subnum).zfill(2)
         self.parse_section('A', parse_subnum)
@@ -274,7 +277,8 @@ class DefenseParser():
         """
         Parses all "Armor/Evasion" type defense equipment.
         """
-        logger.info('Parsing Armor/Evasion defenses.')
+        if self.debug:
+            logger.info('Parsing Armor/Evasion defenses.')
 
         parse_subnum = str(self.parse_subnum).zfill(2)
         self.parse_section('A/Ev', parse_subnum)
@@ -283,7 +287,8 @@ class DefenseParser():
         """
         Parses all "Evasion" type defense equipment.
         """
-        logger.info('Parsing Evasion defenses.')
+        if self.debug:
+            logger.info('Parsing Evasion defenses.')
 
         parse_subnum = str(self.parse_subnum).zfill(2)
         self.parse_section('Ev', parse_subnum)
@@ -292,7 +297,8 @@ class DefenseParser():
         """
         Parses all "Evasion/Energy Shield" type defense equipment.
         """
-        logger.info('Parsing Evasion/Energy Shield defenses.')
+        if self.debug:
+            logger.info('Parsing Evasion/Energy Shield defenses.')
 
         parse_subnum = str(self.parse_subnum).zfill(2)
         self.parse_section('Ev/En', parse_subnum)
@@ -301,7 +307,8 @@ class DefenseParser():
         """
         Parses all "Energy Shield" type defense equipment.
         """
-        logger.info('Parsing Energy Shield defenses.')
+        if self.debug:
+            logger.info('Parsing Energy Shield defenses.')
 
         parse_subnum = str(self.parse_subnum).zfill(2)
         self.parse_section('En', parse_subnum)
@@ -310,7 +317,8 @@ class DefenseParser():
         """
         Parses all "Armor/Energy Shield" type defense equipment.
         """
-        logger.info('Parsing Armor/Energy Shield defenses.')
+        if self.debug:
+            logger.info('Parsing Armor/Energy Shield defenses.')
 
         parse_subnum = str(self.parse_subnum).zfill(2)
         self.parse_section('En/A', parse_subnum)

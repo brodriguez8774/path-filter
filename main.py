@@ -28,23 +28,33 @@ if __name__ == '__main__':
     parser.add_argument(
         '-n', '--name',
         nargs='+',
-        help='Name for loot filter. Defaults to "path.filter" if not specified.'
+        help='Name for loot filter. Defaults to "path.filter" if not specified.',
     )
     parser.add_argument(
         '-d', '--defense',
         nargs='+',
         choices=defense_choices,
-        help='Use to define desired armor types to show. Default shows all types.'
+        help='Use to define desired armor types to show. Default shows all types.',
     )
     parser.add_argument(
         '-w', '--weapons',
         nargs='+',
         choices=weapon_choices,
-        help='Use to define desired weapon types to show. Default shows all types.'
+        help='Use to define desired weapon types to show. Default shows all types.',
+    )
+    parser.add_argument(
+        '--debug',
+        action='store_true',
+        help='Runs program in debug mode.',
     )
 
     # Attempt to parse passed args.
     args = parser.parse_args()
+
+    if args.debug:
+        debug = True
+    else:
+        debug = False
 
     if args.name is None:
         # Use default name.
@@ -105,11 +115,11 @@ if __name__ == '__main__':
 
         # Generate Weapon Filtering.
         parse_num += 1
-        WeaponParser(filter_file, parse_num, weapons, defense)
+        WeaponParser(filter_file, parse_num, weapons, defense, debug=debug)
 
         # Generate Defense Filtering.
         parse_num += 1
-        DefenseParser(filter_file, parse_num, defense)
+        DefenseParser(filter_file, parse_num, defense, debug=debug)
 
     logger.info('')
     logger.info('Created filter at "./generated_filters/{0}"'.format(file_name))

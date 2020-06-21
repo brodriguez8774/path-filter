@@ -16,15 +16,17 @@ logger = init_logging.get_logger(__name__)
 
 class WeaponParser():
 
-    def __init__(self, filter_file, parse_num, weapon_types, defense_types):
+    def __init__(self, filter_file, parse_num, weapon_types, defense_types, debug=False):
         self.filter_file = filter_file
         self.weapon_types = weapon_types
         self.defense_types = defense_types
         self.parse_num = parse_num
         self.parse_subnum = 0
+        self.debug = debug
 
-        logger.info('weapon_types: {0}'.format(self.weapon_types))
-        logger.info('defense_types: {0}'.format(self.defense_types))
+        if self.debug:
+            logger.info('weapon_types: {0}'.format(self.weapon_types))
+            logger.info('defense_types: {0}'.format(self.defense_types))
 
         # Handle for all present weapon types. Note that parse order is order that values show up in filter.
         if 'Wands' in self.weapon_types:
@@ -153,7 +155,9 @@ class WeaponParser():
         """
         Parses all "Wand" type weapons.
         """
-        logger.info('Parsing wands.')
+        if self.debug:
+            logger.info('Parsing wands.')
+
         self.parse_subnum += 1
 
         # Section Start.
@@ -175,7 +179,9 @@ class WeaponParser():
         """
         Parses all "Shield" type items, based on selected defenses.
         """
-        logger.info('Parsing Shields.')
+        if self.debug:
+            logger.info('Parsing Shields.')
+
         self.parse_subnum += 1
         subsubnum = 0
 
