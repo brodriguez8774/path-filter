@@ -1,0 +1,92 @@
+[
+    {
+        "Type": "Weapon",
+        "Class": "Quiver",
+        "Name": "Two-Point Arrow Quiver",
+        "Damage": [],
+        "ImplicitType": "Increased Global Accuracy",
+        "ImplicitValue": [20, 30],
+        "DropLevel": 4,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "Quiver",
+        "Name": "Serrated Arrow Quiver",
+        "Damage": [],
+        "ImplicitType": "Added Physical Damage",
+        "ImplicitValue": [1, 4],
+        "DropLevel": 5,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "Quiver",
+        "Name": "Sharktooth Arrow Quiver",
+        "Damage": [],
+        "ImplicitType": "Life Gain on Hit",
+        "ImplicitValue": [3, 4],
+        "DropLevel": 10,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "Quiver",
+        "Name": "Blunt Arrow Quiver",
+        "Damage": [],
+        "ImplicitType": "Increased Stun Duration",
+        "ImplicitValue": [25, 35],
+        "DropLevel": 16,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "Quiver",
+        "Name": "Fire Arrow Quiver",
+        "Damage": [],
+        "ImplicitType": "Added Fire Damage",
+        "ImplicitValue": [4, 8],
+        "DropLevel": 22,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "Quiver",
+        "Name": "Broadhead Arrow Quiver",
+        "Damage": [],
+        "ImplicitType": "Added Physical Damage",
+        "ImplicitValue": [6, 12],
+        "DropLevel": 28,
+        "MaxLevel": true
+    },
+    {
+        "Type": "Weapon",
+        "Class": "Quiver",
+        "Name": "Penetrating Arrow Quiver",
+        "Damage": [],
+        "ImplicitType": "Pierce",
+        "ImplicitValue": [1],
+        "DropLevel": 36,
+        "MaxLevel": true
+    },
+    {
+        "Type": "Weapon",
+        "Class": "Quiver",
+        "Name": "Ornate Quiver",
+        "Damage": [],
+        "ImplicitType": "Has 1 Socket",
+        "ImplicitValue": [],
+        "DropLevel": 45,
+        "MaxLevel": true
+    },
+    {
+        "Type": "Weapon",
+        "Class": "Quiver",
+        "Name": "Spike-Point Arrow Quiver",
+        "Damage": [],
+        "ImplicitType": "Increased Global Critical Strike Chance",
+        "ImplicitValue": [20, 30],
+        "DropLevel": 45,
+        "MaxLevel": true
+    }
+]
