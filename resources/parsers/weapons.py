@@ -29,6 +29,12 @@ class WeaponParser():
             logger.info('defense_types: {0}'.format(self.defense_types))
 
         # Handle for all present weapon types. Note that parse order is order that values show up in filter.
+        if 'Bows' in self.weapon_types:
+            self.parse_bows()
+
+        if 'Quivers' in self.weapon_types:
+            self.parse_quivers()
+
         if 'Wands' in self.weapon_types:
             self.parse_wands()
 
@@ -45,8 +51,12 @@ class WeaponParser():
         self.filter_file.write('# === Item: {0} === #\n'.format(item['Name']))
 
         self.parse_item_rare(item)
-        self.parse_item_rgb(item)
-        self.parse_item_max_slot(item)
+
+        # Exclude for weapons that don't have slots.
+        if item['Class'] != 'Quiver':
+            self.parse_item_rgb(item)
+            self.parse_item_max_slot(item)
+
         self.parse_item_uncommon(item)
         self.parse_item_base(item)
 
@@ -150,6 +160,54 @@ class WeaponParser():
         self.filter_file.write('    SetBackgroundColor {0}\n'.format(value_dict['weapon']))
         self.filter_file.write('    SetFontSize {0}\n'.format(value_dict['default_font_size']))
         self.filter_file.write('\n')
+
+    def parse_bows(self):
+        """
+        Parses all "Bow" type weapons.
+        """
+        if self.debug:
+            logger.info('Parsing bows.')
+
+        self.parse_subnum += 1
+
+        # Section Start.
+        self.filter_file.write('\n')
+        self.filter_file.write('# ----------------------- #\n')
+        self.filter_file.write('# --- [{0}.{1}] - Bows --- #\n'.format(self.parse_num, self.parse_subnum))
+        self.filter_file.write('# ----------------------- #\n')
+        self.filter_file.write('\n')
+
+        # Parse wands.
+        with open('resources/data/hand/bows.json', 'r') as json_file:
+            # Loop through all items in json.
+            json_data = json.load(json_file)
+            for item in json_data:
+                # Parse item.
+                self.parse_item(item)
+
+    def parse_quivers(self):
+        """
+        Parses all "Quiver" type weapons.
+        """
+        if self.debug:
+            logger.info('Parsing quivers.')
+
+        self.parse_subnum += 1
+
+        # Section Start.
+        self.filter_file.write('\n')
+        self.filter_file.write('# --------------------------- #\n')
+        self.filter_file.write('# --- [{0}.{1}] - Quivers --- #\n'.format(self.parse_num, self.parse_subnum))
+        self.filter_file.write('# --------------------------- #\n')
+        self.filter_file.write('\n')
+
+        # Parse wands.
+        with open('resources/data/hand/quivers.json', 'r') as json_file:
+            # Loop through all items in json.
+            json_data = json.load(json_file)
+            for item in json_data:
+                # Parse item.
+                self.parse_item(item)
 
     def parse_wands(self):
         """

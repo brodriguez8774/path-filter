@@ -21,7 +21,7 @@ if __name__ == '__main__':
     logger.info('')
 
     defense_choices = ['A', 'Ev', 'En', 'A/Ev', 'Ev/En', 'A/En']
-    weapon_choices = ['Wands', 'Shields']
+    weapon_choices = ['Bows', 'Quivers', 'Wands', 'Shields']
 
     # Define argument parsing.
     parser = argparse.ArgumentParser(description='Generates a loot filter file for path of exile.')
