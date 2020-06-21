@@ -130,6 +130,8 @@ if __name__ == '__main__':
         filter_file.write('\n\n')
         filter_file.write('# Generated with:\n')
         filter_file.write('#     Weapons: {0}\n'.format(weapons))
+        if 'Shields' in weapons:
+            filter_file.write('#     Shields: {0}\n'.format(shield_type))
         filter_file.write('#     Defense: {0}\n'.format(defense))
         filter_file.write('\n\n')
 
