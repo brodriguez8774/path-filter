@@ -152,7 +152,7 @@ class DefenseParser():
         self.filter_file.write('Show\n')
 
         # Limitations to filter on.
-        self.filter_file.write('    BaseType {0}\n'.format(item['Name']))
+        self.filter_file.write('    BaseType "{0}"\n'.format(item['Name']))
         if not item['MaxLevel']:    # Only filter on ItemLevel if item is not a max-level drop.
             self.filter_file.write('    ItemLevel <= {0}\n'.format(item['DropLevel'] + 10))
         self.filter_file.write('    Rarity = Rare\n')
@@ -173,7 +173,7 @@ class DefenseParser():
         self.filter_file.write('Show\n')
 
         # Limitations to filter on.
-        self.filter_file.write('    BaseType {0}\n'.format(item['Name']))
+        self.filter_file.write('    BaseType "{0}"\n'.format(item['Name']))
         if not item['MaxLevel']:    # Only filter on ItemLevel if item is not a max-level drop.
             self.filter_file.write('    ItemLevel <= {0}\n'.format(item['DropLevel'] + 10))
         self.filter_file.write('    SocketGroup "RGB"\n')
@@ -198,7 +198,7 @@ class DefenseParser():
             self.filter_file.write('Show\n')
 
             # Limitations to filter on.
-            self.filter_file.write('    BaseType {0}\n'.format(item['Name']))
+            self.filter_file.write('    BaseType "{0}"\n'.format(item['Name']))
             self.filter_file.write('    ItemLevel <= {0}\n'.format(item['DropLevel']))
             self.filter_file.write('    LinkedSockets >= 3\n')
 
@@ -214,7 +214,7 @@ class DefenseParser():
             self.filter_file.write('Show\n')
 
             # Limitations to filter on.
-            self.filter_file.write('    BaseType {0}\n'.format(item['Name']))
+            self.filter_file.write('    BaseType "{0}"\n'.format(item['Name']))
             self.filter_file.write('    ItemLevel <= {0}\n'.format(item['DropLevel']))
             self.filter_file.write('    LinkedSockets >= 4\n')
 
@@ -233,7 +233,7 @@ class DefenseParser():
         self.filter_file.write('Show\n')
 
         # Limitations to filter on.
-        self.filter_file.write('    BaseType {0}\n'.format(item['Name']))
+        self.filter_file.write('    BaseType "{0}"\n'.format(item['Name']))
         if not item['MaxLevel']:    # Only filter on ItemLevel if item is not a max-level drop.
             self.filter_file.write('    ItemLevel <= {0}\n'.format(item['DropLevel'] + 10))
         self.filter_file.write('    Rarity = Magic\n')
@@ -254,7 +254,7 @@ class DefenseParser():
         self.filter_file.write('Show\n')
 
         # Limitations to filter on.
-        self.filter_file.write('    BaseType {0}\n'.format(item['Name']))
+        self.filter_file.write('    BaseType "{0}"\n'.format(item['Name']))
         if not item['MaxLevel']:    # Only filter on ItemLevel if item is not a max-level drop.
             self.filter_file.write('    ItemLevel <= {0}\n'.format(item['DropLevel'] + 10))
 
