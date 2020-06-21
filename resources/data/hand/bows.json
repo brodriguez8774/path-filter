@@ -1,0 +1,252 @@
+[
+    {
+        "Type": "Weapon",
+        "Class": "Bow",
+        "Name": "Crude Bow",
+        "Damage": [5, 13],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 1,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "Bow",
+        "Name": "Short Bow",
+        "Damage": [6, 16],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 5,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "Bow",
+        "Name": "Long Bow",
+        "Damage": [6, 25],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 9,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "Bow",
+        "Name": "Composite Bow",
+        "Damage": [12, 26],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 14,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "Bow",
+        "Name": "Recurve Bow",
+        "Damage": [11, 34],
+        "ImplicitType": "Global Critical Strike Multiplier",
+        "ImplicitValue": [15, 25],
+        "DropLevel": 18,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "Bow",
+        "Name": "Bone Bow",
+        "Damage": [11, 34],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 23,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "Bow",
+        "Name": "Royal Bow",
+        "Damage": [10, 41],
+        "ImplicitType": "Increased Elemental Damage",
+        "ImplicitValue": [20, 24],
+        "DropLevel": 28,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "Bow",
+        "Name": "Death Bow",
+        "Damage": [20, 53],
+        "ImplicitType": "Increased Critical Strike Chance",
+        "ImplicitValue": [30, 50],
+        "DropLevel": 32,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "Bow",
+        "Name": "Grove Bow",
+        "Damage": [15, 44],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 35,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "Bow",
+        "Name": "Reflex Bow",
+        "Damage": [27, 40],
+        "ImplicitType": "Increased Movement Speed",
+        "ImplicitValue": [4],
+        "DropLevel": 36,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "Bow",
+        "Name": "Decurve Bow",
+        "Damage": [17, 70],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 38,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "Bow",
+        "Name": "Compound Bow",
+        "Damage": [26, 54],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 41,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "Bow",
+        "Name": "Sniper Bow",
+        "Damage": [23, 68],
+        "ImplicitType": "Global Critical Strike Multiplier",
+        "ImplicitValue": [15, 25],
+        "DropLevel": 44,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "Bow",
+        "Name": "Ivory Bow",
+        "Damage": [20, 61],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 47,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "Bow",
+        "Name": "Highborn Bow",
+        "Damage": [17, 66],
+        "ImplicitType": "Increased Elemental Damage",
+        "ImplicitValue": [20, 24],
+        "DropLevel": 50,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "Bow",
+        "Name": "Decimation Bow",
+        "Damage": [31, 81],
+        "ImplicitType": "Increased Critical Strike Chance",
+        "ImplicitValue": [30, 50],
+        "DropLevel": 53,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "Bow",
+        "Name": "Thicket Bow",
+        "Damage": [22, 66],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 56,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "Bow",
+        "Name": "Steelwood Bow",
+        "Damage": [40, 60],
+        "ImplicitType": "Increased Movement Speed",
+        "ImplicitValue": [4],
+        "DropLevel": 57,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "Bow",
+        "Name": "Citadel Bow",
+        "Damage": [25, 101],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 58,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "Bow",
+        "Name": "Ranger Bow",
+        "Damage": [39, 80],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 60,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "Bow",
+        "Name": "Assassin Bow",
+        "Damage": [30, 89],
+        "ImplicitType": "Global Critical Strike Multiplier",
+        "ImplicitValue": [15, 25],
+        "DropLevel": 62,
+        "MaxLevel": true
+    },
+    {
+        "Type": "Weapon",
+        "Class": "Bow",
+        "Name": "Spine Bow",
+        "Damage": [26, 78],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 64,
+        "MaxLevel": true
+    },
+    {
+        "Type": "Weapon",
+        "Class": "Bow",
+        "Name": "Imperial Bow",
+        "Damage": [19, 78],
+        "ImplicitType": "Increased Elemental Damage",
+        "ImplicitValue": [20, 24],
+        "DropLevel": 66,
+        "MaxLevel": true
+    },
+    {
+        "Type": "Weapon",
+        "Class": "Bow",
+        "Name": "Harbinger Bow",
+        "Damage": [35, 91],
+        "ImplicitType": "Increased Critical Strike Chance",
+        "ImplicitValue": [30, 50],
+        "DropLevel": 68,
+        "MaxLevel": true
+    },
+    {
+        "Type": "Weapon",
+        "Class": "Bow",
+        "Name": "Maraketh Bow",
+        "Damage": [44, 65],
+        "ImplicitType": "Increased Movement Speed",
+        "ImplicitValue": [10],
+        "DropLevel": 71,
+        "MaxLevel": true
+    }
+]
