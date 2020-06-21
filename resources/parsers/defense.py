@@ -160,7 +160,7 @@ class DefenseParser():
         # Values to set if filter match is found.
         self.filter_file.write('    SetBackgroundColor {0}\n'.format(value_dict[def_type]))
         self.filter_file.write('    SetBorderColor {0}\n'.format(value_dict['rare']))
-        self.filter_file.write('    SetFontSize {0}\n'.format(value_dict['default_font_size']))
+        self.filter_file.write('    SetFontSize {0}\n'.format(value_dict['rare_font_size']))
         self.filter_file.write('\n')
 
     def parse_item_rgb(self, def_type, item):
@@ -181,7 +181,7 @@ class DefenseParser():
         # Values to set if filter match is found.
         self.filter_file.write('    SetBackgroundColor {0}\n'.format(value_dict[def_type]))
         self.filter_file.write('    SetBorderColor {0}\n'.format(value_dict['normal']))
-        self.filter_file.write('    SetFontSize {0}\n'.format(value_dict['default_font_size']))
+        self.filter_file.write('    SetFontSize {0}\n'.format(value_dict['uncommon_font_size']))
         self.filter_file.write('\n')
 
     def parse_item_max_slot(self, def_type, item):
@@ -193,34 +193,34 @@ class DefenseParser():
         item_level = item['DropLevel']
 
         if item_level <= 25:
-            # Filter for 3-socket max items.
+            # Filter for 3-socket max items early on.
             self.filter_file.write('# Max Slot Type.\n')
             self.filter_file.write('Show\n')
 
             # Limitations to filter on.
             self.filter_file.write('    BaseType "{0}"\n'.format(item['Name']))
-            self.filter_file.write('    ItemLevel <= {0}\n'.format(item['DropLevel']))
+            self.filter_file.write('    ItemLevel <= {0}\n'.format(item['DropLevel'] + 10))
             self.filter_file.write('    LinkedSockets >= 3\n')
 
             # Values to set if filter match is found.
             self.filter_file.write('    SetBackgroundColor {0}\n'.format(value_dict[def_type]))
             self.filter_file.write('    SetBorderColor {0}\n'.format(value_dict['normal']))
-            self.filter_file.write('    SetFontSize {0}\n'.format(value_dict['default_font_size']))
+            self.filter_file.write('    SetFontSize {0}\n'.format(value_dict['uncommon_font_size']))
             self.filter_file.write('\n')
 
         elif item_level <= 35:
-            # Filter for 4-socket max items.
+            # Filter for 4-socket max items early on.
             self.filter_file.write('# Max Slot Type.\n')
             self.filter_file.write('Show\n')
 
             # Limitations to filter on.
             self.filter_file.write('    BaseType "{0}"\n'.format(item['Name']))
-            self.filter_file.write('    ItemLevel <= {0}\n'.format(item['DropLevel']))
+            self.filter_file.write('    ItemLevel <= {0}\n'.format(item['DropLevel']  + 10))
             self.filter_file.write('    LinkedSockets >= 4\n')
 
             # Values to set if filter match is found.
             self.filter_file.write('    SetBackgroundColor {0}\n'.format(value_dict[def_type]))
-            self.filter_file.write('    SetFontSize {0}\n'.format(value_dict['default_font_size']))
+            self.filter_file.write('    SetFontSize {0}\n'.format(value_dict['uncommon_font_size']))
             self.filter_file.write('\n')
 
     def parse_item_uncommon(self, def_type, item):
@@ -241,7 +241,7 @@ class DefenseParser():
         # Values to set if filter match is found.
         self.filter_file.write('    SetBackgroundColor {0}\n'.format(value_dict[def_type]))
         self.filter_file.write('    SetBorderColor {0}\n'.format(value_dict['magic']))
-        self.filter_file.write('    SetFontSize {0}\n'.format(value_dict['default_font_size']))
+        self.filter_file.write('    SetFontSize {0}\n'.format(value_dict['uncommon_font_size']))
         self.filter_file.write('\n')
 
     def parse_item_base(self, def_type, item):

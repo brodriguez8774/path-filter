@@ -22,5 +22,9 @@ value_dict = {
     'weapon': '75 75 75',
 
     # Font values.
+    'unique_font_size': 50,
+    'rare_font_size': 32,
+    'uncommon_font_size': 25,
     'default_font_size': 20,
+
 }
