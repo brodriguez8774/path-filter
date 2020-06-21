@@ -34,6 +34,10 @@ class WeaponParser():
             self.parse_shields()
 
     def parse_item(self, item):
+        """
+        Parses an individual item.
+        :param item: The item to parse.
+        """
         # logger.info(item)
         self.filter_file.write('\n\n')
         self.filter_file.write('# === Item: {0} === #\n'.format(item['Name']))
@@ -45,6 +49,10 @@ class WeaponParser():
         self.parse_item_base(item)
 
     def parse_item_rare(self, item):
+        """
+        Handles filtering for rare version of item.
+        :param item: The item to parse.
+        """
         self.filter_file.write('# Rare Type.\n')
         self.filter_file.write('Show\n')
 
@@ -61,6 +69,10 @@ class WeaponParser():
         self.filter_file.write('\n')
 
     def parse_item_rgb(self, item):
+        """
+        Handles filtering for linked RGB version of item.
+        :param item: The item to parse.
+        """
         self.filter_file.write('# Linked RGB Type.\n')
         self.filter_file.write('Show\n')
 
@@ -77,6 +89,10 @@ class WeaponParser():
         self.filter_file.write('\n')
 
     def parse_item_max_slot(self, item):
+        """
+        Handles filtering for max slot version of item.
+        :param item: The item to parse.
+        """
         item_level = item['DropLevel']
 
         if item_level <= 25:
@@ -96,6 +112,10 @@ class WeaponParser():
             self.filter_file.write('\n')
 
     def parse_item_uncommon(self, item):
+        """
+        Handles filtering for uncommon/magic version of item.
+        :param item: The item to parse.
+        """
         self.filter_file.write('# Uncommon Type.\n')
         self.filter_file.write('Show\n')
 
@@ -112,6 +132,10 @@ class WeaponParser():
         self.filter_file.write('\n')
 
     def parse_item_base(self, item):
+        """
+        Handles filtering for standard version of item.
+        :param item: The item to parse.
+        """
         self.filter_file.write('# Base Type.\n')
         self.filter_file.write('Show\n')
 
@@ -126,6 +150,9 @@ class WeaponParser():
         self.filter_file.write('\n')
 
     def parse_wands(self):
+        """
+        Parses all "Wand" type weapons.
+        """
         logger.info('Parsing wands.')
         self.parse_subnum += 1
 
@@ -145,6 +172,9 @@ class WeaponParser():
                 self.parse_item(item)
 
     def parse_shields(self):
+        """
+        Parses all "Shield" type items, based on selected defenses.
+        """
         logger.info('Parsing Shields.')
         self.parse_subnum += 1
         subsubnum = 0

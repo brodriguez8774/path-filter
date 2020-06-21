@@ -50,6 +50,11 @@ class DefenseParser():
             self.parse_en_a()
 
     def parse_section(self, def_type, subnum):
+        """
+        Parses a full armor type section.
+        :param def_type: The armor type to parse.
+        :param subnum: Counter of "armor type sections" parsed so far.
+        """
         def_file = def_type.replace('/', '_')
 
         # Section Start.
@@ -120,6 +125,11 @@ class DefenseParser():
                 self.parse_item(def_type, item)
 
     def parse_item(self, def_type, item):
+        """
+        Parses an individual item.
+        :param def_type: Defense type of the item.
+        :param item: The item to parse.
+        """
         # logger.info(item)
         self.filter_file.write('\n\n')
         self.filter_file.write('# === Item: {0} === #\n'.format(item['Name']))
@@ -131,6 +141,11 @@ class DefenseParser():
         self.parse_item_base(def_type, item)
 
     def parse_item_rare(self, def_type, item):
+        """
+        Handles filtering for rare version of item.
+        :param def_type: Defense type of the item.
+        :param item: The item to parse.
+        """
         self.filter_file.write('# Rare Type.\n')
         self.filter_file.write('Show\n')
 
@@ -147,6 +162,11 @@ class DefenseParser():
         self.filter_file.write('\n')
 
     def parse_item_rgb(self, def_type, item):
+        """
+        Handles filtering for linked RGB version of item.
+        :param def_type: Defense type of the item.
+        :param item: The item to parse.
+        """
         self.filter_file.write('# Linked RGB Type.\n')
         self.filter_file.write('Show\n')
 
@@ -163,6 +183,11 @@ class DefenseParser():
         self.filter_file.write('\n')
 
     def parse_item_max_slot(self, def_type, item):
+        """
+        Handles filtering for max slot version of item.
+        :param def_type: Defense type of the item.
+        :param item: The item to parse.
+        """
         item_level = item['DropLevel']
 
         if item_level <= 25:
@@ -197,6 +222,11 @@ class DefenseParser():
             self.filter_file.write('\n')
 
     def parse_item_uncommon(self, def_type, item):
+        """
+        Handles filtering for uncommon/magic version of item.
+        :param def_type: Defense type of the item.
+        :param item: The item to parse.
+        """
         self.filter_file.write('# Uncommon Type.\n')
         self.filter_file.write('Show\n')
 
@@ -213,6 +243,11 @@ class DefenseParser():
         self.filter_file.write('\n')
 
     def parse_item_base(self, def_type, item):
+        """
+        Handles filtering for standard version of item.
+        :param def_type: Defense type of the item.
+        :param item: The item to parse.
+        """
         self.filter_file.write('# Base Type.\n')
         self.filter_file.write('Show\n')
 
@@ -227,36 +262,54 @@ class DefenseParser():
         self.filter_file.write('\n')
 
     def parse_a(self):
+        """
+        Parses all "Armor" type defense equipment.
+        """
         logger.info('Parsing Armor defenses.')
 
         parse_subnum = str(self.parse_subnum).zfill(2)
         self.parse_section('A', parse_subnum)
 
     def parse_a_ev(self):
+        """
+        Parses all "Armor/Evasion" type defense equipment.
+        """
         logger.info('Parsing Armor/Evasion defenses.')
 
         parse_subnum = str(self.parse_subnum).zfill(2)
         self.parse_section('A/Ev', parse_subnum)
 
     def parse_ev(self):
+        """
+        Parses all "Evasion" type defense equipment.
+        """
         logger.info('Parsing Evasion defenses.')
 
         parse_subnum = str(self.parse_subnum).zfill(2)
         self.parse_section('Ev', parse_subnum)
 
     def parse_ev_en(self):
+        """
+        Parses all "Evasion/Energy Shield" type defense equipment.
+        """
         logger.info('Parsing Evasion/Energy Shield defenses.')
 
         parse_subnum = str(self.parse_subnum).zfill(2)
         self.parse_section('Ev/En', parse_subnum)
 
     def parse_en(self):
+        """
+        Parses all "Energy Shield" type defense equipment.
+        """
         logger.info('Parsing Energy Shield defenses.')
 
         parse_subnum = str(self.parse_subnum).zfill(2)
         self.parse_section('En', parse_subnum)
 
     def parse_en_a(self):
+        """
+        Parses all "Armor/Energy Shield" type defense equipment.
+        """
         logger.info('Parsing Armor/Energy Shield defenses.')
 
         parse_subnum = str(self.parse_subnum).zfill(2)
