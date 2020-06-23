@@ -75,6 +75,51 @@ class FlaskParser():
         """
         self.parse_subnum += 1
 
+        self.filter_file.write('\n')
+        self.filter_file.write('# -------------------------------------- #\n')
+        self.filter_file.write('# --- [{0}.{1}] - High Quality Flasks --- #\n'.format(self.parse_num, str(self.parse_subnum).zfill(2)))
+        self.filter_file.write('# -------------------------------------- #\n')
+        self.filter_file.write('\n')
+
+        # High quality between 15 and 20%.
+        self.filter_file.write('# High quality flasks [15 - 20]%.\n')
+        self.filter_file.write('Show\n')
+
+        # Limitations to filter on.
+        self.filter_file.write(
+            '    BaseType "Life Flasks" "Mana Flasks" "Hybrid Flasks" "Utility Flasks" "Critical Utility Flasks"\n')
+        self.filter_file.write('    Quality >= 15\n')
+
+        # Values to set if filter match is found.
+        self.filter_file.write('    SetBackgroundColor {0}\n'.format(display_dict['standard_background']))
+        self.filter_file.write('    SetFontSize {0}\n'.format(display_dict['important_font_size']))
+        self.filter_file.write('    MinimapIcon 2 {0} {1}\n'.format(
+            display_dict['minimap_icon_flasks'],
+            display_dict['minimap_color_flasks'],
+        ))
+        self.filter_file.write('    PlayEffect {0}\n'.format(display_dict['minimap_color_flasks']))
+        self.filter_file.write('\n')
+
+        # High quality between 10 and 15%.
+        self.filter_file.write('# High quality flasks [10 - 15]%.\n')
+        self.filter_file.write('Show\n')
+
+        # Limitations to filter on.
+        self.filter_file.write('    BaseType "Life Flasks" "Mana Flasks" "Hybrid Flasks" "Utility Flasks" "Critical Utility Flasks"\n')
+        self.filter_file.write('    Quality >= 10\n')
+
+        # Values to set if filter match is found.
+        self.filter_file.write('    SetBackgroundColor {0}\n'.format(display_dict['standard_background']))
+        self.filter_file.write('    SetFontSize {0}\n'.format(display_dict['uncommon_font_size']))
+        self.filter_file.write('    MinimapIcon 2 {0} {1}\n'.format(
+            display_dict['minimap_icon_flasks'],
+            display_dict['minimap_color_flasks'],
+        ))
+        self.filter_file.write('    PlayEffect {0}\n'.format(display_dict['minimap_color_flasks']))
+        self.filter_file.write('\n')
+
+        # High quality between 5 and 10%.
+        self.filter_file.write('# High quality flasks [5 - 10]%.\n')
         self.filter_file.write('Show\n')
 
         # Limitations to filter on.
@@ -83,7 +128,7 @@ class FlaskParser():
 
         # Values to set if filter match is found.
         self.filter_file.write('    SetBackgroundColor {0}\n'.format(display_dict['standard_background']))
-        self.filter_file.write('    SetFontSize {0}\n'.format(display_dict['important_font_size']))
+        self.filter_file.write('    SetFontSize {0}\n'.format(display_dict['default_font_size']))
         self.filter_file.write('    MinimapIcon 2 {0} {1}\n'.format(
             display_dict['minimap_icon_flasks'],
             display_dict['minimap_color_flasks'],
