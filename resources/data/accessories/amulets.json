@@ -1,0 +1,98 @@
+[
+    {
+        "Type": "Accessory",
+        "Class": "Amulet",
+        "Name": "Coral Amulet",
+        "ImplicitType": "Life Regen Per Second",
+        "ImplicitValue": [2, 4],
+        "DropLevel": 1
+    },
+    {
+        "Type": "Accessory",
+        "Class": "Amulet",
+        "Name": "Paua Amulet",
+        "ImplicitType": "Increased Mana Regen",
+        "ImplicitValue": [20, 30],
+        "DropLevel": 1
+    },
+    {
+        "Type": "Accessory",
+        "Class": "Amulet",
+        "Name": "Amber Amulet",
+        "ImplicitType": "+ Strength",
+        "ImplicitValue": [20, 30],
+        "DropLevel": 5
+    },
+    {
+        "Type": "Accessory",
+        "Class": "Amulet",
+        "Name": "Jade Amulet",
+        "ImplicitType": "+ Dex",
+        "ImplicitValue": [20, 30],
+        "DropLevel": 5
+    },
+    {
+        "Type": "Accessory",
+        "Class": "Amulet",
+        "Name": "Lapis Amulet",
+        "ImplicitType": "+ Int",
+        "ImplicitValue": [20, 30],
+        "DropLevel": 5
+    },
+    {
+        "Type": "Accessory",
+        "Class": "Amulet",
+        "Name": "Gold Amulet",
+        "ImplicitType": "Increased Rarity of Items",
+        "ImplicitValue": [12, 20],
+        "DropLevel": 8
+    },
+    {
+        "Type": "Accessory",
+        "Class": "Amulet",
+        "Name": "Agate Amulet",
+        "ImplicitType": "+ Str and Int",
+        "ImplicitValue": [16, 24],
+        "DropLevel": 16
+    },
+    {
+        "Type": "Accessory",
+        "Class": "Amulet",
+        "Name": "Citrine Amulet",
+        "ImplicitType": "+ Str and Dex",
+        "ImplicitValue": [16, 24],
+        "DropLevel": 16
+    },
+    {
+        "Type": "Accessory",
+        "Class": "Amulet",
+        "Name": "Turquoise Amulet",
+        "ImplicitType": "+ Dex and Int",
+        "ImplicitValue": [16, 24],
+        "DropLevel": 16
+    },
+    {
+        "Type": "Accessory",
+        "Class": "Amulet",
+        "Name": "Onyx Amulet",
+        "ImplicitType": "+ All Attributes",
+        "ImplicitValue": [10, 16],
+        "DropLevel": 20
+    },
+    {
+        "Type": "Accessory",
+        "Class": "Amulet",
+        "Name": "Marble Amulet",
+        "ImplicitType": "Regen Life % Per Second",
+        "ImplicitValue": [1.2, 1.6],
+        "DropLevel": 74
+    },
+    {
+        "Type": "Accessory",
+        "Class": "Amulet",
+        "Name": "Blue Pearl Amulet",
+        "ImplicitType": "Blue Pearl Amulet",
+        "ImplicitValue": [48, 56],
+        "DropLevel": 77
+    }
+]

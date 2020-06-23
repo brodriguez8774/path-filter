@@ -1,0 +1,74 @@
+[
+    {
+        "Type": "Accessory",
+        "Class": "Belt",
+        "Name": "Chain Belt",
+        "ImplicitType": "+ Maximum Energy Shield",
+        "ImplicitValue": [9, 20],
+        "DropLevel": 1
+    },
+    {
+        "Type": "Accessory",
+        "Class": "Belt",
+        "Name": "Rustic Sash",
+        "ImplicitType": "Increased Global Physical Damage",
+        "ImplicitValue": [12, 24],
+        "DropLevel": 1
+    },
+    {
+        "Type": "Accessory",
+        "Class": "Belt",
+        "Name": "Stygian Vise",
+        "ImplicitType": "Has Abyssal Socket",
+        "ImplicitValue": [1],
+        "DropLevel": 1
+    },
+    {
+        "Type": "Accessory",
+        "Class": "Belt",
+        "Name": "Heavy Belt",
+        "ImplicitType": "+ Strength",
+        "ImplicitValue": [25, 35],
+        "DropLevel": 8
+    },
+    {
+        "Type": "Accessory",
+        "Class": "Belt",
+        "Name": "Leather Belt",
+        "ImplicitType": "+ Maximum Life",
+        "ImplicitValue": [25, 40],
+        "DropLevel": 8
+    },
+    {
+        "Type": "Accessory",
+        "Class": "Belt",
+        "Name": "Cloth Belt",
+        "ImplicitType": "Increased Stun and Block Recovery",
+        "ImplicitValue": [15, 25],
+        "DropLevel": 16
+    },
+    {
+        "Type": "Accessory",
+        "Class": "Belt",
+        "Name": "Studded Belt",
+        "ImplicitType": "Increased Stun Duration",
+        "ImplicitValue": [20, 30],
+        "DropLevel":
+    },
+    {
+        "Type": "Accessory",
+        "Class": "Belt",
+        "Name": "Vanguard Belt",
+        "ImplicitType": "+ Armor and Evasion",
+        "ImplicitValue": [260, 320],
+        "DropLevel": 78
+    },
+    {
+        "Type": "Accessory",
+        "Class": "Belt",
+        "Name": "Crystal Belt",
+        "ImplicitType": "+ Maximum Energy Shield",
+        "ImplicitValue": [60, 80],
+        "DropLevel": 79
+    }
+]

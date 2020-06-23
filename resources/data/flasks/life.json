@@ -1,0 +1,98 @@
+[
+    {
+        "Type": "Flask",
+        "Class": "Life",
+        "Name": "Small Life Flask",
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 1
+    },
+    {
+        "Type": "Flask",
+        "Class": "Life",
+        "Name": "Medium Life Flask",
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 3
+    },
+    {
+        "Type": "Flask",
+        "Class": "Life",
+        "Name": "Large Life Flask",
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 6
+    },
+    {
+        "Type": "Flask",
+        "Class": "Life",
+        "Name": "Greater Life Flask",
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 12
+    },
+    {
+        "Type": "Flask",
+        "Class": "Life",
+        "Name": "Grand Life Flask",
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 18
+    },
+    {
+        "Type": "Flask",
+        "Class": "Life",
+        "Name": "Giant Life Flask",
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 24
+    },
+    {
+        "Type": "Flask",
+        "Class": "Life",
+        "Name": "Colossal Life Flask",
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 30
+    },
+    {
+        "Type": "Flask",
+        "Class": "Life",
+        "Name": "Sacred Life Flask",
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 36
+    },
+    {
+        "Type": "Flask",
+        "Class": "Life",
+        "Name": "Hallowed Life Flask",
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 42
+    },
+    {
+        "Type": "Flask",
+        "Class": "Life",
+        "Name": "Sanctified Life Flask",
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 50
+    },
+    {
+        "Type": "Flask",
+        "Class": "Life",
+        "Name": "Divine Life Flask",
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 60
+    },
+    {
+        "Type": "Flask",
+        "Class": "Life",
+        "Name": "Eternal Life Flask",
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 65
+    }
+]

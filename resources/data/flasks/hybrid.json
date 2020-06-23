@@ -1,0 +1,50 @@
+[
+    {
+        "Type": "Flask",
+        "Class": "Hybrid",
+        "Name": "Small Hybrid Flask",
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 10
+    },
+    {
+        "Type": "Flask",
+        "Class": "Hybrid",
+        "Name": "Medium Hybrid Flask",
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 20
+    },
+    {
+        "Type": "Flask",
+        "Class": "Hybrid",
+        "Name": "Large Hybrid Flask",
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 30
+    },
+    {
+        "Type": "Flask",
+        "Class": "Hybrid",
+        "Name": "Colossal Hybrid Flask",
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 40
+    },
+    {
+        "Type": "Flask",
+        "Class": "Hybrid",
+        "Name": "Sacred Hybrid Flask",
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 50
+    },
+    {
+        "Type": "Flask",
+        "Class": "Hybrid",
+        "Name": "Hallowed Hybrid Flask",
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 60
+    }
+]

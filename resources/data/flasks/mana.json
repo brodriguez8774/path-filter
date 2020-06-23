@@ -1,0 +1,98 @@
+[
+    {
+        "Type": "Flask",
+        "Class": "Mana",
+        "Name": "Small Mana Flask",
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 1
+    },
+    {
+        "Type": "Flask",
+        "Class": "Mana",
+        "Name": "Medium Mana Flask",
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 3
+    },
+    {
+        "Type": "Flask",
+        "Class": "Mana",
+        "Name": "Large Mana Flask",
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 6
+    },
+    {
+        "Type": "Flask",
+        "Class": "Mana",
+        "Name": "Greater Mana Flask",
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 12
+    },
+    {
+        "Type": "Flask",
+        "Class": "Mana",
+        "Name": "Grand Mana Flask",
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 18
+    },
+    {
+        "Type": "Flask",
+        "Class": "Mana",
+        "Name": "Giant Mana Flask",
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 24
+    },
+    {
+        "Type": "Flask",
+        "Class": "Mana",
+        "Name": "Colossal Mana Flask",
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 30
+    },
+    {
+        "Type": "Flask",
+        "Class": "Mana",
+        "Name": "Sacred Mana Flask",
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 36
+    },
+    {
+        "Type": "Flask",
+        "Class": "Mana",
+        "Name": "Hallowed Mana Flask",
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 42
+    },
+    {
+        "Type": "Flask",
+        "Class": "Mana",
+        "Name": "Sanctified Mana Flask",
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 50
+    },
+    {
+        "Type": "Flask",
+        "Class": "Mana",
+        "Name": "Divine Mana Flask",
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 60
+    },
+    {
+        "Type": "Flask",
+        "Class": "Mana",
+        "Name": "Eternal Mana Flask",
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 65
+    }
+]

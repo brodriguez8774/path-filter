@@ -1,0 +1,146 @@
+[
+    {
+        "Type": "Accessory",
+        "Class": "Ring",
+        "Name": "Breach Ring",
+        "ImplicitType": "Properties Doubled in a Breach",
+        "ImplicitValue": [],
+        "DropLevel": 1
+    },
+    {
+        "Type": "Accessory",
+        "Class": "Ring",
+        "Name": "Coral Ring",
+        "ImplicitType": "+ Maximum Life",
+        "ImplicitValue": [20, 30],
+        "DropLevel":
+    },
+    {
+        "Type": "Accessory",
+        "Class": "Ring",
+        "Name": "Iron Ring",
+        "ImplicitType": "Added Physical Damage to Attacks",
+        "ImplicitValue": [1, 4],
+        "DropLevel": 1
+    },
+    {
+        "Type": "Accessory",
+        "Class": "Ring",
+        "Name": "Paua Ring",
+        "ImplicitType": "+ Maximum Mana",
+        "ImplicitValue": [20, 30],
+        "DropLevel": 1
+    },
+    {
+        "Type": "Accessory",
+        "Class": "Ring",
+        "Name": "Unset Ring",
+        "ImplicitType": "Has Socket",
+        "ImplicitValue": [1],
+        "DropLevel": 5
+    },
+    {
+        "Type": "Accessory",
+        "Class": "Ring",
+        "Name": "Sapphire Ring",
+        "ImplicitType": "+ Cold Resistance",
+        "ImplicitValue": [20, 30],
+        "DropLevel": 8
+    },
+    {
+        "Type": "Accessory",
+        "Class": "Ring",
+        "Name": "Topaz Ring",
+        "ImplicitType": "+ Lightning Resistance",
+        "ImplicitValue": [20, 30],
+        "DropLevel": 12
+    },
+    {
+        "Type": "Accessory",
+        "Class": "Ring",
+        "Name": "Ruby Ring",
+        "ImplicitType": "+ Fire Resistance",
+        "ImplicitValue": [20, 30],
+        "DropLevel": 16
+    },
+    {
+        "Type": "Accessory",
+        "Class": "Ring",
+        "Name": "Diamond Ring",
+        "ImplicitType": "Increased Global Critical Strike Chance",
+        "ImplicitValue": [20, 30],
+        "DropLevel": 20
+    },
+    {
+        "Type": "Accessory",
+        "Class": "Ring",
+        "Name": "Gold Ring",
+        "ImplicitType": "Increased Rarity of Items",
+        "ImplicitValue": [6, 15],
+        "DropLevel": 20
+    },
+    {
+        "Type": "Accessory",
+        "Class": "Ring",
+        "Name": "Moonstone Ring",
+        "ImplicitType": "+ Maximum Energy Shield",
+        "ImplicitValue": [15, 25],
+        "DropLevel": 20
+    },
+    {
+        "Type": "Accessory",
+        "Class": "Ring",
+        "Name": "Two-Stone Ring",
+        "ImplicitType": "+ to Two all Elemental Resistances",
+        "ImplicitValue": [12, 16],
+        "DropLevel": 20
+    },
+    {
+        "Type": "Accessory",
+        "Class": "Ring",
+        "Name": "Amethyst Ring",
+        "ImplicitType": "+ Chaos Resistance",
+        "ImplicitValue": [9, 13],
+        "DropLevel": 30
+    },
+    {
+        "Type": "Accessory",
+        "Class": "Ring",
+        "Name": "Prismatic Ring",
+        "ImplicitType": "+ to All Elemental Resistances",
+        "ImplicitValue": [8, 10],
+        "DropLevel": 30
+    },
+    {
+        "Type": "Accessory",
+        "Class": "Ring",
+        "Name": "Cerulean Ring",
+        "ImplicitType": "Increased Maximum Mana",
+        "ImplicitValue": [8, 10],
+        "DropLevel": 80
+    },
+    {
+        "Type": "Accessory",
+        "Class": "Ring",
+        "Name": "Opal Ring",
+        "ImplicitType": "Increased Elemental Damage",
+        "ImplicitValue": [15, 25],
+        "DropLevel": 80
+    },
+    {
+        "Type": "Accessory",
+        "Class": "Ring",
+        "Name": "Steel Ring",
+        "ImplicitType": "Added Physical Damage",
+        "ImplicitValue": [3, 4, 10, 14],
+        "DropLevel": 80
+    },
+    {
+        "Type": "Accessory",
+        "Class": "Ring",
+        "Name": "Vermillion Ring",
+        "ImplicitType": "Increased Maximum Life",
+        "ImplicitValue": [5, 7],
+        "DropLevel": 80
+    }
+]

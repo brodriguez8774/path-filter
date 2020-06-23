@@ -1,0 +1,122 @@
+[
+    {
+        "Type": "Flask",
+        "Class": "Utility",
+        "Name": "Quicksilver Flask",
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 4
+    },
+    {
+        "Type": "Flask",
+        "Class": "Utility",
+        "Name": "Bismuth Flask",
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 8
+    },
+    {
+        "Type": "Flask",
+        "Class": "Utility",
+        "Name": "Stibnite Flask",
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 14
+    },
+    {
+        "Type": "Flask",
+        "Class": "Utility",
+        "Name": "Amethyst Flask",
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 18
+    },
+    {
+        "Type": "Flask",
+        "Class": "Utility",
+        "Name": "Ruby Flask",
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 18
+    },
+    {
+        "Type": "Flask",
+        "Class": "Utility",
+        "Name": "Sapphire Flask",
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 18
+    },
+    {
+        "Type": "Flask",
+        "Class": "Utility",
+        "Name": "Topaz Flask",
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 18
+    },
+    {
+        "Type": "Flask",
+        "Class": "Utility",
+        "Name": "Silver Flask",
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 22
+    },
+    {
+        "Type": "Flask",
+        "Class": "Utility",
+        "Name": "Aquamarine Flask",
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 27
+    },
+    {
+        "Type": "Flask",
+        "Class": "Utility",
+        "Name": "Granite Flask",
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 27
+    },
+    {
+        "Type": "Flask",
+        "Class": "Utility",
+        "Name": "Jade Flask",
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 27
+    },
+    {
+        "Type": "Flask",
+        "Class": "Utility",
+        "Name": "Quartz Flask",
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 27
+    },
+    {
+        "Type": "Flask",
+        "Class": "Utility",
+        "Name": "Diamond Flask",
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 27
+    },
+    {
+        "Type": "Flask",
+        "Class": "Utility",
+        "Name": "Sulphur Flask",
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 35
+    },
+    {
+        "Type": "Flask",
+        "Class": "Utility",
+        "Name": "Basalt Flask",
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 40
+    }
+]
