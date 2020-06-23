@@ -29,12 +29,33 @@ display_dict = {
     'En/A': '48 3 48',
 
     # Custom other colors.
+    'unique_background': '66 30 30',
+    'unique_text_color': '175 96 37',
+    'standard_background': '25 25 25',
     'weapon': '75 75 75',
+    'normal_important_text': '255 255 255',
+    'uncommon_important_text': '136 136 255',
+    'rare_important_text': '255 255 119',
 
     # Font values.
     'unique_font_size': 50,
+    'important_font_size': 40,
     'rare_font_size': 32,
     'uncommon_font_size': 25,
     'default_font_size': 20,
     'min_font_size': 18,
+
+    # Minimap icon values.
+    'minimap_icon_currency': 'Circle',          # General currency.
+    'minimap_icon_slots': 'Pentagon',           # 5 or 6 slot items.
+    'minimap_icon_special': 'Triangle',         # League currency and other rare things.
+    'minimap_icon_unique': 'UpsideDownHouse',   # Unique items.
+    'minimap_icon_flasks': 'Raindrop',          # Flask items.
+
+    # Minimap color values.
+    'minimap_color_currency': 'White',          # General currency.
+    'minimap_color_slots': 'Yellow',            # 5 or 6 slot items.
+    'minimap_color_special': 'Purple',          # League currency and other rare things.
+    'minimap_color_unique': 'Orange',           # Unique items.
+    'minimap_color_flasks': 'Blue',             # Flask items.
 }
