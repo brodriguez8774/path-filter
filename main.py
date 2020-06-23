@@ -11,6 +11,7 @@ from resources.parsers.accessories import AccessoryParser
 from resources.parsers.currency import CurrencyParser, PreEquipment_CurrencyParser, PostEquipment_CurrencyParser
 from resources.parsers.defense import DefenseParser
 from resources.parsers.other import UniqueParser, NotableGearParser
+from resources.parsers.table_of_contents import TableOfContentsGenerator
 from resources.parsers.weapons import WeaponParser
 from resources.data.value_dictionary import filter_dict
 
@@ -166,6 +167,10 @@ if __name__ == '__main__':
             filter_file.write('#     Shields: {0}\n'.format(shield_type))
         filter_file.write('#     Defense: {0}\n'.format(defense))
         filter_file.write('\n\n')
+
+        # Generate Table of Contents.
+        parse_num += 1
+        TableOfContentsGenerator(filter_file, weapons, defense, shield_type, debug=debug)
 
         # Generate Unique Filtering.
         parse_num += 1
