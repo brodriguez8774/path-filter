@@ -2,7 +2,17 @@
 Dictionary of general values used repeatedly in program.
 """
 
-value_dict = {
+
+# Dictionary for filter value variables.
+filter_dict = {
+# Leveling attributes.
+    'base_drop_level': 10,     # By default, show items that are within 10 levels of the initial drop level.
+    'level_rarity_modifier': 5,    # By default, show uncommon by +5 levels above and rare by +10 levels above.
+}
+
+
+# Dictionary for display value variables.
+display_dict = {
     # "Standard" in game colors.
     'normal': '200 200 200',
     'magic': '136 136 255',
@@ -26,5 +36,4 @@ value_dict = {
     'rare_font_size': 32,
     'uncommon_font_size': 25,
     'default_font_size': 20,
-
 }

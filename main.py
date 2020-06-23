@@ -10,6 +10,7 @@ from resources import logging as init_logging
 from resources.parsers.accessories import AccessoryParser
 from resources.parsers.defense import DefenseParser
 from resources.parsers.weapons import WeaponParser
+from resources.data.value_dictionary import filter_dict
 
 
 # Initialize Logger.
@@ -47,6 +48,20 @@ if __name__ == '__main__':
         nargs='+',
         choices=defense_choices,
         help='Used to define desired shield types to show. Default shows all types.'
+    )
+    parser.add_argument(
+        '--base_drop_level',
+        nargs=1,
+        type=int,
+        help='Defines how many levels a weapon/armor item drop should display for, from when it starts spawning. '
+             'Defaults to 10'
+    )
+    parser.add_argument(
+        '--level_rarity_modifier',
+        nargs=1,
+        type=int,
+        help='Defines how many additional levels to display a weapon/armor item drop, based on rarity. '
+             'Defaults to +5.'
     )
     parser.add_argument(
         '--debug',
@@ -104,6 +119,16 @@ if __name__ == '__main__':
         # Show user-specified shield types.
         shield_type = args.shield_type
 
+    # Get leveling args.
+    if args.base_drop_level is None:
+        base_drop_level = filter_dict['base_drop_level']
+    else:
+        base_drop_level = args.base_drop_level[0]
+    if args.level_rarity_modifier is None:
+        level_rarity_modifier = filter_dict['level_rarity_modifier']
+    else:
+        level_rarity_modifier = args.level_rarity_modifier[0]
+
     # Display args.
     logger.info('')
     logger.info('Creating filter:')
@@ -112,6 +137,13 @@ if __name__ == '__main__':
     if 'Shields' in weapons:
         logger.info('    Shield Types: {0}'.format(shield_type))
     logger.info('    Defense Types: {0}'.format(defense))
+    logger.info('')
+    logger.info('    Drop Level Modifiers (from item base drop level):')
+    logger.info('        Base:     +{0}'.format(base_drop_level))
+    logger.info('        Uncommon: +{0}'.format(base_drop_level + level_rarity_modifier))
+    logger.info('        Rare:     +{0}'.format(base_drop_level + (level_rarity_modifier * 2)))
+
+
     logger.info('')
 
     # Create generation folder, if not present.
@@ -137,11 +169,11 @@ if __name__ == '__main__':
 
         # Generate Weapon Filtering.
         parse_num += 1
-        WeaponParser(filter_file, parse_num, weapons, shield_type, debug=debug)
+        WeaponParser(filter_file, parse_num, weapons, shield_type, base_drop_level, level_rarity_modifier, debug=debug)
 
         # Generate Defense Filtering.
         parse_num += 1
-        DefenseParser(filter_file, parse_num, defense, debug=debug)
+        DefenseParser(filter_file, parse_num, defense, base_drop_level, level_rarity_modifier, debug=debug)
 
     logger.info('')
     logger.info('Created filter at "./generated_filters/{0}"'.format(file_name))
