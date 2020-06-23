@@ -21,7 +21,7 @@ class WeaponParser():
         self.filter_file = filter_file
         self.weapon_types = weapon_types
         self.shield_types = shield_types
-        self.parse_num = str(parse_num).zfill(2)
+        self.parse_num = str(parse_num).zfill(3)
         self.parse_subnum = 0
         self.debug = debug
 
@@ -35,9 +35,9 @@ class WeaponParser():
 
         # Section Start.
         self.filter_file.write('\n')
-        self.filter_file.write('# ====================== #\n')
+        self.filter_file.write('# ======================= #\n')
         self.filter_file.write('# === [{0}] - Weapons === #\n'.format(self.parse_num))
-        self.filter_file.write('# ====================== #\n')
+        self.filter_file.write('# ======================= #\n')
         self.filter_file.write('\n')
 
         # Handle for all present weapon types. Note that parse order is order that values show up in filter.
@@ -208,9 +208,9 @@ class WeaponParser():
 
         # Section Start.
         self.filter_file.write('\n')
-        self.filter_file.write('# ---------------------- #\n')
+        self.filter_file.write('# ----------------------- #\n')
         self.filter_file.write('# --- [{0}.{1}] - Bows --- #\n'.format(self.parse_num, str(self.parse_subnum).zfill(2)))
-        self.filter_file.write('# ---------------------- #\n')
+        self.filter_file.write('# ----------------------- #\n')
         self.filter_file.write('\n')
 
         # Parse wands.
@@ -232,9 +232,9 @@ class WeaponParser():
 
         # Section Start.
         self.filter_file.write('\n')
-        self.filter_file.write('# ------------------------- #\n')
+        self.filter_file.write('# -------------------------- #\n')
         self.filter_file.write('# --- [{0}.{1}] - Quivers --- #\n'.format(self.parse_num, str(self.parse_subnum).zfill(2)))
-        self.filter_file.write('# ------------------------- #\n')
+        self.filter_file.write('# -------------------------- #\n')
         self.filter_file.write('\n')
 
         # Parse wands.
@@ -256,9 +256,9 @@ class WeaponParser():
 
         # Section Start.
         self.filter_file.write('\n')
-        self.filter_file.write('# ----------------------- #\n')
+        self.filter_file.write('# ------------------------ #\n')
         self.filter_file.write('# --- [{0}.{1}] - Wands --- #\n'.format(self.parse_num, str(self.parse_subnum).zfill(2)))
-        self.filter_file.write('# ----------------------- #\n')
+        self.filter_file.write('# ------------------------ #\n')
         self.filter_file.write('\n')
 
         # Parse wands.
@@ -281,9 +281,9 @@ class WeaponParser():
 
         # Section Start.
         self.filter_file.write('\n')
-        self.filter_file.write('# ------------------------- #\n')
+        self.filter_file.write('# -------------------------- #\n')
         self.filter_file.write('# --- [{0}.{1}] - Shields --- #\n'.format(self.parse_num, str(self.parse_subnum).zfill(2)))
-        self.filter_file.write('# ------------------------- #\n')
+        self.filter_file.write('# -------------------------- #\n')
         self.filter_file.write('\n')
 
         if 'A' in self.shield_types:
@@ -291,9 +291,9 @@ class WeaponParser():
             subsubnum += 1
 
             self.filter_file.write('\n')
-            self.filter_file.write('# ----------------------------- #\n')
+            self.filter_file.write('# ------------------------------ #\n')
             self.filter_file.write('# --- [{0}.{1}.{2}] - A Shields --- #\n'.format(self.parse_num, str(self.parse_subnum).zfill(2), subsubnum))
-            self.filter_file.write('# ----------------------------- #\n')
+            self.filter_file.write('# ------------------------------ #\n')
             self.filter_file.write('\n')
 
             with open('resources/data/hand/shields/A.json', 'r') as json_file:
@@ -308,9 +308,9 @@ class WeaponParser():
             subsubnum += 1
 
             self.filter_file.write('\n')
-            self.filter_file.write('# -------------------------------- #\n')
+            self.filter_file.write('# --------------------------------- #\n')
             self.filter_file.write('# --- [{0}.{1}.{2}] - A/Ev Shields --- #\n'.format(self.parse_num, str(self.parse_subnum).zfill(2), subsubnum))
-            self.filter_file.write('# -------------------------------- #\n')
+            self.filter_file.write('# --------------------------------- #\n')
             self.filter_file.write('\n')
 
             with open('resources/data/hand/shields/A_Ev.json', 'r') as json_file:
@@ -325,9 +325,9 @@ class WeaponParser():
             subsubnum += 1
 
             self.filter_file.write('\n')
-            self.filter_file.write('# ------------------------------ #\n')
+            self.filter_file.write('# ------------------------------- #\n')
             self.filter_file.write('# --- [{0}.{1}.{2}] - Ev Shields --- #\n'.format(self.parse_num, str(self.parse_subnum).zfill(2), subsubnum))
-            self.filter_file.write('# ------------------------------ #\n')
+            self.filter_file.write('# ------------------------------- #\n')
             self.filter_file.write('\n')
 
             with open('resources/data/hand/shields/Ev.json', 'r') as json_file:
@@ -342,9 +342,9 @@ class WeaponParser():
             subsubnum += 1
 
             self.filter_file.write('\n')
-            self.filter_file.write('# --------------------------------- #\n')
+            self.filter_file.write('# ---------------------------------- #\n')
             self.filter_file.write('# --- [{0}.{1}.{2}] - Ev/En Shields --- #\n'.format(self.parse_num, str(self.parse_subnum).zfill(2), subsubnum))
-            self.filter_file.write('# --------------------------------- #\n')
+            self.filter_file.write('# ---------------------------------- #\n')
             self.filter_file.write('\n')
 
             with open('resources/data/hand/shields/Ev_En.json', 'r') as json_file:
@@ -359,9 +359,9 @@ class WeaponParser():
             subsubnum += 1
 
             self.filter_file.write('\n')
-            self.filter_file.write('# ------------------------------ #\n')
+            self.filter_file.write('# ------------------------------- #\n')
             self.filter_file.write('# --- [{0}.{1}.{2}] - En Shields --- #\n'.format(self.parse_num, str(self.parse_subnum).zfill(2), subsubnum))
-            self.filter_file.write('# ------------------------------ #\n')
+            self.filter_file.write('# ------------------------------- #\n')
             self.filter_file.write('\n')
 
             with open('resources/data/hand/shields/En.json', 'r') as json_file:
@@ -376,9 +376,9 @@ class WeaponParser():
             subsubnum += 1
 
             self.filter_file.write('\n')
-            self.filter_file.write('# -------------------------------- #\n')
+            self.filter_file.write('# --------------------------------- #\n')
             self.filter_file.write('# --- [{0}.{1}.{2}] - A/En Shields --- #\n'.format(self.parse_num, str(self.parse_subnum).zfill(2), subsubnum))
-            self.filter_file.write('# -------------------------------- #\n')
+            self.filter_file.write('# --------------------------------- #\n')
             self.filter_file.write('\n')
 
             with open('resources/data/hand/shields/En_A.json','r') as json_file:

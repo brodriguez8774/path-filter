@@ -20,7 +20,7 @@ class DefenseParser():
         # Set class vars.
         self.filter_file = filter_file
         self.defense_types = defense_types
-        self.parse_num = str(parse_num).zfill(2)
+        self.parse_num = str(parse_num).zfill(3)
         self.parse_subnum = 0
         self.debug = debug
 
@@ -33,9 +33,9 @@ class DefenseParser():
 
         # Section Start.
         self.filter_file.write('\n')
-        self.filter_file.write('# ===================== #\n')
+        self.filter_file.write('# ====================== #\n')
         self.filter_file.write('# === [{0}] - Armors === #\n'.format(self.parse_num))
-        self.filter_file.write('# ===================== #\n')
+        self.filter_file.write('# ====================== #\n')
         self.filter_file.write('\n')
 
         # Handle for all present weapon types. Note that parse order is order that values show up in filter.
@@ -81,18 +81,18 @@ class DefenseParser():
 
         # Section Start.
         self.filter_file.write('\n')
-        self.filter_file.write('# -------------------{0} #\n'.format('-' * padding_count))
+        self.filter_file.write('# --------------------{0} #\n'.format('-' * padding_count))
         self.filter_file.write('# --- [{0}.{1}] - {2} --- #\n'.format(self.parse_num, subnum, def_type))
-        self.filter_file.write('# -------------------{0} #\n'.format('-' * padding_count))
+        self.filter_file.write('# --------------------{0} #\n'.format('-' * padding_count))
         self.filter_file.write('\n')
 
         # Parse helmets.
         with open('resources/data/equipment/{0}/helmets.json'.format(def_file), 'r') as json_file:
             # Create helmet section header.
             self.filter_file.write('\n')
-            self.filter_file.write('# ------------------------------{0} #\n'.format('-' * padding_count))
+            self.filter_file.write('# -------------------------------{0} #\n'.format('-' * padding_count))
             self.filter_file.write('# --- [{0}.{1}.{2}] - {3} Helmets --- #\n'.format(self.parse_num, subnum, '01', def_type))
-            self.filter_file.write('# ------------------------------{0} #\n'.format('-' * padding_count))
+            self.filter_file.write('# -------------------------------{0} #\n'.format('-' * padding_count))
             self.filter_file.write('\n')
 
             # Loop through all items in json.
@@ -105,9 +105,9 @@ class DefenseParser():
         with open('resources/data/equipment/{0}/chests.json'.format(def_file), 'r') as json_file:
             # Create chest section header.
             self.filter_file.write('\n')
-            self.filter_file.write('# -----------------------------{0} #\n'.format('-' * padding_count))
+            self.filter_file.write('# ------------------------------{0} #\n'.format('-' * padding_count))
             self.filter_file.write('# --- [{0}.{1}.{2}] - {3} Chests --- #\n'.format(self.parse_num, subnum, '02', def_type))
-            self.filter_file.write('# -----------------------------{0} #\n'.format('-' * padding_count))
+            self.filter_file.write('# ------------------------------{0} #\n'.format('-' * padding_count))
             self.filter_file.write('\n')
 
             # Loop through all items in json.
@@ -120,9 +120,9 @@ class DefenseParser():
         with open('resources/data/equipment/{0}/gloves.json'.format(def_file), 'r') as json_file:
             # Create glove section header.
             self.filter_file.write('\n')
-            self.filter_file.write('# -----------------------------{0} #\n'.format('-' * padding_count))
+            self.filter_file.write('# ------------------------------{0} #\n'.format('-' * padding_count))
             self.filter_file.write('# --- [{0}.{1}.{2}] - {3} Gloves --- #\n'.format(self.parse_num, subnum, '03', def_type))
-            self.filter_file.write('# -----------------------------{0} #\n'.format('-' * padding_count))
+            self.filter_file.write('# ------------------------------{0} #\n'.format('-' * padding_count))
             self.filter_file.write('\n')
 
             # Loop through all items in json.
@@ -135,9 +135,9 @@ class DefenseParser():
         with open('resources/data/equipment/{0}/boots.json'.format(def_file), 'r') as json_file:
             # Create boot section header.
             self.filter_file.write('\n')
-            self.filter_file.write('# ----------------------------{0} #\n'.format('-' * padding_count))
+            self.filter_file.write('# -----------------------------{0} #\n'.format('-' * padding_count))
             self.filter_file.write('# --- [{0}.{1}.{2}] - {3} Boots --- #\n'.format(self.parse_num, subnum, '04', def_type))
-            self.filter_file.write('# ----------------------------{0} #\n'.format('-' * padding_count))
+            self.filter_file.write('# -----------------------------{0} #\n'.format('-' * padding_count))
             self.filter_file.write('\n')
 
             # Loop through all items in json.

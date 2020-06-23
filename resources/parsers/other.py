@@ -20,15 +20,15 @@ class UniqueParser():
     """
     def __init__(self, filter_file, parse_num, debug=False):
         self.filter_file = filter_file
-        self.parse_num = str(parse_num).zfill(2)
+        self.parse_num = str(parse_num).zfill(3)
         self.parse_subnum = 0
         self.debug = debug
 
         # Section Start.
         self.filter_file.write('\n')
-        self.filter_file.write('# =========================== #\n')
+        self.filter_file.write('# ============================ #\n')
         self.filter_file.write('# === [{0}] - Unique Items === #\n'.format(self.parse_num))
-        self.filter_file.write('# =========================== #\n')
+        self.filter_file.write('# ============================ #\n')
         self.filter_file.write('\n')
 
         # Unique Items.
@@ -60,15 +60,15 @@ class NotableGearParser():
     """
     def __init__(self, filter_file, parse_num, debug=False):
         self.filter_file = filter_file
-        self.parse_num = str(parse_num).zfill(2)
+        self.parse_num = str(parse_num).zfill(3)
         self.parse_subnum = 0
         self.debug = debug
 
         # Section Start.
         self.filter_file.write('\n')
-        self.filter_file.write('# ============================ #\n')
+        self.filter_file.write('# ============================= #\n')
         self.filter_file.write('# === [{0}] - Notable Gear  === #\n'.format(self.parse_num))
-        self.filter_file.write('# ============================ #\n')
+        self.filter_file.write('# ============================= #\n')
         self.filter_file.write('\n')
 
         # 5 or 6 slot items.
@@ -83,15 +83,15 @@ class NotableGearParser():
 
         # Section Start.
         self.filter_file.write('\n')
-        self.filter_file.write('# --------------------------------- #\n')
+        self.filter_file.write('# ---------------------------------- #\n')
         self.filter_file.write('# --- [{0}.{1}] - High Slot Items --- #\n'.format(self.parse_num, parse_subnum))
-        self.filter_file.write('# --------------------------------- #\n')
+        self.filter_file.write('# ---------------------------------- #\n')
         self.filter_file.write('\n')
 
         self.filter_file.write('\n')
-        self.filter_file.write('# -------------------------------------- #\n')
+        self.filter_file.write('# --------------------------------------- #\n')
         self.filter_file.write('# --- [{0}.{1}.01] - 6-Link Slot Items --- #\n'.format(self.parse_num, parse_subnum))
-        self.filter_file.write('# -------------------------------------- #\n')
+        self.filter_file.write('# --------------------------------------- #\n')
         self.filter_file.write('\n')
 
         self.filter_file.write('# Rare Type.\n')
@@ -116,9 +116,9 @@ class NotableGearParser():
         self.parse_high_slot_filter()
 
         self.filter_file.write('\n')
-        self.filter_file.write('# -------------------------------------- #\n')
+        self.filter_file.write('# --------------------------------------- #\n')
         self.filter_file.write('# --- [{0}.{1}.02] - 5-Link Slot Items --- #\n'.format(self.parse_num, parse_subnum))
-        self.filter_file.write('# -------------------------------------- #\n')
+        self.filter_file.write('# --------------------------------------- #\n')
         self.filter_file.write('\n')
 
         self.filter_file.write('# Rare Type.\n')

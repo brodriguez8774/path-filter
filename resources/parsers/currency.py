@@ -20,15 +20,15 @@ class CurrencyParser():
     """
     def __init__(self, filter_file, parse_num, debug=False):
         self.filter_file = filter_file
-        self.parse_num = str(parse_num).zfill(2)
+        self.parse_num = str(parse_num).zfill(3)
         self.parse_subnum = 0
         self.debug = debug
 
         # Section Start.
         self.filter_file.write('\n')
-        self.filter_file.write('# ======================= #\n')
+        self.filter_file.write('# ======================== #\n')
         self.filter_file.write('# === [{0}] - Currency === #\n'.format(self.parse_num))
-        self.filter_file.write('# ======================= #\n')
+        self.filter_file.write('# ======================== #\n')
         self.filter_file.write('\n')
 
 
@@ -38,15 +38,15 @@ class PreEquipment_CurrencyParser():
     """
     def __init__(self, filter_file, parse_num, debug=False):
         self.filter_file = filter_file
-        self.parse_num = str(parse_num).zfill(2)
+        self.parse_num = str(parse_num).zfill(3)
         self.parse_subnum = 0
         self.debug = debug
 
         # Section Start.
         self.filter_file.write('\n')
-        self.filter_file.write('# ============================================= #\n')
+        self.filter_file.write('# ============================================== #\n')
         self.filter_file.write('# === [{0}] - Pre-Equipment Currency Recipes === #\n'.format(self.parse_num))
-        self.filter_file.write('# ============================================= #\n')
+        self.filter_file.write('# ============================================== #\n')
         self.filter_file.write('\n')
 
 
@@ -56,15 +56,15 @@ class PostEquipment_CurrencyParser():
     """
     def __init__(self, filter_file, parse_num, debug=False):
         self.filter_file = filter_file
-        self.parse_num = str(parse_num).zfill(2)
+        self.parse_num = str(parse_num).zfill(3)
         self.parse_subnum = 0
         self.debug = debug
 
         # Section Start.
         self.filter_file.write('\n')
-        self.filter_file.write('# ============================================== #\n')
+        self.filter_file.write('# =============================================== #\n')
         self.filter_file.write('# === [{0}] - Post-Equipment Currency Recipes === #\n'.format(self.parse_num))
-        self.filter_file.write('# ============================================== #\n')
+        self.filter_file.write('# =============================================== #\n')
         self.filter_file.write('\n')
 
         self.parse_armor_rgb()
@@ -74,9 +74,9 @@ class PostEquipment_CurrencyParser():
 
         # Section Start.
         self.filter_file.write('\n')
-        self.filter_file.write('# ---------------------------- #\n')
+        self.filter_file.write('# ----------------------------- #\n')
         self.filter_file.write('# --- [{0}.{1}] - RGB Linked --- #\n'.format(self.parse_num, str(self.parse_subnum).zfill(2)))
-        self.filter_file.write('# ---------------------------- #\n')
+        self.filter_file.write('# ----------------------------- #\n')
         self.filter_file.write('\n')
 
         # Loop through all defense types.
