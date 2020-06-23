@@ -17,12 +17,13 @@ class TableOfContentsGenerator():
     """
     Creates table of contents for filter file.
     """
-    def __init__(self, filter_file, weapon_types, defense_types, shield_types, debug=False):
+    def __init__(self, filter_file, weapon_types, defense_types, shield_types, show_hybrid_flasks, debug=False):
         # Set class vars.
         self.filter_file = filter_file
         self.weapon_types = weapon_types
         self.defense_types = defense_types
         self.shield_types = shield_types
+        self.show_hybrid_flasks = show_hybrid_flasks
         self.debug = debug
 
         self.generate_table_of_contents()
@@ -57,10 +58,21 @@ class TableOfContentsGenerator():
 
         parse_num += 1
         self.filter_file.write('# [{0}] - Gems\n'.format(str(parse_num).zfill(3)))
+        self.filter_file.write('# [{0}.01] - Rare Gems\n'.format(str(parse_num).zfill(3)))
+        self.filter_file.write('# [{0}.02] - High Quality Gems\n'.format(str(parse_num).zfill(3)))
+        self.filter_file.write('# [{0}.03] - Vaal Gems\n'.format(str(parse_num).zfill(3)))
         self.filter_file.write('#\n')
 
         parse_num += 1
         self.filter_file.write('# [{0}] - Flasks\n'.format(str(parse_num).zfill(3)))
+        self.filter_file.write('# [{0}.01] - Life Flasks\n'.format(str(parse_num).zfill(3)))
+        self.filter_file.write('# [{0}.02] - Mana Flasks\n'.format(str(parse_num).zfill(3)))
+        if self.show_hybrid_flasks:
+            self.filter_file.write('# [{0}.03] - Hybrid Flasks\n'.format(str(parse_num).zfill(3)))
+            self.filter_file.write('# [{0}.04] - Utility Flasks\n'.format(str(parse_num).zfill(3)))
+        else:
+            self.filter_file.write('# [{0}.03] - Utility Flasks\n'.format(str(parse_num).zfill(3)))
+
         self.filter_file.write('#\n')
 
         parse_num += 1

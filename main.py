@@ -184,7 +184,7 @@ if __name__ == '__main__':
 
         # Generate Table of Contents.
         parse_num += 1
-        TableOfContentsGenerator(filter_file, weapons, defense, shield_type, debug=debug)
+        TableOfContentsGenerator(filter_file, weapons, defense, shield_type, show_hybrid_flasks, debug=debug)
 
         # Generate Unique Filtering.
         parse_num += 1
