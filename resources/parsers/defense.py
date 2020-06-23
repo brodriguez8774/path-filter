@@ -20,7 +20,7 @@ class DefenseParser():
         # Set class vars.
         self.filter_file = filter_file
         self.defense_types = defense_types
-        self.parse_num = str(parse_num).zfill(3)
+        self.parse_num = parse_num
         self.parse_subnum = 0
         self.debug = debug
 

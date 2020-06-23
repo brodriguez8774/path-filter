@@ -202,7 +202,7 @@ class WeaponParser():
         # Section Start.
         self.filter_file.write('\n')
         self.filter_file.write('# ----------------------- #\n')
-        self.filter_file.write('# --- [{0}.{1}] - Bows --- #\n'.format(self.parse_num, self.parse_subnum))
+        self.filter_file.write('# --- [{0}.{1}] - Bows --- #\n'.format(self.parse_num, str(self.parse_subnum).zfill(2)))
         self.filter_file.write('# ----------------------- #\n')
         self.filter_file.write('\n')
 
@@ -226,7 +226,7 @@ class WeaponParser():
         # Section Start.
         self.filter_file.write('\n')
         self.filter_file.write('# --------------------------- #\n')
-        self.filter_file.write('# --- [{0}.{1}] - Quivers --- #\n'.format(self.parse_num, self.parse_subnum))
+        self.filter_file.write('# --- [{0}.{1}] - Quivers --- #\n'.format(self.parse_num, str(self.parse_subnum).zfill(2)))
         self.filter_file.write('# --------------------------- #\n')
         self.filter_file.write('\n')
 
@@ -250,7 +250,7 @@ class WeaponParser():
         # Section Start.
         self.filter_file.write('\n')
         self.filter_file.write('# ------------------------ #\n')
-        self.filter_file.write('# --- [{0}.{1}] - Wands --- #\n'.format(self.parse_num, self.parse_subnum))
+        self.filter_file.write('# --- [{0}.{1}] - Wands --- #\n'.format(self.parse_num, str(self.parse_subnum).zfill(2)))
         self.filter_file.write('# ------------------------ #\n')
         self.filter_file.write('\n')
 
@@ -275,7 +275,7 @@ class WeaponParser():
         # Section Start.
         self.filter_file.write('\n')
         self.filter_file.write('# -------------------------- #\n')
-        self.filter_file.write('# --- [{0}.{1}] - Shields --- #\n'.format(self.parse_num, self.parse_subnum))
+        self.filter_file.write('# --- [{0}.{1}] - Shields --- #\n'.format(self.parse_num, str(self.parse_subnum).zfill(2)))
         self.filter_file.write('# -------------------------- #\n')
         self.filter_file.write('\n')
 
@@ -285,7 +285,7 @@ class WeaponParser():
 
             self.filter_file.write('\n')
             self.filter_file.write('# ---------------------------- #\n')
-            self.filter_file.write('# --- [{0}.{1}.{2}] - A Shields --- #\n'.format(self.parse_num, self.parse_subnum, subsubnum))
+            self.filter_file.write('# --- [{0}.{1}.{2}] - A Shields --- #\n'.format(self.parse_num, str(self.parse_subnum).zfill(2), subsubnum))
             self.filter_file.write('# ---------------------------- #\n')
             self.filter_file.write('\n')
 
@@ -302,7 +302,7 @@ class WeaponParser():
 
             self.filter_file.write('\n')
             self.filter_file.write('# ---------------------------- #\n')
-            self.filter_file.write('# --- [{0}.{1}.{2}] - A/Ev Shields --- #\n'.format(self.parse_num, self.parse_subnum, subsubnum))
+            self.filter_file.write('# --- [{0}.{1}.{2}] - A/Ev Shields --- #\n'.format(self.parse_num, str(self.parse_subnum).zfill(2), subsubnum))
             self.filter_file.write('# ---------------------------- #\n')
             self.filter_file.write('\n')
 
@@ -319,7 +319,7 @@ class WeaponParser():
 
             self.filter_file.write('\n')
             self.filter_file.write('# ---------------------------- #\n')
-            self.filter_file.write('# --- [{0}.{1}.{2}] - Ev Shields --- #\n'.format(self.parse_num, self.parse_subnum, subsubnum))
+            self.filter_file.write('# --- [{0}.{1}.{2}] - Ev Shields --- #\n'.format(self.parse_num, str(self.parse_subnum).zfill(2), subsubnum))
             self.filter_file.write('# ---------------------------- #\n')
             self.filter_file.write('\n')
 
@@ -336,7 +336,7 @@ class WeaponParser():
 
             self.filter_file.write('\n')
             self.filter_file.write('# ---------------------------- #\n')
-            self.filter_file.write('# --- [{0}.{1}.{2}] - Ev/En Shields --- #\n'.format(self.parse_num, self.parse_subnum, subsubnum))
+            self.filter_file.write('# --- [{0}.{1}.{2}] - Ev/En Shields --- #\n'.format(self.parse_num, str(self.parse_subnum).zfill(2), subsubnum))
             self.filter_file.write('# ---------------------------- #\n')
             self.filter_file.write('\n')
 
@@ -353,7 +353,7 @@ class WeaponParser():
 
             self.filter_file.write('\n')
             self.filter_file.write('# ---------------------------- #\n')
-            self.filter_file.write('# --- [{0}.{1}.{2}] - En Shields --- #\n'.format(self.parse_num, self.parse_subnum, subsubnum))
+            self.filter_file.write('# --- [{0}.{1}.{2}] - En Shields --- #\n'.format(self.parse_num, str(self.parse_subnum).zfill(2), subsubnum))
             self.filter_file.write('# ---------------------------- #\n')
             self.filter_file.write('\n')
 
@@ -370,7 +370,7 @@ class WeaponParser():
 
             self.filter_file.write('\n')
             self.filter_file.write('# ---------------------------- #\n')
-            self.filter_file.write('# --- [{0}.{1}.{2}] - A/En Shields --- #\n'.format(self.parse_num, self.parse_subnum, subsubnum))
+            self.filter_file.write('# --- [{0}.{1}.{2}] - A/En Shields --- #\n'.format(self.parse_num, str(self.parse_subnum).zfill(2), subsubnum))
             self.filter_file.write('# ---------------------------- #\n')
             self.filter_file.write('\n')
 
