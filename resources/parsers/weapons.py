@@ -54,8 +54,8 @@ class WeaponParser():
 
         # Exclude for weapons that don't have slots.
         if item['Class'] != 'Quiver':
-            self.parse_item_rgb(item)
             self.parse_item_max_slot(item)
+            self.parse_item_rgb(item)
 
         self.parse_item_uncommon(item)
         self.parse_item_base(item)
@@ -78,26 +78,6 @@ class WeaponParser():
         self.filter_file.write('    SetBackgroundColor {0}\n'.format(value_dict['weapon']))
         self.filter_file.write('    SetBorderColor {0}\n'.format(value_dict['rare']))
         self.filter_file.write('    SetFontSize {0}\n'.format(value_dict['rare_font_size']))
-        self.filter_file.write('\n')
-
-    def parse_item_rgb(self, item):
-        """
-        Handles filtering for linked RGB version of item.
-        :param item: The item to parse.
-        """
-        self.filter_file.write('# Linked RGB Type.\n')
-        self.filter_file.write('Show\n')
-
-        # Limitations to filter on.
-        self.filter_file.write('    BaseType "{0}"\n'.format(item['Name']))
-        if not item['MaxLevel']:    # Only filter on ItemLevel if item is not a max-level drop.
-            self.filter_file.write('    ItemLevel <= {0}\n'.format(item['DropLevel'] + 10))
-        self.filter_file.write('    SocketGroup "RGB"\n')
-
-        # Values to set if filter match is found.
-        self.filter_file.write('    SetBackgroundColor {0}\n'.format(value_dict['weapon']))
-        self.filter_file.write('    SetBorderColor {0}\n'.format(value_dict['normal']))
-        self.filter_file.write('    SetFontSize {0}\n'.format(value_dict['uncommon_font_size']))
         self.filter_file.write('\n')
 
     def parse_item_max_slot(self, item):
@@ -137,6 +117,26 @@ class WeaponParser():
             self.filter_file.write('    SetBackgroundColor {0}\n'.format(value_dict['weapon']))
             self.filter_file.write('    SetFontSize {0}\n'.format(value_dict['uncommon_font_size']))
             self.filter_file.write('\n')
+
+    def parse_item_rgb(self, item):
+        """
+        Handles filtering for linked RGB version of item.
+        :param item: The item to parse.
+        """
+        self.filter_file.write('# Linked RGB Type.\n')
+        self.filter_file.write('Show\n')
+
+        # Limitations to filter on.
+        self.filter_file.write('    BaseType "{0}"\n'.format(item['Name']))
+        if not item['MaxLevel']:    # Only filter on ItemLevel if item is not a max-level drop.
+            self.filter_file.write('    ItemLevel <= {0}\n'.format(item['DropLevel'] + 10))
+        self.filter_file.write('    SocketGroup "RGB"\n')
+
+        # Values to set if filter match is found.
+        self.filter_file.write('    SetBackgroundColor {0}\n'.format(value_dict['weapon']))
+        self.filter_file.write('    SetBorderColor {0}\n'.format(value_dict['normal']))
+        self.filter_file.write('    SetFontSize {0}\n'.format(value_dict['uncommon_font_size']))
+        self.filter_file.write('\n')
 
     def parse_item_uncommon(self, item):
         """
