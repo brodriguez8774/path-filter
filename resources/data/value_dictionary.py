@@ -47,6 +47,7 @@ display_dict = {
 
     # Minimap icon values.
     'minimap_icon_currency': 'Circle',          # General currency.
+    'minimap_icon_maps': 'Square',              # Map items.
     'minimap_icon_slots': 'Pentagon',           # 5 or 6 slot items.
     'minimap_icon_special': 'Triangle',         # League currency and other rare things.
     'minimap_icon_unique': 'UpsideDownHouse',   # Unique items.
@@ -54,6 +55,7 @@ display_dict = {
 
     # Minimap color values.
     'minimap_color_currency': 'White',          # General currency.
+    'minimap_color_maps': 'White',              # Map items.
     'minimap_color_slots': 'Yellow',            # 5 or 6 slot items.
     'minimap_color_special': 'Purple',          # League currency and other rare things.
     'minimap_color_unique': 'Orange',           # Unique items.

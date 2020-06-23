@@ -41,14 +41,36 @@ class UniqueParser():
         """
         parse_subnum = str(self.parse_subnum).zfill(2)
 
+        # Unique tier maps.
+        self.filter_file.write('# Unique Tier Maps.\n')
+        self.filter_file.write('Show\n')
+        self.filter_file.write('    Class "Map"\n')
+        self.filter_file.write('    Rarity Unique\n')
+        self.filter_file.write('    SetBackgroundColor {0}\n'.format(display_dict['unique_background']))
+        self.filter_file.write('    SetBorderColor {0}\n'.format(display_dict['unique']))
+        self.filter_file.write('    SetTextColor {0}\n'.format(display_dict['unique_text_color']))
+        self.filter_file.write('    SetFontSize {0}\n'.format(display_dict['unique_font_size']))
+        self.filter_file.write('    PlayAlertSound 16 100\n')
+        self.filter_file.write('    MinimapIcon 0 {0} {1}\n'.format(
+            display_dict['minimap_icon_maps'],
+            display_dict['minimap_color_unique']),
+        )
+        self.filter_file.write('    PlayEffect {0}\n'.format(display_dict['minimap_color_unique']))
+        self.filter_file.write('\n')
+
+        # General Unique Items.
+        self.filter_file.write('# General Unique Items.\n')
         self.filter_file.write('Show\n')
         self.filter_file.write('    Rarity = Unique\n')
         self.filter_file.write('    SetBackgroundColor {0}\n'.format(display_dict['unique_background']))
         self.filter_file.write('    SetBorderColor {0}\n'.format(display_dict['unique']))
-        self.filter_file.write('    SetFontSize {0}\n'.format(display_dict['unique_text_color']))
+        self.filter_file.write('    SetTextColor {0}\n'.format(display_dict['unique_text_color']))
         self.filter_file.write('    SetFontSize {0}\n'.format(display_dict['unique_font_size']))
         self.filter_file.write('    PlayAlertSound 1 300\n')
-        self.filter_file.write('    MinimapIcon 0 {0} {1}\n'.format(display_dict['minimap_icon_unique'], display_dict['minimap_color_unique']))
+        self.filter_file.write('    MinimapIcon 0 {0} {1}\n'.format(
+            display_dict['minimap_icon_unique'],
+            display_dict['minimap_color_unique']),
+        )
         self.filter_file.write('    PlayerEffect {0}\n'.format(display_dict['minimap_color_unique']))
 
         self.filter_file.write('\n')
