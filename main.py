@@ -70,6 +70,11 @@ if __name__ == '__main__':
              'Defaults to +5.'
     )
     parser.add_argument(
+        '--show_hybrid_flasks',
+        action='store_true',
+        help='Determines if hybrid flasks should display or not.'
+    )
+    parser.add_argument(
         '--debug',
         action='store_true',
         help='Runs program in debug mode.',
@@ -135,6 +140,12 @@ if __name__ == '__main__':
     else:
         level_rarity_modifier = args.level_rarity_modifier[0]
 
+    # Check for hybrid flasks.
+    if args.show_hybrid_flasks:
+        show_hybrid_flasks = True
+    else:
+        show_hybrid_flasks = False
+
     # Display args.
     logger.info('')
     logger.info('Creating filter:')
@@ -193,7 +204,7 @@ if __name__ == '__main__':
 
         # Generate Flask Filtering.
         parse_num += 1
-        FlaskParser(filter_file, parse_num, debug=debug)
+        FlaskParser(filter_file, parse_num, show_hybrid_flasks, debug=debug)
 
         # Generate Notable Gear Filtering.
         parse_num += 1
