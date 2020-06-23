@@ -8,6 +8,7 @@ import argparse, os
 # User Imports.
 from resources import logging as init_logging
 from resources.parsers.accessories import AccessoryParser
+from resources.parsers.currency import CurrencyParser, PreEquipment_CurrencyParser, PostEquipment_CurrencyParser
 from resources.parsers.defense import DefenseParser
 from resources.parsers.weapons import WeaponParser
 from resources.data.value_dictionary import filter_dict
@@ -167,6 +168,18 @@ if __name__ == '__main__':
         filter_file.write('#     Defense: {0}\n'.format(defense))
         filter_file.write('\n\n')
 
+        # Generate Currency Filtering.
+        parse_num += 1
+        CurrencyParser(filter_file, parse_num, defense, debug=debug)
+
+        # Generate Pre-Equipment Currency Filtering.
+        parse_num += 1
+        PreEquipment_CurrencyParser(filter_file, parse_num, defense, debug=debug)
+
+        # Generate Accessory Filtering.
+        parse_num += 1
+        AccessoryParser(filter_file, parse_num, defense, debug=debug)
+
         # Generate Weapon Filtering.
         parse_num += 1
         WeaponParser(filter_file, parse_num, weapons, shield_type, base_drop_level, level_rarity_modifier, debug=debug)
@@ -174,6 +187,10 @@ if __name__ == '__main__':
         # Generate Defense Filtering.
         parse_num += 1
         DefenseParser(filter_file, parse_num, defense, base_drop_level, level_rarity_modifier, debug=debug)
+
+        # Generate Post-Equipment Currency Filtering.
+        parse_num += 1
+        PostEquipment_CurrencyParser(filter_file, parse_num, defense, debug=debug)
 
     logger.info('')
     logger.info('Created filter at "./generated_filters/{0}"'.format(file_name))

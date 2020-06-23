@@ -36,4 +36,5 @@ display_dict = {
     'rare_font_size': 32,
     'uncommon_font_size': 25,
     'default_font_size': 20,
+    'min_font_size': 18,
 }
