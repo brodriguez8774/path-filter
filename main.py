@@ -10,6 +10,7 @@ from resources import logging as init_logging
 from resources.parsers.accessories import AccessoryParser
 from resources.parsers.currency import CurrencyParser, PreEquipment_CurrencyParser, PostEquipment_CurrencyParser
 from resources.parsers.defense import DefenseParser
+from resources.parsers.other import UniqueParser, NotableGearParser
 from resources.parsers.weapons import WeaponParser
 from resources.data.value_dictionary import filter_dict
 
@@ -143,8 +144,6 @@ if __name__ == '__main__':
     logger.info('        Base:     +{0}'.format(base_drop_level))
     logger.info('        Uncommon: +{0}'.format(base_drop_level + level_rarity_modifier))
     logger.info('        Rare:     +{0}'.format(base_drop_level + (level_rarity_modifier * 2)))
-
-
     logger.info('')
 
     # Create generation folder, if not present.
@@ -168,13 +167,21 @@ if __name__ == '__main__':
         filter_file.write('#     Defense: {0}\n'.format(defense))
         filter_file.write('\n\n')
 
+        # Generate Unique Filtering.
+        parse_num += 1
+        UniqueParser(filter_file, parse_num, debug=debug)
+
         # Generate Currency Filtering.
         parse_num += 1
-        CurrencyParser(filter_file, parse_num, defense, debug=debug)
+        CurrencyParser(filter_file, parse_num, debug=debug)
+
+        # Generate Notable Gear Filtering.
+        parse_num += 1
+        NotableGearParser(filter_file, parse_num, debug=debug)
 
         # Generate Pre-Equipment Currency Filtering.
         parse_num += 1
-        PreEquipment_CurrencyParser(filter_file, parse_num, defense, debug=debug)
+        PreEquipment_CurrencyParser(filter_file, parse_num, debug=debug)
 
         # Generate Accessory Filtering.
         parse_num += 1
@@ -190,7 +197,7 @@ if __name__ == '__main__':
 
         # Generate Post-Equipment Currency Filtering.
         parse_num += 1
-        PostEquipment_CurrencyParser(filter_file, parse_num, defense, debug=debug)
+        PostEquipment_CurrencyParser(filter_file, parse_num, debug=debug)
 
     logger.info('')
     logger.info('Created filter at "./generated_filters/{0}"'.format(file_name))
