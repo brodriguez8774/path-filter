@@ -149,3 +149,25 @@ class NotableGearParser():
         self.filter_file.write('    MinimapIcon 1 {0} {1}\n'.format(display_dict['minimap_icon_slots'], display_dict['minimap_color_slots']))
         self.filter_file.write('    PlayerEffect {0}\n'.format(display_dict['minimap_color_slots']))
         self.filter_file.write('\n')
+
+
+class FinalParser():
+    """
+    End of filter parsing.
+    """
+    def __init__(self, filter_file, parse_num, debug=False):
+        self.filter_file = filter_file
+        self.parse_num = str(parse_num).zfill(3)
+        self.parse_subnum = 0
+        self.debug = debug
+
+        # Section Start.
+        self.filter_file.write('\n')
+        self.filter_file.write('# ======================================= #\n')
+        self.filter_file.write('# === [{0}] - Final/Cleanup Filtering === #\n'.format(self.parse_num))
+        self.filter_file.write('# ======================================= #\n')
+        self.filter_file.write('\n')
+
+        self.filter_file.write('# Hide everything else of little to no value.\n')
+        self.filter_file.write('Hide\n')
+        self.filter_file.write('    SetFontSize {0}\n'.format(display_dict['min_font_size']))

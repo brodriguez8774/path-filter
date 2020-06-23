@@ -10,7 +10,10 @@ from resources import logging as init_logging
 from resources.parsers.accessories import AccessoryParser
 from resources.parsers.currency import CurrencyParser, PreEquipment_CurrencyParser, PostEquipment_CurrencyParser
 from resources.parsers.defense import DefenseParser
-from resources.parsers.other import UniqueParser, NotableGearParser
+from resources.parsers.flasks import FlaskParser
+from resources.parsers.gems import GemParser
+from resources.parsers.maps import MapParser
+from resources.parsers.other import FinalParser, NotableGearParser, UniqueParser
 from resources.parsers.table_of_contents import TableOfContentsGenerator
 from resources.parsers.weapons import WeaponParser
 from resources.data.value_dictionary import filter_dict
@@ -180,6 +183,18 @@ if __name__ == '__main__':
         parse_num += 1
         CurrencyParser(filter_file, parse_num, debug=debug)
 
+        # Generate Map Filtering.
+        parse_num += 1
+        MapParser(filter_file, parse_num, debug=debug)
+
+        # Generate Gem Filtering.
+        parse_num += 1
+        GemParser(filter_file, parse_num, debug=debug)
+
+        # Generate Flask Filtering.
+        parse_num += 1
+        FlaskParser(filter_file, parse_num, debug=debug)
+
         # Generate Notable Gear Filtering.
         parse_num += 1
         NotableGearParser(filter_file, parse_num, debug=debug)
@@ -203,6 +218,10 @@ if __name__ == '__main__':
         # Generate Post-Equipment Currency Filtering.
         parse_num += 1
         PostEquipment_CurrencyParser(filter_file, parse_num, debug=debug)
+
+        # Generate End-of-Filter filtering.
+        parse_num += 1
+        FinalParser(filter_file, parse_num, debug=debug)
 
     logger.info('')
     logger.info('Created filter at "./generated_filters/{0}"'.format(file_name))

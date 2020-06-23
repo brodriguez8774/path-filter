@@ -208,4 +208,6 @@ class TableOfContentsGenerator():
         self.filter_file.write('# [{0}.01] - RGB Linked (Chromatic Orb)\n'.format(str(parse_num).zfill(3)))
         self.filter_file.write('#\n')
 
-
+        parse_num += 1
+        self.filter_file.write('# [{0}] - Final/Cleanup Filtering\n'.format(str(parse_num).zfill(3)))
+        self.filter_file.write('\n')
