@@ -12,6 +12,7 @@ from resources.parsers.currency import CurrencyParser, PreEquipment_CurrencyPars
 from resources.parsers.defense import DefenseParser
 from resources.parsers.flasks import FlaskParser
 from resources.parsers.gems import GemParser
+from resources.parsers.jewels import JewelParser
 from resources.parsers.maps import MapParser
 from resources.parsers.other import FinalParser, NotableGearParser, UniqueParser
 from resources.parsers.table_of_contents import TableOfContentsGenerator
@@ -201,6 +202,10 @@ if __name__ == '__main__':
         # Generate Gem Filtering.
         parse_num += 1
         GemParser(filter_file, parse_num, debug=debug)
+
+        # Generate Jewel Filtering.
+        parse_num += 1
+        JewelParser(filter_file, parse_num, debug=debug)
 
         # Generate Flask Filtering.
         parse_num += 1

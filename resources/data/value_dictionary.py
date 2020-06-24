@@ -52,9 +52,10 @@ display_dict = {
     'minimap_icon_currency': 'Circle',          # General currency.
     'minimap_icon_maps': 'Square',              # Map items.
     'minimap_icon_slots': 'Pentagon',           # 5 or 6 slot items.
-    'minimap_icon_special': 'Triangle',         # League currency and other rare things.
+    'minimap_icon_special': 'Triangle',         # League drops and other rare/special things.
     'minimap_icon_unique': 'UpsideDownHouse',   # Unique items.
     'minimap_icon_flasks': 'Raindrop',          # Flask items.
+    'minimap_icon_jewel': 'Hexagon',            # Jewel items.
 
     # Minimap color values.
     'minimap_color_currency': 'White',          # General currency.
