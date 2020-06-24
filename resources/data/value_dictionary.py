@@ -33,9 +33,12 @@ display_dict = {
     'unique_text_color': '175 96 37',
     'standard_background': '25 25 25',
     'weapon': '75 75 75',
+    'currency_text': '218 190 147',
     'normal_important_text': '255 255 255',
     'uncommon_important_text': '136 136 255',
     'rare_important_text': '255 255 119',
+    'league_border': '128 0 128',
+    'league_text': '184 0 184',
 
     # Font values.
     'unique_font_size': 50,
