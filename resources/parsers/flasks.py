@@ -86,8 +86,7 @@ class FlaskParser():
         self.filter_file.write('Show\n')
 
         # Limitations to filter on.
-        self.filter_file.write(
-            '    BaseType "Life Flasks" "Mana Flasks" "Hybrid Flasks" "Utility Flasks" "Critical Utility Flasks"\n')
+        self.filter_file.write('    Class "Life Flasks" "Mana Flasks" "Hybrid Flasks" "Utility Flasks" "Critical Utility Flasks"\n')
         self.filter_file.write('    Quality >= 15\n')
 
         # Values to set if filter match is found.
@@ -105,7 +104,7 @@ class FlaskParser():
         self.filter_file.write('Show\n')
 
         # Limitations to filter on.
-        self.filter_file.write('    BaseType "Life Flasks" "Mana Flasks" "Hybrid Flasks" "Utility Flasks" "Critical Utility Flasks"\n')
+        self.filter_file.write('    Class "Life Flasks" "Mana Flasks" "Hybrid Flasks" "Utility Flasks" "Critical Utility Flasks"\n')
         self.filter_file.write('    Quality >= 10\n')
 
         # Values to set if filter match is found.
@@ -123,7 +122,7 @@ class FlaskParser():
         self.filter_file.write('Show\n')
 
         # Limitations to filter on.
-        self.filter_file.write('    BaseType "Life Flasks" "Mana Flasks" "Hybrid Flasks" "Utility Flasks" "Critical Utility Flasks"\n')
+        self.filter_file.write('    Class "Life Flasks" "Mana Flasks" "Hybrid Flasks" "Utility Flasks" "Critical Utility Flasks"\n')
         self.filter_file.write('    Quality >= 5\n')
 
         # Values to set if filter match is found.
