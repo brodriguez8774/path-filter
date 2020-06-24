@@ -57,7 +57,7 @@ class CurrencyParser():
             text_color=display_dict['unique_text_color'],
             font_size=display_dict['unique_font_size'],
             sound='ShMirror 300',
-            minimap='0 {0} {1}'.format(display_dict['minimap_color_unique'], display_dict['minimap_icon_special']),
+            minimap='0 {0} {1}'.format(display_dict['minimap_color_unique'], display_dict['minimap_icon_currency']),
             playeffect=display_dict['minimap_color_unique']
         )
 
@@ -70,7 +70,7 @@ class CurrencyParser():
             text_color=display_dict['currency_text'],
             font_size=display_dict['rare_font_size'],
             sound='ShExalted 300',
-            minimap='0 {0} {1}'.format(display_dict['minimap_color_currency'], display_dict['minimap_icon_special']),
+            minimap='0 {0} {1}'.format(display_dict['minimap_color_currency'], display_dict['minimap_icon_currency']),
             playeffect=display_dict['minimap_color_currency'],
         )
 
@@ -83,7 +83,7 @@ class CurrencyParser():
             text_color=display_dict['currency_text'],
             font_size=display_dict['rare_font_size'],
             sound='ShDivine 300',
-            minimap='0 {0} {1}'.format(display_dict['minimap_color_currency'], display_dict['minimap_icon_special']),
+            minimap='0 {0} {1}'.format(display_dict['minimap_color_currency'], display_dict['minimap_icon_currency']),
             playeffect=display_dict['minimap_color_currency'],
         )
 
@@ -96,8 +96,7 @@ class CurrencyParser():
             text_color=display_dict['currency_text'],
             font_size=display_dict['rare_font_size'],
             sound='ShRegal 175',
-            minimap='0 {0} {1}'.format(display_dict['minimap_color_currency'],
-            display_dict['minimap_icon_special']),
+            minimap='0 {0} {1}'.format(display_dict['minimap_color_currency'], display_dict['minimap_icon_currency']),
             playeffect=display_dict['minimap_color_currency'],
         )
 
@@ -137,7 +136,7 @@ class CurrencyParser():
             font_size=display_dict['uncommon_font_size'],
             sound='ShChaos 175',
             minimap='1 {0} {1}'.format(display_dict['minimap_color_currency'], display_dict['minimap_icon_currency']),
-            playeffect='minimap_color_currency',
+            playeffect=display_dict['minimap_color_currency'],
         )
 
         # Orb of Fusing.
@@ -225,12 +224,9 @@ class CurrencyParser():
         if sound is not None:
             self.filter_file.write('    PlayAlertSound {0}\n'.format(sound))
         if minimap is not None:
-            self.filter_file.write('    MinimapIcon 0 {0} {1}\n'.format(
-                display_dict['minimap_color_unique'],
-                display_dict['minimap_icon_special']
-            ))
+            self.filter_file.write('    MinimapIcon {0}\n'.format(minimap))
         if playeffect is not None:
-            self.filter_file.write('    PlayEffect {0}\n'.format(display_dict['minimap_color_unique']))
+            self.filter_file.write('    PlayEffect {0}\n'.format(playeffect))
         self.filter_file.write('\n')
 
     def league_specific(self):
