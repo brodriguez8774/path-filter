@@ -395,18 +395,99 @@ class PostEquipment_CurrencyParser():
         self.filter_file.write('# =============================================== #\n')
         self.filter_file.write('\n')
 
-        self.parse_armor_rgb()
+        self.parse_quality()
+        self.parse_chromatic()
+        self.parse_regal()
+        self.parse_chaos()
+        self.parse_low_level()
 
-    def parse_armor_rgb(self):
+    def parse_quality(self):
+        """
+        Various "Quality Improvement Currency" recipes.
+        Involves selling any single item of full 20% quality.
+        Alternatively, sell any combination of items (of the same quality type) that sum up to 40% quality.
+        """
         self.parse_subnum += 1
 
-        # Section Start.
+        self.filter_file.write('\n')
+        self.filter_file.write('# ------------------------------------- #\n')
+        self.filter_file.write('# --- [{0}.{1}] - Quality Currencies --- #\n'.format(self.parse_num, str(self.parse_subnum).zfill(2)))
+        self.filter_file.write('# ------------------------------------- #\n')
+        self.filter_file.write('# Involves selling any single item of full 20% quality.\n')
+        self.filter_file.write('# Alternatively, sell any combination of items (of the same quality type) that sum up to 40% quality.\n')
+        self.filter_file.write('\n')
+
+        self.filter_file.write('Show\n')
+
+        # Limitations to filter on.
+        self.filter_file.write('    Quality = 20\n')
+
+        # Values to set if filter match is found.
+        self.filter_file.write('    SetBackgroundColor {0} 100\n'.format(display_dict['standard_background']))
+        self.filter_file.write('    SetBorderColor {0}\n'.format(display_dict['normal']))
+        self.filter_file.write('    SetTextColor {0} 0\n'.format(display_dict['text']))
+        self.filter_file.write('    SetFontSize {0}\n'.format(display_dict['min_font_size']))
+        self.filter_file.write('\n')
+
+    def parse_chromatic(self):
+        """
+        Chromatic orb recipe.
+        Involves item of 3 or more linked slots, with at least one red, green, and blue slot.
+        """
+        self.parse_subnum += 1
+
         self.filter_file.write('\n')
         self.filter_file.write('# ----------------------------- #\n')
         self.filter_file.write('# --- [{0}.{1}] - RGB Linked --- #\n'.format(self.parse_num, str(self.parse_subnum).zfill(2)))
         self.filter_file.write('# ----------------------------- #\n')
+        self.filter_file.write('# Involves item of 3 or more linked slots, with at least one red, green, and blue slot.\n')
         self.filter_file.write('\n')
 
+        self.parse_high_level_chromatic()
+        self.parse_low_level_chromatic()
+
+    def parse_high_level_chromatic(self):
+        """
+        Displaying of rgb recipe at higher levels.
+        """
+        # 2 x 2 space item.
+        self.filter_file.write('# Linked RGB - High Level 2x2.\n')
+        self.filter_file.write('Show\n')
+
+        # Limitations to filter on.
+        self.filter_file.write('    ItemLevel >= 50\n')
+        self.filter_file.write('    SocketGroup "RGB"\n')
+        self.filter_file.write('    Height 2\n')
+        self.filter_file.write('    Width 2\n')
+
+        # Values to set if filter match is found.
+        self.filter_file.write('    SetBackgroundColor {0} 100\n'.format(display_dict['standard_background']))
+        self.filter_file.write('    SetBorderColor {0}\n'.format(display_dict['normal']))
+        self.filter_file.write('    SetTextColor {0} 0\n'.format(display_dict['text']))
+        self.filter_file.write('    SetFontSize {0}\n'.format(display_dict['min_font_size']))
+        self.filter_file.write('\n')
+
+        # 3 x 1 space item.
+        self.filter_file.write('# Linked RGB - High Level 3x1.\n')
+        self.filter_file.write('Show\n')
+
+        # Limitations to filter on.
+        self.filter_file.write('    ItemLevel >= 50\n')
+        self.filter_file.write('    SocketGroup "RGB"\n')
+        self.filter_file.write('    Height 3\n')
+        self.filter_file.write('    Width 1\n')
+
+        # Values to set if filter match is found.
+        self.filter_file.write('    SetBackgroundColor {0} 100\n'.format(display_dict['standard_background']))
+        self.filter_file.write('    SetBorderColor {0}\n'.format(display_dict['normal']))
+        self.filter_file.write('    SetTextColor {0} 0\n'.format(display_dict['text']))
+        self.filter_file.write('    SetFontSize {0}\n'.format(display_dict['min_font_size']))
+        self.filter_file.write('\n')
+
+    def parse_low_level_chromatic(self):
+        """
+        Displaying of rgb recipe at lower levels.
+        """
         # Loop through all defense types.
         def_types = ['A', 'A/Ev', 'Ev', 'Ev/En', 'En', 'En/A']
         for def_type in def_types:
@@ -427,9 +508,9 @@ class PostEquipment_CurrencyParser():
                         slot_list.append(item['Name'])
 
                 # Use list to parse item.
-                self.parse_def_slot_rgb(def_type, def_slot, slot_list)
+                self.parse_def_slot_chromatic(def_type, def_slot, slot_list)
 
-    def parse_def_slot_rgb(self, def_type, def_slot, item_set):
+    def parse_def_slot_chromatic(self, def_type, def_slot, item_set):
         """
         Handles filtering for linked RGB version of def type slot.
         :param def_type: Defense type of the item.
@@ -444,16 +525,192 @@ class PostEquipment_CurrencyParser():
             else:
                 item_set_string += ' "{0}"'.format(item)
 
-        self.filter_file.write('# Linked RGB {0} {1}.\n'.format(def_type, def_slot.title()))
+        self.filter_file.write('# Linked RGB - Low Level, {0} {1}.\n'.format(def_type, def_slot.title()))
         self.filter_file.write('Show\n')
 
         # Limitations to filter on.
         self.filter_file.write('    BaseType {0}\n'.format(item_set_string))
+        self.filter_file.write('    ItemLevel < 50\n')
         self.filter_file.write('    SocketGroup "RGB"\n')
 
         # Values to set if filter match is found.
         self.filter_file.write('    SetBackgroundColor {0} 100\n'.format(display_dict[def_type]))
         self.filter_file.write('    SetBorderColor {0}\n'.format(display_dict['normal']))
-        self.filter_file.write('    SetTextColor {0} 100\n'.format(display_dict['text']))
+        self.filter_file.write('    SetTextColor {0} 0\n'.format(display_dict['text']))
+        self.filter_file.write('    SetFontSize {0}\n'.format(display_dict['min_font_size']))
+        self.filter_file.write('\n')
+
+    def parse_regal(self):
+        """
+        Regal Orb recipe.
+        Involves getting a rare item for each slot, all item level 75 or above.
+        """
+        self.parse_subnum += 1
+
+        self.filter_file.write('\n')
+        self.filter_file.write('# ---------------------------- #\n')
+        self.filter_file.write('# --- [{0}.{1}] - Regal Orb --- #\n'.format(self.parse_num, str(self.parse_subnum).zfill(2)))
+        self.filter_file.write('# ---------------------------- #\n')
+        self.filter_file.write('# Involves getting a rare item for each slot, with all items level 75 or above.\n')
+        self.filter_file.write('\n')
+
+        # Weapon Slots.
+        self.filter_file.write('# Prioritize Small Weapons.\n')
+        self.filter_file.write('Show\n')
+
+        # Limitations to filter on.
+        self.filter_file.write('    ItemLevel >= 75\n')
+        self.filter_file.write('    Rarity = Rare\n')
+        self.filter_file.write('    Height = 3\n')
+        self.filter_file.write('    Width = 1\n')
+
+        # Values to set if filter match is found.
+        self.filter_file.write('    SetBackgroundColor {0} 100\n'.format(display_dict['standard_background']))
+        self.filter_file.write('    SetBorderColor {0}\n'.format(display_dict['rare']))
+        self.filter_file.write('    SetTextColor {0} 0\n'.format(display_dict['text']))
+        self.filter_file.write('    SetFontSize {0}\n'.format(display_dict['min_font_size']))
+        self.filter_file.write('\n')
+
+        # Gear Slots.
+        self.filter_file.write('# Gear Slots.\n')
+        self.filter_file.write('Show\n')
+
+        # Limitations to filter on.
+        self.filter_file.write('    Class "Helmets" "Body Armours" "Gloves" "Boots" "Ring" "Belt" "Amulet"\n')
+        self.filter_file.write('    ItemLevel >= 75\n')
+        self.filter_file.write('    Rarity = Rare\n')
+
+        # Values to set if filter match is found.
+        self.filter_file.write('    SetBackgroundColor {0} 100\n'.format(display_dict['standard_background']))
+        self.filter_file.write('    SetBorderColor {0}\n'.format(display_dict['rare']))
+        self.filter_file.write('    SetTextColor {0} 0\n'.format(display_dict['text']))
+        self.filter_file.write('    SetFontSize {0}\n'.format(display_dict['min_font_size']))
+        self.filter_file.write('\n')
+
+    def parse_chaos(self):
+        """
+        Chaos Orb recipe.
+        Involves getting a rare item for each slot, all item level 60 to 74 or above.
+        """
+        self.parse_subnum += 1
+
+        self.filter_file.write('\n')
+        self.filter_file.write('# ---------------------------- #\n')
+        self.filter_file.write('# --- [{0}.{1}] - Chaos Orb --- #\n'.format(self.parse_num, str(self.parse_subnum).zfill(2)))
+        self.filter_file.write('# ---------------------------- #\n')
+        self.filter_file.write('# Involves getting a rare item for each slot, with all items level 60 to 74.\n')
+        self.filter_file.write('\n')
+
+        # Weapon slots.
+        self.filter_file.write('# Prioritize Small Weapons.\n')
+        self.filter_file.write('Show\n')
+
+        # Limitations to filter on.
+        self.filter_file.write('    ItemLevel >= 65\n')
+        self.filter_file.write('    Rarity = Rare\n')
+        self.filter_file.write('    Height = 3\n')
+        self.filter_file.write('    Width = 1\n')
+
+        # Values to set if filter match is found.
+        self.filter_file.write('    SetBackgroundColor {0} 100\n'.format(display_dict['standard_background']))
+        self.filter_file.write('    SetBorderColor {0}\n'.format(display_dict['rare']))
+        self.filter_file.write('    SetTextColor {0} 0\n'.format(display_dict['text']))
+        self.filter_file.write('    SetFontSize {0}\n'.format(display_dict['min_font_size']))
+        self.filter_file.write('\n')
+
+        # Gear slots.
+        self.filter_file.write('# Gear Slots.\n')
+        self.filter_file.write('Show\n')
+
+        # Limitations to filter on.
+        self.filter_file.write('    Class "Helmets" "Body Armours" "Gloves" "Boots" "Ring" "Belt" "Amulet"\n')
+        self.filter_file.write('    ItemLevel >= 65\n')
+        self.filter_file.write('    Rarity = Rare\n')
+
+        # Values to set if filter match is found.
+        self.filter_file.write('    SetBackgroundColor {0} 100\n'.format(display_dict['standard_background']))
+        self.filter_file.write('    SetBorderColor {0}\n'.format(display_dict['rare']))
+        self.filter_file.write('    SetTextColor {0} 0\n'.format(display_dict['text']))
+        self.filter_file.write('    SetFontSize {0}\n'.format(display_dict['min_font_size']))
+        self.filter_file.write('\n')
+
+    def parse_low_level(self):
+        """
+        General items that can be good to pick up early game, just to sell.
+        """
+        self.parse_subnum += 1
+
+        self.filter_file.write('\n')
+        self.filter_file.write('# ------------------------------------- #\n')
+        self.filter_file.write('# --- [{0}.{1}] - Low Level Currency --- #\n'.format(self.parse_num, str(self.parse_subnum).zfill(2)))
+        self.filter_file.write('# ------------------------------------- #\n')
+        self.filter_file.write('# General items that can be good to sell early game.\n')
+        self.filter_file.write('\n')
+
+        # Orb of Alchemy, 2x2.
+        self.filter_file.write('# Chance at Orb of Alchemy - 2x2 or smaller.\n')
+        self.filter_file.write('Show\n')
+
+        # Limitations to filter on.
+        self.filter_file.write('    ItemLevel <= 40\n')
+        self.filter_file.write('    Rarity = Rare\n')
+        self.filter_file.write('    Width <= 2\n')
+        self.filter_file.write('    Height <= 2\n')
+
+        # Values to set if filter match is found.
+        self.filter_file.write('    SetBackgroundColor {0} 100\n'.format(display_dict['standard_background']))
+        self.filter_file.write('    SetBorderColor {0}\n'.format(display_dict['rare']))
+        self.filter_file.write('    SetTextColor {0} 0\n'.format(display_dict['text']))
+        self.filter_file.write('    SetFontSize {0}\n'.format(display_dict['min_font_size']))
+        self.filter_file.write('\n')
+
+        # Orb of Alchemy, 3x1.
+        self.filter_file.write('# Chance at Orb of Alchemy - 3x1 or smaller.\n')
+        self.filter_file.write('Show\n')
+
+        # Limitations to filter on.
+        self.filter_file.write('    ItemLevel <= 40\n')
+        self.filter_file.write('    Rarity = Rare\n')
+        self.filter_file.write('    Width <= 3\n')
+        self.filter_file.write('    Height <= 1\n')
+
+        # Values to set if filter match is found.
+        self.filter_file.write('    SetBackgroundColor {0} 100\n'.format(display_dict['standard_background']))
+        self.filter_file.write('    SetBorderColor {0}\n'.format(display_dict['rare']))
+        self.filter_file.write('    SetTextColor {0} 0\n'.format(display_dict['text']))
+        self.filter_file.write('    SetFontSize {0}\n'.format(display_dict['min_font_size']))
+        self.filter_file.write('\n')
+
+        # Orb of Transmutation, 2x2.
+        self.filter_file.write('# Chance at Orb of Transmutation - 2x2 or smaller.\n')
+        self.filter_file.write('Show\n')
+
+        # Limitations to filter on.
+        self.filter_file.write('    ItemLevel <= 20\n')
+        self.filter_file.write('    Rarity = Magic\n')
+        self.filter_file.write('    Width <= 2\n')
+        self.filter_file.write('    Height <= 2\n')
+
+        # Values to set if filter match is found.
+        self.filter_file.write('    SetBackgroundColor {0} 100\n'.format(display_dict['standard_background']))
+        self.filter_file.write('    SetBorderColor {0}\n'.format(display_dict['magic']))
+        self.filter_file.write('    SetTextColor {0} 0\n'.format(display_dict['text']))
+        self.filter_file.write('    SetFontSize {0}\n'.format(display_dict['min_font_size']))
+        self.filter_file.write('\n')
+
+        # Orb of Transmutation, 3x1.
+        self.filter_file.write('# Chance at Orb of Transmutation - 3x1 or smaller.\n')
+        self.filter_file.write('Show\n')
+
+        # Limitations to filter on.
+        self.filter_file.write('    ItemLevel <= 20\n')
+        self.filter_file.write('    Rarity = Magic\n')
+        self.filter_file.write('    Width <= 3\n')
+        self.filter_file.write('    Height <= 1\n')
+
+        # Values to set if filter match is found.
+        self.filter_file.write('    SetBackgroundColor {0} 100\n'.format(display_dict['standard_background']))
+        self.filter_file.write('    SetBorderColor {0}\n'.format(display_dict['magic']))
+        self.filter_file.write('    SetTextColor {0} 0\n'.format(display_dict['text']))
         self.filter_file.write('    SetFontSize {0}\n'.format(display_dict['min_font_size']))
         self.filter_file.write('\n')

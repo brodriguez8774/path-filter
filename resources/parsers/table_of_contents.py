@@ -233,7 +233,11 @@ class TableOfContentsGenerator():
 
         parse_num += 1
         self.filter_file.write('# [{0}] - Post-Equipment Currency Recipes\n'.format(str(parse_num).zfill(3)))
-        self.filter_file.write('# [{0}.01] - RGB Linked (Chromatic Orb)\n'.format(str(parse_num).zfill(3)))
+        self.filter_file.write('# [{0}.01] - Quality Currencies\n'.format(str(parse_num).zfill(3)))
+        self.filter_file.write('# [{0}.02] - Chromatic (RGB Linked)\n'.format(str(parse_num).zfill(3)))
+        self.filter_file.write('# [{0}.03] - Regal Orb (Lvl 75+ Rare Set)\n'.format(str(parse_num).zfill(3)))
+        self.filter_file.write('# [{0}.04] - Chaos Orb (Lvl 65+ Rare Set)\n'.format(str(parse_num).zfill(3)))
+        self.filter_file.write('# [{0}.05] - Low Level Currency\n'.format(str(parse_num).zfill(3)))
         self.filter_file.write('#\n')
 
         parse_num += 1
