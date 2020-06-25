@@ -50,6 +50,10 @@ class TableOfContentsGenerator():
 
         parse_num += 1
         self.filter_file.write('# [{0}] - Currency\n'.format(str(parse_num).zfill(3)))
+        self.filter_file.write('# [{0}.01] - General Currency\n'.format(str(parse_num).zfill(3)))
+        self.filter_file.write('# [{0}.02] - League Currency\n'.format(str(parse_num).zfill(3)))
+        self.filter_file.write('# [{0}.03] - Labyrinth Items\n'.format(str(parse_num).zfill(3)))
+        self.filter_file.write('# [{0}.04] - Currency Catch-All\n'.format(str(parse_num).zfill(3)))
         self.filter_file.write('#\n')
 
         parse_num += 1
@@ -61,6 +65,13 @@ class TableOfContentsGenerator():
         self.filter_file.write('# [{0}.01] - Rare Gems\n'.format(str(parse_num).zfill(3)))
         self.filter_file.write('# [{0}.02] - High Quality Gems\n'.format(str(parse_num).zfill(3)))
         self.filter_file.write('# [{0}.03] - Vaal Gems\n'.format(str(parse_num).zfill(3)))
+        self.filter_file.write('#\n')
+
+        parse_num += 1
+        self.filter_file.write('# [{0}] - Jewels\n'.format(str(parse_num).zfill(3)))
+        self.filter_file.write('# [{0}.01] - Standard Jewels\n'.format(str(parse_num).zfill(3)))
+        self.filter_file.write('# [{0}.02] - Abyss Jewels\n'.format(str(parse_num).zfill(3)))
+        self.filter_file.write('# [{0}.03] - Cluster Jewels\n'.format(str(parse_num).zfill(3)))
         self.filter_file.write('#\n')
 
         parse_num += 1
@@ -88,6 +99,9 @@ class TableOfContentsGenerator():
 
         parse_num += 1
         self.filter_file.write('# [{0}] - Accessories\n'.format(str(parse_num).zfill(3)))
+        self.filter_file.write('# [{0}.01] - Amulets\n'.format(str(parse_num).zfill(3)))
+        self.filter_file.write('# [{0}.02] - Belts\n'.format(str(parse_num).zfill(3)))
+        self.filter_file.write('# [{0}.03] - Rings\n'.format(str(parse_num).zfill(3)))
         self.filter_file.write('#\n')
 
         parse_num += 1
