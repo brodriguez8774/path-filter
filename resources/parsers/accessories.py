@@ -24,6 +24,7 @@ class AccessoryParser():
         self.hidden_rings = hidden_rings
         self.parse_num = str(parse_num).zfill(3)
         self.parse_subnum = 0
+        self.debug = debug
 
         # Update dict values.
         filter_dict['base_drop_level'] = base_drop_level
@@ -63,8 +64,11 @@ class AccessoryParser():
         self.filter_file.write('# === {0}: {1} === #\n'.format(item_type, item['Name']))
 
         if item['Name'] not in hidden_list:
-            logger.info('Not hidden: {0}'.format(item['Name']))
             # Display accessory normally.
+
+            if self.debug:
+                logger.info('Not hidden: {0}'.format(item['Name']))
+
             self.filter_file.write('# Rare Type.\n')
             self.filter_file.write('Show\n')
             self.filter_file.write('    BaseType "{0}"\n'.format(item['Name']))
@@ -86,9 +90,12 @@ class AccessoryParser():
             self.filter_file.write('\n')
 
         else:
-            logger.info('Hidden: {0}'.format(item['Name']))
             # Accessory set to always hide.
             # For some select accessories, we make an exception and show it for the first levels.
+
+            if self.debug:
+                logger.info('Hidden: {0}'.format(item['Name']))
+
             if item['Name'] in exception_list:
                 # Exception. Show for first levels, as determined by base_drop_level and rarity_level_modifier.
                 self.filter_file.write('# Rare Type.\n')
@@ -121,7 +128,9 @@ class AccessoryParser():
                 self.filter_file.write('\n')
 
     def parse_amulets(self):
-        """"""
+        """
+        Handle parsing for amulet items.
+        """
         self.parse_subnum += 1
 
         self.filter_file.write('\n')
@@ -130,8 +139,9 @@ class AccessoryParser():
         self.filter_file.write('# -------------------------- #\n')
         self.filter_file.write('\n')
 
-        logger.info('')
-        logger.info('Handling amulets.')
+        if self.debug:
+            logger.info('')
+            logger.info('Handling amulets.')
 
         with open('resources/data/accessories/amulets.json', 'r') as json_file:
             # Loop through all items in json.
@@ -140,7 +150,9 @@ class AccessoryParser():
                 self.handle_accessory(item, ['Coral Amulet', 'Paua Amulet'])
 
     def parse_belts(self):
-        """"""
+        """
+        Handle parsing for belt items.
+        """
         self.parse_subnum += 1
 
         self.filter_file.write('\n')
@@ -149,9 +161,9 @@ class AccessoryParser():
         self.filter_file.write('# ------------------------ #\n')
         self.filter_file.write('\n')
 
-        logger.info('')
-        logger.info('Handling belts.')
-
+        if self.debug:
+            logger.info('')
+            logger.info('Handling belts.')
 
         with open('resources/data/accessories/belts.json', 'r') as json_file:
             # Loop through all items in json.
@@ -160,7 +172,9 @@ class AccessoryParser():
                 self.handle_accessory(item, ['Chain Belt', 'Rustic Sash', 'Leather Belt'])
 
     def parse_rings(self):
-        """"""
+        """
+        Handle parsing for ring items.
+        """
         self.parse_subnum += 1
 
         self.filter_file.write('\n')
@@ -169,9 +183,9 @@ class AccessoryParser():
         self.filter_file.write('# ------------------------ #\n')
         self.filter_file.write('\n')
 
-        logger.info('')
-        logger.info('Handling rings.')
-
+        if self.debug:
+            logger.info('')
+            logger.info('Handling rings.')
 
         with open('resources/data/accessories/rings.json', 'r') as json_file:
             # Loop through all items in json.
