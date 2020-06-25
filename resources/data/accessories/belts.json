@@ -53,7 +53,7 @@
         "Name": "Studded Belt",
         "ImplicitType": "Increased Stun Duration",
         "ImplicitValue": [20, 30],
-        "DropLevel":
+        "DropLevel": 16
     },
     {
         "Type": "Accessory",

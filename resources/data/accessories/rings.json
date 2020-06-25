@@ -13,7 +13,7 @@
         "Name": "Coral Ring",
         "ImplicitType": "+ Maximum Life",
         "ImplicitValue": [20, 30],
-        "DropLevel":
+        "DropLevel": 1
     },
     {
         "Type": "Accessory",
