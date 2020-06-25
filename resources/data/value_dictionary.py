@@ -56,11 +56,12 @@ display_dict = {
     'minimap_icon_unique': 'UpsideDownHouse',   # Unique items.
     'minimap_icon_flasks': 'Raindrop',          # Flask items.
     'minimap_icon_jewel': 'Hexagon',            # Jewel items.
+    'minimap_icon_influenced': 'Diamond',       # Influenced items.
 
     # Minimap color values.
     'minimap_color_currency': 'White',          # General currency.
     'minimap_color_maps': 'White',              # Map items.
-    'minimap_color_slots': 'Yellow',            # 5 or 6 slot items.
+    'minimap_color_notable': 'Yellow',            # Notable Gear Drops.
     'minimap_color_special': 'Purple',          # League currency and other rare things.
     'minimap_color_unique': 'Orange',           # Unique items.
     'minimap_color_flasks': 'Blue',             # Flask items.
