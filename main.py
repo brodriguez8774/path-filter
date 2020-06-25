@@ -3,7 +3,7 @@ Python code to automatically generate a loot filter file for Path of Exile.
 """
 
 # System Imports.
-import argparse, os
+import argparse, json, os
 
 # User Imports.
 from resources import logging as init_logging
@@ -38,6 +38,32 @@ def run_filter_generation():
     # Attempt to parse passed args.
     args = parser.parse_args()
 
+    # Determine if program should display help output or generate filter.
+    amulet_help = get_amulet_help(args)
+    belt_help = get_belt_help(args)
+    ring_help = get_ring_help(args)
+
+    if amulet_help or belt_help or ring_help:
+        # At least one help arg passed. Display help and cancel filter generation.
+        if amulet_help:
+            display_amulet_help()
+
+        if belt_help:
+            display_belt_help()
+
+        if ring_help:
+            display_ring_help()
+
+        logger.info('Cancelling filter generation.')
+    else:
+        # No help arg passed. Continue with actual filter generation.
+        generate_filter(args)
+
+def generate_filter(args):
+    """
+    Logic to actually generate filter file.
+    :param args: Argparse args.
+    """
     # Read in all arg values from user.
     debug = get_debug(args)
     file_name = get_file_name(args)
@@ -47,6 +73,9 @@ def run_filter_generation():
     base_drop_level = get_base_drop_level(args)
     level_rarity_modifier = get_level_rarity_modifier(args)
     hybrid_flask_bool = get_hybrid_flask_bool(args)
+    hidden_amulets = get_hidden_amulets(args)
+    hidden_belts = get_hidden_belts(args)
+    hidden_rings = get_hidden_rings(args)
 
     # Display args.
     logger.info('')
@@ -62,6 +91,16 @@ def run_filter_generation():
     logger.info('        Uncommon: +{0}'.format(base_drop_level + level_rarity_modifier))
     logger.info('        Rare:     +{0}'.format(base_drop_level + (level_rarity_modifier * 2)))
     logger.info('')
+    if len(hidden_amulets) > 0 or len(hidden_belts) > 0 or len(hidden_rings) > 0:
+        logger.info('    Note: For leveling purposes, some amulets/belts/rings will display')
+        logger.info('          early on, even if set to ''"hidden".')
+        if len(hidden_amulets) > 0:
+            logger.info('    Hidden Amulets: {0}'.format(hidden_amulets))
+        if len(hidden_belts) > 0:
+            logger.info('    Hidden Belts: {0}'.format(hidden_belts))
+        if len(hidden_rings) > 0:
+            logger.info('    Hidden Rings: {0}'.format(hidden_rings))
+        logger.info('')
 
     # Create generation folder, if not present.
     try:
@@ -122,7 +161,16 @@ def run_filter_generation():
 
         # Generate Accessory Filtering.
         parse_num += 1
-        AccessoryParser(filter_file, parse_num, defenses, debug=debug)
+        AccessoryParser(
+            filter_file,
+            parse_num,
+            hidden_amulets,
+            hidden_belts,
+            hidden_rings,
+            base_drop_level,
+            level_rarity_modifier,
+            debug=debug,
+        )
 
         # Generate Weapon Filtering.
         parse_num += 1
@@ -196,12 +244,49 @@ def define_argparse_args():
              'Defaults to false.'
     )
     parser.add_argument(
+        '--hide_amulets',
+        nargs='+',
+        choices=get_amulet_list(),
+        help='Hides all passed amulets from filtering. For list of amulets, use the "--amulet_help" arg.'
+    )
+    parser.add_argument(
+        '--hide_belts',
+        nargs='+',
+        choices=get_belt_list(),
+        help='Hides all passed belts from filtering. For list of belts, use the "--belt_help" arg.'
+    )
+    parser.add_argument(
+        '--hide_rings',
+        nargs='+',
+        choices=get_ring_list(),
+        help='Hides all passed rings from filtering. For list of rings, use the "--ring_help" arg.'
+    )
+    parser.add_argument(
         '--debug',
         action='store_true',
         help='Runs program in debug mode. '
              'Defaults to false.',
     )
+    parser.add_argument(
+        '--amulet_help', '--amulets_help', '--help_amulets',
+        action='store_true',
+        help='Displays available amulets to hide with the "--hide_amulets" command. '
+             'By default, all amulets display at all times.'
+    )
+    parser.add_argument(
+        '--belt_help', '--belts_help', '--help_belts',
+        action='store_true',
+        help='Displays available belts to hide with the "--hide_belts" command. '
+             'By default, all belts display at all times.'
+    )
+    parser.add_argument(
+        '--ring_help', '--rings_help', '--help_rings',
+        action='store_true',
+        help='Displays available rings to hide with the "--hide_rings" command. '
+             'By default, all rings display at all times.'
+    )
     return parser
+
 
 def get_debug(args):
     """
@@ -289,7 +374,6 @@ def get_base_drop_level(args):
         return args.base_drop_level[0]
 
 
-
 def get_level_rarity_modifier(args):
     """
     Get level rarity modifier value. This is combined with the above "base drop level" to determine how many additional
@@ -311,6 +395,153 @@ def get_hybrid_flask_bool(args):
         return True
     else:
         return False
+
+
+def get_amulet_help(args):
+    """
+    Checks for amulet help bool. If true, displays available belts to filter on for "--hide_amulets" arg and cancels
+    filter creation.
+    :param args: Argparse args.
+    """
+    if args.amulet_help:
+        return True
+    else:
+        return False
+
+
+def get_belt_help(args):
+    """
+    Checks for belt help bool. If true, displays available belts to filter on for "--hide_belts" arg and cancels
+    filter creation.
+    :param args: Argparse args.
+    """
+    if args.belt_help:
+        return True
+    else:
+        return False
+
+
+def get_ring_help(args):
+    """
+    Checks for ring help bool. If true, displays available belts to filter on for "--hide_rings" arg and cancels
+    filter creation.
+    :param args: Argparse args.
+    """
+    if args.ring_help:
+        return True
+    else:
+        return False
+
+
+def get_hidden_amulets(args):
+    """
+    Get hidden amulet list. Anything in this list will not show up in filtering.
+    :param args: Argparse args.
+    """
+    if args.hide_amulets:
+        return args.hide_amulets
+    else:
+        return []
+
+
+def get_hidden_belts(args):
+    """
+    Get hidden belt list. Anything in this list will not show up in filtering.
+    :param args: Argparse args.
+    """
+    if args.hide_belts:
+        return args.hide_belts
+    else:
+        return []
+
+
+def get_hidden_rings(args):
+    """
+    Get hidden ring list. Anything in this list will not show up in filtering.
+    :param args: Argparse args.
+    """
+    if args.hide_rings:
+        return args.hide_rings
+    else:
+        return []
+
+
+def get_amulet_list():
+    """
+    Gets list of all amulets from json data.
+    :return: List of all available amulets.
+    """
+    item_list = []
+    with open('resources/data/accessories/amulets.json', 'r') as json_file:
+        # Loop through all items in json.
+        json_data = json.load(json_file)
+        for item in json_data:
+            item_list.append(item['Name'])
+
+    return item_list
+
+
+def get_belt_list():
+    """
+    Gets list of all belts from json data.
+    :return: List of all available belts.
+    """
+    item_list = []
+    with open('resources/data/accessories/belts.json', 'r') as json_file:
+        # Loop through all items in json.
+        json_data = json.load(json_file)
+        for item in json_data:
+            item_list.append(item['Name'])
+
+    return item_list
+
+
+def get_ring_list():
+    """
+    Gets list of all rings from json data.
+    :return: List of all available rings.
+    """
+    item_list = []
+    with open('resources/data/accessories/rings.json', 'r') as json_file:
+        # Loop through all items in json.
+        json_data = json.load(json_file)
+        for item in json_data:
+            item_list.append(item['Name'])
+
+    return item_list
+
+
+def display_amulet_help():
+    """
+    Displays helper list of all available amulets.
+    """
+    item_list = get_amulet_list()
+    logger.info('Amulets:')
+    for item in item_list:
+        logger.info('    {0}'.format(item))
+    logger.info('')
+
+
+def display_belt_help():
+    """
+    Displays helper list of all available belts.
+    """
+    item_list = get_belt_list()
+    logger.info('Belts:')
+    for item in item_list:
+        logger.info('    {0}'.format(item))
+    logger.info('')
+
+
+def display_ring_help():
+    """
+    Displays helper list of all available rings.
+    """
+    item_list = get_ring_list()
+    logger.info('Rings:')
+    for item in item_list:
+        logger.info('    {0}'.format(item))
+    logger.info('')
 
 
 if __name__ == '__main__':
