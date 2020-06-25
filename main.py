@@ -3,7 +3,7 @@ Python code to automatically generate a loot filter file for Path of Exile.
 """
 
 # System Imports.
-import argparse, json, os
+import argparse, json, os, sys
 
 # User Imports.
 from resources import logging as init_logging
@@ -115,13 +115,31 @@ def generate_filter(args):
         filter_file.write('# ======================= #\n')
         filter_file.write('# === POE Loot Filter === #\n')
         filter_file.write('# ======================= #\n')
-        filter_file.write('\n\n')
+        filter_file.write('#\n#\n')
         filter_file.write('# Generated with:\n')
+        filter_file.write('#     Base Drop Level: {0}\n'.format(base_drop_level))
+        filter_file.write('#     Level Rarity Modifier: {0}\n'.format(level_rarity_modifier))
+        filter_file.write('#\n')
         filter_file.write('#     Weapons: {0}\n'.format(weapons))
         if 'Shields' in weapons:
             filter_file.write('#     Shields: {0}\n'.format(shield_types))
         filter_file.write('#     Defense: {0}\n'.format(defenses))
-        filter_file.write('\n\n')
+        filter_file.write('#     Hidden Amulets: {0}\n'.format(hidden_amulets))
+        filter_file.write('#     Hidden Belts: {0}\n'.format(hidden_belts))
+        filter_file.write('#     Hidden Rings: {0}\n'.format(hidden_rings))
+        filter_file.write('#     Show Hybrid Flasks: {0}\n'.format(hybrid_flask_bool))
+        filter_file.write('#\n')
+        filter_file.write('# Original Command:\n')
+        filter_file.write('#    ')
+        orig_args = sys.argv
+        for arg in orig_args:
+            if 'main.py' in arg or arg[0] == '-':
+                filter_file.write(' {0}'.format(arg))
+            else:
+                filter_file.write(' "{0}"'.format(arg))
+        filter_file.write('\n#\n')
+
+        filter_file.write('#\n#\n')
 
         # Generate Table of Contents.
         parse_num += 1

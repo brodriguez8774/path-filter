@@ -32,14 +32,14 @@ class TableOfContentsGenerator():
         parse_num = 1
 
         # Section Start.
-        self.filter_file.write('\n')
+        self.filter_file.write('#\n')
         self.filter_file.write('# ================================= #\n')
         self.filter_file.write('# === [{0}] - Table of Contents === #\n'.format(str(parse_num).zfill(3)))
         self.filter_file.write('# ================================= #\n')
-        self.filter_file.write('\n')
+        self.filter_file.write('#\n')
 
         self.filter_file.write('# Use ctrl+f to jump to the indicated section.\n')
-        self.filter_file.write('\n')
+        self.filter_file.write('#\n')
 
         self.filter_file.write('# [{0}] - Table of Contents\n'.format(str(parse_num).zfill(3)))
         self.filter_file.write('#\n')
@@ -236,4 +236,4 @@ class TableOfContentsGenerator():
 
         parse_num += 1
         self.filter_file.write('# [{0}] - Final/Cleanup Filtering\n'.format(str(parse_num).zfill(3)))
-        self.filter_file.write('\n')
+        self.filter_file.write('#\n')
