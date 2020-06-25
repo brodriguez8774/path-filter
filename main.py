@@ -130,7 +130,7 @@ def generate_filter(args):
         filter_file.write('#     Show Hybrid Flasks: {0}\n'.format(hybrid_flask_bool))
         filter_file.write('#\n')
         filter_file.write('# Original Command:\n')
-        filter_file.write('#    ')
+        filter_file.write('#    python')
         orig_args = sys.argv
         for arg in orig_args:
             if 'main.py' in arg or arg[0] == '-':
