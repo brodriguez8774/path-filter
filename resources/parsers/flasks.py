@@ -63,8 +63,8 @@ class FlaskParser():
         self.filter_file.write('    SetBackgroundColor {0}\n'.format(display_dict['standard_background']))
         self.filter_file.write('    SetFontSize {0}\n'.format(display_dict['default_font_size']))
         self.filter_file.write('    MinimapIcon 2 {0} {1}\n'.format(
-            display_dict['minimap_icon_flasks'],
             display_dict['minimap_color_flasks'],
+            display_dict['minimap_icon_flasks'],
         ))
         self.filter_file.write('    PlayEffect {0}\n'.format(display_dict['minimap_color_flasks']))
         self.filter_file.write('\n')
@@ -93,8 +93,8 @@ class FlaskParser():
         self.filter_file.write('    SetBackgroundColor {0}\n'.format(display_dict['standard_background']))
         self.filter_file.write('    SetFontSize {0}\n'.format(display_dict['important_font_size']))
         self.filter_file.write('    MinimapIcon 2 {0} {1}\n'.format(
-            display_dict['minimap_icon_flasks'],
             display_dict['minimap_color_flasks'],
+            display_dict['minimap_icon_flasks'],
         ))
         self.filter_file.write('    PlayEffect {0}\n'.format(display_dict['minimap_color_flasks']))
         self.filter_file.write('\n')
@@ -111,8 +111,8 @@ class FlaskParser():
         self.filter_file.write('    SetBackgroundColor {0}\n'.format(display_dict['standard_background']))
         self.filter_file.write('    SetFontSize {0}\n'.format(display_dict['uncommon_font_size']))
         self.filter_file.write('    MinimapIcon 2 {0} {1}\n'.format(
-            display_dict['minimap_icon_flasks'],
             display_dict['minimap_color_flasks'],
+            display_dict['minimap_icon_flasks'],
         ))
         self.filter_file.write('    PlayEffect {0}\n'.format(display_dict['minimap_color_flasks']))
         self.filter_file.write('\n')
@@ -129,8 +129,8 @@ class FlaskParser():
         self.filter_file.write('    SetBackgroundColor {0}\n'.format(display_dict['standard_background']))
         self.filter_file.write('    SetFontSize {0}\n'.format(display_dict['default_font_size']))
         self.filter_file.write('    MinimapIcon 2 {0} {1}\n'.format(
-            display_dict['minimap_icon_flasks'],
             display_dict['minimap_color_flasks'],
+            display_dict['minimap_icon_flasks'],
         ))
         self.filter_file.write('    PlayEffect {0}\n'.format(display_dict['minimap_color_flasks']))
         self.filter_file.write('\n')
