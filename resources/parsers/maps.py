@@ -46,8 +46,8 @@ class MapParser():
         self.filter_file.write('    PlayAlertSound 16 100\n')
         self.filter_file.write('    MinimapIcon 2 {0} {1}\n'.format(
             display_dict['minimap_color_maps'],
-            display_dict['minimap_icon_maps']),
-        )
+            display_dict['minimap_icon_maps'],
+        ))
         self.filter_file.write('    PlayEffect {0}\n'.format(display_dict['minimap_color_maps']))
         self.filter_file.write('\n')
 
@@ -60,8 +60,8 @@ class MapParser():
         self.filter_file.write('    PlayAlertSound 16 100\n')
         self.filter_file.write('    MinimapIcon 2 {0} {1}\n'.format(
             display_dict['minimap_color_maps'],
-            display_dict['minimap_icon_maps']),
-        )
+            display_dict['minimap_icon_maps'],
+        ))
         self.filter_file.write('    PlayEffect {0}\n'.format(display_dict['minimap_color_maps']))
         self.filter_file.write('\n')
 
@@ -74,8 +74,8 @@ class MapParser():
         self.filter_file.write('    PlayAlertSound 16 75\n')
         self.filter_file.write('    MinimapIcon 2 {0} {1}\n'.format(
             display_dict['minimap_color_maps'],
-            display_dict['minimap_icon_maps']),
-        )
+            display_dict['minimap_icon_maps'],
+        ))
         self.filter_file.write('    PlayEffect {0}\n'.format(display_dict['minimap_color_maps']))
         self.filter_file.write('\n')
 
@@ -87,8 +87,8 @@ class MapParser():
         self.filter_file.write('    PlayAlertSound 16 50\n')
         self.filter_file.write('    MinimapIcon 2 {0} {1}\n'.format(
             display_dict['minimap_color_maps'],
-            display_dict['minimap_icon_maps']),
-        )
+            display_dict['minimap_icon_maps'],
+        ))
         self.filter_file.write('    PlayEffect {0}\n'.format(display_dict['minimap_color_maps']))
         self.filter_file.write('\n')
 

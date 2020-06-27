@@ -58,8 +58,8 @@ class GemParser():
         self.filter_file.write('    SetBorderColor {0}\n'.format(display_dict['unique']))
         self.filter_file.write('    SetFontSize {0}\n'.format(display_dict['important_font_size']))
         self.filter_file.write('    MinimapIcon 0 {0} {1}\n'.format(
-            display_dict['minimap_icon_special'],
             display_dict['minimap_color_special'],
+            display_dict['minimap_icon_special'],
         ))
         self.filter_file.write('    PlayEffect {0}'.format(display_dict['minimap_color_special']))
         self.filter_file.write('\n')
@@ -141,8 +141,8 @@ class GemParser():
         self.filter_file.write('    SetBorderColor {0}\n'.format(display_dict['normal']))
         self.filter_file.write('    SetFontSize {0}\n'.format(display_dict['default_font_size']))
         self.filter_file.write('    MinimapIcon 0 {0} {1}\n'.format(
-            display_dict['minimap_icon_special'],
             display_dict['minimap_color_special'],
+            display_dict['minimap_icon_special'],
         ))
         self.filter_file.write('    PlayEffect {0}'.format(display_dict['minimap_color_special']))
         self.filter_file.write('\n')

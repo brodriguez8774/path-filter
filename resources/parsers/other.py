@@ -52,9 +52,9 @@ class UniqueParser():
         self.filter_file.write('    SetFontSize {0}\n'.format(display_dict['unique_font_size']))
         self.filter_file.write('    PlayAlertSound 16 100\n')
         self.filter_file.write('    MinimapIcon 0 {0} {1}\n'.format(
+            display_dict['minimap_color_unique'],
             display_dict['minimap_icon_maps'],
-            display_dict['minimap_color_unique']),
-        )
+        ))
         self.filter_file.write('    PlayEffect {0}\n'.format(display_dict['minimap_color_unique']))
         self.filter_file.write('\n')
 
@@ -68,9 +68,9 @@ class UniqueParser():
         self.filter_file.write('    SetFontSize {0}\n'.format(display_dict['unique_font_size']))
         self.filter_file.write('    PlayAlertSound 1 300\n')
         self.filter_file.write('    MinimapIcon 0 {0} {1}\n'.format(
+            display_dict['minimap_color_unique'],
             display_dict['minimap_icon_unique'],
-            display_dict['minimap_color_unique']),
-        )
+        ))
         self.filter_file.write('    PlayerEffect {0}\n'.format(display_dict['minimap_color_unique']))
 
         self.filter_file.write('\n')
@@ -171,8 +171,8 @@ class NotableGearParser():
         self.filter_file.write('    SetFontSize {0}\n'.format(display_dict['important_font_size']))
         self.filter_file.write('    PlayAlertSound 1 300\n')
         self.filter_file.write('    MinimapIcon 1 {0} {1}\n'.format(
-            display_dict['minimap_icon_slots'],
             display_dict['minimap_color_notable'],
+            display_dict['minimap_icon_slots'],
         ))
         self.filter_file.write('    PlayerEffect {0}\n'.format(display_dict['minimap_color_notable']))
         self.filter_file.write('\n')
@@ -193,8 +193,8 @@ class NotableGearParser():
         self.filter_file.write('    SetBorderColor {0}\n'.format(display_dict['rare']))
         self.filter_file.write('    PlayAlertSound 1 300\n')
         self.filter_file.write('    MinimapIcon 0 {0} {1}\n'.format(
-            display_dict['minimap_icon_influenced'],
             display_dict['minimap_color_notable'],
+            display_dict['minimap_icon_influenced'],
         ))
         self.filter_file.write('    PlayerEffect {0}\n'.format(display_dict['minimap_color_notable']))
         self.filter_file.write('\n')
@@ -206,8 +206,8 @@ class NotableGearParser():
         self.filter_file.write('    SetBorderColor {0}\n'.format(display_dict['magic']))
         self.filter_file.write('    PlayAlertSound 1 300\n')
         self.filter_file.write('    MinimapIcon 0 {0} {1}\n'.format(
-            display_dict['minimap_icon_influenced'],
             display_dict['minimap_color_notable'],
+            display_dict['minimap_icon_influenced'],
         ))
         self.filter_file.write('    PlayerEffect {0}\n'.format(display_dict['minimap_color_notable']))
         self.filter_file.write('\n')
@@ -219,8 +219,8 @@ class NotableGearParser():
         self.filter_file.write('    SetBorderColor {0}\n'.format(display_dict['normal']))
         self.filter_file.write('    PlayAlertSound 1 300\n')
         self.filter_file.write('    MinimapIcon 0 {0} {1}\n'.format(
-            display_dict['minimap_icon_influenced'],
             display_dict['minimap_color_notable'],
+            display_dict['minimap_icon_influenced'],
         ))
         self.filter_file.write('    PlayerEffect {0}\n'.format(display_dict['minimap_color_notable']))
         self.filter_file.write('\n')
@@ -242,8 +242,8 @@ class NotableGearParser():
         self.filter_file.write('    SetBorderColor {0}\n'.format(display_dict['normal']))
         self.filter_file.write('    PlayAlertSound 1 300\n')
         self.filter_file.write('    MinimapIcon 0 {0} {1}\n'.format(
-            display_dict['minimap_icon_special'],
             display_dict['minimap_color_notable'],
+            display_dict['minimap_icon_special'],
         ))
         self.filter_file.write('    PlayerEffect {0}\n'.format(display_dict['minimap_color_notable']))
         self.filter_file.write('\n')
