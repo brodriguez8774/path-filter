@@ -88,7 +88,7 @@ def generate_filter(args):
     logger.info('')
     logger.info('    Drop Level Modifiers (from item base drop level):')
     logger.info('        Base:     +{0}'.format(base_drop_level))
-    logger.info('        Uncommon: +{0}'.format(base_drop_level + level_rarity_modifier))
+    logger.info('        Magic:    +{0}'.format(base_drop_level + level_rarity_modifier))
     logger.info('        Rare:     +{0}'.format(base_drop_level + (level_rarity_modifier * 2)))
     logger.info('')
     if len(hidden_amulets) > 0 or len(hidden_belts) > 0 or len(hidden_rings) > 0:

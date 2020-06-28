@@ -162,7 +162,7 @@ class WeaponParser():
         """
         drop_level = filter_dict['base_drop_level'] + filter_dict['level_rarity_modifier']
 
-        self.filter_file.write('# Uncommon Type.\n')
+        self.filter_file.write('# Magic Type.\n')
         self.filter_file.write('Show\n')
 
         # Limitations to filter on.

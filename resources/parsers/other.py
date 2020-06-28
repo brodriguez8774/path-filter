@@ -125,7 +125,7 @@ class NotableGearParser():
         self.filter_file.write('    SetBorderColor {0}\n'.format(display_dict['rare']))
         self.parse_high_slot_filter()
 
-        self.filter_file.write('# Uncommon Type.\n')
+        self.filter_file.write('# Magic Type.\n')
         self.filter_file.write('Show\n')
         self.filter_file.write('    Rarity = Magic\n')
         self.filter_file.write('    LinkedSockets = 6\n')
@@ -152,7 +152,7 @@ class NotableGearParser():
         self.filter_file.write('    SetBorderColor {0}\n'.format(display_dict['rare']))
         self.parse_high_slot_filter()
 
-        self.filter_file.write('# Uncommon Type.\n')
+        self.filter_file.write('# Magic Type.\n')
         self.filter_file.write('Show\n')
         self.filter_file.write('    Rarity = Magic\n')
         self.filter_file.write('    LinkedSockets = 5\n')
@@ -199,7 +199,7 @@ class NotableGearParser():
         self.filter_file.write('    PlayEffect {0}\n'.format(display_dict['minimap_color_notable']))
         self.filter_file.write('\n')
 
-        self.filter_file.write('# Uncommon Type.\n')
+        self.filter_file.write('# Magic Type.\n')
         self.filter_file.write('Show\n')
         self.filter_file.write('    Rarity = Magic\n')
         self.filter_file.write('    HasInfluence "Shaper" "Elder" "Crusader" "Hunter" "Redeemer" "Warlord"\n')
