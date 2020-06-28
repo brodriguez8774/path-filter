@@ -238,7 +238,7 @@ class NotableGearParser():
         self.filter_file.write('\n')
 
         self.filter_file.write('Show\n')
-        self.filter_file.write('    BaseType "Fishing Rods"\n')
+        self.filter_file.write('    Class "Fishing Rods"\n')
         self.filter_file.write('    SetBorderColor {0}\n'.format(display_dict['normal']))
         self.filter_file.write('    PlayAlertSound 1 300\n')
         self.filter_file.write('    MinimapIcon 0 {0} {1}\n'.format(

@@ -324,10 +324,28 @@ class CurrencyParser():
         self.filter_file.write('# ---------------------------------- #\n')
         self.filter_file.write('\n')
 
+        # Labyrinth classes.
+        self.filter_file.write('# Labyrinth Classes.')
         self.filter_file.write('Show\n')
 
         # Limitations to filter on.
-        self.filter_file.write('    Class "Labyrinth" "Labyrinth Item" "Labyrinth Trinket" "Key" "Offering to the Goddess" "Divine Vessel"\n')
+        self.filter_file.write('    Class "Labyrinth" "Labyrinth Item" "Labyrinth Trinket"\n')
+
+        # Values to set if filter match is found.
+        self.filter_file.write('    SetFontSize {0}\n'.format(display_dict['uncommon_font_size']))
+        self.filter_file.write('    MinimapIcon 2 {0} {1}\n'.format(
+            display_dict['minimap_color_currency'],
+            display_dict['minimap_icon_special'],
+        ))
+        self.filter_file.write('    PlayEffect {0}\n'.format(display_dict['minimap_color_currency']))
+        self.filter_file.write('\n')
+
+        # Labyrinth base types.
+        self.filter_file.write('# Labyrinth Bases.')
+        self.filter_file.write('Show\n')
+
+        # Limitations to filter on.
+        self.filter_file.write('    BaseType "Key" "Offering to the Goddess" "Divine Vessel"\n')
 
         # Values to set if filter match is found.
         self.filter_file.write('    SetFontSize {0}\n'.format(display_dict['uncommon_font_size']))
