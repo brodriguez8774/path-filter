@@ -52,7 +52,7 @@ class JewelParser():
         self.filter_file.write('    BaseType "Cobalt Jewel" "Crimson Jewel" "Viridian Jewel"\n')
 
         # Values to set if filter match is found.
-        self.filter_file.write('    BorderColor {0}\n'.format(display_dict['normal']))
+        self.filter_file.write('    SetBorderColor {0}\n'.format(display_dict['normal']))
         self.filter_file.write('    SetFontSize {0}\n'.format(display_dict['rare_font_size']))
         self.filter_file.write('    PlayAlertSound 4 175\n')
         self.filter_file.write('    MinimapIcon 2 {0} {1}\n'.format(
@@ -79,7 +79,7 @@ class JewelParser():
         self.filter_file.write('    Class "Abyss Jewel"\n')
 
         # Values to set if filter match is found.
-        self.filter_file.write('    BorderColor {0}\n'.format(display_dict['league_border']))
+        self.filter_file.write('    SetBorderColor {0}\n'.format(display_dict['league_border']))
         self.filter_file.write('    SetTextColor {0}\n'.format(display_dict['league_text']))
         self.filter_file.write('    SetFontSize {0}\n'.format(display_dict['rare_font_size']))
         self.filter_file.write('    PlayAlertSound 4 175\n')
@@ -107,7 +107,7 @@ class JewelParser():
         self.filter_file.write('    BaseType "Cluster Jewel"\n')
 
         # Values to set if filter match is found.
-        self.filter_file.write('    BorderColor {0}\n'.format(display_dict['league_border']))
+        self.filter_file.write('    SetBorderColor {0}\n'.format(display_dict['league_border']))
         self.filter_file.write('    SetTextColor {0}\n'.format(display_dict['league_text']))
         self.filter_file.write('    SetFontSize {0}\n'.format(display_dict['rare_font_size']))
         self.filter_file.write('    PlayAlertSound 4 175\n')

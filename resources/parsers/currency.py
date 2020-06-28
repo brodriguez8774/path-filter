@@ -301,7 +301,7 @@ class CurrencyParser():
             self.filter_file.write('    BaseType {0}\n'.format(base_text))
 
         # Values to set if filter match is found.
-        self.filter_file.write('    BorderColor {0}\n'.format(display_dict['league_border']))
+        self.filter_file.write('    SetBorderColor {0}\n'.format(display_dict['league_border']))
         self.filter_file.write('    SetTextColor {0}\n'.format(display_dict['league_text']))
         self.filter_file.write('    SetFontSize {0}\n'.format(display_dict['rare_font_size']))
         self.filter_file.write('    PlayAlertSound 4 175\n')

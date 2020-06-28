@@ -71,7 +71,7 @@ class UniqueParser():
             display_dict['minimap_color_unique'],
             display_dict['minimap_icon_unique'],
         ))
-        self.filter_file.write('    PlayerEffect {0}\n'.format(display_dict['minimap_color_unique']))
+        self.filter_file.write('    PlayEffect {0}\n'.format(display_dict['minimap_color_unique']))
 
         self.filter_file.write('\n')
 
@@ -174,7 +174,7 @@ class NotableGearParser():
             display_dict['minimap_color_notable'],
             display_dict['minimap_icon_slots'],
         ))
-        self.filter_file.write('    PlayerEffect {0}\n'.format(display_dict['minimap_color_notable']))
+        self.filter_file.write('    PlayEffect {0}\n'.format(display_dict['minimap_color_notable']))
         self.filter_file.write('\n')
 
     def parse_influence(self):
@@ -196,7 +196,7 @@ class NotableGearParser():
             display_dict['minimap_color_notable'],
             display_dict['minimap_icon_influenced'],
         ))
-        self.filter_file.write('    PlayerEffect {0}\n'.format(display_dict['minimap_color_notable']))
+        self.filter_file.write('    PlayEffect {0}\n'.format(display_dict['minimap_color_notable']))
         self.filter_file.write('\n')
 
         self.filter_file.write('# Uncommon Type.\n')
@@ -209,7 +209,7 @@ class NotableGearParser():
             display_dict['minimap_color_notable'],
             display_dict['minimap_icon_influenced'],
         ))
-        self.filter_file.write('    PlayerEffect {0}\n'.format(display_dict['minimap_color_notable']))
+        self.filter_file.write('    PlayEffect {0}\n'.format(display_dict['minimap_color_notable']))
         self.filter_file.write('\n')
 
         self.filter_file.write('# Base Type.\n')
@@ -222,7 +222,7 @@ class NotableGearParser():
             display_dict['minimap_color_notable'],
             display_dict['minimap_icon_influenced'],
         ))
-        self.filter_file.write('    PlayerEffect {0}\n'.format(display_dict['minimap_color_notable']))
+        self.filter_file.write('    PlayEffect {0}\n'.format(display_dict['minimap_color_notable']))
         self.filter_file.write('\n')
 
     def parse_fishing_rods(self):
@@ -245,7 +245,7 @@ class NotableGearParser():
             display_dict['minimap_color_notable'],
             display_dict['minimap_icon_special'],
         ))
-        self.filter_file.write('    PlayerEffect {0}\n'.format(display_dict['minimap_color_notable']))
+        self.filter_file.write('    PlayEffect {0}\n'.format(display_dict['minimap_color_notable']))
         self.filter_file.write('\n')
 
 
