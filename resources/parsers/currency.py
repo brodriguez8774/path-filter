@@ -54,7 +54,7 @@ class CurrencyParser():
             '"Mirror of Kalandra"',
             background_color=display_dict['unique_background'],
             border_color=None,
-            text_color=display_dict['unique_text_color'],
+            text_color=display_dict['unique_text'],
             font_size=display_dict['unique_font_size'],
             sound='ShMirror 300',
             minimap='0 {0} {1}'.format(display_dict['minimap_color_unique'], display_dict['minimap_icon_currency']),

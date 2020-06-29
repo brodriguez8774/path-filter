@@ -48,7 +48,7 @@ class UniqueParser():
         self.filter_file.write('    Rarity Unique\n')
         self.filter_file.write('    SetBackgroundColor {0}\n'.format(display_dict['unique_background']))
         self.filter_file.write('    SetBorderColor {0}\n'.format(display_dict['unique']))
-        self.filter_file.write('    SetTextColor {0}\n'.format(display_dict['unique_text_color']))
+        self.filter_file.write('    SetTextColor {0}\n'.format(display_dict['unique_text']))
         self.filter_file.write('    SetFontSize {0}\n'.format(display_dict['unique_font_size']))
         self.filter_file.write('    PlayAlertSound 16 100\n')
         self.filter_file.write('    MinimapIcon 0 {0} {1}\n'.format(
@@ -64,7 +64,7 @@ class UniqueParser():
         self.filter_file.write('    Rarity = Unique\n')
         self.filter_file.write('    SetBackgroundColor {0}\n'.format(display_dict['unique_background']))
         self.filter_file.write('    SetBorderColor {0}\n'.format(display_dict['unique']))
-        self.filter_file.write('    SetTextColor {0}\n'.format(display_dict['unique_text_color']))
+        self.filter_file.write('    SetTextColor {0}\n'.format(display_dict['unique_text']))
         self.filter_file.write('    SetFontSize {0}\n'.format(display_dict['unique_font_size']))
         self.filter_file.write('    PlayAlertSound 1 300\n')
         self.filter_file.write('    MinimapIcon 0 {0} {1}\n'.format(

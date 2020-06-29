@@ -89,7 +89,7 @@ class WeaponParser():
         self.filter_file.write('    Rarity = Rare\n')
 
         # Values to set if filter match is found.
-        self.filter_file.write('    SetBackgroundColor {0}\n'.format(display_dict['weapon']))
+        self.filter_file.write('    SetBackgroundColor {0}\n'.format(display_dict['dark_grey_background']))
         self.filter_file.write('    SetBorderColor {0}\n'.format(display_dict['rare']))
         self.filter_file.write('    SetFontSize {0}\n'.format(display_dict['rare_font_size']))
         self.filter_file.write('\n')
@@ -113,7 +113,7 @@ class WeaponParser():
             self.filter_file.write('    LinkedSockets >= 3\n')
 
             # Values to set if filter match is found.
-            self.filter_file.write('    SetBackgroundColor {0}\n'.format(display_dict['weapon']))
+            self.filter_file.write('    SetBackgroundColor {0}\n'.format(display_dict['dark_grey_background']))
             self.filter_file.write('    SetBorderColor {0}\n'.format(display_dict['normal']))
             self.filter_file.write('    SetFontSize {0}\n'.format(display_dict['uncommon_font_size']))
             self.filter_file.write('\n')
@@ -129,7 +129,7 @@ class WeaponParser():
             self.filter_file.write('    LinkedSockets >= 4\n')
 
             # Values to set if filter match is found.
-            self.filter_file.write('    SetBackgroundColor {0}\n'.format(display_dict['weapon']))
+            self.filter_file.write('    SetBackgroundColor {0}\n'.format(display_dict['dark_grey_background']))
             self.filter_file.write('    SetFontSize {0}\n'.format(display_dict['uncommon_font_size']))
             self.filter_file.write('\n')
 
@@ -150,7 +150,7 @@ class WeaponParser():
         self.filter_file.write('    SocketGroup "RGB"\n')
 
         # Values to set if filter match is found.
-        self.filter_file.write('    SetBackgroundColor {0}\n'.format(display_dict['weapon']))
+        self.filter_file.write('    SetBackgroundColor {0}\n'.format(display_dict['dark_grey_background']))
         self.filter_file.write('    SetBorderColor {0}\n'.format(display_dict['normal']))
         self.filter_file.write('    SetFontSize {0}\n'.format(display_dict['uncommon_font_size']))
         self.filter_file.write('\n')
@@ -172,7 +172,7 @@ class WeaponParser():
         self.filter_file.write('    Rarity = Magic\n')
 
         # Values to set if filter match is found.
-        self.filter_file.write('    SetBackgroundColor {0}\n'.format(display_dict['weapon']))
+        self.filter_file.write('    SetBackgroundColor {0}\n'.format(display_dict['dark_grey_background']))
         self.filter_file.write('    SetBorderColor {0}\n'.format(display_dict['magic']))
         self.filter_file.write('    SetFontSize {0}\n'.format(display_dict['uncommon_font_size']))
         self.filter_file.write('\n')
@@ -193,7 +193,7 @@ class WeaponParser():
             self.filter_file.write('    ItemLevel <= {0}\n'.format(item['DropLevel'] + drop_level))
 
         # Values to set if filter match is found.
-        self.filter_file.write('    SetBackgroundColor {0}\n'.format(display_dict['weapon']))
+        self.filter_file.write('    SetBackgroundColor {0}\n'.format(display_dict['dark_grey_background']))
         self.filter_file.write('    SetFontSize {0}\n'.format(display_dict['default_font_size']))
         self.filter_file.write('\n')
 

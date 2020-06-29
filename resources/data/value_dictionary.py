@@ -29,16 +29,17 @@ display_dict = {
     'En/A': '48 3 48',
 
     # Custom other colors.
-    'unique_background': '66 30 30',
-    'unique_text_color': '175 96 37',
     'standard_background': '25 25 25',
-    'weapon': '75 75 75',
-    'currency_text': '218 190 147',
+    'dark_grey_background': '75 75 75',
+    'unique_background': '66 30 30',
+    'league_border': '128 0 128',
+
     'normal_important_text': '255 255 255',
     'uncommon_important_text': '136 136 255',
     'rare_important_text': '255 255 119',
-    'league_border': '128 0 128',
+    'unique_text': '175 96 37',
     'league_text': '184 0 184',
+    'currency_text': '218 190 147',
 
     # Font values.
     'unique_font_size': 50,
