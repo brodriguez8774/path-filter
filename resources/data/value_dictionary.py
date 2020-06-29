@@ -33,6 +33,7 @@ display_dict = {
     'dark_grey_background': '75 75 75',
     'unique_background': '66 30 30',
     'league_border': '128 0 128',
+    'currency_orb_border': '0 0 0',
 
     'normal_important_text': '255 255 255',
     'uncommon_important_text': '136 136 255',

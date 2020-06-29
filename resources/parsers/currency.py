@@ -584,7 +584,7 @@ class PostEquipment_CurrencyParser():
 
         # Values to set if filter match is found.
         self.filter_file.write('    SetBackgroundColor {0} 100\n'.format(display_dict['standard_background']))
-        self.filter_file.write('    SetBorderColor {0}\n'.format(display_dict['rare']))
+        self.filter_file.write('    SetBorderColor {0}\n'.format(display_dict['currency_orb_border']))
         self.filter_file.write('    SetTextColor {0} 0\n'.format(display_dict['text']))
         self.filter_file.write('    SetFontSize {0}\n'.format(display_dict['min_font_size']))
         self.filter_file.write('\n')
@@ -600,7 +600,7 @@ class PostEquipment_CurrencyParser():
 
         # Values to set if filter match is found.
         self.filter_file.write('    SetBackgroundColor {0} 100\n'.format(display_dict['standard_background']))
-        self.filter_file.write('    SetBorderColor {0}\n'.format(display_dict['rare']))
+        self.filter_file.write('    SetBorderColor {0}\n'.format(display_dict['currency_orb_border']))
         self.filter_file.write('    SetTextColor {0} 0\n'.format(display_dict['text']))
         self.filter_file.write('    SetFontSize {0}\n'.format(display_dict['min_font_size']))
         self.filter_file.write('\n')
@@ -631,7 +631,7 @@ class PostEquipment_CurrencyParser():
 
         # Values to set if filter match is found.
         self.filter_file.write('    SetBackgroundColor {0} 100\n'.format(display_dict['standard_background']))
-        self.filter_file.write('    SetBorderColor {0}\n'.format(display_dict['rare']))
+        self.filter_file.write('    SetBorderColor {0}\n'.format(display_dict['currency_orb_border']))
         self.filter_file.write('    SetTextColor {0} 0\n'.format(display_dict['text']))
         self.filter_file.write('    SetFontSize {0}\n'.format(display_dict['min_font_size']))
         self.filter_file.write('\n')
@@ -647,7 +647,7 @@ class PostEquipment_CurrencyParser():
 
         # Values to set if filter match is found.
         self.filter_file.write('    SetBackgroundColor {0} 100\n'.format(display_dict['standard_background']))
-        self.filter_file.write('    SetBorderColor {0}\n'.format(display_dict['rare']))
+        self.filter_file.write('    SetBorderColor {0}\n'.format(display_dict['currency_orb_border']))
         self.filter_file.write('    SetTextColor {0} 0\n'.format(display_dict['text']))
         self.filter_file.write('    SetFontSize {0}\n'.format(display_dict['min_font_size']))
         self.filter_file.write('\n')
