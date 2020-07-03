@@ -14,6 +14,35 @@ from resources.data.value_dictionary import display_dict, filter_dict
 logger = init_logging.get_logger(__name__)
 
 
+class QuestItemParser():
+    """
+    Filtering for all quest items.
+    """
+    def __init__(self, filter_file, parse_num, debug=False):
+        self.filter_file = filter_file
+        self.parse_num = str(parse_num).zfill(3)
+        self.parse_subnum = 0
+        self.debug = debug
+
+        # Section Start.
+        self.filter_file.write('\n')
+        self.filter_file.write('# =========================== #\n')
+        self.filter_file.write('# === [{0}] - Quest Items === #\n'.format(self.parse_num))
+        self.filter_file.write('# =========================== #\n')
+        self.filter_file.write('\n')
+
+        self.filter_file.write('Show\n')
+
+        # Limitations to filter on.
+        self.filter_file.write('    Class "Quest" "Quest Items"\n')
+
+        # Values to set if filter match is found.
+        self.filter_file.write('    SetBorderColor {0}\n'.format(display_dict['quest']))
+        self.filter_file.write('    SetTextColor {0}\n'.format(display_dict['quest']))
+        self.filter_file.write('    SetFontSize {0}\n'.format(display_dict['important_font_size']))
+        self.filter_file.write('\n')
+
+
 class UniqueParser():
     """
     Filtering for all uniques.

@@ -14,7 +14,7 @@ from resources.parsers.flasks import FlaskParser
 from resources.parsers.gems import GemParser
 from resources.parsers.jewels import JewelParser
 from resources.parsers.maps import MapParser
-from resources.parsers.other import FinalParser, NotableGearParser, UniqueParser
+from resources.parsers.other import FinalParser, NotableGearParser, QuestItemParser, UniqueParser
 from resources.parsers.table_of_contents import TableOfContentsGenerator
 from resources.parsers.weapons import WeaponParser
 from resources.data.value_dictionary import filter_dict
@@ -144,6 +144,10 @@ def generate_filter(args):
         # Generate Table of Contents.
         parse_num += 1
         TableOfContentsGenerator(filter_file, weapons, defenses, shield_types, hybrid_flask_bool, debug=debug)
+
+        # Generate Quest Item Filtering.
+        parse_num += 1
+        QuestItemParser(filter_file, parse_num, debug=debug)
 
         # Generate Unique Filtering.
         parse_num += 1

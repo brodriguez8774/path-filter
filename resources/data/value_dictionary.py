@@ -19,6 +19,7 @@ display_dict = {
     'rare': '255 255 199',
     'unique': '175 96 37',
     'text': '127 127 127',
+    'quest': '74 230 58',
 
     # Custom armor-class colors.
     'A': '48 3 3',

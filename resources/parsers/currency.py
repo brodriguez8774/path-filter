@@ -371,7 +371,7 @@ class CurrencyParser():
         self.filter_file.write('Show\n')
 
         # Limitations to filter on.
-        self.filter_file.write('    Class "Currency" "Stackable Currency" "Quest" "Quest Items" "Leaguestone"\n')
+        self.filter_file.write('    Class "Currency" "Stackable Currency" "Leaguestone"\n')
 
         # Values to set if filter match is found.
         self.filter_file.write('    SetFontSize {0}\n'.format(display_dict['default_font_size']))

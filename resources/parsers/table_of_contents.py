@@ -45,6 +45,10 @@ class TableOfContentsGenerator():
         self.filter_file.write('#\n')
 
         parse_num += 1
+        self.filter_file.write('# [{0}] - Quest Items\n'.format(str(parse_num).zfill(3)))
+        self.filter_file.write('#\n')
+
+        parse_num += 1
         self.filter_file.write('# [{0}] - Uniques\n'.format(str(parse_num).zfill(3)))
         self.filter_file.write('#\n')
 
