@@ -59,10 +59,11 @@ def run_filter_generation():
         # No help arg passed. Continue with actual filter generation.
         generate_filter(args)
 
-def generate_filter(args):
+def generate_filter(args ,test_mode=False):
     """
     Logic to actually generate filter file.
     :param args: Argparse args.
+    :param test_mode: Debugging mode for testing specific sections of generation.
     """
     # Read in all arg values from user.
     debug = get_debug(args)
@@ -141,74 +142,79 @@ def generate_filter(args):
 
         filter_file.write('#\n#\n')
 
-        # Generate Table of Contents.
-        parse_num += 1
-        TableOfContentsGenerator(filter_file, weapons, defenses, shield_types, hybrid_flask_bool, debug=debug)
+        if not test_mode:
+            # Generate Table of Contents.
+            parse_num += 1
+            TableOfContentsGenerator(filter_file, weapons, defenses, shield_types, hybrid_flask_bool, debug=debug)
 
-        # Generate Quest Item Filtering.
-        parse_num += 1
-        QuestItemParser(filter_file, parse_num, debug=debug)
+            # Generate Quest Item Filtering.
+            parse_num += 1
+            QuestItemParser(filter_file, parse_num, debug=debug)
 
-        # Generate Unique Filtering.
-        parse_num += 1
-        UniqueParser(filter_file, parse_num, debug=debug)
+            # Generate Unique Filtering.
+            parse_num += 1
+            UniqueParser(filter_file, parse_num, debug=debug)
 
-        # Generate Currency Filtering.
-        parse_num += 1
-        CurrencyParser(filter_file, parse_num, debug=debug)
+            # Generate Currency Filtering.
+            parse_num += 1
+            CurrencyParser(filter_file, parse_num, debug=debug)
 
-        # Generate Map Filtering.
-        parse_num += 1
-        MapParser(filter_file, parse_num, debug=debug)
+            # Generate Map Filtering.
+            parse_num += 1
+            MapParser(filter_file, parse_num, debug=debug)
 
-        # Generate Gem Filtering.
-        parse_num += 1
-        GemParser(filter_file, parse_num, debug=debug)
+            # Generate Gem Filtering.
+            parse_num += 1
+            GemParser(filter_file, parse_num, debug=debug)
 
-        # Generate Jewel Filtering.
-        parse_num += 1
-        JewelParser(filter_file, parse_num, debug=debug)
+            # Generate Jewel Filtering.
+            parse_num += 1
+            JewelParser(filter_file, parse_num, debug=debug)
 
-        # Generate Flask Filtering.
-        parse_num += 1
-        FlaskParser(filter_file, parse_num, hybrid_flask_bool, debug=debug)
+            # Generate Flask Filtering.
+            parse_num += 1
+            FlaskParser(filter_file, parse_num, hybrid_flask_bool, debug=debug)
 
-        # Generate Notable Gear Filtering.
-        parse_num += 1
-        NotableGearParser(filter_file, parse_num, debug=debug)
+            # Generate Notable Gear Filtering.
+            parse_num += 1
+            NotableGearParser(filter_file, parse_num, debug=debug)
 
-        # Generate Pre-Equipment Currency Filtering.
-        parse_num += 1
-        PreEquipment_CurrencyParser(filter_file, parse_num, debug=debug)
+            # Generate Pre-Equipment Currency Filtering.
+            parse_num += 1
+            PreEquipment_CurrencyParser(filter_file, parse_num, debug=debug)
 
-        # Generate Accessory Filtering.
-        parse_num += 1
-        AccessoryParser(
-            filter_file,
-            parse_num,
-            hidden_amulets,
-            hidden_belts,
-            hidden_rings,
-            base_drop_level,
-            level_rarity_modifier,
-            debug=debug,
-        )
+            # Generate Accessory Filtering.
+            parse_num += 1
+            AccessoryParser(
+                filter_file,
+                parse_num,
+                hidden_amulets,
+                hidden_belts,
+                hidden_rings,
+                base_drop_level,
+                level_rarity_modifier,
+                debug=debug,
+            )
 
-        # Generate Weapon Filtering.
-        parse_num += 1
-        WeaponParser(filter_file, parse_num, weapons, shield_types, base_drop_level, level_rarity_modifier, debug=debug)
+            # Generate Weapon Filtering.
+            parse_num += 1
+            WeaponParser(filter_file, parse_num, weapons, shield_types, base_drop_level, level_rarity_modifier, debug=debug)
 
-        # Generate Defense Filtering.
-        parse_num += 1
-        DefenseParser(filter_file, parse_num, defenses, base_drop_level, level_rarity_modifier, debug=debug)
+            # Generate Defense Filtering.
+            parse_num += 1
+            DefenseParser(filter_file, parse_num, defenses, base_drop_level, level_rarity_modifier, debug=debug)
 
-        # Generate Post-Equipment Currency Filtering.
-        parse_num += 1
-        PostEquipment_CurrencyParser(filter_file, parse_num, debug=debug)
+            # Generate Post-Equipment Currency Filtering.
+            parse_num += 1
+            PostEquipment_CurrencyParser(filter_file, parse_num, debug=debug)
 
-        # Generate End-of-Filter filtering.
-        parse_num += 1
-        FinalParser(filter_file, parse_num, debug=debug)
+            # Generate End-of-Filter filtering.
+            parse_num += 1
+            FinalParser(filter_file, parse_num, debug=debug)
+
+        else:
+            # Test mode. For debugging.
+            pass
 
         logger.info('Created filter at "./generated_filters/{0}"'.format(file_name))
 
