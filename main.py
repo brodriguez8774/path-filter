@@ -214,7 +214,9 @@ def generate_filter(args ,test_mode=False):
 
         else:
             # Test mode. For debugging.
-            pass
+
+            # Hide all non-test items.
+            FinalParser(filter_file, parse_num, debug=debug)
 
         logger.info('Created filter at "./generated_filters/{0}"'.format(file_name))
 
