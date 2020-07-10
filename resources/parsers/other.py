@@ -195,6 +195,18 @@ class NotableGearParser():
         self.filter_file.write('    SetBorderColor {0}\n'.format(display_dict['normal']))
         self.parse_high_slot_filter()
 
+        self.filter_file.write('\n')
+        self.filter_file.write('# ---------------------------------- #\n')
+        self.filter_file.write('# --- [{0}.{1}.03] - 6 Slot Items --- #\n'.format(self.parse_num, parse_subnum))
+        self.filter_file.write('# ---------------------------------- #\n')
+        self.filter_file.write('\n')
+
+        self.filter_file.write('Show\n')
+        self.filter_file.write('    Sockets = 6\n')
+        self.filter_file.write('    SetBorderColor {0}\n'.format(display_dict['normal']))
+        self.parse_high_slot_filter()
+
+
     def parse_high_slot_filter(self):
         self.filter_file.write('    SetBackgroundColor {0}\n'.format(display_dict['standard_background']))
         self.filter_file.write('    SetFontSize {0}\n'.format(display_dict['important_font_size']))
