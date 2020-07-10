@@ -475,8 +475,8 @@ class PostEquipment_CurrencyParser():
         # Limitations to filter on.
         self.filter_file.write('    ItemLevel >= 50\n')
         self.filter_file.write('    SocketGroup "RGB"\n')
-        self.filter_file.write('    Height 2\n')
-        self.filter_file.write('    Width 2\n')
+        self.filter_file.write('    Height <= 2\n')
+        self.filter_file.write('    Width <= 2\n')
 
         # Values to set if filter match is found.
         self.filter_file.write('    SetBackgroundColor {0} 100\n'.format(display_dict['standard_background']))
@@ -492,8 +492,8 @@ class PostEquipment_CurrencyParser():
         # Limitations to filter on.
         self.filter_file.write('    ItemLevel >= 50\n')
         self.filter_file.write('    SocketGroup "RGB"\n')
-        self.filter_file.write('    Height 3\n')
-        self.filter_file.write('    Width 1\n')
+        self.filter_file.write('    Height <= 3\n')
+        self.filter_file.write('    Width <= 1\n')
 
         # Values to set if filter match is found.
         self.filter_file.write('    SetBackgroundColor {0} 100\n'.format(display_dict['standard_background']))
@@ -579,8 +579,8 @@ class PostEquipment_CurrencyParser():
         # Limitations to filter on.
         self.filter_file.write('    ItemLevel >= 75\n')
         self.filter_file.write('    Rarity = Rare\n')
-        self.filter_file.write('    Height = 3\n')
-        self.filter_file.write('    Width = 1\n')
+        self.filter_file.write('    Height <= 3\n')
+        self.filter_file.write('    Width <= 1\n')
 
         # Values to set if filter match is found.
         self.filter_file.write('    SetBackgroundColor {0} 100\n'.format(display_dict['standard_background']))
@@ -626,8 +626,8 @@ class PostEquipment_CurrencyParser():
         # Limitations to filter on.
         self.filter_file.write('    ItemLevel >= 65\n')
         self.filter_file.write('    Rarity = Rare\n')
-        self.filter_file.write('    Height = 3\n')
-        self.filter_file.write('    Width = 1\n')
+        self.filter_file.write('    Height <= 3\n')
+        self.filter_file.write('    Width <= 1\n')
 
         # Values to set if filter match is found.
         self.filter_file.write('    SetBackgroundColor {0} 100\n'.format(display_dict['standard_background']))
@@ -670,7 +670,7 @@ class PostEquipment_CurrencyParser():
         self.filter_file.write('Show\n')
 
         # Limitations to filter on.
-        self.filter_file.write('    ItemLevel <= 40\n')
+        self.filter_file.write('    ItemLevel <= 59\n')
         self.filter_file.write('    Rarity = Rare\n')
         self.filter_file.write('    Width <= 2\n')
         self.filter_file.write('    Height <= 2\n')
@@ -687,7 +687,7 @@ class PostEquipment_CurrencyParser():
         self.filter_file.write('Show\n')
 
         # Limitations to filter on.
-        self.filter_file.write('    ItemLevel <= 40\n')
+        self.filter_file.write('    ItemLevel <= 59\n')
         self.filter_file.write('    Rarity = Rare\n')
         self.filter_file.write('    Width <= 3\n')
         self.filter_file.write('    Height <= 1\n')
@@ -704,7 +704,7 @@ class PostEquipment_CurrencyParser():
         self.filter_file.write('Show\n')
 
         # Limitations to filter on.
-        self.filter_file.write('    ItemLevel <= 20\n')
+        self.filter_file.write('    ItemLevel <= 44\n')
         self.filter_file.write('    Rarity = Magic\n')
         self.filter_file.write('    Width <= 2\n')
         self.filter_file.write('    Height <= 2\n')
@@ -721,7 +721,7 @@ class PostEquipment_CurrencyParser():
         self.filter_file.write('Show\n')
 
         # Limitations to filter on.
-        self.filter_file.write('    ItemLevel <= 20\n')
+        self.filter_file.write('    ItemLevel <= 44\n')
         self.filter_file.write('    Rarity = Magic\n')
         self.filter_file.write('    Width <= 3\n')
         self.filter_file.write('    Height <= 1\n')
