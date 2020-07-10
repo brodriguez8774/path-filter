@@ -81,7 +81,7 @@ class AccessoryParser():
             self.filter_file.write('Show\n')
             self.filter_file.write('    BaseType "{0}"\n'.format(item['Name']))
             self.filter_file.write('    Rarity = Magic\n')
-            self.filter_file.write('    SetBorderColor {0}\n'.format(display_dict['uncommon']))
+            self.filter_file.write('    SetBorderColor {0}\n'.format(display_dict['magic']))
             self.filter_file.write('    SetFontSize {0}\n'.format(display_dict['uncommon_font_size']))
             self.filter_file.write('\n')
 
@@ -114,7 +114,7 @@ class AccessoryParser():
                 self.filter_file.write('    BaseType "{0}"\n'.format(item['Name']))
                 self.filter_file.write('    ItemLevel <= {0}\n'.format(item['DropLevel'] + magic_drop_modifier))
                 self.filter_file.write('    Rarity = Magic\n')
-                self.filter_file.write('    SetBorderColor {0}\n'.format(display_dict['uncommon']))
+                self.filter_file.write('    SetBorderColor {0}\n'.format(display_dict['magic']))
                 self.filter_file.write('    SetFontSize {0}\n'.format(display_dict['uncommon_font_size']))
                 self.filter_file.write('\n')
 
