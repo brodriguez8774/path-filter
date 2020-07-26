@@ -6,8 +6,8 @@ Dictionary of general values used repeatedly in program.
 # Dictionary for filter value variables.
 filter_dict = {
 # Leveling attributes.
-    'base_drop_level': 10,     # By default, show items that are within 10 levels of the initial drop level.
-    'level_rarity_modifier': 5,    # By default, show uncommon by +5 levels above and rare by +10 levels above.
+    'base_drop_level': 10,          # By default, show items that are within 10 levels of the initial drop level.
+    'level_rarity_modifier': 5,     # By default, show uncommon by +5 levels above and rare by +10 levels above.
 }
 
 
@@ -33,15 +33,18 @@ display_dict = {
     'standard_background': '25 25 25',
     'dark_grey_background': '75 75 75',
     'unique_background': '66 30 30',
-    'league_border': '128 0 128',
+    'currency_border': '255 215 0',
     'currency_orb_border': '0 0 0',
+    'league_border': '128 0 128',
+    'card_border': '14 186 255',
 
-    'normal_important_text': '255 255 255',
-    'uncommon_important_text': '136 136 255',
-    'rare_important_text': '255 255 119',
+    'normal_text': '200 200 200',
+    'uncommon_text': '136 136 255',
+    'rare_text': '255 255 119',
     'unique_text': '175 96 37',
+    'currency_text': '255 215 0',
     'league_text': '184 0 184',
-    'currency_text': '218 190 147',
+    'card_text': '14 186 255',
 
     # Font values.
     'unique_font_size': 50,
@@ -64,7 +67,7 @@ display_dict = {
     # Minimap color values.
     'minimap_color_currency': 'White',          # General currency.
     'minimap_color_maps': 'White',              # Map items.
-    'minimap_color_notable': 'Yellow',            # Notable Gear Drops.
+    'minimap_color_notable': 'Yellow',          # Notable Gear Drops.
     'minimap_color_special': 'Purple',          # League currency and other rare things.
     'minimap_color_unique': 'Orange',           # Unique items.
     'minimap_color_flasks': 'Blue',             # Flask items.
