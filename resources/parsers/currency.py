@@ -7,7 +7,8 @@ import json
 
 # User Imports.
 from resources import logging as init_logging
-from resources.data.value_dictionary import display_dict, filter_dict
+from resources.data.value_dictionary import display_dict
+from resources.parsers.templates import FilterTemplates
 
 
 # Initialize Logger.
@@ -22,6 +23,7 @@ class CurrencyParser():
         self.filter_file = filter_file
         self.parse_num = str(parse_num).zfill(3)
         self.parse_subnum = 0
+        self.template = FilterTemplates(filter_file, debug=debug)
         self.debug = debug
 
         # Section Start.
@@ -49,185 +51,112 @@ class CurrencyParser():
         self.filter_file.write('\n')
 
         # Mirror of Kalandra.
-        self.create_general_rule(
-            'Mirror of Kalandra',
-            '"Mirror of Kalandra"',
+        self.template.rare_currency(
+            description='Mirror of Kalandra',
+            base_text='Mirror of Kalandra',
             background_color=display_dict['unique_background'],
-            border_color=None,
+            border_color=display_dict['unique'],
             text_color=display_dict['unique_text'],
             font_size=display_dict['unique_font_size'],
+            minimap_size=0,
+            minimap_color=display_dict['minimap_color_unique'],
+            minimap_shape=display_dict['minimap_icon_currency'],
             sound='ShMirror 300',
-            minimap='0 {0} {1}'.format(display_dict['minimap_color_unique'], display_dict['minimap_icon_currency']),
-            playeffect=display_dict['minimap_color_unique']
+            playeffect = display_dict['minimap_color_unique'],
         )
 
         # Exalted Orb.
-        self.create_general_rule(
-            'Exalted Orb',
-            '"Exalted Orb"',
-            background_color=None,
-            border_color=None,
-            text_color=display_dict['currency_text'],
-            font_size=display_dict['rare_font_size'],
+        self.template.rare_currency(
+            description='Exalted Orb',
+            base_text='Exalted Orb',
             sound='ShExalted 300',
-            minimap='0 {0} {1}'.format(display_dict['minimap_color_currency'], display_dict['minimap_icon_currency']),
-            playeffect=display_dict['minimap_color_currency'],
         )
 
         # Divine Orb.
-        self.create_general_rule(
-            'Divine Orb',
-            '"Divine Orb"',
-            background_color=None,
-            border_color=None,
-            text_color=display_dict['currency_text'],
-            font_size=display_dict['rare_font_size'],
+        self.template.rare_currency(
+            description='Divine Orb',
+            base_text='Divine Orb',
             sound='ShDivine 300',
-            minimap='0 {0} {1}'.format(display_dict['minimap_color_currency'], display_dict['minimap_icon_currency']),
-            playeffect=display_dict['minimap_color_currency'],
         )
 
         # Regal Orb.
-        self.create_general_rule(
-            'Regal Orb',
-            '"Regal Orb"',
-            background_color=None,
-            border_color=None,
-            text_color=display_dict['currency_text'],
-            font_size=display_dict['rare_font_size'],
-            sound='ShRegal 175',
-            minimap='0 {0} {1}'.format(display_dict['minimap_color_currency'], display_dict['minimap_icon_currency']),
-            playeffect=display_dict['minimap_color_currency'],
+        self.template.rare_currency(
+            description='Regal Orb',
+            base_text='Regal Orb',
+            sound='ShRegal 300',
         )
 
         # Blessed Orb.
-        self.create_general_rule(
-            'Blessed Orb',
-            '"Blessed Orb"',
-            background_color=None,
-            border_color=None,
-            text_color=display_dict['currency_text'],
-            font_size=display_dict['uncommon_font_size'],
-            sound='ShBlessed 175',
-            minimap='0 {0} {1}'.format(display_dict['minimap_color_currency'], display_dict['minimap_icon_currency']),
-            playeffect=display_dict['minimap_color_currency'],
+        self.template.rare_currency(
+            description='Blessed Orb',
+            base_text='Blessed Orb',
+            sound='ShBlessed 300',
         )
 
         # Vaal Orb.
-        self.create_general_rule(
-            'Vaal Orb',
-            '"Vaal Orb"',
-            background_color=None,
-            border_color=None,
-            text_color=display_dict['currency_text'],
-            font_size=display_dict['uncommon_font_size'],
-            sound='ShVaal 175',
-            minimap='1 {0} {1}'.format(display_dict['minimap_color_currency'], display_dict['minimap_icon_currency']),
-            playeffect=display_dict['minimap_color_currency'],
+        self.template.rare_currency(
+            description='Vaal Orb',
+            base_text='Vaal Orb',
+            sound='ShVaal 300',
         )
 
         # Chaos Orb.
-        self.create_general_rule(
-            'Chaos Orb',
-            '"Chaos Orb"',
-            background_color=None,
-            border_color=None,
-            text_color=display_dict['currency_text'],
-            font_size=display_dict['uncommon_font_size'],
-            sound='ShChaos 175',
-            minimap='1 {0} {1}'.format(display_dict['minimap_color_currency'], display_dict['minimap_icon_currency']),
-            playeffect=display_dict['minimap_color_currency'],
+        self.template.rare_currency(
+            description='Chaos Orb',
+            base_text='Chaos Orb',
+            sound='ShChaos 300',
         )
 
         # Orb of Fusing.
-        self.create_general_rule(
-            'Orb of Fusing',
-            '"Orb of Fusing"',
-            background_color=None,
-            border_color=None,
-            text_color=display_dict['currency_text'],
-            font_size=display_dict['default_font_size'],
-            sound='ShFusing 175',
-            minimap='2 {0} {1}'.format(display_dict['minimap_color_currency'], display_dict['minimap_icon_currency']),
-            playeffect=display_dict['minimap_color_currency'],
+        self.template.rare_currency(
+            description='Orb of Fusing',
+            base_text='Orb of Fusing',
+            font_size=display_dict['rare_font_size'],
+            minimap_size=1,
+            sound='ShFusing 300',
         )
 
         # Orb of Alchemy.
-        self.create_general_rule(
-            'Orb of Alchemy',
-            '"Orb of Alchemy"',
-            background_color=None,
-            border_color=None,
-            text_color=display_dict['currency_text'],
-            font_size=display_dict['default_font_size'],
+        self.template.rare_currency(
+            description='Orb of Alchemy',
+            base_text='Orb of Alchemy',
+            font_size=display_dict['rare_font_size'],
+            minimap_size=1,
             sound='ShAlchemy 175',
-            minimap='2 {0} {1}'.format(display_dict['minimap_color_currency'], display_dict['minimap_icon_currency']),
-            playeffect=display_dict['minimap_color_currency'],
         )
 
         # Divination Cards.
-        self.create_general_rule(
-            'Divination Cards',
-            '"Card" "Stacked Deck"',
-            background_color=None,
-            border_color=None,
-            text_color=display_dict['currency_text'],
-            font_size=display_dict['default_font_size'],
-            sound='9 175',
-            minimap=None,
-            playeffect=None,
+        self.template.card_item(
+            description='Divination Cards',
+            base_text=['Card', 'Stacked Deck']
+        )
+        self.template.card_item(
+            class_text=['Divination Card'],
         )
 
         # Misc important currency.
-        self.create_general_rule(
-            'Misc important currency',
-            '"Gemcutter\'s Prism" "Cartographer\'s Chisel" "Silver Coin" "Orb of Scouring"  "Orb of Regret" "Stone of Passage" "Eternal Orb" "Master Cartographer\'s Seal" "Albino Rhoa Feather"',
-            background_color=None,
-            border_color=None,
-            text_color=display_dict['currency_text'],
-            font_size=display_dict['default_font_size'],
+        self.template.rare_currency(
+            description='Misc important currency',
+            base_text=[
+                'Gemcutter\'s Prism', 'Cartographer\'s Chisel', 'Orb of Scouring', 'Orb of Regret', 'Silver Coin',
+                'Eternal Orb', 'Master Cartographer\'s Seal', 'Albino Rhoa Feather',
+            ],
+            font_size=display_dict['uncommon_font_size'],
+            minimap_size=2,
             sound='4 175',
-            minimap='0 {0} {1}'.format(display_dict['minimap_color_currency'], display_dict['minimap_icon_currency']),
-            playeffect=display_dict['minimap_color_currency'],
         )
 
         # Low level important currency.
-        self.create_general_rule(
-            'Low level important currency',
-            '"Orb of Alteration" "Chromatic Orb" "Jeweller\'s Orb" "Armourer\'s Scrap" "Blacksmith\'s Whetstone" "Glassblower\'s Bauble" "Orb of Chance"',
-            background_color=None,
-            border_color=None,
-            text_color=display_dict['currency_text'],
+        self.template.rare_currency(
+            description='Low level important currency',
+            base_text=[
+                'Orb of Alteration', 'Chromatic Orb', 'Jeweller\'s Orb', 'Armourer\'s Scrap', 'Blacksmith\'s Whetstone',
+                'Glassblower\'s Bauble', 'Orb of Chance',
+            ],
             font_size=display_dict['default_font_size'],
+            minimap_size=2,
             sound=None,
-            minimap='0 {0} {1}'.format(display_dict['minimap_color_currency'], display_dict['minimap_icon_currency']),
         )
-
-    def create_general_rule(self, description_text, base_text, background_color=None, border_color=None,
-                            text_color=None, font_size=None, sound=None, minimap=None, playeffect=None):
-        """"""
-        self.filter_file.write('# {0}.\n'.format(description_text))
-        self.filter_file.write('Show\n')
-
-        # Limitations to filter on.
-        self.filter_file.write('    BaseType {0}\n'.format(base_text))
-
-        # Values to set if filter match is found.
-        if background_color is not None:
-            self.filter_file.write('    SetBackgroundColor {0}\n'.format(background_color))
-        if border_color is not None:
-            self.filter_file.write('    SetBorderColor {0}\n'.format(border_color))
-        if text_color is not None:
-            self.filter_file.write('    SetTextColor {0}\n'.format(text_color))
-        if font_size is not None:
-            self.filter_file.write('    SetFontSize {0}\n'.format(font_size))
-        if sound is not None:
-            self.filter_file.write('    PlayAlertSound {0}\n'.format(sound))
-        if minimap is not None:
-            self.filter_file.write('    MinimapIcon {0}\n'.format(minimap))
-        if playeffect is not None:
-            self.filter_file.write('    PlayEffect {0}\n'.format(playeffect))
-        self.filter_file.write('\n')
 
     def league_specific(self):
         """
@@ -241,76 +170,94 @@ class CurrencyParser():
         self.filter_file.write('# ---------------------------------- #\n')
         self.filter_file.write('\n')
 
-        self.create_league_rule('Harvest Classes', class_text='"Harvest Seed"')
-        self.create_league_rule(
-            'Harvest Bases',
-            base_text='"Dedication to the Goddess" "Facetor\'s Lens" "Gift to the Goddess" "Infused Engineer\'s Orb"'
+        self.template.special_item(
+            description='Harvest Classes',
+            class_text='Harvest Seed',
         )
-        self.create_league_rule('Delerium Bases', base_text='"Delirium Orb" "Simulacrum Splinter" "Simulacrum"')
-        self.create_league_rule(
-            'Metamorph',
-            base_text='"Abrasive Catalyst" "Fertile Catalyst" "Imbued Catalyst" "Intrinsic Catalyst" "Prismatic '
-            'Catalyst" "Tempering Catalyst" "Turbulent Catalyst"'
+        self.template.special_item(
+            description='Harvest Bases',
+            base_text=[
+                'Dedication to the Goddess', 'Facetor\'s Lens', 'Gift to the Goddess', 'Infused Engineer\'s Orb',
+            ],
         )
-        self.create_league_rule(
-            'Blight',
-            base_text='"Amber Oil" "Azure Oil" "Black Oil" "Clear Oil" "Crimson Oil" "Golden Oil" "Opalescent Oil" '
-            '"Sepia Oil" "Silver Oil" "Teal Oil" "Verdant Oil" "Violet Oil"'
+        self.template.special_item(
+            description='Delerium Bases',
+            base_text=['Delirium Orb', 'Simulacrum Splinter', 'Simulacrum'],
         )
-        self.create_league_rule('Legion Classes', class_text='"Incubator"')
-        self.create_league_rule(
-            'Legion Bases',
-            base_text='"Timeless Eternal Empire Splinter" "Timeless Karui Splinter" "Timeless Maraketh Splinter" '
-            '"Timeless Templar Splinter" "Timeless Vaal Splinter"'
+        self.template.special_item(
+            description='Metamorph',
+            base_text=[
+                'Abrasive Catalyst', 'Fertile Catalyst', 'Imbued Catalyst', 'Intrinsic Catalyst', 'Prismatic Catalyst',
+                'Tempering Catalyst', 'Turbulent Catalyst',
+            ],
         )
-        self.create_league_rule('Delve', class_text='"Delve Socketable Currency"')
-        self.create_league_rule('Incursion Classes', class_text='"Incursion Item"')
-        self.create_league_rule(
-            'Incursion Bases',
-            base_text='"Vial of Dominance" "Vial of Summoning" "Vial of Awakening" "Vial of the Ritual" "Vial of'
-            ' Fate" "Vial of Consequence" "Vial of Transcendence" "Vial of the Ghost" "Vial of Sacrifice"'
+        self.template.special_item(
+            description='Blight',
+            base_text=[
+                'Amber Oil', 'Azure Oil', 'Black Oil', 'Clear Oil', 'Crimson Oil', 'Golden Oil', 'Opalescent Oil',
+                'Sepia Oil', 'Silver Oil', 'Teal Oil', 'Verdant Oil', 'Violet Oil',
+            ],
         )
-        self.create_league_rule('Harbringer', class_text='"Piece"')
-        self.create_league_rule(
-            'Breach',
-            base_text='"Blessing of Xoph" "Blessing of Tul" "Blessing of Esh" "Blessing of Uul-Netol" "Blessing of '
-            'Chayula" "Splinter of Xoph" "Splinter of Tul" "Splinter of Esh" "Splinter of Uul-Netol" "Splinter of '
-            'Chayula"'
+        self.template.special_item(
+            description='Legion Classes',
+            class_text='Incubator',
         )
-        self.create_league_rule('Prophecy', base_text='"Silver Coin"')
-        self.create_league_rule('Essence', base_text='"Essence of"')
-        self.create_league_rule('Perandus', base_text='"Perandus Coin"')
-
-    def create_league_rule(self, description_text, *args, class_text=None, base_text=None, **kwargs):
-        """
-        Define filter for league item(s).
-        :param description_text: Descriptive comment text for league.
-        :param item_type: BaseType or Class.
-        :param type_text: Text for league item.
-        """
-        if class_text is None and base_text is None:
-            raise ValueError('Either class_text or base_text required for league currency.')
-
-        self.filter_file.write('# {0}.\n'.format(description_text))
-        self.filter_file.write('Show\n')
-
-        # Limitations to filter on.
-        if class_text is not None:
-            self.filter_file.write('    Class {0}\n'.format(class_text))
-        if base_text is not None:
-            self.filter_file.write('    BaseType {0}\n'.format(base_text))
-
-        # Values to set if filter match is found.
-        self.filter_file.write('    SetBorderColor {0}\n'.format(display_dict['league_border']))
-        self.filter_file.write('    SetTextColor {0}\n'.format(display_dict['league_text']))
-        self.filter_file.write('    SetFontSize {0}\n'.format(display_dict['rare_font_size']))
-        self.filter_file.write('    PlayAlertSound 4 175\n')
-        self.filter_file.write('    MinimapIcon 2 {0} {1}\n'.format(
-            display_dict['minimap_color_special'],
-            display_dict['minimap_icon_special']
-        ))
-        self.filter_file.write('    PlayEffect {0}\n'.format(display_dict['minimap_color_special']))
-        self.filter_file.write('\n')
+        self.template.special_item(
+            description='Legion Bases',
+            base_text=[
+                'Timeless Eternal Empire Splinter', 'Timeless Karui Splinter', 'Timeless Maraketh Splinter',
+                'Timeless Templar Splinter', 'Timeless Vaal Splinter',
+            ],
+            font_size=display_dict['uncommon_font_size'],
+            minimap_size=2,
+        )
+        self.template.special_item(
+            description='Delve',
+            class_text='Delve Socketable Currency'
+        )
+        self.template.special_item(
+            description='Incursion Classes',
+            class_text='Incursion Item',
+        )
+        self.template.special_item(
+            description='Incursion Bases',
+            base_text=[
+                'Vial of Dominance', 'Vial of Summoning', 'Vial of Awakening', 'Vial of the Ritual', 'Vial of Fate',
+                'Vial of Consequence', 'Vial of Transcendence', 'Vial of the Ghost', 'Vial of Sacrifice',
+            ],
+        )
+        self.template.special_item(
+            description='Incursion Stone of Passage',
+            base_text='Stone of Passage',
+            font_size=display_dict['unique_font_size'],
+            minimap_size=0,
+            sound='4 250'
+        )
+        self.template.special_item(
+            description='Harbringer',
+            class_text='Piece',
+        )
+        self.template.special_item(
+            description='Breach',
+            base_text=[
+                'Blessing of Xoph', 'Blessing of Tul', 'Blessing of Esh', 'Blessing of Uul-Netol',
+                'Blessing of Chayula', 'Splinter of Xoph', 'Splinter of Tul', 'Splinter of Esh',
+                'Splinter of Uul-Netol', 'Splinter of Chayula',
+            ],
+            font_size=display_dict['uncommon_font_size'],
+            minimap_size=2,
+        )
+        self.template.special_item(
+            description='Essence',
+            base_text='Essence of',
+            font_size=display_dict['uncommon_font_size'],
+            minimap_size=2,
+        )
+        self.template.special_item(
+            description='Perandus',
+            base_text='Perandus Coin',
+            font_size=display_dict['uncommon_font_size'],
+        )
 
     def labyrinth_items(self):
         """
@@ -325,36 +272,16 @@ class CurrencyParser():
         self.filter_file.write('\n')
 
         # Labyrinth classes.
-        self.filter_file.write('# Labyrinth Classes.')
-        self.filter_file.write('Show\n')
-
-        # Limitations to filter on.
-        self.filter_file.write('    Class "Labyrinth" "Labyrinth Item" "Labyrinth Trinket"\n')
-
-        # Values to set if filter match is found.
-        self.filter_file.write('    SetFontSize {0}\n'.format(display_dict['uncommon_font_size']))
-        self.filter_file.write('    MinimapIcon 2 {0} {1}\n'.format(
-            display_dict['minimap_color_currency'],
-            display_dict['minimap_icon_special'],
-        ))
-        self.filter_file.write('    PlayEffect {0}\n'.format(display_dict['minimap_color_currency']))
-        self.filter_file.write('\n')
+        self.template.special_item(
+            description='Labyrinth Classes',
+            class_text=['Labyrinth', 'Labyrinth Item', 'Labyrinth Trinket']
+        )
 
         # Labyrinth base types.
-        self.filter_file.write('# Labyrinth Bases.')
-        self.filter_file.write('Show\n')
-
-        # Limitations to filter on.
-        self.filter_file.write('    BaseType "Key" "Offering to the Goddess" "Divine Vessel"\n')
-
-        # Values to set if filter match is found.
-        self.filter_file.write('    SetFontSize {0}\n'.format(display_dict['uncommon_font_size']))
-        self.filter_file.write('    MinimapIcon 2 {0} {1}\n'.format(
-            display_dict['minimap_color_currency'],
-            display_dict['minimap_icon_special'],
-        ))
-        self.filter_file.write('    PlayEffect {0}\n'.format(display_dict['minimap_color_currency']))
-        self.filter_file.write('\n')
+        self.template.special_item(
+            description='Labyrinth Bases',
+            base_text=['Key', 'Offering to the Goddess', 'Divine Vessel']
+        )
 
     def currency_catchall(self):
         """
@@ -368,14 +295,9 @@ class CurrencyParser():
         self.filter_file.write('# ------------------------------------- #\n')
         self.filter_file.write('\n')
 
-        self.filter_file.write('Show\n')
-
-        # Limitations to filter on.
-        self.filter_file.write('    Class "Currency" "Stackable Currency" "Leaguestone"\n')
-
-        # Values to set if filter match is found.
-        self.filter_file.write('    SetFontSize {0}\n'.format(display_dict['default_font_size']))
-        self.filter_file.write('\n')
+        self.template.common_item(
+            class_text=['Currency', 'Stackable Currency', 'Leaguestone'],
+        )
 
 
 class PreEquipment_CurrencyParser():
@@ -386,6 +308,7 @@ class PreEquipment_CurrencyParser():
         self.filter_file = filter_file
         self.parse_num = str(parse_num).zfill(3)
         self.parse_subnum = 0
+        self.template = FilterTemplates(filter_file, debug=debug)
         self.debug = debug
 
         # Section Start.
@@ -404,6 +327,7 @@ class PostEquipment_CurrencyParser():
         self.filter_file = filter_file
         self.parse_num = str(parse_num).zfill(3)
         self.parse_subnum = 0
+        self.template = FilterTemplates(filter_file, debug=debug)
         self.debug = debug
 
         # Section Start.
@@ -435,17 +359,9 @@ class PostEquipment_CurrencyParser():
         self.filter_file.write('# Alternatively, sell any combination of items (of the same quality type) that sum up to 40% quality.\n')
         self.filter_file.write('\n')
 
-        self.filter_file.write('Show\n')
-
-        # Limitations to filter on.
-        self.filter_file.write('    Quality = 20\n')
-
-        # Values to set if filter match is found.
-        self.filter_file.write('    SetBackgroundColor {0} 100\n'.format(display_dict['standard_background']))
-        self.filter_file.write('    SetBorderColor {0}\n'.format(display_dict['normal']))
-        self.filter_file.write('    SetTextColor {0} 0\n'.format(display_dict['text']))
-        self.filter_file.write('    SetFontSize {0}\n'.format(display_dict['min_font_size']))
-        self.filter_file.write('\n')
+        self.template.currency_recipe_quality(
+            quality=20,
+        )
 
     def parse_chromatic(self):
         """
@@ -469,38 +385,22 @@ class PostEquipment_CurrencyParser():
         Displaying of rgb recipe at higher levels.
         """
         # 2 x 2 space item.
-        self.filter_file.write('# Linked RGB - High Level 2x2.\n')
-        self.filter_file.write('Show\n')
-
-        # Limitations to filter on.
-        self.filter_file.write('    ItemLevel >= 50\n')
-        self.filter_file.write('    SocketGroup "RGB"\n')
-        self.filter_file.write('    Height <= 2\n')
-        self.filter_file.write('    Width <= 2\n')
-
-        # Values to set if filter match is found.
-        self.filter_file.write('    SetBackgroundColor {0} 100\n'.format(display_dict['standard_background']))
-        self.filter_file.write('    SetBorderColor {0}\n'.format(display_dict['normal']))
-        self.filter_file.write('    SetTextColor {0} 0\n'.format(display_dict['text']))
-        self.filter_file.write('    SetFontSize {0}\n'.format(display_dict['min_font_size']))
-        self.filter_file.write('\n')
+        self.template.currency_recipe_high_level(
+            description='Linked RGB - High Level 2x2',
+            item_level='>= 50',
+            height='<= 2',
+            width='<= 2',
+            border_color=display_dict['normal'],
+        )
 
         # 3 x 1 space item.
-        self.filter_file.write('# Linked RGB - High Level 3x1.\n')
-        self.filter_file.write('Show\n')
-
-        # Limitations to filter on.
-        self.filter_file.write('    ItemLevel >= 50\n')
-        self.filter_file.write('    SocketGroup "RGB"\n')
-        self.filter_file.write('    Height <= 3\n')
-        self.filter_file.write('    Width <= 1\n')
-
-        # Values to set if filter match is found.
-        self.filter_file.write('    SetBackgroundColor {0} 100\n'.format(display_dict['standard_background']))
-        self.filter_file.write('    SetBorderColor {0}\n'.format(display_dict['normal']))
-        self.filter_file.write('    SetTextColor {0} 0\n'.format(display_dict['text']))
-        self.filter_file.write('    SetFontSize {0}\n'.format(display_dict['min_font_size']))
-        self.filter_file.write('\n')
+        self.template.currency_recipe_high_level(
+            description='Linked RGB - High Level 3x1',
+            item_level='>= 50',
+            height='<= 3',
+            width='<= 1',
+            border_color=display_dict['normal'],
+        )
 
     def parse_low_level_chromatic(self):
         """
@@ -536,27 +436,16 @@ class PostEquipment_CurrencyParser():
         :param item: The def type set to parse.
         """
         # Create item string.
-        item_set_string = None
+        item_set_list = []
         for item in item_set:
-            if item_set_string is None:
-                item_set_string = '"{0}"'.format(item)
-            else:
-                item_set_string += ' "{0}"'.format(item)
+            item_set_list.append('{0}'.format(item))
 
-        self.filter_file.write('# Linked RGB - Low Level, {0} {1}.\n'.format(def_type, def_slot.title()))
-        self.filter_file.write('Show\n')
-
-        # Limitations to filter on.
-        self.filter_file.write('    BaseType {0}\n'.format(item_set_string))
-        self.filter_file.write('    ItemLevel < 50\n')
-        self.filter_file.write('    SocketGroup "RGB"\n')
-
-        # Values to set if filter match is found.
-        self.filter_file.write('    SetBackgroundColor {0} 100\n'.format(display_dict[def_type]))
-        self.filter_file.write('    SetBorderColor {0}\n'.format(display_dict['normal']))
-        self.filter_file.write('    SetTextColor {0} 0\n'.format(display_dict['text']))
-        self.filter_file.write('    SetFontSize {0}\n'.format(display_dict['min_font_size']))
-        self.filter_file.write('\n')
+        self.template.currency_recipe_low_level(
+            description='Linked RGB - Low Level, {0} {1}'.format(def_type, def_slot.title()),
+            base_text=item_set_list,
+            item_level='< 50',
+            socket_group='"RGB"',
+        )
 
     def parse_regal(self):
         """
@@ -573,37 +462,21 @@ class PostEquipment_CurrencyParser():
         self.filter_file.write('\n')
 
         # Weapon Slots.
-        self.filter_file.write('# Prioritize Small Weapons.\n')
-        self.filter_file.write('Show\n')
-
-        # Limitations to filter on.
-        self.filter_file.write('    ItemLevel >= 75\n')
-        self.filter_file.write('    Rarity = Rare\n')
-        self.filter_file.write('    Height <= 3\n')
-        self.filter_file.write('    Width <= 1\n')
-
-        # Values to set if filter match is found.
-        self.filter_file.write('    SetBackgroundColor {0} 100\n'.format(display_dict['standard_background']))
-        self.filter_file.write('    SetBorderColor {0}\n'.format(display_dict['currency_orb_border']))
-        self.filter_file.write('    SetTextColor {0} 0\n'.format(display_dict['text']))
-        self.filter_file.write('    SetFontSize {0}\n'.format(display_dict['min_font_size']))
-        self.filter_file.write('\n')
+        self.template.currency_recipe_high_level(
+            description='Prioritize Small Weapons',
+            item_level='>= 75',
+            rarity='Rare',
+            height='<= 3',
+            width='<= 1',
+        )
 
         # Gear Slots.
-        self.filter_file.write('# Gear Slots.\n')
-        self.filter_file.write('Show\n')
-
-        # Limitations to filter on.
-        self.filter_file.write('    Class "Helmets" "Body Armours" "Gloves" "Boots" "Ring" "Belt" "Amulet"\n')
-        self.filter_file.write('    ItemLevel >= 75\n')
-        self.filter_file.write('    Rarity = Rare\n')
-
-        # Values to set if filter match is found.
-        self.filter_file.write('    SetBackgroundColor {0} 100\n'.format(display_dict['standard_background']))
-        self.filter_file.write('    SetBorderColor {0}\n'.format(display_dict['currency_orb_border']))
-        self.filter_file.write('    SetTextColor {0} 0\n'.format(display_dict['text']))
-        self.filter_file.write('    SetFontSize {0}\n'.format(display_dict['min_font_size']))
-        self.filter_file.write('\n')
+        self.template.currency_recipe_high_level(
+            description='Gear Slots',
+            class_text=['Helmets', 'Body Armours', 'Gloves', 'Boots', 'Ring', 'Belt', 'Amulet'],
+            item_level='>= 75',
+            rarity='Rare',
+        )
 
     def parse_chaos(self):
         """
@@ -620,37 +493,21 @@ class PostEquipment_CurrencyParser():
         self.filter_file.write('\n')
 
         # Weapon slots.
-        self.filter_file.write('# Prioritize Small Weapons.\n')
-        self.filter_file.write('Show\n')
+        self.template.currency_recipe_high_level(
+            description='Prioritize Small Weapons',
+            item_level='>= 65',
+            rarity='Rare',
+            height='<= 3',
+            width='<= 1',
+        )
 
-        # Limitations to filter on.
-        self.filter_file.write('    ItemLevel >= 65\n')
-        self.filter_file.write('    Rarity = Rare\n')
-        self.filter_file.write('    Height <= 3\n')
-        self.filter_file.write('    Width <= 1\n')
-
-        # Values to set if filter match is found.
-        self.filter_file.write('    SetBackgroundColor {0} 100\n'.format(display_dict['standard_background']))
-        self.filter_file.write('    SetBorderColor {0}\n'.format(display_dict['currency_orb_border']))
-        self.filter_file.write('    SetTextColor {0} 0\n'.format(display_dict['text']))
-        self.filter_file.write('    SetFontSize {0}\n'.format(display_dict['min_font_size']))
-        self.filter_file.write('\n')
-
-        # Gear slots.
-        self.filter_file.write('# Gear Slots.\n')
-        self.filter_file.write('Show\n')
-
-        # Limitations to filter on.
-        self.filter_file.write('    Class "Helmets" "Body Armours" "Gloves" "Boots" "Ring" "Belt" "Amulet"\n')
-        self.filter_file.write('    ItemLevel >= 65\n')
-        self.filter_file.write('    Rarity = Rare\n')
-
-        # Values to set if filter match is found.
-        self.filter_file.write('    SetBackgroundColor {0} 100\n'.format(display_dict['standard_background']))
-        self.filter_file.write('    SetBorderColor {0}\n'.format(display_dict['currency_orb_border']))
-        self.filter_file.write('    SetTextColor {0} 0\n'.format(display_dict['text']))
-        self.filter_file.write('    SetFontSize {0}\n'.format(display_dict['min_font_size']))
-        self.filter_file.write('\n')
+        # Gear Slots.
+        self.template.currency_recipe_high_level(
+            description='Gear Slots',
+            class_text=['Helmets', 'Body Armours', 'Gloves', 'Boots', 'Ring', 'Belt', 'Amulet'],
+            item_level='>= 65',
+            rarity='Rare',
+        )
 
     def parse_low_level(self):
         """
@@ -666,69 +523,39 @@ class PostEquipment_CurrencyParser():
         self.filter_file.write('\n')
 
         # Orb of Alchemy, 2x2.
-        self.filter_file.write('# Chance at Orb of Alchemy - 2x2 or smaller.\n')
-        self.filter_file.write('Show\n')
-
-        # Limitations to filter on.
-        self.filter_file.write('    ItemLevel <= 59\n')
-        self.filter_file.write('    Rarity = Rare\n')
-        self.filter_file.write('    Width <= 2\n')
-        self.filter_file.write('    Height <= 2\n')
-
-        # Values to set if filter match is found.
-        self.filter_file.write('    SetBackgroundColor {0} 100\n'.format(display_dict['standard_background']))
-        self.filter_file.write('    SetBorderColor {0}\n'.format(display_dict['rare']))
-        self.filter_file.write('    SetTextColor {0} 0\n'.format(display_dict['text']))
-        self.filter_file.write('    SetFontSize {0}\n'.format(display_dict['min_font_size']))
-        self.filter_file.write('\n')
+        self.template.currency_recipe_low_level(
+            description='Chance at Orb of Alchemy - 2x2 or smaller',
+            item_level='<= 59',
+            rarity='Rare',
+            width='<= 2',
+            height='<= 2',
+        )
 
         # Orb of Alchemy, 3x1.
-        self.filter_file.write('# Chance at Orb of Alchemy - 3x1 or smaller.\n')
-        self.filter_file.write('Show\n')
-
-        # Limitations to filter on.
-        self.filter_file.write('    ItemLevel <= 59\n')
-        self.filter_file.write('    Rarity = Rare\n')
-        self.filter_file.write('    Width <= 3\n')
-        self.filter_file.write('    Height <= 1\n')
-
-        # Values to set if filter match is found.
-        self.filter_file.write('    SetBackgroundColor {0} 100\n'.format(display_dict['standard_background']))
-        self.filter_file.write('    SetBorderColor {0}\n'.format(display_dict['rare']))
-        self.filter_file.write('    SetTextColor {0} 0\n'.format(display_dict['text']))
-        self.filter_file.write('    SetFontSize {0}\n'.format(display_dict['min_font_size']))
-        self.filter_file.write('\n')
+        self.template.currency_recipe_low_level(
+            description='Chance at Orb of Alchemy - 3x1 or smaller',
+            item_level='<= 59',
+            rarity='Rare',
+            width='<= 3',
+            height='<= 1',
+        )
 
         # Orb of Transmutation, 2x2.
-        self.filter_file.write('# Chance at Orb of Transmutation - 2x2 or smaller.\n')
-        self.filter_file.write('Show\n')
-
-        # Limitations to filter on.
-        self.filter_file.write('    ItemLevel <= 44\n')
-        self.filter_file.write('    Rarity = Magic\n')
-        self.filter_file.write('    Width <= 2\n')
-        self.filter_file.write('    Height <= 2\n')
-
-        # Values to set if filter match is found.
-        self.filter_file.write('    SetBackgroundColor {0} 100\n'.format(display_dict['standard_background']))
-        self.filter_file.write('    SetBorderColor {0}\n'.format(display_dict['magic']))
-        self.filter_file.write('    SetTextColor {0} 0\n'.format(display_dict['text']))
-        self.filter_file.write('    SetFontSize {0}\n'.format(display_dict['min_font_size']))
-        self.filter_file.write('\n')
+        self.template.currency_recipe_low_level(
+            description='Chance at Orb of Transmutation - 2x2 or smaller',
+            item_level='<= 44',
+            rarity='Magic',
+            width='<= 2',
+            height='<= 2',
+            border_color=display_dict['uncommon'],
+        )
 
         # Orb of Transmutation, 3x1.
-        self.filter_file.write('# Chance at Orb of Transmutation - 3x1 or smaller.\n')
-        self.filter_file.write('Show\n')
-
-        # Limitations to filter on.
-        self.filter_file.write('    ItemLevel <= 44\n')
-        self.filter_file.write('    Rarity = Magic\n')
-        self.filter_file.write('    Width <= 3\n')
-        self.filter_file.write('    Height <= 1\n')
-
-        # Values to set if filter match is found.
-        self.filter_file.write('    SetBackgroundColor {0} 100\n'.format(display_dict['standard_background']))
-        self.filter_file.write('    SetBorderColor {0}\n'.format(display_dict['magic']))
-        self.filter_file.write('    SetTextColor {0} 0\n'.format(display_dict['text']))
-        self.filter_file.write('    SetFontSize {0}\n'.format(display_dict['min_font_size']))
-        self.filter_file.write('\n')
+        self.template.currency_recipe_low_level(
+            description='Chance at Orb of Transmutation - 3x1 or smaller',
+            item_level='<= 44',
+            rarity='Magic',
+            width='<= 3',
+            height='<= 1',
+            border_color=display_dict['uncommon'],
+        )

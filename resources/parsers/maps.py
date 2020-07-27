@@ -7,7 +7,8 @@ import json
 
 # User Imports.
 from resources import logging as init_logging
-from resources.data.value_dictionary import display_dict, filter_dict
+from resources.data.value_dictionary import display_dict
+from resources.parsers.templates import FilterTemplates
 
 
 # Initialize Logger.
@@ -22,6 +23,7 @@ class MapParser():
         self.filter_file = filter_file
         self.parse_num = str(parse_num).zfill(3)
         self.parse_subnum = 0
+        self.template = FilterTemplates(filter_file, debug=debug)
         self.debug = debug
 
         # Section Start.
@@ -38,59 +40,52 @@ class MapParser():
         Generates filtering for all map types.
         """
         # High quality maps.
-        self.filter_file.write('# High Quality Maps.\n')
-        self.filter_file.write('Show\n')
-        self.filter_file.write('    Class "Map"\n')
-        self.filter_file.write('    Quality >= 10\n')
-        self.filter_file.write('    SetFontSize {0}\n'.format(display_dict['rare_font_size']))
-        self.filter_file.write('    PlayAlertSound 16 100\n')
-        self.filter_file.write('    MinimapIcon 2 {0} {1}\n'.format(
-            display_dict['minimap_color_maps'],
-            display_dict['minimap_icon_maps'],
-        ))
-        self.filter_file.write('    PlayEffect {0}\n'.format(display_dict['minimap_color_maps']))
-        self.filter_file.write('\n')
+        self.template.common_item(
+            description='High Quality Maps',
+            class_text='Map',
+            quality='>= 10',
+            font_size=display_dict['rare_font_size'],
+            minimap_size=1,
+            minimap_color=display_dict['minimap_color_maps'],
+            minimap_shape=display_dict['minimap_icon_maps'],
+            sound='16 175',
+            playeffect=display_dict['minimap_color_maps'],
+        )
 
         # High tier maps.
-        self.filter_file.write('# High Tier Maps.\n')
-        self.filter_file.write('Show\n')
-        self.filter_file.write('    Class "Map"\n')
-        self.filter_file.write('    MapTier >= 11\n')
-        self.filter_file.write('    SetFontSize {0}\n'.format(display_dict['rare_font_size']))
-        self.filter_file.write('    PlayAlertSound 16 100\n')
-        self.filter_file.write('    MinimapIcon 2 {0} {1}\n'.format(
-            display_dict['minimap_color_maps'],
-            display_dict['minimap_icon_maps'],
-        ))
-        self.filter_file.write('    PlayEffect {0}\n'.format(display_dict['minimap_color_maps']))
-        self.filter_file.write('\n')
+        self.template.common_item(
+            description='High Tier Maps',
+            class_text='Map',
+            map_tier='>= 11',
+            font_size=display_dict['rare_font_size'],
+            minimap_size=0,
+            minimap_color=display_dict['minimap_color_maps'],
+            minimap_shape=display_dict['minimap_icon_maps'],
+            sound='16 175',
+            playeffect=display_dict['minimap_color_maps'],
+        )
 
         # Medium tier maps.
-        self.filter_file.write('# Medium Tier Maps.\n')
-        self.filter_file.write('Show\n')
-        self.filter_file.write('    Class "Map"\n')
-        self.filter_file.write('    MapTier >= 6\n')
-        self.filter_file.write('    SetFontSize {0}\n'.format(display_dict['uncommon_font_size']))
-        self.filter_file.write('    PlayAlertSound 16 75\n')
-        self.filter_file.write('    MinimapIcon 2 {0} {1}\n'.format(
-            display_dict['minimap_color_maps'],
-            display_dict['minimap_icon_maps'],
-        ))
-        self.filter_file.write('    PlayEffect {0}\n'.format(display_dict['minimap_color_maps']))
-        self.filter_file.write('\n')
+        self.template.common_item(
+            description='Medium Tier Maps',
+            class_text='Map',
+            map_tier='>= 6',
+            font_size=display_dict['uncommon_font_size'],
+            minimap_size=1,
+            minimap_color=display_dict['minimap_color_maps'],
+            minimap_shape=display_dict['minimap_icon_maps'],
+            sound='16 175',
+            playeffect=display_dict['minimap_color_maps'],
+        )
 
         # Low tier maps.
-        self.filter_file.write('# Low Tier Maps.\n')
-        self.filter_file.write('Show\n')
-        self.filter_file.write('    Class "Map" "Map Fragments" "Misc Map Items"\n')
-        self.filter_file.write('    SetFontSize {0}\n'.format(display_dict['default_font_size']))
-        self.filter_file.write('    PlayAlertSound 16 50\n')
-        self.filter_file.write('    MinimapIcon 2 {0} {1}\n'.format(
-            display_dict['minimap_color_maps'],
-            display_dict['minimap_icon_maps'],
-        ))
-        self.filter_file.write('    PlayEffect {0}\n'.format(display_dict['minimap_color_maps']))
-        self.filter_file.write('\n')
-
-
-
+        self.template.common_item(
+            description='Low Tier Maps',
+            class_text=['Map', 'Map Fragments', 'Misc Map Items'],
+            font_size=display_dict['default_font_size'],
+            minimap_size=1,
+            minimap_color=display_dict['minimap_color_maps'],
+            minimap_shape=display_dict['minimap_icon_maps'],
+            sound='16 175',
+            playeffect=display_dict['minimap_color_maps'],
+        )

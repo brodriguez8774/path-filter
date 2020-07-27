@@ -8,6 +8,7 @@ import json
 # User Imports.
 from resources import logging as init_logging
 from resources.data.value_dictionary import display_dict, filter_dict
+from resources.parsers.templates import FilterTemplates
 
 
 # Initialize Logger.
@@ -15,7 +16,6 @@ logger = init_logging.get_logger(__name__)
 
 
 class WeaponParser():
-
     def __init__(self, filter_file, parse_num, weapon_types, shield_types, base_drop_level, level_rarity_modifier, debug=False):
         # Set class vars.
         self.filter_file = filter_file
@@ -23,6 +23,7 @@ class WeaponParser():
         self.shield_types = shield_types
         self.parse_num = str(parse_num).zfill(3)
         self.parse_subnum = 0
+        self.template = FilterTemplates(filter_file, debug=debug)
         self.debug = debug
 
         # Update dict values.
@@ -79,20 +80,11 @@ class WeaponParser():
         """
         drop_level = filter_dict['base_drop_level'] + (filter_dict['level_rarity_modifier'] * 2)
 
-        self.filter_file.write('# Rare Type.\n')
-        self.filter_file.write('Show\n')
-
-        # Limitations to filter on.
-        self.filter_file.write('    BaseType "{0}"\n'.format(item['Name']))
-        if not item['MaxLevel']:    # Only filter on ItemLevel if item is not a max-level drop.
-            self.filter_file.write('    ItemLevel <= {0}\n'.format(item['DropLevel'] + drop_level))
-        self.filter_file.write('    Rarity = Rare\n')
-
-        # Values to set if filter match is found.
-        self.filter_file.write('    SetBackgroundColor {0}\n'.format(display_dict['dark_grey_background']))
-        self.filter_file.write('    SetBorderColor {0}\n'.format(display_dict['rare']))
-        self.filter_file.write('    SetFontSize {0}\n'.format(display_dict['rare_font_size']))
-        self.filter_file.write('\n')
+        self.template.rare_item(
+            base_text=item['Name'],
+            background_color=display_dict['dark_grey_background'],
+            item_level='<= {0}'.format(item['DropLevel'] + drop_level),
+        )
 
     def parse_item_max_slot(self, item):
         """
@@ -104,34 +96,29 @@ class WeaponParser():
 
         if item_level <= 25:
             # Filter for 3-socket max items early on.
-            self.filter_file.write('# Max Slot Type.\n')
-            self.filter_file.write('Show\n')
-
-            # Limitations to filter on.
-            self.filter_file.write('    BaseType "{0}"\n'.format(item['Name']))
-            self.filter_file.write('    ItemLevel <= {0}\n'.format(item['DropLevel'] + drop_level))
-            self.filter_file.write('    LinkedSockets >= 3\n')
-
-            # Values to set if filter match is found.
-            self.filter_file.write('    SetBackgroundColor {0}\n'.format(display_dict['dark_grey_background']))
-            self.filter_file.write('    SetBorderColor {0}\n'.format(display_dict['normal']))
-            self.filter_file.write('    SetFontSize {0}\n'.format(display_dict['uncommon_font_size']))
-            self.filter_file.write('\n')
+            self.template.common_item(
+                description='Max Slot Type',
+                base_text=item['Name'],
+                item_level='<= {0}'.format(item_level + drop_level),
+                linked_sockets='3',
+                background_color=display_dict['dark_grey_background'],
+                border_color=display_dict['normal'],
+                font_size=display_dict['uncommon_font_size'],
+            )
 
         elif item_level <= 35:
             # Filter for 4-socket max items early on.
+            self.template.common_item(
+                description='Max Slot Type',
+                base_text=item['Name'],
+                item_level='<= {0}'.format(item_level + drop_level),
+                linked_sockets='3',
+                background_color=display_dict['dark_grey_background'],
+                border_color=display_dict['normal'],
+                font_size=display_dict['uncommon_font_size'],
+            )
             self.filter_file.write('# Max Slot Type.\n')
             self.filter_file.write('Show\n')
-
-            # Limitations to filter on.
-            self.filter_file.write('    BaseType "{0}"\n'.format(item['Name']))
-            self.filter_file.write('    ItemLevel <= {0}\n'.format(item['DropLevel'] + drop_level))
-            self.filter_file.write('    LinkedSockets >= 4\n')
-
-            # Values to set if filter match is found.
-            self.filter_file.write('    SetBackgroundColor {0}\n'.format(display_dict['dark_grey_background']))
-            self.filter_file.write('    SetFontSize {0}\n'.format(display_dict['uncommon_font_size']))
-            self.filter_file.write('\n')
 
     def parse_item_rgb(self, item):
         """
@@ -140,20 +127,15 @@ class WeaponParser():
         """
         drop_level = filter_dict['base_drop_level']
 
-        self.filter_file.write('# Linked RGB Type.\n')
-        self.filter_file.write('Show\n')
-
-        # Limitations to filter on.
-        self.filter_file.write('    BaseType "{0}"\n'.format(item['Name']))
-        if not item['MaxLevel']:    # Only filter on ItemLevel if item is not a max-level drop.
-            self.filter_file.write('    ItemLevel <= {0}\n'.format(item['DropLevel'] + drop_level))
-        self.filter_file.write('    SocketGroup "RGB"\n')
-
-        # Values to set if filter match is found.
-        self.filter_file.write('    SetBackgroundColor {0}\n'.format(display_dict['dark_grey_background']))
-        self.filter_file.write('    SetBorderColor {0}\n'.format(display_dict['normal']))
-        self.filter_file.write('    SetFontSize {0}\n'.format(display_dict['uncommon_font_size']))
-        self.filter_file.write('\n')
+        self.template.common_item(
+            description='Linked RGB Type',
+            base_text=item['Name'],
+            item_level='<= {0}'.format(item['DropLevel'] + drop_level),
+            socket_group='"RGB"',
+            background_color=display_dict['dark_grey_background'],
+            border_color=display_dict['normal'],
+            font_size=display_dict['uncommon_font_size'],
+        )
 
     def parse_item_uncommon(self, item):
         """
@@ -162,20 +144,11 @@ class WeaponParser():
         """
         drop_level = filter_dict['base_drop_level'] + filter_dict['level_rarity_modifier']
 
-        self.filter_file.write('# Magic Type.\n')
-        self.filter_file.write('Show\n')
-
-        # Limitations to filter on.
-        self.filter_file.write('    BaseType "{0}"\n'.format(item['Name']))
-        if not item['MaxLevel']:    # Only filter on ItemLevel if item is not a max-level drop.
-            self.filter_file.write('    ItemLevel <= {0}\n'.format(item['DropLevel'] + drop_level))
-        self.filter_file.write('    Rarity = Magic\n')
-
-        # Values to set if filter match is found.
-        self.filter_file.write('    SetBackgroundColor {0}\n'.format(display_dict['dark_grey_background']))
-        self.filter_file.write('    SetBorderColor {0}\n'.format(display_dict['magic']))
-        self.filter_file.write('    SetFontSize {0}\n'.format(display_dict['uncommon_font_size']))
-        self.filter_file.write('\n')
+        self.template.uncommon_item(
+            base_text=item['Name'],
+            background_color=display_dict['dark_grey_background'],
+            item_level='<= {0}'.format(item['DropLevel'] + drop_level),
+        )
 
     def parse_item_base(self, item):
         """
@@ -184,18 +157,11 @@ class WeaponParser():
         """
         drop_level = filter_dict['base_drop_level']
 
-        self.filter_file.write('# Base Type.\n')
-        self.filter_file.write('Show\n')
-
-        # Limitations to filter on.
-        self.filter_file.write('    BaseType "{0}"\n'.format(item['Name']))
-        if not item['MaxLevel']:    # Only filter on ItemLevel if item is not a max-level drop.
-            self.filter_file.write('    ItemLevel <= {0}\n'.format(item['DropLevel'] + drop_level))
-
-        # Values to set if filter match is found.
-        self.filter_file.write('    SetBackgroundColor {0}\n'.format(display_dict['dark_grey_background']))
-        self.filter_file.write('    SetFontSize {0}\n'.format(display_dict['default_font_size']))
-        self.filter_file.write('\n')
+        self.template.common_item(
+            base_text=item['Name'],
+            background_color=display_dict['dark_grey_background'],
+            item_level='<= {0}'.format(item['DropLevel'] + drop_level),
+        )
 
     def parse_bows(self):
         """

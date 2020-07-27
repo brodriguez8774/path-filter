@@ -7,7 +7,8 @@ import json
 
 # User Imports.
 from resources import logging as init_logging
-from resources.data.value_dictionary import display_dict, filter_dict
+from resources.data.value_dictionary import display_dict
+from resources.parsers.templates import FilterTemplates
 
 
 # Initialize Logger.
@@ -23,6 +24,7 @@ class FlaskParser():
         self.parse_num = str(parse_num).zfill(3)
         self.parse_subnum = 0
         self.hybrid_flasks = show_hybrid_flasks
+        self.template = FilterTemplates(filter_file, debug=debug)
         self.debug = debug
 
         # Section Start.
@@ -48,26 +50,40 @@ class FlaskParser():
             drop_level = flask['DropLevel'] + 6
         elif flask['Class'] == 'Hybrid':
             drop_level = flask['DropLevel'] + 10
-        elif flask['Name'] == 'Quicksilver Flask':
-            drop_level = 100
         else:
             drop_level = 70
 
-        self.filter_file.write('Show\n')
-
-        # Limitations to filter on.
-        self.filter_file.write('    BaseType "{0}"\n'.format(flask['Name']))
-        self.filter_file.write('    ItemLevel <= {0}\n'.format(drop_level))
-
-        # Values to set if filter match is found.
-        self.filter_file.write('    SetBackgroundColor {0}\n'.format(display_dict['standard_background']))
-        self.filter_file.write('    SetFontSize {0}\n'.format(display_dict['default_font_size']))
-        self.filter_file.write('    MinimapIcon 2 {0} {1}\n'.format(
-            display_dict['minimap_color_flasks'],
-            display_dict['minimap_icon_flasks'],
-        ))
-        self.filter_file.write('    PlayEffect {0}\n'.format(display_dict['minimap_color_flasks']))
-        self.filter_file.write('\n')
+        # Separate handling for quicksilver flasks.
+        if flask['Name'] == 'Quicksilver Flask':
+            self.template.common_item(
+                description='Low level Quicksilver Flasks',
+                base_text='Quicksilver Flask',
+                item_level='<= 59',
+                font_size=display_dict['rare_font_size'],
+                minimap_size=0,
+                minimap_color=display_dict['minimap_color_flasks'],
+                minimap_shape=display_dict['minimap_icon_flasks'],
+                playeffect=display_dict['minimap_color_flasks'],
+            )
+            self.template.common_item(
+                description='High level Quicksilver Flasks',
+                base_text='Quicksilver Flask',
+                font_size=display_dict['uncommon_font_size'],
+                minimap_size=2,
+                minimap_color=display_dict['minimap_color_flasks'],
+                minimap_shape=display_dict['minimap_icon_flasks'],
+                playeffect=display_dict['minimap_color_flasks'],
+            )
+        else:
+            # All other flasks.
+            self.template.common_item(
+                base_text=flask['Name'],
+                item_level='<= {0}'.format(drop_level),
+                minimap_size=2,
+                minimap_color=display_dict['minimap_color_flasks'],
+                minimap_shape=display_dict['minimap_icon_flasks'],
+                playeffect=display_dict['minimap_color_flasks'],
+            )
 
     def show_high_quality_flasks(self):
         """
@@ -82,58 +98,40 @@ class FlaskParser():
         self.filter_file.write('\n')
 
         # High quality between 15 and 20%.
-        self.filter_file.write('# High quality flasks [15 - 20]%.\n')
-        self.filter_file.write('Show\n')
-
-        # Limitations to filter on.
-        self.filter_file.write('    Class "Life Flasks" "Mana Flasks" "Hybrid Flasks" "Utility Flasks" "Critical Utility Flasks"\n')
-        self.filter_file.write('    Quality >= 15\n')
-
-        # Values to set if filter match is found.
-        self.filter_file.write('    SetBackgroundColor {0}\n'.format(display_dict['standard_background']))
-        self.filter_file.write('    SetFontSize {0}\n'.format(display_dict['important_font_size']))
-        self.filter_file.write('    MinimapIcon 2 {0} {1}\n'.format(
-            display_dict['minimap_color_flasks'],
-            display_dict['minimap_icon_flasks'],
-        ))
-        self.filter_file.write('    PlayEffect {0}\n'.format(display_dict['minimap_color_flasks']))
-        self.filter_file.write('\n')
+        self.template.currency_recipe_quality(
+            description='High quality gems [15 - 20]%',
+            class_text=['Life Flasks', 'Mana Flasks', 'Hybrid Flasks', 'Utility Flasks', 'Critical Utility Flasks'],
+            quality='>= 15',
+            font_size=display_dict['rare_font_size'],
+            minimap_size=1,
+            minimap_color=display_dict['minimap_color_flasks'],
+            minimap_shape=display_dict['minimap_icon_flasks'],
+            playeffect=display_dict['minimap_color_flasks'],
+        )
 
         # High quality between 10 and 15%.
-        self.filter_file.write('# High quality flasks [10 - 15]%.\n')
-        self.filter_file.write('Show\n')
-
-        # Limitations to filter on.
-        self.filter_file.write('    Class "Life Flasks" "Mana Flasks" "Hybrid Flasks" "Utility Flasks" "Critical Utility Flasks"\n')
-        self.filter_file.write('    Quality >= 10\n')
-
-        # Values to set if filter match is found.
-        self.filter_file.write('    SetBackgroundColor {0}\n'.format(display_dict['standard_background']))
-        self.filter_file.write('    SetFontSize {0}\n'.format(display_dict['uncommon_font_size']))
-        self.filter_file.write('    MinimapIcon 2 {0} {1}\n'.format(
-            display_dict['minimap_color_flasks'],
-            display_dict['minimap_icon_flasks'],
-        ))
-        self.filter_file.write('    PlayEffect {0}\n'.format(display_dict['minimap_color_flasks']))
-        self.filter_file.write('\n')
+        self.template.currency_recipe_quality(
+            description='High quality gems [10 - 15]%',
+            class_text=['Life Flasks', 'Mana Flasks', 'Hybrid Flasks', 'Utility Flasks', 'Critical Utility Flasks'],
+            quality='>= 10',
+            font_size=display_dict['uncommon_font_size'],
+            minimap_size=1,
+            minimap_color=display_dict['minimap_color_flasks'],
+            minimap_shape=display_dict['minimap_icon_flasks'],
+            playeffect=display_dict['minimap_color_flasks'],
+        )
 
         # High quality between 5 and 10%.
-        self.filter_file.write('# High quality flasks [5 - 10]%.\n')
-        self.filter_file.write('Show\n')
-
-        # Limitations to filter on.
-        self.filter_file.write('    Class "Life Flasks" "Mana Flasks" "Hybrid Flasks" "Utility Flasks" "Critical Utility Flasks"\n')
-        self.filter_file.write('    Quality >= 5\n')
-
-        # Values to set if filter match is found.
-        self.filter_file.write('    SetBackgroundColor {0}\n'.format(display_dict['standard_background']))
-        self.filter_file.write('    SetFontSize {0}\n'.format(display_dict['default_font_size']))
-        self.filter_file.write('    MinimapIcon 2 {0} {1}\n'.format(
-            display_dict['minimap_color_flasks'],
-            display_dict['minimap_icon_flasks'],
-        ))
-        self.filter_file.write('    PlayEffect {0}\n'.format(display_dict['minimap_color_flasks']))
-        self.filter_file.write('\n')
+        self.template.currency_recipe_quality(
+            description='High quality gems [10 - 15]%',
+            class_text=['Life Flasks', 'Mana Flasks', 'Hybrid Flasks', 'Utility Flasks', 'Critical Utility Flasks'],
+            quality='>= 10',
+            font_size=display_dict['default_font_size'],
+            minimap_size=1,
+            minimap_color=display_dict['minimap_color_flasks'],
+            minimap_shape=display_dict['minimap_icon_flasks'],
+            playeffect=display_dict['minimap_color_flasks'],
+        )
 
     def show_life_flasks(self):
         """

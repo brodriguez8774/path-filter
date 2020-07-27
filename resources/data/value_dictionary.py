@@ -15,7 +15,7 @@ filter_dict = {
 display_dict = {
     # "Standard" in game colors.
     'normal': '200 200 200',
-    'magic': '136 136 255',
+    'uncommon': '136 136 255',
     'rare': '255 255 199',
     'unique': '175 96 37',
     'text': '127 127 127',

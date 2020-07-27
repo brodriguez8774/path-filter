@@ -7,7 +7,8 @@ import json
 
 # User Imports.
 from resources import logging as init_logging
-from resources.data.value_dictionary import display_dict, filter_dict
+from resources.data.value_dictionary import filter_dict
+from resources.parsers.templates import FilterTemplates
 
 
 # Initialize Logger.
@@ -24,6 +25,7 @@ class AccessoryParser():
         self.hidden_rings = hidden_rings
         self.parse_num = str(parse_num).zfill(3)
         self.parse_subnum = 0
+        self.template = FilterTemplates(filter_file, debug=debug)
         self.debug = debug
 
         # Update dict values.
@@ -61,7 +63,7 @@ class AccessoryParser():
         magic_drop_modifier = filter_dict['base_drop_level'] + filter_dict['level_rarity_modifier']
         normal_drop_modifier = filter_dict['base_drop_level']
 
-        self.filter_file.write('# === {0}: {1} === #\n'.format(item_type, item['Name']))
+        self.filter_file.write('\n\n# === {0}: {1} === #\n'.format(item_type, item['Name']))
 
         if item['Name'] not in hidden_list:
             # Display accessory normally.
@@ -69,27 +71,9 @@ class AccessoryParser():
             if self.debug:
                 logger.info('Not hidden: {0}'.format(item['Name']))
 
-            self.filter_file.write('# Rare Type.\n')
-            self.filter_file.write('Show\n')
-            self.filter_file.write('    BaseType "{0}"\n'.format(item['Name']))
-            self.filter_file.write('    Rarity = Rare\n')
-            self.filter_file.write('    SetBorderColor {0}\n'.format(display_dict['rare']))
-            self.filter_file.write('    SetFontSize {0}\n'.format(display_dict['rare_font_size']))
-            self.filter_file.write('\n')
-
-            self.filter_file.write('# Magic Type.\n')
-            self.filter_file.write('Show\n')
-            self.filter_file.write('    BaseType "{0}"\n'.format(item['Name']))
-            self.filter_file.write('    Rarity = Magic\n')
-            self.filter_file.write('    SetBorderColor {0}\n'.format(display_dict['magic']))
-            self.filter_file.write('    SetFontSize {0}\n'.format(display_dict['uncommon_font_size']))
-            self.filter_file.write('\n')
-
-            self.filter_file.write('# Base Type.\n')
-            self.filter_file.write('Show\n')
-            self.filter_file.write('    BaseType "{0}"\n'.format(item['Name']))
-            self.filter_file.write('    SetFontSize {0}\n'.format(display_dict['default_font_size']))
-            self.filter_file.write('\n')
+            self.template.rare_item(base_text=item['Name'])
+            self.template.uncommon_item(base_text=item['Name'])
+            self.template.common_item(base_text=item['Name'])
 
         else:
             # Accessory set to always hide.
@@ -100,36 +84,21 @@ class AccessoryParser():
 
             if item['Name'] in exception_list:
                 # Exception. Show for first levels, as determined by base_drop_level and rarity_level_modifier.
-                self.filter_file.write('# Rare Type.\n')
-                self.filter_file.write('Show\n')
-                self.filter_file.write('    BaseType "{0}"\n'.format(item['Name']))
-                self.filter_file.write('    ItemLevel <= {0}\n'.format(item['DropLevel'] + rare_drop_modifier))
-                self.filter_file.write('    Rarity = Rare\n')
-                self.filter_file.write('    SetBorderColor {0}\n'.format(display_dict['rare']))
-                self.filter_file.write('    SetFontSize {0}\n'.format(display_dict['rare_font_size']))
-                self.filter_file.write('\n')
+                self.template.rare_item(
+                    base_text=item['Name'],
+                    item_level='<= {0}'.format(item['DropLevel'] + rare_drop_modifier),
+                )
+                self.template.uncommon_item(
+                    base_text=item['Name'],
+                    item_level='<= {0}'.format(item['DropLevel'] + magic_drop_modifier),
+                )
+                self.template.common_item(
+                    base_text=item['Name'],
+                    item_level='<= {0}'.format(item['DropLevel'] + normal_drop_modifier),
+                )
 
-                self.filter_file.write('# Magic Type.\n')
-                self.filter_file.write('Show\n')
-                self.filter_file.write('    BaseType "{0}"\n'.format(item['Name']))
-                self.filter_file.write('    ItemLevel <= {0}\n'.format(item['DropLevel'] + magic_drop_modifier))
-                self.filter_file.write('    Rarity = Magic\n')
-                self.filter_file.write('    SetBorderColor {0}\n'.format(display_dict['magic']))
-                self.filter_file.write('    SetFontSize {0}\n'.format(display_dict['uncommon_font_size']))
-                self.filter_file.write('\n')
-
-                self.filter_file.write('# Base Type.\n')
-                self.filter_file.write('Show\n')
-                self.filter_file.write('    BaseType "{0}"\n'.format(item['Name']))
-                self.filter_file.write('    ItemLevel <= {0}\n'.format(item['DropLevel'] + normal_drop_modifier))
-                self.filter_file.write('    SetFontSize {0}\n'.format(display_dict['default_font_size']))
-                self.filter_file.write('\n')
-
-            else:
-                # Not an exception. Hide accessory unconditionally.
-                self.filter_file.write('Hide\n')
-                self.filter_file.write('    BaseType "{0}"\n'.format(item['Name']))
-                self.filter_file.write('\n')
+            # Hide all other instances of accessory.
+            self.template.hidden_item(base_text=item['Name'])
 
     def parse_amulets(self):
         """

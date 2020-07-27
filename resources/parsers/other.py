@@ -7,7 +7,8 @@ import json
 
 # User Imports.
 from resources import logging as init_logging
-from resources.data.value_dictionary import display_dict, filter_dict
+from resources.data.value_dictionary import display_dict
+from resources.parsers.templates import FilterTemplates
 
 
 # Initialize Logger.
@@ -22,6 +23,7 @@ class QuestItemParser():
         self.filter_file = filter_file
         self.parse_num = str(parse_num).zfill(3)
         self.parse_subnum = 0
+        self.template = FilterTemplates(filter_file, debug=debug)
         self.debug = debug
 
         # Section Start.
@@ -31,16 +33,9 @@ class QuestItemParser():
         self.filter_file.write('# =========================== #\n')
         self.filter_file.write('\n')
 
-        self.filter_file.write('Show\n')
-
-        # Limitations to filter on.
-        self.filter_file.write('    Class "Quest" "Quest Items"\n')
-
-        # Values to set if filter match is found.
-        self.filter_file.write('    SetBorderColor {0}\n'.format(display_dict['quest']))
-        self.filter_file.write('    SetTextColor {0}\n'.format(display_dict['quest']))
-        self.filter_file.write('    SetFontSize {0}\n'.format(display_dict['important_font_size']))
-        self.filter_file.write('\n')
+        self.template.quest_item(
+            class_text=['Quest', 'Quest Items']
+        )
 
 
 class UniqueParser():
@@ -51,6 +46,7 @@ class UniqueParser():
         self.filter_file = filter_file
         self.parse_num = str(parse_num).zfill(3)
         self.parse_subnum = 0
+        self.template = FilterTemplates(filter_file, debug=debug)
         self.debug = debug
 
         # Section Start.
@@ -68,41 +64,18 @@ class UniqueParser():
         Filter parsing for unique items.
         """
         self.parse_subnum += 1
-        parse_subnum = str(self.parse_subnum).zfill(2)
 
         # Unique tier maps.
-        self.filter_file.write('# Unique Tier Maps.\n')
-        self.filter_file.write('Show\n')
-        self.filter_file.write('    Class "Map"\n')
-        self.filter_file.write('    Rarity Unique\n')
-        self.filter_file.write('    SetBackgroundColor {0}\n'.format(display_dict['unique_background']))
-        self.filter_file.write('    SetBorderColor {0}\n'.format(display_dict['unique']))
-        self.filter_file.write('    SetTextColor {0}\n'.format(display_dict['unique_text']))
-        self.filter_file.write('    SetFontSize {0}\n'.format(display_dict['unique_font_size']))
-        self.filter_file.write('    PlayAlertSound 16 100\n')
-        self.filter_file.write('    MinimapIcon 0 {0} {1}\n'.format(
-            display_dict['minimap_color_unique'],
-            display_dict['minimap_icon_maps'],
-        ))
-        self.filter_file.write('    PlayEffect {0}\n'.format(display_dict['minimap_color_unique']))
-        self.filter_file.write('\n')
+        self.template.unique_item(
+            description='Unique Tier Maps',
+            minimap_shape=display_dict['minimap_icon_maps'],
+            sound = '16 200',
+        )
 
         # General Unique Items.
-        self.filter_file.write('# General Unique Items.\n')
-        self.filter_file.write('Show\n')
-        self.filter_file.write('    Rarity = Unique\n')
-        self.filter_file.write('    SetBackgroundColor {0}\n'.format(display_dict['unique_background']))
-        self.filter_file.write('    SetBorderColor {0}\n'.format(display_dict['unique']))
-        self.filter_file.write('    SetTextColor {0}\n'.format(display_dict['unique_text']))
-        self.filter_file.write('    SetFontSize {0}\n'.format(display_dict['unique_font_size']))
-        self.filter_file.write('    PlayAlertSound 1 300\n')
-        self.filter_file.write('    MinimapIcon 0 {0} {1}\n'.format(
-            display_dict['minimap_color_unique'],
-            display_dict['minimap_icon_unique'],
-        ))
-        self.filter_file.write('    PlayEffect {0}\n'.format(display_dict['minimap_color_unique']))
-
-        self.filter_file.write('\n')
+        self.template.unique_item(
+            description='General Unique Items',
+        )
 
 
 class NotableGearParser():
@@ -113,6 +86,7 @@ class NotableGearParser():
         self.filter_file = filter_file
         self.parse_num = str(parse_num).zfill(3)
         self.parse_subnum = 0
+        self.template = FilterTemplates(filter_file, debug=debug)
         self.debug = debug
 
         # Section Start.
@@ -125,6 +99,7 @@ class NotableGearParser():
         # 5 or 6 slot items.
         self.parse_high_slot()
         self.parse_influence()
+        self.parse_veiled_items()
         self.parse_fishing_rods()
 
     def parse_high_slot(self):
@@ -147,26 +122,33 @@ class NotableGearParser():
         self.filter_file.write('# --------------------------------------- #\n')
         self.filter_file.write('\n')
 
-        self.filter_file.write('# Rare Type.\n')
-        self.filter_file.write('Show\n')
-        self.filter_file.write('    Rarity = Rare\n')
-        self.filter_file.write('    LinkedSockets = 6\n')
-        self.filter_file.write('    SetBorderColor {0}\n'.format(display_dict['rare']))
-        self.parse_high_slot_filter()
-
-        self.filter_file.write('# Magic Type.\n')
-        self.filter_file.write('Show\n')
-        self.filter_file.write('    Rarity = Magic\n')
-        self.filter_file.write('    LinkedSockets = 6\n')
-        self.filter_file.write('    SetBorderColor {0}\n'.format(display_dict['magic']))
-        self.parse_high_slot_filter()
-
-        self.filter_file.write('# Base Type.\n')
-        self.filter_file.write('Show\n')
-        self.filter_file.write('    Rarity = Normal\n')
-        self.filter_file.write('    LinkedSockets = 6\n')
-        self.filter_file.write('    SetBorderColor {0}\n'.format(display_dict['normal']))
-        self.parse_high_slot_filter()
+        self.template.rare_item(
+            linked_sockets='6',
+            font_size=display_dict['important_font_size'],
+            minimap_size=0,
+            minimap_color=display_dict['minimap_color_notable'],
+            minimap_shape=display_dict['minimap_icon_slots'],
+            sound='1 300',
+            playeffect=display_dict['minimap_color_notable'],
+        )
+        self.template.uncommon_item(
+            linked_sockets='6',
+            font_size=display_dict['important_font_size'],
+            minimap_size=0,
+            minimap_color=display_dict['minimap_color_notable'],
+            minimap_shape=display_dict['minimap_icon_slots'],
+            sound='1 300',
+            playeffect=display_dict['minimap_color_notable'],
+        )
+        self.template.common_item(
+            linked_sockets='6',
+            font_size=display_dict['important_font_size'],
+            minimap_size=0,
+            minimap_color=display_dict['minimap_color_notable'],
+            minimap_shape=display_dict['minimap_icon_slots'],
+            sound='1 300',
+            playeffect=display_dict['minimap_color_notable'],
+        )
 
         self.filter_file.write('\n')
         self.filter_file.write('# --------------------------------------- #\n')
@@ -174,26 +156,33 @@ class NotableGearParser():
         self.filter_file.write('# --------------------------------------- #\n')
         self.filter_file.write('\n')
 
-        self.filter_file.write('# Rare Type.\n')
-        self.filter_file.write('Show\n')
-        self.filter_file.write('    Rarity = Rare\n')
-        self.filter_file.write('    LinkedSockets = 5\n')
-        self.filter_file.write('    SetBorderColor {0}\n'.format(display_dict['rare']))
-        self.parse_high_slot_filter()
-
-        self.filter_file.write('# Magic Type.\n')
-        self.filter_file.write('Show\n')
-        self.filter_file.write('    Rarity = Magic\n')
-        self.filter_file.write('    LinkedSockets = 5\n')
-        self.filter_file.write('    SetBorderColor {0}\n'.format(display_dict['magic']))
-        self.parse_high_slot_filter()
-
-        self.filter_file.write('# Base Type.\n')
-        self.filter_file.write('Show\n')
-        self.filter_file.write('    Rarity = Normal\n')
-        self.filter_file.write('    LinkedSockets = 5\n')
-        self.filter_file.write('    SetBorderColor {0}\n'.format(display_dict['normal']))
-        self.parse_high_slot_filter()
+        self.template.rare_item(
+            linked_sockets='5',
+            font_size=display_dict['rare_font_size'],
+            minimap_size=1,
+            minimap_color=display_dict['minimap_color_notable'],
+            minimap_shape=display_dict['minimap_icon_slots'],
+            sound='1 300',
+            playeffect=display_dict['minimap_color_notable'],
+        )
+        self.template.uncommon_item(
+            linked_sockets='5',
+            font_size=display_dict['rare_font_size'],
+            minimap_size=1,
+            minimap_color=display_dict['minimap_color_notable'],
+            minimap_shape=display_dict['minimap_icon_slots'],
+            sound='1 200',
+            playeffect=display_dict['minimap_color_notable'],
+        )
+        self.template.common_item(
+            linked_sockets='5',
+            font_size=display_dict['rare_font_size'],
+            minimap_size=1,
+            minimap_color=display_dict['minimap_color_notable'],
+            minimap_shape=display_dict['minimap_icon_slots'],
+            sound='1 200',
+            playeffect=display_dict['minimap_color_notable'],
+        )
 
         self.filter_file.write('\n')
         self.filter_file.write('# ---------------------------------- #\n')
@@ -201,22 +190,30 @@ class NotableGearParser():
         self.filter_file.write('# ---------------------------------- #\n')
         self.filter_file.write('\n')
 
-        self.filter_file.write('Show\n')
-        self.filter_file.write('    Sockets = 6\n')
-        self.filter_file.write('    SetBorderColor {0}\n'.format(display_dict['normal']))
-        self.parse_high_slot_filter()
-
-
-    def parse_high_slot_filter(self):
-        self.filter_file.write('    SetBackgroundColor {0}\n'.format(display_dict['standard_background']))
-        self.filter_file.write('    SetFontSize {0}\n'.format(display_dict['important_font_size']))
-        self.filter_file.write('    PlayAlertSound 1 300\n')
-        self.filter_file.write('    MinimapIcon 1 {0} {1}\n'.format(
-            display_dict['minimap_color_notable'],
-            display_dict['minimap_icon_slots'],
-        ))
-        self.filter_file.write('    PlayEffect {0}\n'.format(display_dict['minimap_color_notable']))
-        self.filter_file.write('\n')
+        self.template.rare_item(
+            sockets='6',
+            font_size=display_dict['rare_font_size'],
+            minimap_size=2,
+            minimap_color=display_dict['minimap_color_notable'],
+            minimap_shape=display_dict['minimap_icon_slots'],
+            playeffect=display_dict['minimap_color_notable'],
+        )
+        self.template.uncommon_item(
+            sockets='6',
+            font_size=display_dict['rare_font_size'],
+            minimap_size=2,
+            minimap_color=display_dict['minimap_color_notable'],
+            minimap_shape=display_dict['minimap_icon_slots'],
+            playeffect=display_dict['minimap_color_notable'],
+        )
+        self.template.common_item(
+            sockets='6',
+            font_size=display_dict['rare_font_size'],
+            minimap_size=2,
+            minimap_color=display_dict['minimap_color_notable'],
+            minimap_shape=display_dict['minimap_icon_slots'],
+            playeffect=display_dict['minimap_color_notable'],
+        )
 
     def parse_influence(self):
         self.parse_subnum += 1
@@ -227,44 +224,46 @@ class NotableGearParser():
         self.filter_file.write('# ----------------------------------- #\n')
         self.filter_file.write('\n')
 
-        self.filter_file.write('# Rare Type.\n')
-        self.filter_file.write('Show\n')
-        self.filter_file.write('    Rarity = Rare\n')
-        self.filter_file.write('    HasInfluence "Shaper" "Elder" "Crusader" "Hunter" "Redeemer" "Warlord"\n')
-        self.filter_file.write('    SetBorderColor {0}\n'.format(display_dict['rare']))
-        self.filter_file.write('    PlayAlertSound 1 300\n')
-        self.filter_file.write('    MinimapIcon 0 {0} {1}\n'.format(
-            display_dict['minimap_color_notable'],
-            display_dict['minimap_icon_influenced'],
-        ))
-        self.filter_file.write('    PlayEffect {0}\n'.format(display_dict['minimap_color_notable']))
+        self.template.rare_item(
+            has_influence=['Shaper', 'Elder', 'Crusader', 'Hunter', 'Redeemer', 'Warlord'],
+            minimap_size=0,
+            minimap_color=display_dict['minimap_color_notable'],
+            minimap_shape=display_dict['minimap_icon_influenced'],
+            sound='1 300',
+            playeffect=display_dict['minimap_color_notable'],
+        )
+        self.template.uncommon_item(
+            has_influence=['Shaper', 'Elder', 'Crusader', 'Hunter', 'Redeemer', 'Warlord'],
+            minimap_size=0,
+            minimap_color=display_dict['minimap_color_notable'],
+            minimap_shape=display_dict['minimap_icon_influenced'],
+            sound='1 300',
+            playeffect=display_dict['minimap_color_notable'],
+        )
+        self.template.common_item(
+            has_influence=['Shaper', 'Elder', 'Crusader', 'Hunter', 'Redeemer', 'Warlord'],
+            minimap_size=0,
+            minimap_color=display_dict['minimap_color_notable'],
+            minimap_shape=display_dict['minimap_icon_influenced'],
+            sound='1 300',
+            playeffect=display_dict['minimap_color_notable'],
+        )
+
+    def parse_veiled_items(self):
+        """
+        Handling for betrayal league veiled items.
+        """
+        self.parse_subnum += 1
+
+        self.filter_file.write('\n')
+        self.filter_file.write('# ------------------------------- #\n')
+        self.filter_file.write('# --- [{0}.{1}] - Veiled Items --- #\n'.format(self.parse_num, str(self.parse_subnum).zfill(2)))
+        self.filter_file.write('# ------------------------------- #\n')
         self.filter_file.write('\n')
 
-        self.filter_file.write('# Magic Type.\n')
-        self.filter_file.write('Show\n')
-        self.filter_file.write('    Rarity = Magic\n')
-        self.filter_file.write('    HasInfluence "Shaper" "Elder" "Crusader" "Hunter" "Redeemer" "Warlord"\n')
-        self.filter_file.write('    SetBorderColor {0}\n'.format(display_dict['magic']))
-        self.filter_file.write('    PlayAlertSound 1 300\n')
-        self.filter_file.write('    MinimapIcon 0 {0} {1}\n'.format(
-            display_dict['minimap_color_notable'],
-            display_dict['minimap_icon_influenced'],
-        ))
-        self.filter_file.write('    PlayEffect {0}\n'.format(display_dict['minimap_color_notable']))
-        self.filter_file.write('\n')
-
-        self.filter_file.write('# Base Type.\n')
-        self.filter_file.write('Show\n')
-        self.filter_file.write('    Rarity = Normal\n')
-        self.filter_file.write('    HasInfluence "Shaper" "Elder" "Crusader" "Hunter" "Redeemer" "Warlord"\n')
-        self.filter_file.write('    SetBorderColor {0}\n'.format(display_dict['normal']))
-        self.filter_file.write('    PlayAlertSound 1 300\n')
-        self.filter_file.write('    MinimapIcon 0 {0} {1}\n'.format(
-            display_dict['minimap_color_notable'],
-            display_dict['minimap_icon_influenced'],
-        ))
-        self.filter_file.write('    PlayEffect {0}\n'.format(display_dict['minimap_color_notable']))
-        self.filter_file.write('\n')
+        self.template.special_item(
+            has_mod='Veil',
+        )
 
     def parse_fishing_rods(self):
         """
@@ -278,16 +277,9 @@ class NotableGearParser():
         self.filter_file.write('# ------------------------------- #\n')
         self.filter_file.write('\n')
 
-        self.filter_file.write('Show\n')
-        self.filter_file.write('    Class "Fishing Rods"\n')
-        self.filter_file.write('    SetBorderColor {0}\n'.format(display_dict['normal']))
-        self.filter_file.write('    PlayAlertSound 1 300\n')
-        self.filter_file.write('    MinimapIcon 0 {0} {1}\n'.format(
-            display_dict['minimap_color_notable'],
-            display_dict['minimap_icon_special'],
-        ))
-        self.filter_file.write('    PlayEffect {0}\n'.format(display_dict['minimap_color_notable']))
-        self.filter_file.write('\n')
+        self.template.special_item(
+            class_text='Fishing Rods',
+        )
 
 
 class FinalParser():
@@ -298,6 +290,7 @@ class FinalParser():
         self.filter_file = filter_file
         self.parse_num = str(parse_num).zfill(3)
         self.parse_subnum = 0
+        self.template = FilterTemplates(filter_file, debug=debug)
         self.debug = debug
 
         # Section Start.
@@ -307,6 +300,4 @@ class FinalParser():
         self.filter_file.write('# ======================================= #\n')
         self.filter_file.write('\n')
 
-        self.filter_file.write('# Hide everything else of little to no value.\n')
-        self.filter_file.write('Hide\n')
-        self.filter_file.write('    SetFontSize {0}\n'.format(display_dict['min_font_size']))
+        self.template.hidden_item(description='Hide everything else of little to no value')

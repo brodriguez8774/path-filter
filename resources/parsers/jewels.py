@@ -7,7 +7,8 @@ import json
 
 # User Imports.
 from resources import logging as init_logging
-from resources.data.value_dictionary import display_dict, filter_dict
+from resources.data.value_dictionary import display_dict
+from resources.parsers.templates import FilterTemplates
 
 
 # Initialize Logger.
@@ -22,6 +23,7 @@ class JewelParser():
         self.filter_file = filter_file
         self.parse_num = str(parse_num).zfill(3)
         self.parse_subnum = 0
+        self.template = FilterTemplates(filter_file, debug=debug)
         self.debug = debug
 
         # Section Start.
@@ -45,22 +47,11 @@ class JewelParser():
         self.filter_file.write('# ---------------------------------- #\n')
         self.filter_file.write('\n')
 
-        self.filter_file.write('# Standard Jewels.\n')
-        self.filter_file.write('Show\n')
-
-        # Limitations to filter on.
-        self.filter_file.write('    BaseType "Cobalt Jewel" "Crimson Jewel" "Viridian Jewel"\n')
-
-        # Values to set if filter match is found.
-        self.filter_file.write('    SetBorderColor {0}\n'.format(display_dict['normal']))
-        self.filter_file.write('    SetFontSize {0}\n'.format(display_dict['rare_font_size']))
-        self.filter_file.write('    PlayAlertSound 4 175\n')
-        self.filter_file.write('    MinimapIcon 2 {0} {1}\n'.format(
-            display_dict['minimap_color_special'],
-            display_dict['minimap_icon_jewel']
-        ))
-        self.filter_file.write('    PlayEffect {0}\n'.format(display_dict['minimap_color_special']))
-        self.filter_file.write('\n')
+        self.template.special_item(
+            base_text=['Cobalt Jewel', 'Crimson Jewel', 'Viridian Jewel'],
+            minimap_size=2,
+            minimap_shape=display_dict['minimap_icon_jewel'],
+        )
 
     def parse_abyss(self):
         """"""
@@ -72,23 +63,11 @@ class JewelParser():
         self.filter_file.write('# ------------------------------- #\n')
         self.filter_file.write('\n')
 
-        self.filter_file.write('# Abyss Jewels.\n')
-        self.filter_file.write('Show\n')
-
-        # Limitations to filter on.
-        self.filter_file.write('    Class "Abyss Jewel"\n')
-
-        # Values to set if filter match is found.
-        self.filter_file.write('    SetBorderColor {0}\n'.format(display_dict['league_border']))
-        self.filter_file.write('    SetTextColor {0}\n'.format(display_dict['league_text']))
-        self.filter_file.write('    SetFontSize {0}\n'.format(display_dict['rare_font_size']))
-        self.filter_file.write('    PlayAlertSound 4 175\n')
-        self.filter_file.write('    MinimapIcon 2 {0} {1}\n'.format(
-            display_dict['minimap_color_special'],
-            display_dict['minimap_icon_jewel']
-        ))
-        self.filter_file.write('    PlayEffect {0}\n'.format(display_dict['minimap_color_special']))
-        self.filter_file.write('\n')
+        self.template.special_item(
+            class_text='Abyss Jewel',
+            minimap_size=1,
+            minimap_shape=display_dict['minimap_icon_jewel'],
+        )
 
     def parse_cluster(self):
         """"""
@@ -100,20 +79,9 @@ class JewelParser():
         self.filter_file.write('# --------------------------------- #\n')
         self.filter_file.write('\n')
 
-        self.filter_file.write('# Cluster Jewels.\n')
-        self.filter_file.write('Show\n')
-
-        # Limitations to filter on.
-        self.filter_file.write('    BaseType "Cluster Jewel"\n')
-
-        # Values to set if filter match is found.
-        self.filter_file.write('    SetBorderColor {0}\n'.format(display_dict['league_border']))
-        self.filter_file.write('    SetTextColor {0}\n'.format(display_dict['league_text']))
-        self.filter_file.write('    SetFontSize {0}\n'.format(display_dict['rare_font_size']))
-        self.filter_file.write('    PlayAlertSound 4 175\n')
-        self.filter_file.write('    MinimapIcon 2 {0} {1}\n'.format(
-            display_dict['minimap_color_special'],
-            display_dict['minimap_icon_jewel']
-        ))
-        self.filter_file.write('    PlayEffect {0}\n'.format(display_dict['minimap_color_special']))
-        self.filter_file.write('\n')
+        self.template.special_item(
+            class_text='Cluster Jewel',
+            minimap_size=0,
+            minimap_shape=display_dict['minimap_icon_jewel'],
+            sound='4 250',
+        )
