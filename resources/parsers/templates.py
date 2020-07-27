@@ -74,7 +74,7 @@ class FilterTemplates():
         )
 
     def uncommon_item(self, *args,
-            description='Uncommon Type', class_text=None, base_text=None,
+            description='Magic Type', class_text=None, base_text=None,
             item_level=None, quality=None,
             linked_sockets=None, socket_group=None, sockets=None,
             height=None, width=None,
@@ -88,7 +88,7 @@ class FilterTemplates():
         """
         self.base.write_rule(
             description=description, class_text=class_text, base_text=base_text,
-            item_level=item_level, rarity='Uncommon', quality=quality,
+            item_level=item_level, rarity='Magic', quality=quality,
             linked_sockets=linked_sockets, socket_group=socket_group, sockets=sockets,
             height=height, width=width,
             has_influence=has_influence, map_tier=map_tier,
@@ -351,13 +351,9 @@ class BaseTemplate():
         if width is not None:
             self.filter_file.write('    Width {0}\n'.format(str(width).strip()))
         if has_mod is not None:
-            if has_mod[0] != '"':
-                has_mod = '"' + has_mod
-            if has_mod[:0] != '"':
-                has_mod = has_mod + '"'
-            self.filter_file.write('    HasExplicitMod {0}\n'.format(str(has_mod).strip()))
+            self.filter_file.write('    HasExplicitMod {0}\n'.format(self._format_item_text(has_mod)))
         if has_influence is not None:
-            self.filter_file.write('    HasInfluence {0}\n'.format(str(has_influence).strip()))
+            self.filter_file.write('    HasInfluence {0}\n'.format(self._format_item_text(has_influence)))
         if map_tier is not None:
             self.filter_file.write('    MapTier {0}\n'.format(str(map_tier).strip()))
 

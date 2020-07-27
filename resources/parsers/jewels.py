@@ -80,7 +80,7 @@ class JewelParser():
         self.filter_file.write('\n')
 
         self.template.special_item(
-            class_text='Cluster Jewel',
+            base_text='Cluster Jewel',
             minimap_size=0,
             minimap_shape=display_dict['minimap_icon_jewel'],
             sound='4 250',
