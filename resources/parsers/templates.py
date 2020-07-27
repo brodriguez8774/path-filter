@@ -266,7 +266,9 @@ class FilterTemplates():
         Template to hide items from showing.
         """
         self.base.write_rule(
-            description=description, class_text=class_text, base_text=base_text, sound='None',
+            description=description, class_text=class_text, base_text=base_text,
+            font_size=display_dict['min_font_size'],
+            sound='None',
         )
 
 
