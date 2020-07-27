@@ -68,8 +68,9 @@ class UniqueParser():
         # Unique tier maps.
         self.template.unique_item(
             description='Unique Tier Maps',
+            class_text='Map',
             minimap_shape=display_dict['minimap_icon_maps'],
-            sound = '16 200',
+            sound='3 200',
         )
 
         # General Unique Items.

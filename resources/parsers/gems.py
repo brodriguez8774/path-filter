@@ -110,4 +110,3 @@ class GemParser():
             base_text='Vaal',
             border_color=display_dict['normal'],
         )
-        self.filter_file.write('Show\n')

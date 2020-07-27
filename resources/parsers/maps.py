@@ -48,7 +48,7 @@ class MapParser():
             minimap_size=1,
             minimap_color=display_dict['minimap_color_maps'],
             minimap_shape=display_dict['minimap_icon_maps'],
-            sound='16 175',
+            sound='3 175',
             playeffect=display_dict['minimap_color_maps'],
         )
 
@@ -61,7 +61,7 @@ class MapParser():
             minimap_size=0,
             minimap_color=display_dict['minimap_color_maps'],
             minimap_shape=display_dict['minimap_icon_maps'],
-            sound='16 175',
+            sound='3 175',
             playeffect=display_dict['minimap_color_maps'],
         )
 
@@ -74,7 +74,7 @@ class MapParser():
             minimap_size=1,
             minimap_color=display_dict['minimap_color_maps'],
             minimap_shape=display_dict['minimap_icon_maps'],
-            sound='16 175',
+            sound='3 175',
             playeffect=display_dict['minimap_color_maps'],
         )
 
@@ -86,6 +86,6 @@ class MapParser():
             minimap_size=1,
             minimap_color=display_dict['minimap_color_maps'],
             minimap_shape=display_dict['minimap_icon_maps'],
-            sound='16 175',
+            sound='3 175',
             playeffect=display_dict['minimap_color_maps'],
         )
