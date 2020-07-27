@@ -1,0 +1,252 @@
+[
+    {
+        "Type": "Weapon",
+        "Class": "Sceptre",
+        "Name": "Driftwood Sceptre",
+        "Damage": [5, 8],
+        "ImplicitType": "Increased Elemental Damage",
+        "ImplicitValue": [10],
+        "DropLevel": 1,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "Sceptre",
+        "Name": "Darkwood Sceptre",
+        "Damage": [8, 12],
+        "ImplicitType": "Increased Elemental Damage",
+        "ImplicitValue": [12],
+        "DropLevel": 5,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "Sceptre",
+        "Name": "Bronze Sceptre",
+        "Damage": [10, 19],
+        "ImplicitType": "Increased Elemental Damage",
+        "ImplicitValue": [12],
+        "DropLevel": 10,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "Sceptre",
+        "Name": "Quartz Sceptre",
+        "Damage": [14, 22],
+        "ImplicitType": "Increased Elemental Damage",
+        "ImplicitValue": [20],
+        "DropLevel": 15,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "Sceptre",
+        "Name": "Iron Sceptre",
+        "Damage": [18, 27],
+        "ImplicitType": "Increased Elemental Damage",
+        "ImplicitValue": [14],
+        "DropLevel": 20,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "Sceptre",
+        "Name": "Ochre Sceptre",
+        "Damage": [17, 31],
+        "ImplicitType": "Increased Elemental Damage",
+        "ImplicitValue": [16],
+        "DropLevel": 24,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "Sceptre",
+        "Name": "Ritual Sceptre",
+        "Damage": [21, 50],
+        "ImplicitType": "Increased Elemental Damage",
+        "ImplicitValue": [16],
+        "DropLevel": 28,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "Sceptre",
+        "Name": "Shadow Sceptre",
+        "Damage": [29, 44],
+        "ImplicitType": "Increased Elemental Damage",
+        "ImplicitValue": [22],
+        "DropLevel": 32,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "Sceptre",
+        "Name": "Grinning Fetish",
+        "Damage": [24, 36],
+        "ImplicitType": "Increased Elemental Damage",
+        "ImplicitValue": [18],
+        "DropLevel": 35,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "Sceptre",
+        "Name": "Horned Sceptre",
+        "Damage": [27, 50],
+        "ImplicitType": "Elemental Resist Penetration",
+        "ImplicitValue": [4],
+        "DropLevel": 36,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "Sceptre",
+        "Name": "Sekhem",
+        "Damage": [30, 55],
+        "ImplicitType": "Increased Elemental Damage",
+        "ImplicitValue": [18],
+        "DropLevel": 38,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "Sceptre",
+        "Name": "Crystal Sceptre",
+        "Damage": [35, 52],
+        "ImplicitType": "Increased Elemental Damage",
+        "ImplicitValue": [30],
+        "DropLevel": 41,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "Sceptre",
+        "Name": "Lead Sceptre",
+        "Damage": [38, 57],
+        "ImplicitType": "Increased Elemental Damage",
+        "ImplicitValue": [22],
+        "DropLevel": 44,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "Sceptre",
+        "Name": "Blood Sceptre",
+        "Damage": [30, 55],
+        "ImplicitType": "Increased Elemental Damage",
+        "ImplicitValue": [24],
+        "DropLevel": 47,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "Sceptre",
+        "Name": "Royal Sceptre",
+        "Damage": [34, 80],
+        "ImplicitType": "Increased Elemental Damage",
+        "ImplicitValue": [24],
+        "DropLevel": 50,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "Sceptre",
+        "Name": "Abyssal Sceptre",
+        "Damage": [45, 67],
+        "ImplicitType": "Increased Elemental Damage",
+        "ImplicitValue": [30],
+        "DropLevel": 53,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "Sceptre",
+        "Name": "Stag Sceptre",
+        "Damage": [39, 72],
+        "ImplicitType": "Elemental Resist Penetration",
+        "ImplicitValue": [4],
+        "DropLevel": 55,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "Sceptre",
+        "Name": "Karui Sceptre",
+        "Damage": [37, 55],
+        "ImplicitType": "Increased Elemental Damage",
+        "ImplicitValue": [26],
+        "DropLevel": 56,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "Sceptre",
+        "Name": "Tyrant's Sekhem",
+        "Damage": [43, 80],
+        "ImplicitType": "Increased Elemental Damage",
+        "ImplicitValue": [26],
+        "DropLevel": 58,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "Sceptre",
+        "Name": "Opal Sceptre",
+        "Damage": [49, 73],
+        "ImplicitType": "Increased Elemental Damage",
+        "ImplicitValue": [40],
+        "DropLevel": 60,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "Sceptre",
+        "Name": "Platinum Sceptre",
+        "Damage": [51, 76],
+        "ImplicitType": "Increased Elemental Damage",
+        "ImplicitValue": [30],
+        "DropLevel": 62,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "Sceptre",
+        "Name": "Vaal Sceptre",
+        "Damage": [37, 70],
+        "ImplicitType": "Increased Elemental Damage",
+        "ImplicitValue": [32],
+        "DropLevel": 64,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "Sceptre",
+        "Name": "Carnal Sceptre",
+        "Damage": [41, 95],
+        "ImplicitType": "Increased Elemental Damage",
+        "ImplicitValue": [32],
+        "DropLevel": 66,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "Sceptre",
+        "Name": "Void Sceptre",
+        "Damage": [50, 76],
+        "ImplicitType": "Increased Elemental Damage",
+        "ImplicitValue": [40],
+        "DropLevel": 68,
+        "MaxLevel": true
+    },
+    {
+        "Type": "Weapon",
+        "Class": "Sceptre",
+        "Name": "Sambar Sceptre",
+        "Damage": [42, 78],
+        "ImplicitType": "Elemental Resist Penetration",
+        "ImplicitValue": [6],
+        "DropLevel": 70,
+        "MaxLevel": true
+    }
+]

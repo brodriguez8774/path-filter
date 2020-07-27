@@ -25,7 +25,7 @@ logger = init_logging.get_logger(__name__)
 
 
 defense_choices = ['A', 'Ev', 'En', 'A/Ev', 'Ev/En', 'A/En']
-weapon_choices = ['Bows', 'Quivers', 'Wands', 'Shields']
+weapon_choices = ['Bows', 'Quivers', 'Sceptres', 'Wands', 'Shields']
 
 
 def run_filter_generation():

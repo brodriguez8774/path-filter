@@ -48,6 +48,9 @@ class WeaponParser():
         if 'Quivers' in self.weapon_types:
             self.parse_quivers()
 
+        if 'Sceptres' in self.weapon_types:
+            self.parse_sceptres()
+
         if 'Wands' in self.weapon_types:
             self.parse_wands()
 
@@ -210,6 +213,31 @@ class WeaponParser():
             for item in json_data:
                 # Parse item.
                 self.parse_item(item)
+
+    def parse_sceptres(self):
+        """
+        Parses all "Sceptre" type weapons.
+        """
+        if self.debug:
+            logger.info('Parsing sceptres.')
+
+        self.parse_subnum += 1
+
+        # Section Start.
+        self.filter_file.write('\n')
+        self.filter_file.write('# --------------------------- #\n')
+        self.filter_file.write('# --- [{0}.{1}] - Sceptres --- #\n'.format(self.parse_num, str(self.parse_subnum).zfill(2)))
+        self.filter_file.write('# --------------------------- #\n')
+        self.filter_file.write('\n')
+
+        # Parse wands.
+        with open('resources/data/hand/sceptres.json', 'r') as json_file:
+            # Loop through all items in json.
+            json_data = json.load(json_file)
+            for item in json_data:
+                # Parse item.
+                self.parse_item(item)
+
 
     def parse_wands(self):
         """
