@@ -120,8 +120,6 @@ class WeaponParser():
                 border_color=display_dict['normal'],
                 font_size=display_dict['uncommon_font_size'],
             )
-            self.filter_file.write('# Max Slot Type.\n')
-            self.filter_file.write('Show\n')
 
     def parse_item_rgb(self, item):
         """
