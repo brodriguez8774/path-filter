@@ -122,13 +122,14 @@ class CurrencyParser():
             base_text='Orb of Alchemy',
             font_size=display_dict['rare_font_size'],
             minimap_size=1,
-            sound='ShAlchemy 175',
+            sound='ShAlchemy 250',
         )
 
         # Divination Cards.
         self.template.card_item(
             description='Divination Cards',
-            base_text=['Card', 'Stacked Deck']
+            class_text='Currency',
+            base_text=['Stacked Deck'],
         )
         self.template.card_item(
             class_text=['Divination Card'],
@@ -136,26 +137,35 @@ class CurrencyParser():
 
         # Misc important currency.
         self.template.rare_currency(
-            description='Misc important currency',
+            description='Misc Important Currency',
             base_text=[
-                'Gemcutter\'s Prism', 'Cartographer\'s Chisel', 'Orb of Scouring', 'Orb of Regret', 'Silver Coin',
-                'Eternal Orb', 'Master Cartographer\'s Seal', 'Albino Rhoa Feather',
+                'Cartographer\'s Chisel', 'Orb of Scouring', 'Orb of Regret', 'Silver Coin',
+                'Eternal Orb', 'Master Cartographer\'s Seal', 'Albino Rhoa Feather', 'Orb of Chance',
             ],
             font_size=display_dict['uncommon_font_size'],
             minimap_size=2,
-            sound='4 175',
+            sound='5 175',
         )
 
-        # Low level important currency.
+        # Misc low importance currency.
         self.template.rare_currency(
-            description='Low level important currency',
+            description='Misc Low Importance Currency - Low Level',
             base_text=[
-                'Orb of Alteration', 'Chromatic Orb', 'Jeweller\'s Orb', 'Armourer\'s Scrap', 'Blacksmith\'s Whetstone',
-                'Glassblower\'s Bauble', 'Orb of Chance',
+                'Orb of Alteration', 'Orb of Augmentation',
+                'Chromatic Orb', 'Jeweller\'s Orb',
+                'Armourer\'s Scrap', 'Blacksmith\'s Whetstone', 'Glassblower\'s Bauble', 'Gemcutter\'s Prism',
+            ],
+            area_level='<= 49',
+            font_size=display_dict['default_font_size'],
+        )
+
+        self.template.notable_item(
+            description='Misc Low Importance Currency',
+            base_text=[
+                'Chromatic Orb', 'Jeweller\'s Orb',
+                'Armourer\'s Scrap', 'Blacksmith\'s Whetstone', 'Glassblower\'s Bauble', 'Gemcutter\'s Prism',
             ],
             font_size=display_dict['default_font_size'],
-            minimap_size=2,
-            sound=None,
         )
 
     def league_specific(self):
@@ -231,7 +241,7 @@ class CurrencyParser():
             base_text='Stone of Passage',
             font_size=display_dict['unique_font_size'],
             minimap_size=0,
-            sound='4 250'
+            sound='4 300'
         )
         self.template.special_item(
             description='Harbringer',
@@ -359,7 +369,7 @@ class PostEquipment_CurrencyParser():
         self.filter_file.write('# Alternatively, sell any combination of items (of the same quality type) that sum up to 40% quality.\n')
         self.filter_file.write('\n')
 
-        self.template.currency_recipe_quality(
+        self.template.notable_item(
             quality=20,
         )
 

@@ -83,5 +83,5 @@ class JewelParser():
             base_text='Cluster Jewel',
             minimap_size=0,
             minimap_shape=display_dict['minimap_icon_jewel'],
-            sound='4 250',
+            sound='4 300',
         )

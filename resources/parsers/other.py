@@ -34,7 +34,7 @@ class QuestItemParser():
         self.filter_file.write('\n')
 
         self.template.quest_item(
-            class_text=['Quest', 'Quest Items']
+            class_text=['Quest', 'Quest Items'],
         )
 
 
@@ -70,7 +70,7 @@ class UniqueParser():
             description='Unique Tier Maps',
             class_text='Map',
             minimap_shape=display_dict['minimap_icon_maps'],
-            sound='3 200',
+            sound='13 200',
         )
 
         # General Unique Items.
@@ -118,9 +118,9 @@ class NotableGearParser():
         self.filter_file.write('\n')
 
         self.filter_file.write('\n')
-        self.filter_file.write('# --------------------------------------- #\n')
-        self.filter_file.write('# --- [{0}.{1}.01] - 6-Link Slot Items --- #\n'.format(self.parse_num, parse_subnum))
-        self.filter_file.write('# --------------------------------------- #\n')
+        self.filter_file.write('# ---------------------------------- #\n')
+        self.filter_file.write('# --- [{0}.{1}.01] - 6-Link Items --- #\n'.format(self.parse_num, parse_subnum))
+        self.filter_file.write('# ---------------------------------- #\n')
         self.filter_file.write('\n')
 
         self.template.rare_item(
@@ -129,7 +129,7 @@ class NotableGearParser():
             minimap_size=0,
             minimap_color=display_dict['minimap_color_notable'],
             minimap_shape=display_dict['minimap_icon_slots'],
-            sound='1 300',
+            sound='6 300',
             playeffect=display_dict['minimap_color_notable'],
         )
         self.template.uncommon_item(
@@ -138,7 +138,7 @@ class NotableGearParser():
             minimap_size=0,
             minimap_color=display_dict['minimap_color_notable'],
             minimap_shape=display_dict['minimap_icon_slots'],
-            sound='1 300',
+            sound='6 300',
             playeffect=display_dict['minimap_color_notable'],
         )
         self.template.common_item(
@@ -147,41 +147,41 @@ class NotableGearParser():
             minimap_size=0,
             minimap_color=display_dict['minimap_color_notable'],
             minimap_shape=display_dict['minimap_icon_slots'],
-            sound='1 300',
+            sound='6 300',
             playeffect=display_dict['minimap_color_notable'],
         )
 
         self.filter_file.write('\n')
-        self.filter_file.write('# --------------------------------------- #\n')
-        self.filter_file.write('# --- [{0}.{1}.02] - 5-Link Slot Items --- #\n'.format(self.parse_num, parse_subnum))
-        self.filter_file.write('# --------------------------------------- #\n')
+        self.filter_file.write('# ---------------------------------- #\n')
+        self.filter_file.write('# --- [{0}.{1}.02] - 5-Link Items --- #\n'.format(self.parse_num, parse_subnum))
+        self.filter_file.write('# ---------------------------------- #\n')
         self.filter_file.write('\n')
 
         self.template.rare_item(
             linked_sockets='5',
-            font_size=display_dict['rare_font_size'],
+            font_size=display_dict['unique_font_size'],
             minimap_size=1,
             minimap_color=display_dict['minimap_color_notable'],
             minimap_shape=display_dict['minimap_icon_slots'],
-            sound='1 300',
+            sound='6 225',
             playeffect=display_dict['minimap_color_notable'],
         )
         self.template.uncommon_item(
             linked_sockets='5',
-            font_size=display_dict['rare_font_size'],
+            font_size=display_dict['unique_font_size'],
             minimap_size=1,
             minimap_color=display_dict['minimap_color_notable'],
             minimap_shape=display_dict['minimap_icon_slots'],
-            sound='1 200',
+            sound='6 225',
             playeffect=display_dict['minimap_color_notable'],
         )
         self.template.common_item(
             linked_sockets='5',
-            font_size=display_dict['rare_font_size'],
+            font_size=display_dict['unique_font_size'],
             minimap_size=1,
             minimap_color=display_dict['minimap_color_notable'],
             minimap_shape=display_dict['minimap_icon_slots'],
-            sound='1 200',
+            sound='6 225',
             playeffect=display_dict['minimap_color_notable'],
         )
 
@@ -193,27 +193,30 @@ class NotableGearParser():
 
         self.template.rare_item(
             sockets='6',
-            font_size=display_dict['rare_font_size'],
+            font_size=display_dict['unique_font_size'],
             minimap_size=2,
             minimap_color=display_dict['minimap_color_notable'],
             minimap_shape=display_dict['minimap_icon_slots'],
             playeffect=display_dict['minimap_color_notable'],
+            sound='6 175',
         )
         self.template.uncommon_item(
             sockets='6',
-            font_size=display_dict['rare_font_size'],
+            font_size=display_dict['unique_font_size'],
             minimap_size=2,
             minimap_color=display_dict['minimap_color_notable'],
             minimap_shape=display_dict['minimap_icon_slots'],
             playeffect=display_dict['minimap_color_notable'],
+            sound='6 175',
         )
         self.template.common_item(
             sockets='6',
-            font_size=display_dict['rare_font_size'],
+            font_size=display_dict['unique_font_size'],
             minimap_size=2,
             minimap_color=display_dict['minimap_color_notable'],
             minimap_shape=display_dict['minimap_icon_slots'],
             playeffect=display_dict['minimap_color_notable'],
+            sound='6 175',
         )
 
     def parse_influence(self):
@@ -230,7 +233,7 @@ class NotableGearParser():
             minimap_size=0,
             minimap_color=display_dict['minimap_color_notable'],
             minimap_shape=display_dict['minimap_icon_influenced'],
-            sound='1 300',
+            sound='5 300',
             playeffect=display_dict['minimap_color_notable'],
         )
         self.template.uncommon_item(
@@ -238,7 +241,7 @@ class NotableGearParser():
             minimap_size=0,
             minimap_color=display_dict['minimap_color_notable'],
             minimap_shape=display_dict['minimap_icon_influenced'],
-            sound='1 300',
+            sound='5 300',
             playeffect=display_dict['minimap_color_notable'],
         )
         self.template.common_item(
@@ -246,7 +249,7 @@ class NotableGearParser():
             minimap_size=0,
             minimap_color=display_dict['minimap_color_notable'],
             minimap_shape=display_dict['minimap_icon_influenced'],
-            sound='1 300',
+            sound='5 300',
             playeffect=display_dict['minimap_color_notable'],
         )
 

@@ -40,7 +40,7 @@ class MapParser():
         Generates filtering for all map types.
         """
         # High quality maps.
-        self.template.common_item(
+        self.template.notable_item(
             description='High Quality Maps',
             class_text='Map',
             quality='>= 10',
@@ -48,12 +48,12 @@ class MapParser():
             minimap_size=1,
             minimap_color=display_dict['minimap_color_maps'],
             minimap_shape=display_dict['minimap_icon_maps'],
-            sound='3 175',
+            sound='13 250',
             playeffect=display_dict['minimap_color_maps'],
         )
 
         # High tier maps.
-        self.template.common_item(
+        self.template.notable_item(
             description='High Tier Maps',
             class_text='Map',
             map_tier='>= 11',
@@ -61,12 +61,12 @@ class MapParser():
             minimap_size=0,
             minimap_color=display_dict['minimap_color_maps'],
             minimap_shape=display_dict['minimap_icon_maps'],
-            sound='3 175',
+            sound='13 250',
             playeffect=display_dict['minimap_color_maps'],
         )
 
         # Medium tier maps.
-        self.template.common_item(
+        self.template.notable_item(
             description='Medium Tier Maps',
             class_text='Map',
             map_tier='>= 6',
@@ -74,18 +74,18 @@ class MapParser():
             minimap_size=1,
             minimap_color=display_dict['minimap_color_maps'],
             minimap_shape=display_dict['minimap_icon_maps'],
-            sound='3 175',
+            sound='13 225',
             playeffect=display_dict['minimap_color_maps'],
         )
 
         # Low tier maps.
-        self.template.common_item(
+        self.template.notable_item(
             description='Low Tier Maps',
             class_text=['Map', 'Map Fragments', 'Misc Map Items'],
             font_size=display_dict['default_font_size'],
             minimap_size=1,
             minimap_color=display_dict['minimap_color_maps'],
             minimap_shape=display_dict['minimap_icon_maps'],
-            sound='3 175',
+            sound='13 200',
             playeffect=display_dict['minimap_color_maps'],
         )

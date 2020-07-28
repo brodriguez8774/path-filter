@@ -24,7 +24,7 @@ class FilterTemplates():
 
     def unique_item(self, *args,
             description='Unique Type', class_text=None, base_text=None,
-            quality=None,
+            area_level=None, item_level=None, quality=None,
             linked_sockets=None, socket_group=None, sockets=None,
             height=None, width=None,
             has_influence=None, map_tier=None,
@@ -38,7 +38,7 @@ class FilterTemplates():
         """
         self.base.write_rule(
             description=description, class_text=class_text, base_text=base_text,
-            rarity='Unique', quality=quality,
+            area_level=area_level, item_level=item_level, rarity='Unique', quality=quality,
             linked_sockets=linked_sockets, socket_group=socket_group, sockets=sockets,
             height=height, width=width,
             has_influence=has_influence, map_tier=map_tier,
@@ -50,20 +50,20 @@ class FilterTemplates():
 
     def rare_item(self, *args,
             description='Rare Type', class_text=None, base_text=None,
-            item_level=None, quality=None,
+            area_level=None, item_level=None, quality=None,
             linked_sockets=None, socket_group=None, sockets=None,
             height=None, width=None,
             has_influence=None, map_tier=None,
             background_color=display_dict['standard_background'], border_color=display_dict['rare'],
             text_color=display_dict['rare_text'], font_size=display_dict['rare_font_size'],
             minimap_size=None, minimap_color=None, minimap_shape=None,
-            sound=None, playeffect=None):
+            sound='None', playeffect=None):
         """
         General filtering template for rare items.
         """
         self.base.write_rule(
             description=description, class_text=class_text, base_text=base_text,
-            item_level=item_level, rarity='Rare', quality=quality,
+            area_level=area_level, item_level=item_level, rarity='Rare', quality=quality,
             linked_sockets=linked_sockets, socket_group=socket_group, sockets=sockets,
             height=height, width=width,
             has_influence=has_influence, map_tier=map_tier,
@@ -75,20 +75,45 @@ class FilterTemplates():
 
     def uncommon_item(self, *args,
             description='Magic Type', class_text=None, base_text=None,
-            item_level=None, quality=None,
+            area_level=None, item_level=None, quality=None,
             linked_sockets=None, socket_group=None, sockets=None,
             height=None, width=None,
             has_influence=None, map_tier=None,
             background_color=display_dict['standard_background'], border_color=display_dict['uncommon'],
             text_color=display_dict['uncommon_text'], font_size=display_dict['uncommon_font_size'],
             minimap_size=None, minimap_color=None, minimap_shape=None,
-            sound=None, playeffect=None):
+            sound='None', playeffect=None):
         """
         General filtering template for magic/uncommon items.
         """
         self.base.write_rule(
             description=description, class_text=class_text, base_text=base_text,
-            item_level=item_level, rarity='Magic', quality=quality,
+            area_level= area_level, item_level=item_level, rarity='Magic', quality=quality,
+            linked_sockets=linked_sockets, socket_group=socket_group, sockets=sockets,
+            height=height, width=width,
+            has_influence=has_influence, map_tier=map_tier,
+            background_color=background_color, border_color=border_color,
+            text_color=text_color, font_size=font_size,
+            minimap_size=minimap_size, minimap_color=minimap_color, minimap_shape=minimap_shape,
+            sound=sound, playeffect=playeffect,
+        )
+
+    def notable_item(self, *args,
+            description=None, class_text=None, base_text=None,
+            area_level=None, item_level=None, quality=None,
+            linked_sockets=None, socket_group=None, sockets=None,
+            height=None, width=None,
+            has_influence=None, map_tier=None,
+            background_color=display_dict['standard_background'], border_color=display_dict['notable_border'],
+            text_color=display_dict['notable_text'], font_size=display_dict['default_font_size'],
+            minimap_size=None, minimap_color=None, minimap_shape=None,
+            sound='None', playeffect=None):
+        """
+        General filtering template for notable common/normal items.
+        """
+        self.base.write_rule(
+            description=description, class_text=class_text, base_text=base_text,
+            area_level=area_level, item_level=item_level, quality=quality,
             linked_sockets=linked_sockets, socket_group=socket_group, sockets=sockets,
             height=height, width=width,
             has_influence=has_influence, map_tier=map_tier,
@@ -100,20 +125,20 @@ class FilterTemplates():
 
     def common_item(self, *args,
             description='Common Type', class_text=None, base_text=None,
-            item_level=None, quality=None,
+            area_level=None, item_level=None, quality=None,
             linked_sockets=None, socket_group=None, sockets=None,
             height=None, width=None,
             has_influence=None, map_tier=None,
-            background_color=display_dict['standard_background'], border_color=display_dict['normal'],
+            background_color=display_dict['standard_background'], border_color=display_dict['normal_border'],
             text_color=display_dict['normal_text'], font_size=display_dict['default_font_size'],
             minimap_size=None, minimap_color=None, minimap_shape=None,
-            sound=None, playeffect=None):
+            sound='None', playeffect=None):
         """
         General filtering template for common/normal items.
         """
         self.base.write_rule(
             description=description, class_text=class_text, base_text=base_text,
-            item_level=item_level, quality=quality,
+            area_level=area_level, item_level=item_level, quality=quality,
             linked_sockets=linked_sockets, socket_group=socket_group, sockets=sockets,
             height=height, width=width,
             has_influence=has_influence, map_tier=map_tier,
@@ -125,34 +150,18 @@ class FilterTemplates():
 
     def rare_currency(self, *args,
             description=None, class_text=None, base_text=None,
-            background_color=display_dict['standard_background'], border_color=display_dict['currency_border'],
+            area_level=None,
+            background_color=display_dict['standard_background'], border_color=display_dict['rare_currency_border'],
             text_color=display_dict['currency_text'], font_size=display_dict['rare_font_size'],
             minimap_size=0, minimap_color=display_dict['minimap_color_currency'],
             minimap_shape=display_dict['minimap_icon_currency'],
-            sound='4 175', playeffect=display_dict['minimap_color_currency']):
+            sound='10 250', playeffect=display_dict['minimap_color_currency']):
         """
         Template for rarer currency items.
         """
         self.base.write_rule(
             description=description, class_text=class_text, base_text=base_text,
-            background_color=background_color, border_color=border_color,
-            text_color=text_color, font_size=font_size,
-            minimap_size=minimap_size, minimap_color=minimap_color, minimap_shape=minimap_shape,
-            sound=sound, playeffect=playeffect,
-        )
-
-    def currency_recipe_quality(self, *args,
-            description=None, class_text=None, base_text=None,
-            quality=None,
-            background_color=display_dict['standard_background'], border_color=display_dict['normal'],
-            text_color=display_dict['text'], font_size=display_dict['min_font_size'],
-            minimap_size=None, minimap_color=None, minimap_shape=None,
-            sound=None, playeffect=None):
-        """
-        Template for quality currency recipe items.
-        """
-        self.base.write_rule(
-            description=description, class_text=class_text, base_text=base_text,  quality=quality,
+            area_level=area_level,
             background_color=background_color, border_color=border_color,
             text_color=text_color, font_size=font_size,
             minimap_size=minimap_size, minimap_color=minimap_color, minimap_shape=minimap_shape,
@@ -168,7 +177,7 @@ class FilterTemplates():
             border_color=display_dict['currency_orb_border'],
             text_color='{0} 50'.format(display_dict['text']), font_size=display_dict['min_font_size'],
             minimap_size=None, minimap_color=None, minimap_shape=None,
-            sound=None, playeffect=None):
+            sound='None', playeffect=None):
         """
         Template for high level currency recipe items.
         """
@@ -192,7 +201,7 @@ class FilterTemplates():
             text_color='{0} 50'.format(display_dict['text']),
             font_size=display_dict['min_font_size'],
             minimap_size=None, minimap_color=None, minimap_shape=None,
-            sound=None, playeffect=None):
+            sound='None', playeffect=None):
         """
         Template for low level currency recipe items.
         """
@@ -212,7 +221,7 @@ class FilterTemplates():
             background_color=display_dict['standard_background'], border_color=display_dict['card_border'],
             text_color=display_dict['card_text'], font_size=display_dict['default_font_size'],
             minimap_size=None, minimap_color=None, minimap_shape=None,
-            sound='9 175', playeffect=None):
+            sound='9 225', playeffect=None):
         """
         Because cards vary so much in purpose and usefulness, they get their own template.
         """
@@ -231,7 +240,7 @@ class FilterTemplates():
             text_color=display_dict['league_text'], font_size=display_dict['rare_font_size'],
             minimap_size=1, minimap_color=display_dict['minimap_color_special'],
             minimap_shape=display_dict['minimap_icon_special'],
-            sound='4 175', playeffect=display_dict['minimap_color_special']):
+            sound='4 250', playeffect=display_dict['minimap_color_special']):
         """
         Template for various special items, mostly consisting of league items.
         """
@@ -249,7 +258,7 @@ class FilterTemplates():
             background_color=display_dict['standard_background'], border_color=display_dict['quest'],
             text_color=display_dict['quest'], font_size=display_dict['important_font_size'],
             minimap_size=None, minimap_color=None, minimap_shape=None,
-            sound=None, playeffect=None):
+            sound='2 300', playeffect=None):
         """
         Template for quest items.
         """
@@ -286,7 +295,7 @@ class BaseTemplate():
 
     def write_rule(self, *args,
             description=None, show_item=True, class_text=None, base_text=None,
-            item_level=None, rarity=None, quality=None,
+            area_level=None, item_level=None, rarity=None, quality=None,
             linked_sockets=None, socket_group=None, sockets=None,
             height=None, width=None,
             has_mod=None, has_influence=None, map_tier=None,
@@ -304,6 +313,8 @@ class BaseTemplate():
         :param show_item: Boolean indicating if filter should show or hide matching items. Defaults to show.
         :param class_text: The "Class" text for rule. If not present, then base_text should be present.
         :param base_text: The "BaseType" text for rule. If not present, then class_text should be present.
+        :param area_level: Rule selector based on level of current area. Helps with dynamic filtering on level for
+                            anything without an item level (such as currency).
         :param item_level: Rule selector based on level item was generated at.
         :param rarity: Rule selector based on rarity of item.
         :param quality: Rule selector based on quality of item.
@@ -337,6 +348,8 @@ class BaseTemplate():
             self.filter_file.write('    Class {0}\n'.format(self._format_item_text(class_text)))
         if base_text is not None:
             self.filter_file.write('    BaseType {0}\n'.format(self._format_item_text(base_text)))
+        if area_level is not None:
+            self.filter_file.write('    AreaLevel {0}\n'.format(str(area_level).strip()))
         if item_level is not None:
             self.filter_file.write('    ItemLevel {0}\n'.format(str(item_level).strip()))
         if rarity is not None:

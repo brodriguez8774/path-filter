@@ -70,7 +70,7 @@ class GemParser():
         self.filter_file.write('\n')
 
         # High quality between 15 and 20%.
-        self.template.currency_recipe_quality(
+        self.template.notable_item(
             description='High quality gems [15 - 20]%',
             class_text='Gem',
             quality='>= 15',
@@ -78,7 +78,7 @@ class GemParser():
         )
 
         # High quality between 10 and 15%.
-        self.template.currency_recipe_quality(
+        self.template.notable_item(
             description='High quality gems [10 - 15]%',
             class_text='Gem',
             quality='>= 10',
@@ -86,7 +86,7 @@ class GemParser():
         )
 
         # High quality between 5 and 10%.
-        self.template.currency_recipe_quality(
+        self.template.notable_item(
             description='High quality gems [5 - 10]%',
             class_text='Gem',
             quality='>= 5',

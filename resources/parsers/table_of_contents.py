@@ -93,8 +93,8 @@ class TableOfContentsGenerator():
         parse_num += 1
         self.filter_file.write('# [{0}] - Notable Gear\n'.format(str(parse_num).zfill(3)))
         self.filter_file.write('# [{0}.01] - High Slot Items\n'.format(str(parse_num).zfill(3)))
-        self.filter_file.write('# [{0}.01.01] - 6-Link Slot Items\n'.format(str(parse_num).zfill(3)))
-        self.filter_file.write('# [{0}.01.02] - 5-Link Slot Items\n'.format(str(parse_num).zfill(3)))
+        self.filter_file.write('# [{0}.01.01] - 6-Link Items\n'.format(str(parse_num).zfill(3)))
+        self.filter_file.write('# [{0}.01.02] - 5-Link Items\n'.format(str(parse_num).zfill(3)))
         self.filter_file.write('# [{0}.01.03] - 6 Slot Items\n'.format(str(parse_num).zfill(3)))
         self.filter_file.write('# [{0}.02] - Influenced Items\n'.format(str(parse_num).zfill(3)))
         self.filter_file.write('# [{0}.03] - Veiled Items\n'.format(str(parse_num).zfill(3)))
