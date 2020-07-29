@@ -131,7 +131,7 @@ def generate_filter(args ,test_mode=False):
         filter_file.write('#     Show Hybrid Flasks: {0}\n'.format(hybrid_flask_bool))
         filter_file.write('#\n')
         filter_file.write('# Original Command:\n')
-        filter_file.write('#    python')
+        filter_file.write('#     python')
         orig_args = sys.argv
         for arg in orig_args:
             if 'main.py' in arg or arg[0] == '-':
@@ -141,14 +141,14 @@ def generate_filter(args ,test_mode=False):
         filter_file.write('\n#\n#\n')
 
         filter_file.write('# Sounds:\n')
-        filter_file.write('    1 - Unique\n')
-        filter_file.write('    2 - Quest Items\n')
-        filter_file.write('    4 - League/Special Item\n')
-        filter_file.write('    5 - Influenced Item\n')
-        filter_file.write('    6 - High Slot Item\n')
-        filter_file.write('    9 - Cards\n')
-        filter_file.write('    10 - Rare Currency\n')
-        filter_file.write('    13 - Map\n')
+        filter_file.write('#     1 - Unique\n')
+        filter_file.write('#     2 - Quest Items\n')
+        filter_file.write('#     4 - League/Special Item\n')
+        filter_file.write('#     5 - Influenced Item\n')
+        filter_file.write('#     6 - High Slot Item\n')
+        filter_file.write('#     9 - Cards\n')
+        filter_file.write('#     10 - Rare Currency\n')
+        filter_file.write('#     13 - Map\n')
         filter_file.write('#\n#\n')
 
         if not test_mode:
