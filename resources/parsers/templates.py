@@ -129,7 +129,7 @@ class FilterTemplates():
             linked_sockets=None, socket_group=None, sockets=None,
             height=None, width=None,
             has_influence=None, map_tier=None,
-            background_color=display_dict['standard_background'], border_color=display_dict['normal_border'],
+            background_color=display_dict['standard_background'], border_color=None,
             text_color=display_dict['normal_text'], font_size=display_dict['default_font_size'],
             minimap_size=None, minimap_color=None, minimap_shape=None,
             sound='None', playeffect=None):

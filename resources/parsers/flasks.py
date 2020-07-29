@@ -57,7 +57,7 @@ class FlaskParser():
         if flask['Name'] == 'Quicksilver Flask':
             self.template.common_item(
                 description='Low level Quicksilver Flasks',
-                base_text='Quicksilver Flask',
+                base_text=flask['Name'],
                 item_level='<= 59',
                 font_size=display_dict['rare_font_size'],
                 minimap_size=0,
@@ -67,7 +67,7 @@ class FlaskParser():
             )
             self.template.common_item(
                 description='High level Quicksilver Flasks',
-                base_text='Quicksilver Flask',
+                base_text=flask['Name'],
                 font_size=display_dict['uncommon_font_size'],
                 minimap_size=2,
                 minimap_color=display_dict['minimap_color_flasks'],

@@ -74,7 +74,7 @@ class GemParser():
             description='High quality gems [15 - 20]%',
             class_text='Gem',
             quality='>= 15',
-            font_size=display_dict['rare_font_size']
+            font_size=display_dict['rare_font_size'],
         )
 
         # High quality between 10 and 15%.
@@ -82,7 +82,7 @@ class GemParser():
             description='High quality gems [10 - 15]%',
             class_text='Gem',
             quality='>= 10',
-            font_size=display_dict['uncommon_font_size']
+            font_size=display_dict['uncommon_font_size'],
         )
 
         # High quality between 5 and 10%.
@@ -90,7 +90,7 @@ class GemParser():
             description='High quality gems [5 - 10]%',
             class_text='Gem',
             quality='>= 5',
-            font_size=display_dict['default_font_size']
+            font_size=display_dict['default_font_size'],
         )
 
     def vaal_gems(self):
@@ -105,8 +105,8 @@ class GemParser():
         self.filter_file.write('# ---------------------------- #\n')
         self.filter_file.write('\n')
 
-        self.template.special_item(
+        self.template.notable_item(
             class_text='Gem',
             base_text='Vaal',
-            border_color=display_dict['normal'],
+            font_size=display_dict['uncommon_font_size'],
         )
