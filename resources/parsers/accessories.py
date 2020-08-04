@@ -97,8 +97,9 @@ class AccessoryParser():
                     item_level='<= {0}'.format(item['DropLevel'] + normal_drop_modifier),
                 )
 
-            # Hide all other instances of accessory.
-            self.template.hidden_item(base_text=item['Name'])
+            else:
+                # Hide all other accessories.
+                self.template.hidden_item(base_text=item['Name'])
 
     def parse_amulets(self):
         """
