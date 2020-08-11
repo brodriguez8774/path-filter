@@ -83,11 +83,17 @@ class WeaponParser():
         """
         drop_level = filter_dict['base_drop_level'] + (filter_dict['level_rarity_modifier'] * 2)
 
-        self.template.rare_item(
-            base_text=item['Name'],
-            background_color=display_dict['dark_grey_background'],
-            item_level='<= {0}'.format(item['DropLevel'] + drop_level),
-        )
+        if item['MaxLevel'] is True:
+            self.template.rare_item(
+                base_text=item['Name'],
+                background_color=display_dict['dark_grey_background'],
+            )
+        else:
+            self.template.rare_item(
+                base_text=item['Name'],
+                background_color=display_dict['dark_grey_background'],
+                item_level='<= {0}'.format(item['DropLevel'] + drop_level),
+            )
 
     def parse_item_max_slot(self, item):
         """
@@ -128,15 +134,25 @@ class WeaponParser():
         """
         drop_level = filter_dict['base_drop_level']
 
-        self.template.common_item(
-            description='Linked RGB Type',
-            base_text=item['Name'],
-            item_level='<= {0}'.format(item['DropLevel'] + drop_level),
-            socket_group='"RGB"',
-            background_color=display_dict['dark_grey_background'],
-            border_color=display_dict['normal'],
-            font_size=display_dict['uncommon_font_size'],
-        )
+        if item['MaxLevel'] is True:
+            self.template.common_item(
+                description='Linked RGB Type',
+                base_text=item['Name'],
+                socket_group='"RGB"',
+                background_color=display_dict['dark_grey_background'],
+                border_color=display_dict['normal'],
+                font_size=display_dict['uncommon_font_size'],
+            )
+        else:
+            self.template.common_item(
+                description='Linked RGB Type',
+                base_text=item['Name'],
+                item_level='<= {0}'.format(item['DropLevel'] + drop_level),
+                socket_group='"RGB"',
+                background_color=display_dict['dark_grey_background'],
+                border_color=display_dict['normal'],
+                font_size=display_dict['uncommon_font_size'],
+            )
 
     def parse_item_uncommon(self, item):
         """
@@ -145,11 +161,17 @@ class WeaponParser():
         """
         drop_level = filter_dict['base_drop_level'] + filter_dict['level_rarity_modifier']
 
-        self.template.uncommon_item(
-            base_text=item['Name'],
-            background_color=display_dict['dark_grey_background'],
-            item_level='<= {0}'.format(item['DropLevel'] + drop_level),
-        )
+        if item['MaxLevel'] is True:
+            self.template.uncommon_item(
+                base_text=item['Name'],
+                background_color=display_dict['dark_grey_background'],
+            )
+        else:
+            self.template.uncommon_item(
+                base_text=item['Name'],
+                background_color=display_dict['dark_grey_background'],
+                item_level='<= {0}'.format(item['DropLevel'] + drop_level),
+            )
 
     def parse_item_base(self, item):
         """
@@ -158,11 +180,17 @@ class WeaponParser():
         """
         drop_level = filter_dict['base_drop_level']
 
-        self.template.common_item(
-            base_text=item['Name'],
-            background_color=display_dict['dark_grey_background'],
-            item_level='<= {0}'.format(item['DropLevel'] + drop_level),
-        )
+        if item['MaxLevel'] is True:
+            self.template.common_item(
+                base_text=item['Name'],
+                background_color=display_dict['dark_grey_background'],
+            )
+        else:
+            self.template.common_item(
+                base_text=item['Name'],
+                background_color=display_dict['dark_grey_background'],
+                item_level='<= {0}'.format(item['DropLevel'] + drop_level),
+            )
 
     def parse_bows(self):
         """
