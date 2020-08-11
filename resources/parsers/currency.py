@@ -274,6 +274,17 @@ class CurrencyParser():
             minimap_size=2,
         )
         self.template.special_item(
+            description='Essence',
+            base_text='Remnant of',
+            font_size=display_dict['uncommon_font_size'],
+            minimap_size=2,
+        )
+        self.template.special_item(
+            description='Prophecies',
+            base_text='Prophecy',
+            font_size=display_dict['uncommon_font_size'],
+        )
+        self.template.special_item(
             description='Perandus',
             base_text='Perandus Coin',
             font_size=display_dict['uncommon_font_size'],
