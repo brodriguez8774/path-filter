@@ -140,7 +140,7 @@ class CurrencyParser():
             description='Misc Important Currency',
             base_text=[
                 'Cartographer\'s Chisel', 'Orb of Scouring', 'Orb of Regret', 'Silver Coin',
-                'Eternal Orb', 'Master Cartographer\'s Seal', 'Albino Rhoa Feather', 'Orb of Chance',
+                'Eternal Orb', 'Master Cartographer\'s Seal', 'Albino Rhoa Feather', 'Orb of Chance', 'Sextant',
             ],
             font_size=display_dict['uncommon_font_size'],
             minimap_size=2,
@@ -222,8 +222,18 @@ class CurrencyParser():
             minimap_size=2,
         )
         self.template.special_item(
-            description='Delve',
-            class_text='Delve Socketable Currency'
+            description='Scarab Items',
+            class_text='Map Fragments',
+            base_text='Scarab',
+        )
+        self.template.special_item(
+            description='General Delve Currency',
+            class_text='Delve Socketable Currency',
+        )
+        self.template.special_item(
+            description='Fossils',
+            class_text='Currency',
+            base_text='Fossil',
         )
         self.template.special_item(
             description='Incursion Classes',
@@ -267,6 +277,11 @@ class CurrencyParser():
             description='Perandus',
             base_text='Perandus Coin',
             font_size=display_dict['uncommon_font_size'],
+        )
+        self.template.special_item(
+            description='Talismans',
+            class_text='Amulets',
+            base_text='Talisman',
         )
 
     def labyrinth_items(self):
