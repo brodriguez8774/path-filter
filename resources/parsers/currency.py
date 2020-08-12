@@ -282,6 +282,7 @@ class CurrencyParser():
         self.template.special_item(
             description='Prophecies',
             base_text='Prophecy',
+            class_text='Currency',
             font_size=display_dict['uncommon_font_size'],
         )
         self.template.special_item(
