@@ -34,7 +34,16 @@ class QuestItemParser():
         self.filter_file.write('\n')
 
         self.template.quest_item(
-            class_text=['Quest', 'Quest Items'],
+            description='General Quest Items',
+            class_text=['Quest', 'Quest Items', 'Pantheon Soul'],
+        )
+
+        self.template.quest_item(
+            description='Atlas Quest Items',
+            class_text='Watchstone',
+            border_color=None,
+            background_color=None,
+            text_color=None,
         )
 
 
