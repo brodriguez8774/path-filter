@@ -231,9 +231,13 @@ class CurrencyParser():
             class_text='Delve Socketable Currency',
         )
         self.template.special_item(
-            description='Fossils',
+            description='Delve Fossils',
             class_text='Currency',
             base_text='Fossil',
+        )
+        self.template.special_item(
+            description='Delve Resonators',
+            base_text='Resonator',
         )
         self.template.special_item(
             description='Incursion Classes',
