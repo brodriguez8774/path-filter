@@ -139,7 +139,7 @@ class CurrencyParser():
         self.template.rare_currency(
             description='Misc Important Currency',
             base_text=[
-                'Cartographer\'s Chisel', 'Orb of Scouring', 'Orb of Regret', 'Silver Coin',
+                'Cartographer\'s Chisel', 'Orb of Scouring', 'Orb of Regret', 'Silver Coin',  'Gemcutter\'s Prism',
                 'Eternal Orb', 'Master Cartographer\'s Seal', 'Albino Rhoa Feather', 'Orb of Chance', 'Sextant',
             ],
             font_size=display_dict['uncommon_font_size'],
@@ -153,7 +153,7 @@ class CurrencyParser():
             base_text=[
                 'Orb of Alteration', 'Orb of Augmentation',
                 'Chromatic Orb', 'Jeweller\'s Orb',
-                'Armourer\'s Scrap', 'Blacksmith\'s Whetstone', 'Glassblower\'s Bauble', 'Gemcutter\'s Prism',
+                'Armourer\'s Scrap', 'Blacksmith\'s Whetstone', 'Glassblower\'s Bauble',
             ],
             area_level='<= 49',
             font_size=display_dict['default_font_size'],
@@ -163,7 +163,7 @@ class CurrencyParser():
             description='Misc Low Importance Currency',
             base_text=[
                 'Chromatic Orb', 'Jeweller\'s Orb',
-                'Armourer\'s Scrap', 'Blacksmith\'s Whetstone', 'Glassblower\'s Bauble', 'Gemcutter\'s Prism',
+                'Armourer\'s Scrap', 'Blacksmith\'s Whetstone', 'Glassblower\'s Bauble',
             ],
             font_size=display_dict['default_font_size'],
         )
