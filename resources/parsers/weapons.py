@@ -57,48 +57,51 @@ class WeaponParser():
         if 'Shields' in self.weapon_types:
             self.parse_shields()
 
-    def parse_item(self, item):
+    def parse_item(self, item, background_color):
         """
         Parses an individual item.
         :param item: The item to parse.
+        :param background_color: Background color to give item.
         """
         # logger.info(item)
         self.filter_file.write('\n\n')
         self.filter_file.write('# === Item: {0} === #\n'.format(item['Name']))
 
-        self.parse_item_rare(item)
+        self.parse_item_rare(item, background_color)
 
         # Exclude for weapons that don't have slots.
         if item['Class'] != 'Quiver':
-            self.parse_item_max_slot(item)
-            self.parse_item_rgb(item)
+            self.parse_item_max_slot(item, background_color)
+            self.parse_item_rgb(item, background_color)
 
-        self.parse_item_uncommon(item)
-        self.parse_item_base(item)
+        self.parse_item_uncommon(item, background_color)
+        self.parse_item_base(item, background_color)
 
-    def parse_item_rare(self, item):
+    def parse_item_rare(self, item, background_color):
         """
         Handles filtering for rare version of item.
         :param item: The item to parse.
+        :param background_color: Background color to give item.
         """
         drop_level = filter_dict['base_drop_level'] + (filter_dict['level_rarity_modifier'] * 2)
 
         if item['MaxLevel'] is True:
             self.template.rare_item(
                 base_text=item['Name'],
-                background_color=display_dict['dark_grey_background'],
+                background_color=background_color,
             )
         else:
             self.template.rare_item(
                 base_text=item['Name'],
-                background_color=display_dict['dark_grey_background'],
+                background_color=background_color,
                 item_level='<= {0}'.format(item['DropLevel'] + drop_level),
             )
 
-    def parse_item_max_slot(self, item):
+    def parse_item_max_slot(self, item, background_color):
         """
         Handles filtering for max slot version of item.
         :param item: The item to parse.
+        :param background_color: Background color to give item.
         """
         drop_level = filter_dict['base_drop_level'] + (filter_dict['level_rarity_modifier'] * 2)
         item_level = item['DropLevel']
@@ -110,7 +113,7 @@ class WeaponParser():
                 base_text=item['Name'],
                 item_level='<= {0}'.format(item_level + drop_level),
                 linked_sockets='3',
-                background_color=display_dict['dark_grey_background'],
+                background_color=background_color,
                 border_color=display_dict['normal'],
                 font_size=display_dict['uncommon_font_size'],
             )
@@ -122,15 +125,16 @@ class WeaponParser():
                 base_text=item['Name'],
                 item_level='<= {0}'.format(item_level + drop_level),
                 linked_sockets='3',
-                background_color=display_dict['dark_grey_background'],
+                background_color=background_color,
                 border_color=display_dict['normal'],
                 font_size=display_dict['uncommon_font_size'],
             )
 
-    def parse_item_rgb(self, item):
+    def parse_item_rgb(self, item, background_color):
         """
         Handles filtering for linked RGB version of item.
         :param item: The item to parse.
+        :param background_color: Background color to give item.
         """
         drop_level = filter_dict['base_drop_level']
 
@@ -139,7 +143,7 @@ class WeaponParser():
                 description='Linked RGB Type',
                 base_text=item['Name'],
                 socket_group='"RGB"',
-                background_color=display_dict['dark_grey_background'],
+                background_color=background_color,
                 border_color=display_dict['normal'],
                 font_size=display_dict['uncommon_font_size'],
             )
@@ -149,46 +153,48 @@ class WeaponParser():
                 base_text=item['Name'],
                 item_level='<= {0}'.format(item['DropLevel'] + drop_level),
                 socket_group='"RGB"',
-                background_color=display_dict['dark_grey_background'],
+                background_color=background_color,
                 border_color=display_dict['normal'],
                 font_size=display_dict['uncommon_font_size'],
             )
 
-    def parse_item_uncommon(self, item):
+    def parse_item_uncommon(self, item, background_color):
         """
         Handles filtering for uncommon/magic version of item.
         :param item: The item to parse.
+        :param background_color: Background color to give item.
         """
         drop_level = filter_dict['base_drop_level'] + filter_dict['level_rarity_modifier']
 
         if item['MaxLevel'] is True:
             self.template.uncommon_item(
                 base_text=item['Name'],
-                background_color=display_dict['dark_grey_background'],
+                background_color=background_color,
             )
         else:
             self.template.uncommon_item(
                 base_text=item['Name'],
-                background_color=display_dict['dark_grey_background'],
+                background_color=background_color,
                 item_level='<= {0}'.format(item['DropLevel'] + drop_level),
             )
 
-    def parse_item_base(self, item):
+    def parse_item_base(self, item, background_color):
         """
         Handles filtering for standard version of item.
         :param item: The item to parse.
+        :param background_color: Background color to give item.
         """
         drop_level = filter_dict['base_drop_level']
 
         if item['MaxLevel'] is True:
             self.template.common_item(
                 base_text=item['Name'],
-                background_color=display_dict['dark_grey_background'],
+                background_color=background_color,
             )
         else:
             self.template.common_item(
                 base_text=item['Name'],
-                background_color=display_dict['dark_grey_background'],
+                background_color=background_color,
                 item_level='<= {0}'.format(item['DropLevel'] + drop_level),
             )
 
@@ -214,7 +220,7 @@ class WeaponParser():
             json_data = json.load(json_file)
             for item in json_data:
                 # Parse item.
-                self.parse_item(item)
+                self.parse_item(item, display_dict['Ev'])
 
     def parse_quivers(self):
         """
@@ -238,7 +244,7 @@ class WeaponParser():
             json_data = json.load(json_file)
             for item in json_data:
                 # Parse item.
-                self.parse_item(item)
+                self.parse_item(item, display_dict['Ev'])
 
     def parse_sceptres(self):
         """
@@ -262,8 +268,7 @@ class WeaponParser():
             json_data = json.load(json_file)
             for item in json_data:
                 # Parse item.
-                self.parse_item(item)
-
+                self.parse_item(item, display_dict['En/A'])
 
     def parse_wands(self):
         """
@@ -287,7 +292,7 @@ class WeaponParser():
             json_data = json.load(json_file)
             for item in json_data:
                 # Parse item.
-                self.parse_item(item)
+                self.parse_item(item, display_dict['En'])
 
     def parse_shields(self):
         """
@@ -321,7 +326,7 @@ class WeaponParser():
                 json_data = json.load(json_file)
                 for item in json_data:
                     # Parse item.
-                    self.parse_item(item)
+                    self.parse_item(item, display_dict['A'])
 
         if 'A/Ev' in self.shield_types:
             # Parse Armor/Evasion shields.
@@ -338,7 +343,7 @@ class WeaponParser():
                 json_data = json.load(json_file)
                 for item in json_data:
                     # Parse item.
-                    self.parse_item(item)
+                    self.parse_item(item, display_dict['A/Ev'])
 
         if 'Ev' in self.shield_types:
             # Parse Evasion shields.
@@ -355,7 +360,7 @@ class WeaponParser():
                 json_data = json.load(json_file)
                 for item in json_data:
                     # Parse item.
-                    self.parse_item(item)
+                    self.parse_item(item, display_dict['Ev'])
 
         if 'Ev/En' in self.shield_types:
             # Parse Evasion/Energy Shield shields.
@@ -372,7 +377,7 @@ class WeaponParser():
                 json_data = json.load(json_file)
                 for item in json_data:
                     # Parse item.
-                    self.parse_item(item)
+                    self.parse_item(item, display_dict['Ev/En'])
 
         if 'En' in self.shield_types:
             # Parse Energy Shield shields.
@@ -389,7 +394,7 @@ class WeaponParser():
                 json_data = json.load(json_file)
                 for item in json_data:
                     # Parse item.
-                    self.parse_item(item)
+                    self.parse_item(item, display_dict['En'])
 
         if 'A/En' in self.shield_types:
             # Parse Armor/Energy Shield shields.
@@ -406,4 +411,4 @@ class WeaponParser():
                 json_data = json.load(json_file)
                 for item in json_data:
                     # Parse item.
-                    self.parse_item(item)
+                    self.parse_item(item, display_dict['En/A'])
