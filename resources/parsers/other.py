@@ -40,10 +40,7 @@ class QuestItemParser():
 
         self.template.quest_item(
             description='Atlas Quest Items',
-            class_text='Watchstone',
-            border_color=None,
-            background_color=None,
-            text_color=None,
+            base_text='Watchstone',
         )
 
 
