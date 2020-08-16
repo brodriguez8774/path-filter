@@ -141,7 +141,17 @@ class CurrencyParser():
             base_text=[
                 'Cartographer\'s Chisel', 'Orb of Scouring', 'Orb of Regret', 'Silver Coin',  'Gemcutter\'s Prism',
                 'Eternal Orb', 'Master Cartographer\'s Seal', 'Albino Rhoa Feather', 'Orb of Chance', 'Sextant',
+                'Awakener\'s Orb', 'Bestiary Orb', 'Orb of Annulment', 'Ancient Orb', 'Engineer\'s Orb',
+                'Harbinger\'s Orb', 'Orb of Binding',
             ],
+            font_size=display_dict['uncommon_font_size'],
+            minimap_size=2,
+            sound='5 175',
+        )
+        self.template.rare_currency(
+            description='Misc Currency Shards',
+            class_text='Currency',
+            base_text='Shard',
             font_size=display_dict['uncommon_font_size'],
             minimap_size=2,
             sound='5 175',
@@ -566,7 +576,7 @@ class PostEquipment_CurrencyParser():
         # Orb of Alchemy, 2x2.
         self.template.currency_recipe_low_level(
             description='Chance at Orb of Alchemy - 2x2 or smaller',
-            item_level='<= 59',
+            item_level='<= 55',
             rarity='Rare',
             width='<= 2',
             height='<= 2',
@@ -575,7 +585,7 @@ class PostEquipment_CurrencyParser():
         # Orb of Alchemy, 3x1.
         self.template.currency_recipe_low_level(
             description='Chance at Orb of Alchemy - 3x1 or smaller',
-            item_level='<= 59',
+            item_level='<= 55',
             rarity='Rare',
             width='<= 3',
             height='<= 1',
