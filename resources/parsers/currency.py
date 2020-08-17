@@ -142,7 +142,7 @@ class CurrencyParser():
                 'Cartographer\'s Chisel', 'Orb of Scouring', 'Orb of Regret', 'Silver Coin',  'Gemcutter\'s Prism',
                 'Eternal Orb', 'Master Cartographer\'s Seal', 'Albino Rhoa Feather', 'Orb of Chance', 'Sextant',
                 'Awakener\'s Orb', 'Bestiary Orb', 'Orb of Annulment', 'Ancient Orb', 'Engineer\'s Orb',
-                'Harbinger\'s Orb', 'Orb of Binding',
+                'Harbinger\'s Orb', 'Orb of Binding', 'Orb of Horizons',
             ],
             font_size=display_dict['uncommon_font_size'],
             minimap_size=2,
