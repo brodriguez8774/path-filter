@@ -150,7 +150,7 @@ class FilterTemplates():
 
     def rare_currency(self, *args,
             description=None, class_text=None, base_text=None,
-            area_level=None,
+            area_level=None, quality=None,
             background_color=display_dict['standard_background'], border_color=display_dict['rare_currency_border'],
             text_color=display_dict['currency_text'], font_size=display_dict['rare_font_size'],
             minimap_size=0, minimap_color=display_dict['minimap_color_currency'],
@@ -161,7 +161,7 @@ class FilterTemplates():
         """
         self.base.write_rule(
             description=description, class_text=class_text, base_text=base_text,
-            area_level=area_level,
+            area_level=area_level, quality=quality,
             background_color=background_color, border_color=border_color,
             text_color=text_color, font_size=font_size,
             minimap_size=minimap_size, minimap_color=minimap_color, minimap_shape=minimap_shape,

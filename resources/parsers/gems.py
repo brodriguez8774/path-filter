@@ -70,27 +70,41 @@ class GemParser():
         self.filter_file.write('\n')
 
         # High quality between 15 and 20%.
-        self.template.notable_item(
+        self.template.rare_currency(
             description='High quality gems [15 - 20]%',
             class_text='Gem',
             quality='>= 15',
             font_size=display_dict['important_font_size'],
+            minimap_size=2,
+            sound='5 175',
         )
 
         # High quality between 10 and 15%.
-        self.template.notable_item(
+        self.template.rare_currency(
             description='High quality gems [10 - 15]%',
             class_text='Gem',
             quality='>= 10',
             font_size=display_dict['rare_font_size'],
+            minimap_size=2,
+            sound='5 175',
         )
 
         # High quality between 5 and 10%.
-        self.template.notable_item(
+        self.template.rare_currency(
             description='High quality gems [5 - 10]%',
             class_text='Gem',
             quality='>= 5',
             font_size=display_dict['uncommon_font_size'],
+            minimap_size=2,
+            sound='5 175',
+        )
+
+        # High quality under 5%
+        self.template.rare_currency(
+            description='High quality gems [1 - 4]%',
+            class_text='Gem',
+            quality='>= 1',
+            font_size=display_dict['default_font_size'],
         )
 
     def vaal_gems(self):
