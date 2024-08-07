@@ -42,6 +42,24 @@ class WeaponParser():
         self.filter_file.write('\n')
 
         # Handle for all present weapon types. Note that parse order is order that values show up in filter.
+        if "OneHandMaces" in self.weapon_types:
+            self.parse_one_hand_maces()
+
+        if "TwoHandMaces" in self.weapon_types:
+            self.parse_two_hand_maces()
+
+        if "OneHandAxes" in self.weapon_types:
+            self.parse_one_hand_axes()
+
+        if "TwoHandAxes" in self.weapon_types:
+            self.parse_two_hand_axes()
+
+        if "Daggers" in self.weapon_types:
+            self.parse_daggers()
+
+        if "Claws" in self.weapon_types:
+            self.parse_claws()
+
         if 'Bows' in self.weapon_types:
             self.parse_bows()
 
@@ -197,6 +215,150 @@ class WeaponParser():
                 background_color=background_color,
                 item_level='<= {0}'.format(item['DropLevel'] + drop_level),
             )
+
+    def parse_one_hand_maces(self):
+        """
+        Parses all "One Hand Mace" type weapons.
+        """
+        if self.debug:
+            logger.info('Parsing one handed maces.')
+
+        self.parse_subnum += 1
+
+        # Section Start.
+        self.filter_file.write('\n')
+        self.filter_file.write('# --------------------------------- #\n')
+        self.filter_file.write('# --- [{0}.{1}] - One Hand Maces --- #\n'.format(self.parse_num, str(self.parse_subnum).zfill(2)))
+        self.filter_file.write('# --------------------------------- #\n')
+        self.filter_file.write('\n')
+
+        # Parse wands.
+        with open('resources/data/hand/one_hand_maces.json', 'r') as json_file:
+            # Loop through all items in json.
+            json_data = json.load(json_file)
+            for item in json_data:
+                # Parse item.
+                self.parse_item(item, display_dict['A'])
+
+    def parse_two_hand_maces(self):
+        """
+        Parses all "Two Hand Mace" type weapons.
+        """
+        if self.debug:
+            logger.info('Parsing two handed maces.')
+
+        self.parse_subnum += 1
+
+        # Section Start.
+        self.filter_file.write('\n')
+        self.filter_file.write('# --------------------------------- #\n')
+        self.filter_file.write('# --- [{0}.{1}] - Two Hand Maces --- #\n'.format(self.parse_num, str(self.parse_subnum).zfill(2)))
+        self.filter_file.write('# --------------------------------- #\n')
+        self.filter_file.write('\n')
+
+        # Parse wands.
+        with open('resources/data/hand/two_hand_mace.json', 'r') as json_file:
+            # Loop through all items in json.
+            json_data = json.load(json_file)
+            for item in json_data:
+                # Parse item.
+                self.parse_item(item, display_dict['A'])
+
+    def parse_one_hand_axes(self):
+        """
+        Parses all "One Hand Axe" type weapons.
+        """
+        if self.debug:
+            logger.info('Parsing one handed axes.')
+
+        self.parse_subnum += 1
+
+        # Section Start.
+        self.filter_file.write('\n')
+        self.filter_file.write('# -------------------------------- #\n')
+        self.filter_file.write('# --- [{0}.{1}] - One Hand Axes --- #\n'.format(self.parse_num, str(self.parse_subnum).zfill(2)))
+        self.filter_file.write('# -------------------------------- #\n')
+        self.filter_file.write('\n')
+
+        # Parse wands.
+        with open('resources/data/hand/one_hand_axes.json', 'r') as json_file:
+            # Loop through all items in json.
+            json_data = json.load(json_file)
+            for item in json_data:
+                # Parse item.
+                self.parse_item(item, display_dict['A/Ev'])
+
+    def parse_two_hand_axes(self):
+        """
+        Parses all "Two Hand Axe" type weapons.
+        """
+        if self.debug:
+            logger.info('Parsing two handed axes.')
+
+        self.parse_subnum += 1
+
+        # Section Start.
+        self.filter_file.write('\n')
+        self.filter_file.write('# -------------------------------- #\n')
+        self.filter_file.write('# --- [{0}.{1}] - Two Hand Axes --- #\n'.format(self.parse_num, str(self.parse_subnum).zfill(2)))
+        self.filter_file.write('# -------------------------------- #\n')
+        self.filter_file.write('\n')
+
+        # Parse wands.
+        with open('resources/data/hand/two_hand_axes.json', 'r') as json_file:
+            # Loop through all items in json.
+            json_data = json.load(json_file)
+            for item in json_data:
+                # Parse item.
+                self.parse_item(item, display_dict['A/Ev'])
+
+    def parse_daggers(self):
+        """
+        Parses all "Dagger" type weapons.
+        """
+        if self.debug:
+            logger.info('Parsing daggers.')
+
+        self.parse_subnum += 1
+
+        # Section Start.
+        self.filter_file.write('\n')
+        self.filter_file.write('# -------------------------- #\n')
+        self.filter_file.write('# --- [{0}.{1}] - Daggers --- #\n'.format(self.parse_num, str(self.parse_subnum).zfill(2)))
+        self.filter_file.write('# -------------------------- #\n')
+        self.filter_file.write('\n')
+
+        # Parse wands.
+        with open('resources/data/hand/daggers.json', 'r') as json_file:
+            # Loop through all items in json.
+            json_data = json.load(json_file)
+            for item in json_data:
+                # Parse item.
+                self.parse_item(item, display_dict['Ev/En'])
+
+    def parse_claws(self):
+        """
+        Parses all "Claw" type weapons.
+        """
+        if self.debug:
+            logger.info('Parsing claws.')
+
+        self.parse_subnum += 1
+
+        # Section Start.
+        self.filter_file.write('\n')
+        self.filter_file.write('# ------------------------ #\n')
+        self.filter_file.write('# --- [{0}.{1}] - Claws --- #\n'.format(self.parse_num, str(self.parse_subnum).zfill(2)))
+        self.filter_file.write('# ------------------------ #\n')
+        self.filter_file.write('\n')
+
+        # Parse wands.
+        with open('resources/data/hand/claws.json', 'r') as json_file:
+            # Loop through all items in json.
+            json_data = json.load(json_file)
+            for item in json_data:
+                # Parse item.
+                self.parse_item(item, display_dict['Ev/En'])
 
     def parse_bows(self):
         """
