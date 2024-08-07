@@ -25,7 +25,14 @@ logger = init_logging.get_logger(__name__)
 
 
 defense_choices = ['A', 'Ev', 'En', 'A/Ev', 'Ev/En', 'A/En']
-weapon_choices = ['Bows', 'Quivers', 'Sceptres', 'Wands', 'Shields']
+weapon_choices = [
+    'OneHandMaces', 'TwoHandMaces',
+    'OneHandAxes', 'TwoHandAxes',
+    'Daggers', 'Claws',
+    'Bows', 'Quivers',
+    'Sceptres', 'Wands',
+    'Shields'
+]
 
 
 def run_filter_generation():
@@ -58,6 +65,7 @@ def run_filter_generation():
     else:
         # No help arg passed. Continue with actual filter generation.
         generate_filter(args)
+
 
 def generate_filter(args ,test_mode=False):
     """
@@ -113,9 +121,11 @@ def generate_filter(args ,test_mode=False):
     parse_num = 0
     with open('generated_filters/{0}'.format(file_name), "w") as filter_file:
         filter_file.write('\n')
-        filter_file.write('# ======================= #\n')
-        filter_file.write('# === POE Loot Filter === #\n')
-        filter_file.write('# ======================= #\n')
+        filter_file.write('#==============================#\n')
+        filter_file.write('# Waffyblade - POE Loot Filter #\n')
+        filter_file.write('#==============================#\n')
+        filter_file.write('#\n#\n')
+        filter_file.write('# Focuses on simplified drops, compared to other filters like Neversink Filterblade.')
         filter_file.write('#\n#\n')
         filter_file.write('# Generated with:\n')
         filter_file.write('#     Base Drop Level: {0}\n'.format(base_drop_level))

@@ -116,6 +116,33 @@ class TableOfContentsGenerator():
         self.filter_file.write('# [{0}] - Weapons\n'.format(str(parse_num).zfill(3)))
 
         parse_subnum = 0
+        if 'OneHandMaces' in self.weapon_types:
+            parse_subnum += 1
+            self.filter_file.write('# [{0}.{1}] - One Handed Maces\n'.format(str(parse_num).zfill(3), str(parse_subnum).zfill(2)))
+
+        if 'TwoHandMaces' in self.weapon_types:
+            parse_subnum += 1
+            self.filter_file.write('# [{0}.{1}] - Two Handed Maces\n'.format(str(parse_num).zfill(3), str(parse_subnum).zfill(2)))
+
+        if 'OneHandAxes' in self.weapon_types:
+            parse_subnum += 1
+            self.filter_file.write('# [{0}.{1}] - One Handed Axes\n'.format(str(parse_num).zfill(3), str(parse_subnum).zfill(2)))
+
+        if 'TwoHandAxes' in self.weapon_types:
+            parse_subnum += 1
+            self.filter_file.write(
+                '# [{0}.{1}] - Two Handed Axes\n'.format(str(parse_num).zfill(3), str(parse_subnum).zfill(2)))
+
+        if 'Daggers' in self.weapon_types:
+            parse_subnum += 1
+            self.filter_file.write(
+                '# [{0}.{1}] - Daggers\n'.format(str(parse_num).zfill(3), str(parse_subnum).zfill(2)))
+
+        if 'Claws' in self.weapon_types:
+            parse_subnum += 1
+            self.filter_file.write(
+                '# [{0}.{1}] - Claws\n'.format(str(parse_num).zfill(3), str(parse_subnum).zfill(2)))
+
         if 'Bows' in self.weapon_types:
             parse_subnum += 1
             self.filter_file.write('# [{0}.{1}] - Bows\n'.format(str(parse_num).zfill(3), str(parse_subnum).zfill(2)))
