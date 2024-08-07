@@ -1,0 +1,281 @@
+[
+    {
+        "Type": "Weapon",
+        "Class": "One Hand Axes",
+        "Name": "Rusted Hatchet",
+        "Damage": [6, 11],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 1,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "One Hand Axes",
+        "Name": "Jade Hatchet",
+        "Damage": [10, 15],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 6,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "One Hand Axes",
+        "Name": "Boarding Axe",
+        "Damage": [11, 21],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 11,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "One Hand Axes",
+        "Name": "Cleaver",
+        "Damage": [12, 35],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 16,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "One Hand Axes",
+        "Name": "Broad Axe",
+        "Damage": [19, 34],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 21,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "One Hand Axes",
+        "Name": "Arming Axe",
+        "Damage": [14, 42],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 25,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "One Hand Axes",
+        "Name": "Decorative Axe",
+        "Damage": [27, 50],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 29,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "One Hand Axes",
+        "Name": "Maltreatment Axe",
+        "Damage": [21, 44],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 30,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "One Hand Axes",
+        "Name": "Spectral Axe",
+        "Damage": [29, 48],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 33,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "One Hand Axes",
+        "Name": "Etched Hatchet",
+        "Damage": [26, 46],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 35,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "One Hand Axes",
+        "Name": "Jasper Axe",
+        "Damage": [32, 50],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 36,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "One Hand Axes",
+        "Name": "Tomahawk",
+        "Damage": [25, 46],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 39,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "One Hand Axes",
+        "Name": "Wrist Chopper",
+        "Damage": [26, 79],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 42,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "One Hand Axes",
+        "Name": "War Axe",
+        "Damage": [35, 65],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 45,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "One Hand Axes",
+        "Name": "Chest Splitter",
+        "Damage": [24, 71],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 48,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "One Hand Axes",
+        "Name": "Disapprobation Axe",
+        "Damage": [32, 67],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 50,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "One Hand Axes",
+        "Name": "Ceremonial Axe",
+        "Damage": [45, 83],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 51,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "One Hand Axes",
+        "Name": "Wraith Axe",
+        "Damage": [45, 75],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 54,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "One Hand Axes",
+        "Name": "Engraved Hatchet",
+        "Damage": [40, 71],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 56,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "One Hand Axes",
+        "Name": "Karui Axe",
+        "Damage": [49, 77],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 57,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "One Hand Axes",
+        "Name": "Siege Axe",
+        "Damage": [38, 70],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 59,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "One Hand Axes",
+        "Name": "Reaver Axe",
+        "Damage": [38, 114],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 61,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "One Hand Axes",
+        "Name": "Butcher Axe",
+        "Damage": [67, 87],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 1,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "One Hand Axes",
+        "Name": "Vaal Hatchet",
+        "Damage": [30, 90],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 65,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "One Hand Axes",
+        "Name": "Royal Axe",
+        "Damage": [30, 90],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 65,
+        "MaxLevel": true
+    },{
+        "Type": "Weapon",
+        "Class": "One Hand Axes",
+        "Name": "Infernal Axe",
+        "Damage": [51, 85],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 69,
+        "MaxLevel": true
+    },
+    {
+        "Type": "Weapon",
+        "Class": "One Hand Axes",
+        "Name": "Psychotic Axe",
+        "Damage": [38, 79],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 70,
+        "MaxLevel": true
+    },
+    {
+        "Type": "Weapon",
+        "Class": "One Hand Axes",
+        "Name": "Runic Hatchet",
+        "Damage": [44, 79],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 71,
+        "MaxLevel": true
+    }
+]

@@ -1,0 +1,252 @@
+[
+    {
+        "Type": "Weapon",
+        "Class": "Two Hand Maces",
+        "Name": "Driftwood Maul",
+        "Damage": [10, 16],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 1,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "Two Hand Maces",
+        "Name": "Tribal Maul",
+        "Damage": [17, 25],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 8,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "Two Hand Maces",
+        "Name": "Mallet",
+        "Damage": [16, 33],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 12,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "Two Hand Maces",
+        "Name": "Sledgehammer",
+        "Damage": [25, 38],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 17,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "Two Hand Maces",
+        "Name": "Jagged Maul",
+        "Damage": [27, 49],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 22,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "Two Hand Maces",
+        "Name": "Brass Maul",
+        "Damage": [40, 60],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 27,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "Two Hand Maces",
+        "Name": "Blunt Force Condenser",
+        "Damage": [39, 64],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 30,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "Two Hand Maces",
+        "Name": "Fright Maul",
+        "Damage": [46, 62],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 32,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "Two Hand Maces",
+        "Name": "Morning Star",
+        "Damage": [45, 68],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 34,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "Two Hand Maces",
+        "Name": "Totemic Maul",
+        "Damage": [57, 85],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 36,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "Two Hand Maces",
+        "Name": "Great Mallet",
+        "Damage": [43, 88],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 40,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "Two Hand Maces",
+        "Name": "Steelhead",
+        "Damage": [54, 51],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 44,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "Two Hand Maces",
+        "Name": "Spiny Maul",
+        "Damage": [55, 103],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 48,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "Two Hand Maces",
+        "Name": "Crushing Force Magnifier",
+        "Damage": [62, 103],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 50,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "Two Hand Maces",
+        "Name": "Plated MAul",
+        "Damage": [72, 108],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 51,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "Two Hand Maces",
+        "Name": "Dread Maul",
+        "Damage": [77, 104],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 54,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "Two Hand Maces",
+        "Name": "Solar Maul",
+        "Damage": [75, 113],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 56,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "Two Hand Maces",
+        "Name": "Kariu Maul",
+        "Damage": [112, 168],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 57,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "Two Hand Maces",
+        "Name": "Colossus Mallet",
+        "Damage": [65, 135],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 61,
+        "MaxLevel": true
+    },
+    {
+        "Type": "Weapon",
+        "Class": "Two Hand Maces",
+        "Name": "Piledriver",
+        "Damage": [77, 115],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 61,
+        "MaxLevel": true
+    },
+    {
+        "Type": "Weapon",
+        "Class": "Two Hand Maces",
+        "Name": "Meatgrinder",
+        "Damage": [74, 138],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 63,
+        "MaxLevel": true
+    },
+    {
+        "Type": "Weapon",
+        "Class": "Two Hand Maces",
+        "Name": "Imperial Maul",
+        "Damage": [102, 153],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 65,
+        "MaxLevel": true
+    },
+    {
+        "Type": "Weapon",
+        "Class": "Two Hand Maces",
+        "Name": "Terror Maul",
+        "Damage": [101, 137],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 67,
+        "MaxLevel": true
+    },
+    {
+        "Type": "Weapon",
+        "Class": "Two Hand Maces",
+        "Name": "Coranal Maul",
+        "Damage": [91, 16],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 69,
+        "MaxLevel": true
+    },
+    {
+        "Type": "Weapon",
+        "Class": "Two Hand Maces",
+        "Name": "Impact Force Propagator",
+        "Damage": [81, 135],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 70,
+        "MaxLevel": true
+    }
+]

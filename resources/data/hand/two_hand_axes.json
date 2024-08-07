@@ -1,0 +1,252 @@
+[
+    {
+        "Type": "Weapon",
+        "Class": "Two Hand Axes",
+        "Name": "Stone Axe",
+        "Damage": [12, 20],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 1,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "Two Hand Axes",
+        "Name": "Jade Chopper",
+        "Damage": [19, 30],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 9,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "Two Hand Axes",
+        "Name": "Woodsplitter",
+        "Damage": [19, 39],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 13,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "Two Hand Axes",
+        "Name": "Poleaxe",
+        "Damage": [29, 43],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 18,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "Two Hand Axes",
+        "Name": "Double Axe",
+        "Damage": [36, 60],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 23,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "Two Hand Axes",
+        "Name": "Gilded Axe",
+        "Damage": [36, 60],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 28,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "Two Hand Axes",
+        "Name": "Prime Cleaver",
+        "Damage": [36, 56],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 30,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "Two Hand Axes",
+        "Name": "Shadow Axe",
+        "Damage": [49, 73],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 33,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "Two Hand Axes",
+        "Name": "Dagger Axe",
+        "Damage": [53, 83],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 36,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "Two Hand Axes",
+        "Name": "Jasper Chopper",
+        "Damage": [58, 91],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 37,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "Two Hand Axes",
+        "Name": "Timber Axe",
+        "Damage": [48, 99],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 41,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "Two Hand Axes",
+        "Name": "Headsman Axe",
+        "Damage": [61, 92],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 45,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "Two Hand Axes",
+        "Name": "Labrys",
+        "Damage": [74, 123],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 49,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "Two Hand Axes",
+        "Name": "Honed Cleaver",
+        "Damage": [55, 86],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 50,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "Two Hand Axes",
+        "Name": "Noble Axe",
+        "Damage": [76, 103],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 52,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "Two Hand Axes",
+        "Name": "Abyssal Axe",
+        "Damage": [81, 121],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 55,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "Two Hand Axes",
+        "Name": "Karui Chopper",
+        "Damage": [121, 189],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 58,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "Two Hand Axes",
+        "Name": "Talon Axe",
+        "Damage": [88, 138],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 59,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "Two Hand Axes",
+        "Name": "Sundering Axe",
+        "Damage": [74, 155],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 60,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "Two Hand Axes",
+        "Name": "Ezomyte Axe",
+        "Damage": [87, 131],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 62,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "Two Hand Axes",
+        "Name": "Vaal Axe",
+        "Damage": [104, 174],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 64,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "Two Hand Axes",
+        "Name": "Despot Axe",
+        "Damage": [90, 122],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 66,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "Two Hand Axes",
+        "Name": "Void Axe",
+        "Damage": [94, 144],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 68,
+        "MaxLevel": true
+    },
+    {
+        "Type": "Weapon",
+        "Class": "Two Hand Axes",
+        "Name": "Apex Cleaver",
+        "Damage": [65, 101],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 70,
+        "MaxLevel": true
+    },
+    {
+        "Type": "Weapon",
+        "Class": "Two Hand Axes",
+        "Name": "Fleshripper",
+        "Damage": [97, 152],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 70,
+        "MaxLevel": true
+    }
+]

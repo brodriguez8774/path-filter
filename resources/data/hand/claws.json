@@ -1,0 +1,280 @@
+[
+    {
+        "Type": "Weapon",
+        "Class": "Claw",
+        "Name": "Nailed Fist",
+        "Damage": [4, 11],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 1,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "Claw",
+        "Name": "Sharktooth Claw",
+        "Damage": [6, 17],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 7,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "Claw",
+        "Name": "Awl",
+        "Damage": [7, 23],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 12,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "Claw",
+        "Name": "Cat's Paw",
+        "Damage": [12, 22],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 17,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "Claw",
+        "Name": "Blinder",
+        "Damage": [12, 31],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 22,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "Claw",
+        "Name": "Timeworn Claw",
+        "Damage": [16, 43],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 26,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "Claw",
+        "Name": "Shadow Fangs",
+        "Damage": [13, 24],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 30,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "Claw",
+        "Name": "Sparkling Claw",
+        "Damage": [14, 38],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 30,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "Claw",
+        "Name": "Fright Claw",
+        "Damage": [12, 46],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 34,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "Claw",
+        "Name": "Double Claw",
+        "Damage": [15, 44],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 36,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "Claw",
+        "Name": "Thresher Claw",
+        "Damage": [20, 53],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 37,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "Claw",
+        "Name": "Gouger",
+        "Damage": [15, 51],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 40,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "Claw",
+        "Name": "Tiger's Paw",
+        "Damage": [23, 43],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 43,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "Claw",
+        "Name": "Gut Ripper",
+        "Damage": [20, 53],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 46,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "Claw",
+        "Name": "Prehistoric Claw",
+        "Damage": [26, 68],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 49,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "Claw",
+        "Name": "Malign Fangs",
+        "Damage": [20, 37],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 50,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "Claw",
+        "Name": "Noble Claw",
+        "Damage": [21, 56],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 52,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "Claw",
+        "Name": "Eagle Claw",
+        "Damage": [17, 69],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 55,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "Claw",
+        "Name": "Twin Claw",
+        "Damage": [21, 64],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 57,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "Claw",
+        "Name": "Great White Claw",
+        "Damage": [30, 78],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 58,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "Claw",
+        "Name": "Throat Stabber",
+        "Damage": [21, 73],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 60,
+        "MaxLevel": false
+    },{
+        "Type": "Weapon",
+        "Class": "Claw",
+        "Name": "Hellion's Paw",
+        "Damage": [29, 55],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 62,
+        "MaxLevel": false
+    },{
+        "Type": "Weapon",
+        "Class": "Claw",
+        "Name": "Eye Gouger",
+        "Damage": [26, 68],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 64,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "Claw",
+        "Name": "Vaal Claw",
+        "Damage": [25, 65],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 68,
+        "MaxLevel": true
+    },
+    {
+        "Type": "Weapon",
+        "Class": "Claw",
+        "Name": "Imperial Claw",
+        "Damage": [25, 65],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 68,
+        "MaxLevel": true
+    },
+    {
+        "Type": "Weapon",
+        "Class": "Claw",
+        "Name": "Terror Claw",
+        "Damage": [18, 71],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 70,
+        "MaxLevel": true
+    },
+    {
+        "Type": "Weapon",
+        "Class": "Claw",
+        "Name": "Void Fangs",
+        "Damage": [22, 41],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 70,
+        "MaxLevel": true
+    },
+    {
+        "Type": "Weapon",
+        "Class": "Claw",
+        "Name": "Gemeni Claw",
+        "Damage": [23, 68],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 72,
+        "MaxLevel": true
+    }
+]

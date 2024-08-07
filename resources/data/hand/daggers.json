@@ -1,0 +1,312 @@
+[
+    {
+        "Type": "Weapon",
+        "Class": "Dagger",
+        "Name": "Glass Shank",
+        "Damage": [6, 10],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 1,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "Dagger",
+        "Name": "Skinning Knife",
+        "Damage": [4, 17],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 5,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "Dagger",
+        "Name": "Stiletto",
+        "Damage": [7, 27],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 15,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "Dagger",
+        "Name": "Flaying Knife",
+        "Damage": [11, 45],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 30,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "Dagger",
+        "Name": "Hollowpoint Dagger",
+        "Damage": [12, 46],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 30,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "Dagger",
+        "Name": "Prong Dagger",
+        "Damage": [14, 54],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 36,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "Dagger",
+        "Name": "Poignard",
+        "Damage": [13, 52],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 41,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "Dagger",
+        "Name": "Pressurised Dagger",
+        "Damage": [18, 71],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 50,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "Dagger",
+        "Name": "Trisula",
+        "Damage": [19, 74],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 51,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "Dagger",
+        "Name": "Gutting Knife",
+        "Damage": [19, 76],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 56,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "Dagger",
+        "Name": "Ambusher",
+        "Damage": [17, 74],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 60,
+        "MaxLevel": true
+    },
+    {
+        "Type": "Weapon",
+        "Class": "Dagger",
+        "Name": "Pneumatic Dagger",
+        "Damage": [20, 79],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 70,
+        "MaxLevel": true
+    },
+    {
+        "Type": "Weapon",
+        "Class": "Dagger",
+        "Name": "Sai",
+        "Damage": [22, 88],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 70,
+        "MaxLevel": true
+    },
+    {
+        "Type": "Weapon",
+        "Class": "Dagger",
+        "Name": "Carving Knife",
+        "Damage": [3, 26],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 10,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "Dagger",
+        "Name": "Boot Knife",
+        "Damage": [8, 34],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 20,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "Dagger",
+        "Name": "Copper Kris",
+        "Damage": [10, 41],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 24,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "Dagger",
+        "Name": "Skean",
+        "Damage": [11, 43],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 28,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "Dagger",
+        "Name": "Flickerflame Blade",
+        "Damage": [12, 47],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 30,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "Dagger",
+        "Name": "Imp Dagger",
+        "Damage": [15, 59],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 32,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "Dagger",
+        "Name": "Butcher Knife",
+        "Damage": [7, 62],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 38,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "Dagger",
+        "Name": "Boot Blade",
+        "Damage": [15, 59],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 44,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "Dagger",
+        "Name": "Golden Kris",
+        "Damage": [19, 75],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 47,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "Dagger",
+        "Name": "Flashfire Blade",
+        "Damage": [18, 73],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 50,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "Dagger",
+        "Name": "Royal Skean",
+        "Damage": [16, 64],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 50,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "Dagger",
+        "Name": "Fiend Dagger",
+        "Damage": [6, 10],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 1,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "Dagger",
+        "Name": "Slaughter Knife",
+        "Damage": [10, 86],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 58,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "Dagger",
+        "Name": "Ezomyte Dagger",
+        "Damage": [20, 79],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 62,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "Dagger",
+        "Name": "Platinum Kris",
+        "Damage": [24, 95],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 64,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "Dagger",
+        "Name": "Imperial Skean",
+        "Damage": [18, 73],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 66,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "Dagger",
+        "Name": "Demon Dagger",
+        "Damage": [24, 97],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 68,
+        "MaxLevel": true
+    },
+    {
+        "Type": "Weapon",
+        "Class": "Dagger",
+        "Name": "Infernal Blade",
+        "Damage": [21, 85],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 70,
+        "MaxLevel": true
+    }
+]

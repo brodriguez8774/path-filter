@@ -1,0 +1,282 @@
+[
+    {
+        "Type": "Weapon",
+        "Class": "One Hand Maces",
+        "Name": "Driftwood Club",
+        "Damage": [6, 8],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 1,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "One Hand Maces",
+        "Name": "Tribal Club",
+        "Damage": [8, 13],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 5,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "One Hand Maces",
+        "Name": "Spiked Club",
+        "Damage": [13, 16],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 10,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "One Hand Maces",
+        "Name": "Stone Hammer",
+        "Damage": [15, 27],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 15,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "One Hand Maces",
+        "Name": "War Hammer",
+        "Damage": [13, 31],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 20,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "One Hand Maces",
+        "Name": "Bladed Mace",
+        "Damage": [19, 32],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 24,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "One Hand Maces",
+        "Name": "Ceremonial Mace",
+        "Damage": [32, 40],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 28,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "One Hand Maces",
+        "Name": "Flare Mace",
+        "Damage": [20, 41],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 30,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "One Hand Maces",
+        "Name": "Dream Mace",
+        "Damage": [21, 43],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 32,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "One Hand Maces",
+        "Name": "Wyrm Mace",
+        "Damage": [28, 42],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 34,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "One Hand Maces",
+        "Name": "Petrified Club",
+        "Damage": [31, 51],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 35,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "One Hand Maces",
+        "Name": "Barbed Club",
+        "Damage": [33, 42],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 38,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "One Hand Maces",
+        "Name": "Rock Breaker",
+        "Damage": [37, 69],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 41,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "One Hand Maces",
+        "Name": "Battle Hammer",
+        "Damage": [25, 59],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 44,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "One Hand Maces",
+        "Name": "Flanged Mace",
+        "Damage": [38, 63],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 47,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "One Hand Maces",
+        "Name": "Crack Mace",
+        "Damage": [31, 64],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 50,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "One Hand Maces",
+        "Name": "Ornate Mace",
+        "Damage": [53, 67],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 50,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "One Hand Maces",
+        "Name": "Phantom Mace",
+        "Damage": [33, 69],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 53,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "One Hand Maces",
+        "Name": "Dragon Mace",
+        "Damage": [44, 66],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 55,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "One Hand Maces",
+        "Name": "Ancestral Club",
+        "Damage": [48, 80],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 56,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "One Hand Maces",
+        "Name": "Tenderizer",
+        "Damage": [49, 62],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 58,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "One Hand Maces",
+        "Name": "Gavel",
+        "Damage": [54, 101],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 60,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "One Hand Maces",
+        "Name": "Legion Hammer",
+        "Damage": [35, 81],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 62,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "One Hand Maces",
+        "Name": "Pernach",
+        "Damage": [49, 82],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 64,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "One Hand Maces",
+        "Name": "Auric Mace",
+        "Damage": [65, 88],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 66,
+        "MaxLevel": true
+    },
+    {
+        "Type": "Weapon",
+        "Class": "One Hand Maces",
+        "Name": "Nightmare Mace",
+        "Damage": [38, 80],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 68,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "One Hand Maces",
+        "Name": "Behemoth Mace",
+        "Damage": [49, 74],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 70,
+        "MaxLevel": true
+    },
+    {
+        "Type": "Weapon",
+        "Class": "One Hand Maces",
+        "Name": "Boom Mace",
+        "Damage": [39, 81],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 70,
+        "MaxLevel": true
+    }
+]
