@@ -142,7 +142,10 @@ class CurrencyParser():
                 'Cartographer\'s Chisel', 'Orb of Scouring', 'Orb of Regret', 'Silver Coin',  'Gemcutter\'s Prism',
                 'Eternal Orb', 'Master Cartographer\'s Seal', 'Albino Rhoa Feather', 'Orb of Chance', 'Sextant',
                 'Awakener\'s Orb', 'Bestiary Orb', 'Orb of Annulment', 'Ancient Orb', 'Engineer\'s Orb',
-                'Harbinger\'s Orb', 'Orb of Binding', 'Orb of Horizons',
+                'Harbinger\'s Orb', 'Orb of Binding', 'Orb of Horizons', "Fracturing Shard", "Burial Medallion",
+                "Grand Eldritch Ember", "Grand Eldritch Ichor", "Greater Eldritch Ichor", "Scrap Metal", "Stacked Deck",
+                "Ancient Shard", "Astragali", "Enkindling Orb", "Exalted Shard", "Greater Eldritch Ember",
+                "Lesser Eldritch Ember", "Lesser Eldritch Ichor", "Orb of Scouring", "Orb of Unmaking",
             ],
             font_size=display_dict['uncommon_font_size'],
             minimap_size=2,
@@ -190,20 +193,70 @@ class CurrencyParser():
         self.filter_file.write('# ---------------------------------- #\n')
         self.filter_file.write('\n')
 
+        # Settlers of Kalguur.
         self.template.special_item(
-            description='Harvest Classes',
-            class_text='Harvest Seed',
+            description='Kalguur Currency',
+            class_text="Stackable Currency",
+            base_text='Gold',
         )
         self.template.special_item(
-            description='Harvest Bases',
+            description='Kalguur Runes',
             base_text=[
-                'Dedication to the Goddess', 'Facetor\'s Lens', 'Gift to the Goddess', 'Infused Engineer\'s Orb',
+                "Power Rune", "Time Rune", "Bounty Rune", "Journey Rune", "Mountain Rune", "River Rune", "Bound Rune",
+                "Life Rune", "Sun Rune", "War Rune", "Rune",
             ],
         )
+
+        # Trial of the Ancestors.
+        self.template.special_item(
+            description='Trial of the Ancestors',
+            base_text=["Omen of", 'Tattoo of ']
+        )
+
+        # Ritual.
+        self.template.special_item(
+            description='Ritual',
+            class_text='Corpses',
+            base_text='Gold',
+        )
+
+        # Heist.
+        self.template.special_item(
+            description='Heist Classes',
+            class_text=["Heist Cloaks", "Heist Brooches", "Heist Gear", "Heist Tools"]
+        )
+        self.template.special_item(
+            description='Heist Bases',
+            base_text=[
+                "Whisper-woven Cloak", "Hooded Cloak", "Foliate Brooch", "Enamel Brooch", "Burst Band",
+                "Obsidian Sharpening Stone", "Precise Arrowhead", "Grandmaster Keyring", "Master Lockpick",
+                "Regicide Disguise Kit", "Silkweave Sole", "Steel Bracers", "Thaumaturgical Sensing Charm",
+                "Thaumaturgical Ward", "Thaumetic Blowtorch", "Thaumetic Flashpowder", "Azurite Flashpowder",
+                "Espionage Disguise Kit", "Fine Lockpick", "Polished Sensing Charm", "Runed Bracers", "Shining Ward",
+                "Skeleton Keyring", "Sulphur Blowtorch", "Winged Sole", "Rogue's Marker",
+            ],
+        )
+
+        # Harvest.
+        # Seems to be discontinued.
+        # self.template.special_item(
+        #     description='Harvest Classes',
+        #     class_text='Harvest Seed',
+        # )
+        # self.template.special_item(
+        #     description='Harvest Bases',
+        #     base_text=[
+        #         'Dedication to the Goddess', 'Facetor\'s Lens', 'Gift to the Goddess', 'Infused Engineer\'s Orb',
+        #     ],
+        # )
+
+        # Delirium.
         self.template.special_item(
             description='Delerium Bases',
             base_text=['Delirium Orb', 'Simulacrum Splinter', 'Simulacrum'],
         )
+
+        # Metamorph.
         self.template.special_item(
             description='Metamorph',
             base_text=[
@@ -211,6 +264,8 @@ class CurrencyParser():
                 'Tempering Catalyst', 'Turbulent Catalyst',
             ],
         )
+
+        # Blight.
         self.template.special_item(
             description='Blight',
             base_text=[
@@ -218,6 +273,8 @@ class CurrencyParser():
                 'Sepia Oil', 'Silver Oil', 'Teal Oil', 'Verdant Oil', 'Violet Oil',
             ],
         )
+
+        # Legion.
         self.template.special_item(
             description='Legion Classes',
             class_text='Incubator',
@@ -231,14 +288,20 @@ class CurrencyParser():
             font_size=display_dict['uncommon_font_size'],
             minimap_size=2,
         )
+
+        # Scarab.
         self.template.special_item(
             description='Scarab Items',
             class_text='Map Fragments',
             base_text='Scarab',
         )
+
+        # Delve.
         self.template.special_item(
             description='General Delve Currency',
-            class_text='Delve Socketable Currency',
+            class_text=[
+                'Delve Socketable Currency', "Delve Stackable Socketable Currency"
+            ]
         )
         self.template.special_item(
             description='Delve Fossils',
@@ -249,6 +312,8 @@ class CurrencyParser():
             description='Delve Resonators',
             base_text='Resonator',
         )
+
+        # Incursion.
         self.template.special_item(
             description='Incursion Classes',
             class_text='Incursion Item',
@@ -267,6 +332,8 @@ class CurrencyParser():
             minimap_size=0,
             sound='4 300'
         )
+
+        # Harbringer.
         self.template.special_item(
             description='Harbringer',
             class_text='Piece',
@@ -293,6 +360,8 @@ class CurrencyParser():
             font_size=display_dict['uncommon_font_size'],
             minimap_size=2,
         )
+
+        # OG.
         self.template.special_item(
             description='Prophecies',
             base_text='Prophecy',
@@ -308,6 +377,12 @@ class CurrencyParser():
             description='Talismans',
             class_text='Amulets',
             base_text='Talisman',
+        )
+
+        # Other.
+        self.template.special_item(
+            description='Other/Misc Special Currency',
+            base_text=["Deregulation Scroll", "Electroshock Scroll", "Fragmentation Scroll", "Haemocombustion Scroll", "Specularity Scroll", "Time-light Scroll", "Imprint", "Unshaping Orb"],
         )
 
     def labyrinth_items(self):

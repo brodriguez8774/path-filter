@@ -89,3 +89,19 @@ class MapParser():
             sound='13 200',
             playeffect=display_dict['minimap_color_maps'],
         )
+
+        # Map-like items.
+        self.template.notable_item(
+            description='Map-like Item Classes',
+            class_text=[
+                "Blueprints", "Contracts", "Memories", "Sanctum Research",
+            ],
+            font_size=display_dict['rare_font_size'],
+        )
+        self.template.notable_item(
+            description='Map-like Item Bases',
+            class_text=[
+                "Expedition Logbook",
+            ],
+            font_size=display_dict['rare_font_size'],
+        )
