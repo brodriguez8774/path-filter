@@ -390,28 +390,6 @@ class BaseTemplate():
             self.filter_file.write('Hide\n')
 
         # Limitations to filter on.
-        if class_text is not None:
-            self.filter_file.write('    Class {0}\n'.format(self._format_item_text(class_text)))
-        if base_text is not None:
-            self.filter_file.write('    BaseType {0}\n'.format(self._format_item_text(base_text)))
-        if area_level is not None:
-            self.filter_file.write('    AreaLevel {0}\n'.format(str(area_level).strip()))
-        if item_level is not None:
-            self.filter_file.write('    ItemLevel {0}\n'.format(str(item_level).strip()))
-        if rarity is not None:
-            self.filter_file.write('    Rarity = {0}\n'.format(str(rarity).strip()))
-        if quality is not None:
-            self.filter_file.write('    Quality {0}\n'.format(str(quality).strip()))
-        if linked_sockets is not None:
-            self.filter_file.write('    LinkedSockets >= {0}\n'.format(str(linked_sockets).strip()))
-        if socket_group is not None:
-            self.filter_file.write('    SocketGroup >= {0}\n'.format(str(socket_group).strip()))
-        if sockets is not None:
-            self.filter_file.write('    Sockets {0}\n'.format(str(sockets).strip()))
-        if height is not None:
-            self.filter_file.write('    Height {0}\n'.format(str(height).strip()))
-        if width is not None:
-            self.filter_file.write('    Width {0}\n'.format(str(width).strip()))
         if has_mod is not None:
             self.filter_file.write('    HasExplicitMod {0}\n'.format(self._format_item_text(has_mod)))
         if has_influence is not None:
@@ -424,8 +402,34 @@ class BaseTemplate():
             self.filter_file.write('    Mirrored {0}\n'.format(self._format_item_text(is_mirrored)))
         if is_replica is not None:
             self.filter_file.write('    Replica {0}\n'.format(self._format_item_text(is_replica)))
+
+        if area_level is not None:
+            self.filter_file.write('    AreaLevel {0}\n'.format(str(area_level).strip()))
+        if item_level is not None:
+            self.filter_file.write('    ItemLevel {0}\n'.format(str(item_level).strip()))
+        if class_text is not None:
+            self.filter_file.write('    Class {0}\n'.format(self._format_item_text(class_text)))
+        if base_text is not None:
+            self.filter_file.write('    BaseType {0}\n'.format(self._format_item_text(base_text)))
+
+        if linked_sockets is not None:
+            self.filter_file.write('    LinkedSockets >= {0}\n'.format(str(linked_sockets).strip()))
+        if socket_group is not None:
+            self.filter_file.write('    SocketGroup >= {0}\n'.format(str(socket_group).strip()))
+        if sockets is not None:
+            self.filter_file.write('    Sockets {0}\n'.format(str(sockets).strip()))
+
         if map_tier is not None:
             self.filter_file.write('    MapTier {0}\n'.format(str(map_tier).strip()))
+        if rarity is not None:
+            self.filter_file.write('    Rarity = {0}\n'.format(str(rarity).strip()))
+        if quality is not None:
+            self.filter_file.write('    Quality {0}\n'.format(str(quality).strip()))
+
+        if height is not None:
+            self.filter_file.write('    Height {0}\n'.format(str(height).strip()))
+        if width is not None:
+            self.filter_file.write('    Width {0}\n'.format(str(width).strip()))
 
         # Values to set if filter match is found.
         if background_color is not None:
