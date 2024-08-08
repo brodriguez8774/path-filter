@@ -40,6 +40,7 @@ class FlaskParser():
         if self.hybrid_flasks:
             self.show_hybrid_flasks()
         self.show_utility_flasks()
+        self.show_tinctures()
 
     def parse_flask(self, flask):
         """
@@ -208,3 +209,24 @@ class FlaskParser():
             for flask in json_data:
                 # Parse item.
                 self.parse_flask(flask)
+
+    def show_tinctures(self):
+        """
+        Handling for tinctures.
+        """
+
+        self.parse_subnum += 1
+
+        self.filter_file.write('\n')
+        self.filter_file.write('# ---------------------------- #\n')
+        self.filter_file.write('# --- [{0}.{1}] - Tinctures --- #\n'.format(self.parse_num, str(self.parse_subnum).zfill(2)))
+        self.filter_file.write('# ---------------------------- #\n')
+        self.filter_file.write('\n')
+
+        self.template.common_item(
+            base_text="Tincture",
+            minimap_size=2,
+            minimap_color=display_dict['minimap_color_flasks'],
+            minimap_shape=display_dict['minimap_icon_flasks'],
+            playeffect=display_dict['minimap_color_flasks'],
+        )

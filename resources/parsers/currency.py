@@ -35,7 +35,7 @@ class CurrencyParser():
 
         self.general_currency()
         self.league_specific()
-        self.labyrinth_items()
+        self.quest_like_items()
         self.currency_catchall()
 
     def general_currency(self):
@@ -195,11 +195,6 @@ class CurrencyParser():
 
         # Settlers of Kalguur.
         self.template.special_item(
-            description='Kalguur Currency',
-            class_text="Stackable Currency",
-            base_text='Gold',
-        )
-        self.template.special_item(
             description='Kalguur Runes',
             base_text=[
                 "Power Rune", "Time Rune", "Bounty Rune", "Journey Rune", "Mountain Rune", "River Rune", "Bound Rune",
@@ -223,7 +218,7 @@ class CurrencyParser():
         # Heist.
         self.template.special_item(
             description='Heist Classes',
-            class_text=["Heist Cloaks", "Heist Brooches", "Heist Gear", "Heist Tools"]
+            class_text=["Heist Cloaks", "Heist Brooches", "Heist Gear", "Heist Tools", "Heist Target"]
         )
         self.template.special_item(
             description='Heist Bases',
@@ -385,15 +380,15 @@ class CurrencyParser():
             base_text=["Deregulation Scroll", "Electroshock Scroll", "Fragmentation Scroll", "Haemocombustion Scroll", "Specularity Scroll", "Time-light Scroll", "Imprint", "Unshaping Orb"],
         )
 
-    def labyrinth_items(self):
+    def quest_like_items(self):
         """
-        Handling for labyrinth-specific items.
+        Handling for quest-like items.
         """
         self.parse_subnum += 1
 
         self.filter_file.write('\n')
         self.filter_file.write('# ---------------------------------- #\n')
-        self.filter_file.write('# --- [{0}.{1}] - Labyrinth Items --- #\n'.format(self.parse_num, str(self.parse_subnum).zfill(2)))
+        self.filter_file.write('# --- [{0}.{1}] - Quest-like Items --- #\n'.format(self.parse_num, str(self.parse_subnum).zfill(2)))
         self.filter_file.write('# ---------------------------------- #\n')
         self.filter_file.write('\n')
 
@@ -407,6 +402,18 @@ class CurrencyParser():
         self.template.special_item(
             description='Labyrinth Bases',
             base_text=['Key', 'Offering to the Goddess', 'Divine Vessel']
+        )
+
+        # Labyrinth classes.
+        self.template.special_item(
+            description='Quest-like Classes',
+            class_text=["Incursion Items"]
+        )
+
+        # Labyrinth base types.
+        self.template.special_item(
+            description='Quest-like Bases',
+            base_text=["Maven's"]
         )
 
     def currency_catchall(self):

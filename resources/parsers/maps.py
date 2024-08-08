@@ -90,6 +90,23 @@ class MapParser():
             playeffect=display_dict['minimap_color_maps'],
         )
 
+        # Misc map items.
+        self.template.notable_item(
+            description='Misc map Item Classes',
+            class_text=[
+                "Vault Keys", "Chronicle of Atzoatl", "Inscribed Ultimatum", "Mirrored Tablet", "Primeval Remnant",
+                "Primordial Remnant",
+            ],
+            font_size=display_dict['rare_font_size'],
+        )
+        self.template.notable_item(
+            description='Misc map Item Bases',
+            class_text=[
+                "Reliquary Key", "Misc Map Items",
+            ],
+            font_size=display_dict['rare_font_size'],
+        )
+
         # Map-like items.
         self.template.notable_item(
             description='Map-like Item Classes',

@@ -53,7 +53,12 @@ class FilterTemplates():
             area_level=None, item_level=None, quality=None,
             linked_sockets=None, socket_group=None, sockets=None,
             height=None, width=None,
-            has_influence=None, map_tier=None,
+            has_influence=None,
+            is_fractured=None,
+            is_synthesized=None,
+            is_mirrored=None,
+            is_replica=None,
+            map_tier=None,
             background_color=display_dict['standard_background'], border_color=display_dict['rare'],
             text_color=display_dict['rare_text'], font_size=display_dict['rare_font_size'],
             minimap_size=None, minimap_color=None, minimap_shape=None,
@@ -66,7 +71,12 @@ class FilterTemplates():
             area_level=area_level, item_level=item_level, rarity='Rare', quality=quality,
             linked_sockets=linked_sockets, socket_group=socket_group, sockets=sockets,
             height=height, width=width,
-            has_influence=has_influence, map_tier=map_tier,
+            has_influence=has_influence,
+            is_fractured=is_fractured,
+            is_synthesized=is_synthesized,
+            is_mirrored=is_mirrored,
+            is_replica=is_replica,
+            map_tier=map_tier,
             background_color=background_color, border_color=border_color,
             text_color=text_color, font_size=font_size,
             minimap_size=minimap_size, minimap_color=minimap_color, minimap_shape=minimap_shape,
@@ -78,7 +88,12 @@ class FilterTemplates():
             area_level=None, item_level=None, quality=None,
             linked_sockets=None, socket_group=None, sockets=None,
             height=None, width=None,
-            has_influence=None, map_tier=None,
+            has_influence=None,
+            is_fractured=None,
+            is_synthesized=None,
+            is_mirrored=None,
+            is_replica=None,
+            map_tier=None,
             background_color=display_dict['standard_background'], border_color=display_dict['uncommon'],
             text_color=display_dict['uncommon_text'], font_size=display_dict['uncommon_font_size'],
             minimap_size=None, minimap_color=None, minimap_shape=None,
@@ -91,7 +106,12 @@ class FilterTemplates():
             area_level= area_level, item_level=item_level, rarity='Magic', quality=quality,
             linked_sockets=linked_sockets, socket_group=socket_group, sockets=sockets,
             height=height, width=width,
-            has_influence=has_influence, map_tier=map_tier,
+            has_influence=has_influence,
+            is_fractured=is_fractured,
+            is_synthesized=is_synthesized,
+            is_mirrored=is_mirrored,
+            is_replica=is_replica,
+            map_tier=map_tier,
             background_color=background_color, border_color=border_color,
             text_color=text_color, font_size=font_size,
             minimap_size=minimap_size, minimap_color=minimap_color, minimap_shape=minimap_shape,
@@ -103,7 +123,12 @@ class FilterTemplates():
             area_level=None, item_level=None, quality=None,
             linked_sockets=None, socket_group=None, sockets=None,
             height=None, width=None,
-            has_influence=None, map_tier=None,
+            has_influence=None,
+            is_fractured=None,
+            is_synthesized=None,
+            is_mirrored=None,
+            is_replica=None,
+            map_tier=None,
             background_color=display_dict['standard_background'], border_color=display_dict['notable_border'],
             text_color=display_dict['notable_text'], font_size=display_dict['default_font_size'],
             minimap_size=None, minimap_color=None, minimap_shape=None,
@@ -116,7 +141,12 @@ class FilterTemplates():
             area_level=area_level, item_level=item_level, quality=quality,
             linked_sockets=linked_sockets, socket_group=socket_group, sockets=sockets,
             height=height, width=width,
-            has_influence=has_influence, map_tier=map_tier,
+            has_influence=has_influence,
+            is_fractured=is_fractured,
+            is_synthesized=is_synthesized,
+            is_mirrored=is_mirrored,
+            is_replica=is_replica,
+            map_tier=map_tier,
             background_color=background_color, border_color=border_color,
             text_color=text_color, font_size=font_size,
             minimap_size=minimap_size, minimap_color=minimap_color, minimap_shape=minimap_shape,
@@ -128,7 +158,12 @@ class FilterTemplates():
             area_level=None, item_level=None, quality=None,
             linked_sockets=None, socket_group=None, sockets=None,
             height=None, width=None,
-            has_influence=None, map_tier=None,
+            has_influence=None,
+            is_fractured=None,
+            is_synthesized=None,
+            is_mirrored=None,
+            is_replica=None,
+            map_tier=None,
             background_color=display_dict['standard_background'], border_color=None,
             text_color=display_dict['normal_text'], font_size=display_dict['default_font_size'],
             minimap_size=None, minimap_color=None, minimap_shape=None,
@@ -141,7 +176,12 @@ class FilterTemplates():
             area_level=area_level, item_level=item_level, quality=quality,
             linked_sockets=linked_sockets, socket_group=socket_group, sockets=sockets,
             height=height, width=width,
-            has_influence=has_influence, map_tier=map_tier,
+            has_influence=has_influence,
+            is_fractured=is_fractured,
+            is_synthesized=is_synthesized,
+            is_mirrored=is_mirrored,
+            is_replica=is_replica,
+            map_tier=map_tier,
             background_color=background_color, border_color=border_color,
             text_color=text_color, font_size=font_size,
             minimap_size=minimap_size, minimap_color=minimap_color, minimap_shape=minimap_shape,
@@ -298,7 +338,13 @@ class BaseTemplate():
             area_level=None, item_level=None, rarity=None, quality=None,
             linked_sockets=None, socket_group=None, sockets=None,
             height=None, width=None,
-            has_mod=None, has_influence=None, map_tier=None,
+            has_mod=None,
+            has_influence=None,
+            is_fractured=None,
+            is_synthesized=None,
+            is_mirrored=None,
+            is_replica=None,
+            map_tier=None,
             background_color=None, border_color=None,
             text_color=None, font_size=None,
             minimap_size=None, minimap_color=None, minimap_shape=None,
@@ -370,6 +416,14 @@ class BaseTemplate():
             self.filter_file.write('    HasExplicitMod {0}\n'.format(self._format_item_text(has_mod)))
         if has_influence is not None:
             self.filter_file.write('    HasInfluence {0}\n'.format(self._format_item_text(has_influence)))
+        if is_fractured is not None:
+            self.filter_file.write('    FracturedItem {0}\n'.format(self._format_item_text(is_fractured)))
+        if is_synthesized is not None:
+            self.filter_file.write('    SynthesisedItem {0}\n'.format(self._format_item_text(is_synthesized)))
+        if is_mirrored is not None:
+            self.filter_file.write('    Mirrored {0}\n'.format(self._format_item_text(is_mirrored)))
+        if is_replica is not None:
+            self.filter_file.write('    Replica {0}\n'.format(self._format_item_text(is_replica)))
         if map_tier is not None:
             self.filter_file.write('    MapTier {0}\n'.format(str(map_tier).strip()))
 
@@ -417,6 +471,7 @@ class BaseTemplate():
 
             # Return formatted set.
             return formatted_text
+
         elif isinstance(item_text, str):
             # Strip possible outer whitespace.
             item_text = item_text.strip()
@@ -431,6 +486,11 @@ class BaseTemplate():
 
             # Return formatted item.
             return item_text
+
+        elif item_text is True or item_text is False:
+            # Is literal boolean. Can set as normal string, no quotes.
+            return str(item_text)
+
         else:
             # Item is neither set or string.
             raise TypeError('Passed item must be either set (list/tuple) or string value.')

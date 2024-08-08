@@ -234,7 +234,9 @@ class NotableGearParser():
         self.filter_file.write('# ----------------------------------- #\n')
         self.filter_file.write('\n')
 
+        # General map influence types.
         self.template.rare_item(
+            description='Map-Influenced Types',
             has_influence=['Shaper', 'Elder', 'Crusader', 'Hunter', 'Redeemer', 'Warlord'],
             minimap_size=0,
             minimap_color=display_dict['minimap_color_notable'],
@@ -243,6 +245,7 @@ class NotableGearParser():
             playeffect=display_dict['minimap_color_notable'],
         )
         self.template.uncommon_item(
+            description='Map-Influenced Types',
             has_influence=['Shaper', 'Elder', 'Crusader', 'Hunter', 'Redeemer', 'Warlord'],
             minimap_size=0,
             minimap_color=display_dict['minimap_color_notable'],
@@ -251,7 +254,124 @@ class NotableGearParser():
             playeffect=display_dict['minimap_color_notable'],
         )
         self.template.common_item(
+            description='Map-Influenced Types',
             has_influence=['Shaper', 'Elder', 'Crusader', 'Hunter', 'Redeemer', 'Warlord'],
+            minimap_size=0,
+            minimap_color=display_dict['minimap_color_notable'],
+            minimap_shape=display_dict['minimap_icon_influenced'],
+            sound='5 300',
+            playeffect=display_dict['minimap_color_notable'],
+        )
+
+        # Fractured types.
+        self.template.rare_item(
+            description='Fractured Influence Types',
+            is_fractured=True,
+            minimap_size=0,
+            minimap_color=display_dict['minimap_color_notable'],
+            minimap_shape=display_dict['minimap_icon_influenced'],
+            sound='5 300',
+            playeffect=display_dict['minimap_color_notable'],
+        )
+        self.template.uncommon_item(
+            description='Fractured Influence Types',
+            is_fractured=True,
+            minimap_size=0,
+            minimap_color=display_dict['minimap_color_notable'],
+            minimap_shape=display_dict['minimap_icon_influenced'],
+            sound='5 300',
+            playeffect=display_dict['minimap_color_notable'],
+        )
+        self.template.common_item(
+            description='Fractured Influence Types',
+            is_fractured=True,
+            minimap_size=0,
+            minimap_color=display_dict['minimap_color_notable'],
+            minimap_shape=display_dict['minimap_icon_influenced'],
+            sound='5 300',
+            playeffect=display_dict['minimap_color_notable'],
+        )
+
+        # Synthesized types.
+        self.template.rare_item(
+            description='Synthesis Influence Types',
+            is_synthesized=True,
+            minimap_size=0,
+            minimap_color=display_dict['minimap_color_notable'],
+            minimap_shape=display_dict['minimap_icon_influenced'],
+            sound='5 300',
+            playeffect=display_dict['minimap_color_notable'],
+        )
+        self.template.uncommon_item(
+            description='Synthesis Influence Types',
+            is_synthesized=True,
+            minimap_size=0,
+            minimap_color=display_dict['minimap_color_notable'],
+            minimap_shape=display_dict['minimap_icon_influenced'],
+            sound='5 300',
+            playeffect=display_dict['minimap_color_notable'],
+        )
+        self.template.common_item(
+            description='Synthesis Influence Types',
+            is_synthesized=True,
+            minimap_size=0,
+            minimap_color=display_dict['minimap_color_notable'],
+            minimap_shape=display_dict['minimap_icon_influenced'],
+            sound='5 300',
+            playeffect=display_dict['minimap_color_notable'],
+        )
+
+        # Mirrored types.
+        self.template.rare_item(
+            description='Mirror Types',
+            is_mirrored=True,
+            minimap_size=0,
+            minimap_color=display_dict['minimap_color_notable'],
+            minimap_shape=display_dict['minimap_icon_influenced'],
+            sound='5 300',
+            playeffect=display_dict['minimap_color_notable'],
+        )
+        self.template.uncommon_item(
+            description='Mirror Types',
+            is_mirrored=True,
+            minimap_size=0,
+            minimap_color=display_dict['minimap_color_notable'],
+            minimap_shape=display_dict['minimap_icon_influenced'],
+            sound='5 300',
+            playeffect=display_dict['minimap_color_notable'],
+        )
+        self.template.common_item(
+            description='Mirror Types',
+            is_mirrored=True,
+            minimap_size=0,
+            minimap_color=display_dict['minimap_color_notable'],
+            minimap_shape=display_dict['minimap_icon_influenced'],
+            sound='5 300',
+            playeffect=display_dict['minimap_color_notable'],
+        )
+
+        # Replica types.
+        self.template.rare_item(
+            description='Replica Types',
+            is_replica=True,
+            minimap_size=0,
+            minimap_color=display_dict['minimap_color_notable'],
+            minimap_shape=display_dict['minimap_icon_influenced'],
+            sound='5 300',
+            playeffect=display_dict['minimap_color_notable'],
+        )
+        self.template.uncommon_item(
+            description='Replica Types',
+            is_replica=True,
+            minimap_size=0,
+            minimap_color=display_dict['minimap_color_notable'],
+            minimap_shape=display_dict['minimap_icon_influenced'],
+            sound='5 300',
+            playeffect=display_dict['minimap_color_notable'],
+        )
+        self.template.common_item(
+            description='Replica Types',
+            is_replica=True,
             minimap_size=0,
             minimap_color=display_dict['minimap_color_notable'],
             minimap_shape=display_dict['minimap_icon_influenced'],
@@ -310,4 +430,17 @@ class FinalParser():
         self.filter_file.write('# ======================================= #\n')
         self.filter_file.write('\n')
 
+        # Hide any gear that has not yet been parsed.
+        self.template.hidden_item(
+            description='Hide remaining gear that has not yet been parsed.',
+            base_text=["Helmets", "Body Armours", "Gloves", "Boots", "Ring", "Belt", "Amulet"]
+        )
+
+        # Kalguur gold currency.
+        # Set here so that it will not accidentally make gear with text "gold" special.
+        self.template.special_item(
+            base_text='Gold',
+        )
+
+        # Hide everything else that has not yet been parsed.
         self.template.hidden_item(description='Hide everything else of little to no value')
