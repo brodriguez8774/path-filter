@@ -172,7 +172,7 @@
     {
         "Type": "Weapon",
         "Class": "Two Hand Maces",
-        "Name": "Kariu Maul",
+        "Name": "Karui Maul",
         "Damage": [112, 168],
         "ImplicitType": "",
         "ImplicitValue": [],
@@ -232,7 +232,7 @@
     {
         "Type": "Weapon",
         "Class": "Two Hand Maces",
-        "Name": "Coranal Maul",
+        "Name": "Coronal Maul",
         "Damage": [91, 16],
         "ImplicitType": "",
         "ImplicitValue": [],

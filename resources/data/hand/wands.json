@@ -102,16 +102,6 @@
     {
         "Type": "Weapon",
         "Class": "Wand",
-        "Name": "Serpent Wand",
-        "Damage": [21, 64],
-        "ImplicitType": "Spell Damage",
-        "ImplicitValue": [26, 30],
-        "DropLevel": 49,
-        "MaxLevel": false
-    },
-    {
-        "Type": "Weapon",
-        "Class": "Wand",
         "Name": "Omen Wand",
         "Damage": [33, 61],
         "ImplicitType": "Spell Damage",
