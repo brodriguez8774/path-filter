@@ -433,7 +433,7 @@ class FinalParser():
         # Hide any gear that has not yet been parsed.
         self.template.hidden_item(
             description='Hide remaining gear that has not yet been parsed.',
-            base_text=["Helmets", "Body Armours", "Gloves", "Boots", "Ring", "Belt", "Amulet"]
+            class_text=["Helmets", "Body Armours", "Gloves", "Boots", "Ring", "Belt", "Amulet"]
         )
 
         # Kalguur gold currency.

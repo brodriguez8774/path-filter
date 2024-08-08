@@ -92,17 +92,17 @@ class MapParser():
 
         # Misc map items.
         self.template.notable_item(
-            description='Misc map Item Classes',
+            description='Misc Map Item Classes',
             class_text=[
-                "Vault Keys", "Chronicle of Atzoatl", "Inscribed Ultimatum", "Mirrored Tablet", "Primeval Remnant",
-                "Primordial Remnant",
+                "Vault Keys",
             ],
             font_size=display_dict['rare_font_size'],
         )
         self.template.notable_item(
-            description='Misc map Item Bases',
-            class_text=[
-                "Reliquary Key", "Misc Map Items",
+            description='Misc Map Item Bases',
+            base_text=[
+                "Reliquary Key", "Chronicle of Atzoatl", "Inscribed Ultimatum", "Mirrored Tablet", "Primeval Remnant",
+                "Primordial Remnant",
             ],
             font_size=display_dict['rare_font_size'],
         )
