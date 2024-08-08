@@ -56,7 +56,7 @@ class TableOfContentsGenerator():
         self.filter_file.write('# [{0}] - Currency\n'.format(str(parse_num).zfill(3)))
         self.filter_file.write('# [{0}.01] - General Currency\n'.format(str(parse_num).zfill(3)))
         self.filter_file.write('# [{0}.02] - League Currency\n'.format(str(parse_num).zfill(3)))
-        self.filter_file.write('# [{0}.03] - Labyrinth Items\n'.format(str(parse_num).zfill(3)))
+        self.filter_file.write('# [{0}.03] - Quest-like Items\n'.format(str(parse_num).zfill(3)))
         self.filter_file.write('# [{0}.04] - Currency Catch-All\n'.format(str(parse_num).zfill(3)))
         self.filter_file.write('#\n')
 
@@ -87,6 +87,7 @@ class TableOfContentsGenerator():
             self.filter_file.write('# [{0}.04] - Utility Flasks\n'.format(str(parse_num).zfill(3)))
         else:
             self.filter_file.write('# [{0}.03] - Utility Flasks\n'.format(str(parse_num).zfill(3)))
+        self.filter_file.write('# [{0}.03] - Tinctures\n'.format(str(parse_num).zfill(3)))
 
         self.filter_file.write('#\n')
 
