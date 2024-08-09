@@ -20,12 +20,12 @@ class FilterTemplates:
         self.debug = debug
 
         if debug:
-            logger.info('Initializing FilterTemplates class.')
+            logger.info("Initializing FilterTemplates class.")
 
     def unique_item(
         self,
         *args,
-        description='Unique Type',
+        description="Unique Type",
         class_text=None,
         base_text=None,
         area_level=None,
@@ -38,15 +38,15 @@ class FilterTemplates:
         width=None,
         has_influence=None,
         map_tier=None,
-        background_color=display_dict['unique_background'],
-        border_color=display_dict['unique'],
-        text_color=display_dict['unique_text'],
-        font_size=display_dict['unique_font_size'],
+        background_color=display_dict["unique_background"],
+        border_color=display_dict["unique"],
+        text_color=display_dict["unique_text"],
+        font_size=display_dict["unique_font_size"],
         minimap_size=0,
-        minimap_color=display_dict['minimap_color_unique'],
-        minimap_shape=display_dict['minimap_icon_unique'],
-        sound='1 300',
-        playeffect=display_dict['minimap_color_unique']
+        minimap_color=display_dict["minimap_color_unique"],
+        minimap_shape=display_dict["minimap_icon_unique"],
+        sound="1 300",
+        playeffect=display_dict["minimap_color_unique"]
     ):
         """
         General filtering template for unique items.
@@ -57,7 +57,7 @@ class FilterTemplates:
             base_text=base_text,
             area_level=area_level,
             item_level=item_level,
-            rarity='Unique',
+            rarity="Unique",
             quality=quality,
             linked_sockets=linked_sockets,
             socket_group=socket_group,
@@ -80,7 +80,7 @@ class FilterTemplates:
     def rare_item(
         self,
         *args,
-        description='Rare Type',
+        description="Rare Type",
         class_text=None,
         base_text=None,
         area_level=None,
@@ -97,14 +97,14 @@ class FilterTemplates:
         is_mirrored=None,
         is_replica=None,
         map_tier=None,
-        background_color=display_dict['standard_background'],
-        border_color=display_dict['rare'],
-        text_color=display_dict['rare_text'],
-        font_size=display_dict['rare_font_size'],
+        background_color=display_dict["standard_background"],
+        border_color=display_dict["rare"],
+        text_color=display_dict["rare_text"],
+        font_size=display_dict["rare_font_size"],
         minimap_size=None,
         minimap_color=None,
         minimap_shape=None,
-        sound='None',
+        sound="None",
         playeffect=None
     ):
         """
@@ -116,7 +116,7 @@ class FilterTemplates:
             base_text=base_text,
             area_level=area_level,
             item_level=item_level,
-            rarity='Rare',
+            rarity="Rare",
             quality=quality,
             linked_sockets=linked_sockets,
             socket_group=socket_group,
@@ -143,7 +143,7 @@ class FilterTemplates:
     def uncommon_item(
         self,
         *args,
-        description='Magic Type',
+        description="Magic Type",
         class_text=None,
         base_text=None,
         area_level=None,
@@ -160,14 +160,14 @@ class FilterTemplates:
         is_mirrored=None,
         is_replica=None,
         map_tier=None,
-        background_color=display_dict['standard_background'],
-        border_color=display_dict['uncommon'],
-        text_color=display_dict['uncommon_text'],
-        font_size=display_dict['uncommon_font_size'],
+        background_color=display_dict["standard_background"],
+        border_color=display_dict["uncommon"],
+        text_color=display_dict["uncommon_text"],
+        font_size=display_dict["uncommon_font_size"],
         minimap_size=None,
         minimap_color=None,
         minimap_shape=None,
-        sound='None',
+        sound="None",
         playeffect=None
     ):
         """
@@ -179,7 +179,7 @@ class FilterTemplates:
             base_text=base_text,
             area_level=area_level,
             item_level=item_level,
-            rarity='Magic',
+            rarity="Magic",
             quality=quality,
             linked_sockets=linked_sockets,
             socket_group=socket_group,
@@ -223,14 +223,14 @@ class FilterTemplates:
         is_mirrored=None,
         is_replica=None,
         map_tier=None,
-        background_color=display_dict['standard_background'],
-        border_color=display_dict['notable_border'],
-        text_color=display_dict['notable_text'],
-        font_size=display_dict['default_font_size'],
+        background_color=display_dict["standard_background"],
+        border_color=display_dict["notable_border"],
+        text_color=display_dict["notable_text"],
+        font_size=display_dict["default_font_size"],
         minimap_size=None,
         minimap_color=None,
         minimap_shape=None,
-        sound='None',
+        sound="None",
         playeffect=None
     ):
         """
@@ -268,7 +268,7 @@ class FilterTemplates:
     def common_item(
         self,
         *args,
-        description='Common Type',
+        description="Common Type",
         class_text=None,
         base_text=None,
         area_level=None,
@@ -285,14 +285,14 @@ class FilterTemplates:
         is_mirrored=None,
         is_replica=None,
         map_tier=None,
-        background_color=display_dict['standard_background'],
+        background_color=display_dict["standard_background"],
         border_color=None,
-        text_color=display_dict['normal_text'],
-        font_size=display_dict['default_font_size'],
+        text_color=display_dict["normal_text"],
+        font_size=display_dict["default_font_size"],
         minimap_size=None,
         minimap_color=None,
         minimap_shape=None,
-        sound='None',
+        sound="None",
         playeffect=None
     ):
         """
@@ -335,15 +335,15 @@ class FilterTemplates:
         base_text=None,
         area_level=None,
         quality=None,
-        background_color=display_dict['standard_background'],
-        border_color=display_dict['rare_currency_border'],
-        text_color=display_dict['currency_text'],
-        font_size=display_dict['rare_font_size'],
+        background_color=display_dict["standard_background"],
+        border_color=display_dict["rare_currency_border"],
+        text_color=display_dict["currency_text"],
+        font_size=display_dict["rare_font_size"],
         minimap_size=0,
-        minimap_color=display_dict['minimap_color_currency'],
-        minimap_shape=display_dict['minimap_icon_currency'],
-        sound='10 250',
-        playeffect=display_dict['minimap_color_currency']
+        minimap_color=display_dict["minimap_color_currency"],
+        minimap_shape=display_dict["minimap_icon_currency"],
+        sound="10 250",
+        playeffect=display_dict["minimap_color_currency"]
     ):
         """
         Template for rarer currency items.
@@ -372,20 +372,20 @@ class FilterTemplates:
         class_text=None,
         base_text=None,
         item_level=None,
-        rarity='Rare',
+        rarity="Rare",
         linked_sockets=None,
         socket_group=None,
         sockets=None,
         width=None,
         height=None,
-        background_color='{0} 100'.format(display_dict['standard_background']),
-        border_color=display_dict['currency_orb_border'],
-        text_color='{0} 50'.format(display_dict['text']),
-        font_size=display_dict['min_font_size'],
+        background_color="{0} 100".format(display_dict["standard_background"]),
+        border_color=display_dict["currency_orb_border"],
+        text_color="{0} 50".format(display_dict["text"]),
+        font_size=display_dict["min_font_size"],
         minimap_size=None,
         minimap_color=None,
         minimap_shape=None,
-        sound='None',
+        sound="None",
         playeffect=None
     ):
         """
@@ -420,20 +420,20 @@ class FilterTemplates:
         class_text=None,
         base_text=None,
         item_level=None,
-        rarity='Rare',
+        rarity="Rare",
         linked_sockets=None,
         socket_group=None,
         sockets=None,
         width=None,
         height=None,
-        background_color='{0} 100'.format(display_dict['standard_background']),
-        border_color=display_dict['rare'],
-        text_color='{0} 50'.format(display_dict['text']),
-        font_size=display_dict['min_font_size'],
+        background_color="{0} 100".format(display_dict["standard_background"]),
+        border_color=display_dict["rare"],
+        text_color="{0} 50".format(display_dict["text"]),
+        font_size=display_dict["min_font_size"],
         minimap_size=None,
         minimap_color=None,
         minimap_shape=None,
-        sound='None',
+        sound="None",
         playeffect=None
     ):
         """
@@ -467,14 +467,14 @@ class FilterTemplates:
         description=None,
         class_text=None,
         base_text=None,
-        background_color=display_dict['standard_background'],
-        border_color=display_dict['card_border'],
-        text_color=display_dict['card_text'],
-        font_size=display_dict['default_font_size'],
+        background_color=display_dict["standard_background"],
+        border_color=display_dict["card_border"],
+        text_color=display_dict["card_text"],
+        font_size=display_dict["default_font_size"],
         minimap_size=None,
         minimap_color=None,
         minimap_shape=None,
-        sound='9 225',
+        sound="9 225",
         playeffect=None
     ):
         """
@@ -502,15 +502,15 @@ class FilterTemplates:
         class_text=None,
         base_text=None,
         has_mod=None,
-        background_color=display_dict['standard_background'],
-        border_color=display_dict['league_border'],
-        text_color=display_dict['league_text'],
-        font_size=display_dict['rare_font_size'],
+        background_color=display_dict["standard_background"],
+        border_color=display_dict["league_border"],
+        text_color=display_dict["league_text"],
+        font_size=display_dict["rare_font_size"],
         minimap_size=1,
-        minimap_color=display_dict['minimap_color_special'],
-        minimap_shape=display_dict['minimap_icon_special'],
-        sound='4 250',
-        playeffect=display_dict['minimap_color_special']
+        minimap_color=display_dict["minimap_color_special"],
+        minimap_shape=display_dict["minimap_icon_special"],
+        sound="4 250",
+        playeffect=display_dict["minimap_color_special"]
     ):
         """
         Template for various special items, mostly consisting of league items.
@@ -537,14 +537,14 @@ class FilterTemplates:
         description=None,
         class_text=None,
         base_text=None,
-        background_color=display_dict['standard_background'],
-        border_color=display_dict['quest'],
-        text_color=display_dict['quest'],
-        font_size=display_dict['important_font_size'],
+        background_color=display_dict["standard_background"],
+        border_color=display_dict["quest"],
+        text_color=display_dict["quest"],
+        font_size=display_dict["important_font_size"],
         minimap_size=None,
         minimap_color=None,
         minimap_shape=None,
-        sound='2 300',
+        sound="2 300",
         playeffect=None
     ):
         """
@@ -565,7 +565,7 @@ class FilterTemplates:
             playeffect=playeffect,
         )
 
-    def hidden_item(self, *args, description='Hide all other instances', class_text=None, base_text=None):
+    def hidden_item(self, *args, description="Hide all other instances", class_text=None, base_text=None):
         """
         Template to hide items from showing.
         """
@@ -574,8 +574,8 @@ class FilterTemplates:
             description=description,
             class_text=class_text,
             base_text=base_text,
-            font_size=display_dict['min_font_size'],
-            sound='None',
+            font_size=display_dict["min_font_size"],
+            sound="None",
         )
 
 
@@ -589,7 +589,7 @@ class BaseTemplate:
         self.debug = debug
 
         if debug:
-            logger.info('Initializing BaseTemplate class.')
+            logger.info("Initializing BaseTemplate class.")
 
     def write_rule(
         self,
@@ -658,79 +658,79 @@ class BaseTemplate:
         :param playeffect: Filter application to set glow aura of item.
         """
         if description is not None:
-            self.filter_file.write('# {0}.\n'.format(description))
+            self.filter_file.write("# {0}.\n".format(description))
         if show_item:
-            self.filter_file.write('Show\n')
+            self.filter_file.write("Show\n")
         else:
-            self.filter_file.write('Hide\n')
+            self.filter_file.write("Hide\n")
 
         # Limitations to filter on.
         if has_mod is not None:
-            self.filter_file.write('    HasExplicitMod {0}\n'.format(self._format_item_text(has_mod)))
+            self.filter_file.write("    HasExplicitMod {0}\n".format(self._format_item_text(has_mod)))
         if has_influence is not None:
-            self.filter_file.write('    HasInfluence {0}\n'.format(self._format_item_text(has_influence)))
+            self.filter_file.write("    HasInfluence {0}\n".format(self._format_item_text(has_influence)))
         if is_fractured is not None:
-            self.filter_file.write('    FracturedItem {0}\n'.format(self._format_item_text(is_fractured)))
+            self.filter_file.write("    FracturedItem {0}\n".format(self._format_item_text(is_fractured)))
         if is_synthesized is not None:
-            self.filter_file.write('    SynthesisedItem {0}\n'.format(self._format_item_text(is_synthesized)))
+            self.filter_file.write("    SynthesisedItem {0}\n".format(self._format_item_text(is_synthesized)))
         if is_mirrored is not None:
-            self.filter_file.write('    Mirrored {0}\n'.format(self._format_item_text(is_mirrored)))
+            self.filter_file.write("    Mirrored {0}\n".format(self._format_item_text(is_mirrored)))
         if is_replica is not None:
-            self.filter_file.write('    Replica {0}\n'.format(self._format_item_text(is_replica)))
+            self.filter_file.write("    Replica {0}\n".format(self._format_item_text(is_replica)))
 
         if area_level is not None:
-            self.filter_file.write('    AreaLevel {0}\n'.format(str(area_level).strip()))
+            self.filter_file.write("    AreaLevel {0}\n".format(str(area_level).strip()))
         if item_level is not None:
-            self.filter_file.write('    ItemLevel {0}\n'.format(str(item_level).strip()))
+            self.filter_file.write("    ItemLevel {0}\n".format(str(item_level).strip()))
         if class_text is not None:
-            self.filter_file.write('    Class {0}\n'.format(self._format_item_text(class_text)))
+            self.filter_file.write("    Class {0}\n".format(self._format_item_text(class_text)))
         if base_text is not None:
-            self.filter_file.write('    BaseType {0}\n'.format(self._format_item_text(base_text)))
+            self.filter_file.write("    BaseType {0}\n".format(self._format_item_text(base_text)))
 
         if linked_sockets is not None:
-            self.filter_file.write('    LinkedSockets >= {0}\n'.format(str(linked_sockets).strip()))
+            self.filter_file.write("    LinkedSockets >= {0}\n".format(str(linked_sockets).strip()))
         if socket_group is not None:
-            self.filter_file.write('    SocketGroup >= {0}\n'.format(str(socket_group).strip()))
+            self.filter_file.write("    SocketGroup >= {0}\n".format(str(socket_group).strip()))
         if sockets is not None:
-            self.filter_file.write('    Sockets {0}\n'.format(str(sockets).strip()))
+            self.filter_file.write("    Sockets {0}\n".format(str(sockets).strip()))
 
         if map_tier is not None:
-            self.filter_file.write('    MapTier {0}\n'.format(str(map_tier).strip()))
+            self.filter_file.write("    MapTier {0}\n".format(str(map_tier).strip()))
         if rarity is not None:
-            self.filter_file.write('    Rarity = {0}\n'.format(str(rarity).strip()))
+            self.filter_file.write("    Rarity = {0}\n".format(str(rarity).strip()))
         if quality is not None:
-            self.filter_file.write('    Quality {0}\n'.format(str(quality).strip()))
+            self.filter_file.write("    Quality {0}\n".format(str(quality).strip()))
 
         if height is not None:
-            self.filter_file.write('    Height {0}\n'.format(str(height).strip()))
+            self.filter_file.write("    Height {0}\n".format(str(height).strip()))
         if width is not None:
-            self.filter_file.write('    Width {0}\n'.format(str(width).strip()))
+            self.filter_file.write("    Width {0}\n".format(str(width).strip()))
 
         # Values to set if filter match is found.
         if background_color is not None:
-            self.filter_file.write('    SetBackgroundColor {0}\n'.format(str(background_color).strip()))
+            self.filter_file.write("    SetBackgroundColor {0}\n".format(str(background_color).strip()))
         if border_color is not None:
-            self.filter_file.write('    SetBorderColor {0}\n'.format(str(border_color).strip()))
+            self.filter_file.write("    SetBorderColor {0}\n".format(str(border_color).strip()))
         if text_color is not None:
-            self.filter_file.write('    SetTextColor {0}\n'.format(str(text_color).strip()))
+            self.filter_file.write("    SetTextColor {0}\n".format(str(text_color).strip()))
         if font_size is not None:
-            self.filter_file.write('    SetFontSize {0}\n'.format(str(font_size).strip()))
+            self.filter_file.write("    SetFontSize {0}\n".format(str(font_size).strip()))
         if sound is not None:
-            self.filter_file.write('    PlayAlertSound {0}\n'.format(str(sound).strip()))
+            self.filter_file.write("    PlayAlertSound {0}\n".format(str(sound).strip()))
         if minimap_size is not None or minimap_color is not None or minimap_shape is not None:
             # Check that all three are present.
             if minimap_color is None or minimap_size is None or minimap_shape is None:
-                raise ValueError('Either all three minimap values must be provided, or none.')
+                raise ValueError("Either all three minimap values must be provided, or none.")
             self.filter_file.write(
-                '    MinimapIcon {0} {1} {2}\n'.format(
+                "    MinimapIcon {0} {1} {2}\n".format(
                     str(minimap_size).strip(),
                     str(minimap_color).strip(),
                     str(minimap_shape).strip(),
                 )
             )
         if playeffect is not None:
-            self.filter_file.write('    PlayEffect {0}\n'.format(str(playeffect).strip()))
-        self.filter_file.write('\n')
+            self.filter_file.write("    PlayEffect {0}\n".format(str(playeffect).strip()))
+        self.filter_file.write("\n")
 
     def _format_item_text(self, item_text):
         """
@@ -742,12 +742,12 @@ class BaseTemplate:
         # Check format of item.
         if isinstance(item_text, list) or isinstance(item_text, tuple):
             # Item is array or tuple. Format each value within.
-            formatted_text = ''
+            formatted_text = ""
 
             # Loop through all values in set and format each.
             for item in item_text:
                 if len(formatted_text) > 0:
-                    formatted_text += ' '
+                    formatted_text += " "
                 formatted_text += self._format_item_text(item)
 
             # Return formatted set.
@@ -774,4 +774,4 @@ class BaseTemplate:
 
         else:
             # Item is neither set or string.
-            raise TypeError('Passed item must be either set (list/tuple) or string value.')
+            raise TypeError("Passed item must be either set (list/tuple) or string value.")

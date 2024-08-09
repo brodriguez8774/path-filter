@@ -28,11 +28,11 @@ class JewelParser:
         self.debug = debug
 
         # Section Start.
-        self.filter_file.write('\n')
-        self.filter_file.write('# ====================== #\n')
-        self.filter_file.write('# === [{0}] - Jewels === #\n'.format(self.parse_num))
-        self.filter_file.write('# ====================== #\n')
-        self.filter_file.write('\n')
+        self.filter_file.write("\n")
+        self.filter_file.write("# ====================== #\n")
+        self.filter_file.write("# === [{0}] - Jewels === #\n".format(self.parse_num))
+        self.filter_file.write("# ====================== #\n")
+        self.filter_file.write("\n")
 
         self.parse_standard()
         self.parse_abyss()
@@ -42,53 +42,53 @@ class JewelParser:
         """"""
         self.parse_subnum += 1
 
-        self.filter_file.write('\n')
-        self.filter_file.write('# ---------------------------------- #\n')
+        self.filter_file.write("\n")
+        self.filter_file.write("# ---------------------------------- #\n")
         self.filter_file.write(
-            '# --- [{0}.{1}] - Standard Jewels --- #\n'.format(self.parse_num, str(self.parse_subnum).zfill(2))
+            "# --- [{0}.{1}] - Standard Jewels --- #\n".format(self.parse_num, str(self.parse_subnum).zfill(2))
         )
-        self.filter_file.write('# ---------------------------------- #\n')
-        self.filter_file.write('\n')
+        self.filter_file.write("# ---------------------------------- #\n")
+        self.filter_file.write("\n")
 
         self.template.special_item(
-            base_text=['Cobalt Jewel', 'Crimson Jewel', 'Viridian Jewel'],
+            base_text=["Cobalt Jewel", "Crimson Jewel", "Viridian Jewel"],
             minimap_size=2,
-            minimap_shape=display_dict['minimap_icon_jewel'],
+            minimap_shape=display_dict["minimap_icon_jewel"],
         )
 
     def parse_abyss(self):
         """"""
         self.parse_subnum += 1
 
-        self.filter_file.write('\n')
-        self.filter_file.write('# ------------------------------- #\n')
+        self.filter_file.write("\n")
+        self.filter_file.write("# ------------------------------- #\n")
         self.filter_file.write(
-            '# --- [{0}.{1}] - Abyss Jewels --- #\n'.format(self.parse_num, str(self.parse_subnum).zfill(2))
+            "# --- [{0}.{1}] - Abyss Jewels --- #\n".format(self.parse_num, str(self.parse_subnum).zfill(2))
         )
-        self.filter_file.write('# ------------------------------- #\n')
-        self.filter_file.write('\n')
+        self.filter_file.write("# ------------------------------- #\n")
+        self.filter_file.write("\n")
 
         self.template.special_item(
-            class_text='Abyss Jewel',
+            class_text="Abyss Jewel",
             minimap_size=1,
-            minimap_shape=display_dict['minimap_icon_jewel'],
+            minimap_shape=display_dict["minimap_icon_jewel"],
         )
 
     def parse_cluster(self):
         """"""
         self.parse_subnum += 1
 
-        self.filter_file.write('\n')
-        self.filter_file.write('# --------------------------------- #\n')
+        self.filter_file.write("\n")
+        self.filter_file.write("# --------------------------------- #\n")
         self.filter_file.write(
-            '# --- [{0}.{1}] - Cluster Jewels --- #\n'.format(self.parse_num, str(self.parse_subnum).zfill(2))
+            "# --- [{0}.{1}] - Cluster Jewels --- #\n".format(self.parse_num, str(self.parse_subnum).zfill(2))
         )
-        self.filter_file.write('# --------------------------------- #\n')
-        self.filter_file.write('\n')
+        self.filter_file.write("# --------------------------------- #\n")
+        self.filter_file.write("\n")
 
         self.template.special_item(
-            base_text='Cluster Jewel',
+            base_text="Cluster Jewel",
             minimap_size=0,
-            minimap_shape=display_dict['minimap_icon_jewel'],
-            sound='4 300',
+            minimap_shape=display_dict["minimap_icon_jewel"],
+            sound="4 300",
         )

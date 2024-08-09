@@ -15,7 +15,7 @@ import logging.config
 # Variables to help run logging.
 LOG_VERSION = 2.0
 first_logging_call = True
-log_handler_class = 'logging.handlers.RotatingFileHandler'
+log_handler_class = "logging.handlers.RotatingFileHandler"
 log_handler_file_max_bytes = 1024 * 1024 * 10
 log_handler_file_backup_count = 10
 
@@ -56,7 +56,7 @@ def _initialize_logger_settings(debug=False):
     """
     # Determine logging path.
     project_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-    log_dir = os.path.join(project_dir, 'resources/logs')
+    log_dir = os.path.join(project_dir, "resources/logs")
 
     # Check if logging path exists.
     if not os.path.exists(log_dir):
@@ -74,8 +74,8 @@ def _initialize_logger_settings(debug=False):
     # Optionally test that logging is working as expected.
     if debug:
         logger = logging.getLogger(__name__)
-        logger.info('Logging initialized.')
-        logger.debug('Logging directory: {0}'.format(log_dir))
+        logger.info("Logging initialized.")
+        logger.debug("Logging directory: {0}".format(log_dir))
 
 
 def _create_logging_dict(log_directory):
@@ -85,91 +85,91 @@ def _create_logging_dict(log_directory):
     :return: Dictionary of logging options.
     """
     return {
-        'version': 1,
-        'filters': {
+        "version": 1,
+        "filters": {
             # Default level filters.
-            'exclude_info_plus': {
-                '()': _ExcludeInfoPlusFilter,
+            "exclude_info_plus": {
+                "()": _ExcludeInfoPlusFilter,
             },
-            'exclude_warnings_plus': {
-                '()': _ExcludeWarningsPlusFilter,
+            "exclude_warnings_plus": {
+                "()": _ExcludeWarningsPlusFilter,
             },
-            'exclude_error_plus': {
-                '()': _ExcludeErrorPlusFilter,
+            "exclude_error_plus": {
+                "()": _ExcludeErrorPlusFilter,
             },
         },
-        'formatters': {
+        "formatters": {
             # Minimal logging. Only includes message.
-            'minimal': {
-                'format': '%(message)s',
+            "minimal": {
+                "format": "%(message)s",
             },
             # Simple logging. Includes message type and actual message.
-            'simple': {
-                'format': '[%(levelname)s] [%(filename)s %(lineno)d]: %(message)s',
+            "simple": {
+                "format": "[%(levelname)s] [%(filename)s %(lineno)d]: %(message)s",
             },
             # Basic logging. Includes date, message type, file originated, and actual message.
-            'standard': {
-                'format': '%(asctime)s [%(levelname)s] [%(filename)s %(lineno)d]: %(message)s',
+            "standard": {
+                "format": "%(asctime)s [%(levelname)s] [%(filename)s %(lineno)d]: %(message)s",
             },
             # Verbose logging. Includes standard plus the process number and thread id.
-            'verbose': {
-                'format': '%(asctime)s [%(levelname)s] [%(filename)s %(lineno)d] || %(process)d %(thread)d || %(message)s',
+            "verbose": {
+                "format": "%(asctime)s [%(levelname)s] [%(filename)s %(lineno)d] || %(process)d %(thread)d || %(message)s",
             },
         },
-        'handlers': {
+        "handlers": {
             # Sends log message to the void. May be useful for debugging.
-            'null': {
-                'class': 'logging.NullHandler',
+            "null": {
+                "class": "logging.NullHandler",
             },
             # To console.
-            'console': {
-                'level': 'INFO',
-                'class': 'logging.StreamHandler',
-                'formatter': 'simple',
+            "console": {
+                "level": "INFO",
+                "class": "logging.StreamHandler",
+                "formatter": "simple",
             },
             # Debug Level - To to file.
-            'file_debug': {
-                'level': 'DEBUG',
-                'class': log_handler_class,
-                'filename': os.path.join(log_directory, 'debug.log'),
-                'maxBytes': log_handler_file_max_bytes,
-                'backupCount': log_handler_file_backup_count,
-                'formatter': 'standard',
+            "file_debug": {
+                "level": "DEBUG",
+                "class": log_handler_class,
+                "filename": os.path.join(log_directory, "debug.log"),
+                "maxBytes": log_handler_file_max_bytes,
+                "backupCount": log_handler_file_backup_count,
+                "formatter": "standard",
             },
             # Info Level - To file.
-            'file_info': {
-                'level': 'INFO',
-                'class': log_handler_class,
-                'filename': os.path.join(log_directory, 'info.log'),
-                'maxBytes': log_handler_file_max_bytes,
-                'backupCount': log_handler_file_backup_count,
-                'formatter': 'standard',
+            "file_info": {
+                "level": "INFO",
+                "class": log_handler_class,
+                "filename": os.path.join(log_directory, "info.log"),
+                "maxBytes": log_handler_file_max_bytes,
+                "backupCount": log_handler_file_backup_count,
+                "formatter": "standard",
             },
             # Warn Level - To file.
-            'file_warn': {
-                'level': 'WARNING',
-                'class': log_handler_class,
-                'filename': os.path.join(log_directory, 'warn.log'),
-                'maxBytes': log_handler_file_max_bytes,
-                'backupCount': log_handler_file_backup_count,
-                'formatter': 'verbose',
+            "file_warn": {
+                "level": "WARNING",
+                "class": log_handler_class,
+                "filename": os.path.join(log_directory, "warn.log"),
+                "maxBytes": log_handler_file_max_bytes,
+                "backupCount": log_handler_file_backup_count,
+                "formatter": "verbose",
             },
             # Error Level - To file.
-            'file_error': {
-                'level': 'ERROR',
-                'class': log_handler_class,
-                'filename': os.path.join(log_directory, 'error.log'),
-                'maxBytes': log_handler_file_max_bytes,
-                'backupCount': log_handler_file_backup_count,
-                'formatter': 'verbose',
+            "file_error": {
+                "level": "ERROR",
+                "class": log_handler_class,
+                "filename": os.path.join(log_directory, "error.log"),
+                "maxBytes": log_handler_file_max_bytes,
+                "backupCount": log_handler_file_backup_count,
+                "formatter": "verbose",
             },
         },
-        'loggers': {
+        "loggers": {
             # All basic logging.
-            '': {
-                'handlers': ['console', 'file_debug', 'file_info', 'file_warn', 'file_error'],
-                'level': 'NOTSET',
-                'propagate': False,
+            "": {
+                "handlers": ["console", "file_debug", "file_info", "file_warn", "file_error"],
+                "level": "NOTSET",
+                "propagate": False,
             },
         },
     }
@@ -203,11 +203,11 @@ def add_logging_level(levelName, levelNum, methodName=None):
         methodName = levelName.lower()
 
     if hasattr(logging, levelName):
-        raise AttributeError('{} already defined in logging module'.format(levelName))
+        raise AttributeError("{} already defined in logging module".format(levelName))
     if hasattr(logging, methodName):
-        raise AttributeError('{} already defined in logging module'.format(methodName))
+        raise AttributeError("{} already defined in logging module".format(methodName))
     if hasattr(logging.getLoggerClass(), methodName):
-        raise AttributeError('{} already defined in logger class'.format(methodName))
+        raise AttributeError("{} already defined in logger class".format(methodName))
 
     # This method was inspired by the answers to Stack Overflow post
     # http://stackoverflow.com/q/2183233/2988730, especially

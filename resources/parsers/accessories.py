@@ -38,15 +38,15 @@ class AccessoryParser:
         self.debug = debug
 
         # Update dict values.
-        filter_dict['base_drop_level'] = base_drop_level
-        filter_dict['level_rarity_modifier'] = level_rarity_modifier
+        filter_dict["base_drop_level"] = base_drop_level
+        filter_dict["level_rarity_modifier"] = level_rarity_modifier
 
         # Section Start.
-        self.filter_file.write('\n')
-        self.filter_file.write('# =========================== #\n')
-        self.filter_file.write('# === [{0}] - Accessories === #\n'.format(self.parse_num))
-        self.filter_file.write('# =========================== #\n')
-        self.filter_file.write('\n')
+        self.filter_file.write("\n")
+        self.filter_file.write("# =========================== #\n")
+        self.filter_file.write("# === [{0}] - Accessories === #\n".format(self.parse_num))
+        self.filter_file.write("# =========================== #\n")
+        self.filter_file.write("\n")
 
         self.parse_amulets()
         self.parse_belts()
@@ -58,38 +58,38 @@ class AccessoryParser:
         :param item: Accessory item to determine filtering on.
         :param exception_list: List of exceptions. If item is set to hide but in this list, then show for first levels.
         """
-        item_type = item['Class']
+        item_type = item["Class"]
 
-        if item_type == 'Amulet':
+        if item_type == "Amulet":
             hidden_list = self.hidden_amulets
-        elif item_type == 'Belt':
+        elif item_type == "Belt":
             hidden_list = self.hidden_belts
         else:
             hidden_list = self.hidden_rings
 
         # Determine level drop modifiers.
-        rare_drop_modifier = filter_dict['base_drop_level'] + (filter_dict['level_rarity_modifier'] * 2)
-        magic_drop_modifier = filter_dict['base_drop_level'] + filter_dict['level_rarity_modifier']
-        normal_drop_modifier = filter_dict['base_drop_level']
+        rare_drop_modifier = filter_dict["base_drop_level"] + (filter_dict["level_rarity_modifier"] * 2)
+        magic_drop_modifier = filter_dict["base_drop_level"] + filter_dict["level_rarity_modifier"]
+        normal_drop_modifier = filter_dict["base_drop_level"]
 
-        self.filter_file.write('\n\n# === {0}: {1} === #\n'.format(item_type, item['Name']))
+        self.filter_file.write("\n\n# === {0}: {1} === #\n".format(item_type, item["Name"]))
 
-        if item['Name'] not in hidden_list:
+        if item["Name"] not in hidden_list:
             # Display accessory normally.
 
             if self.debug:
-                logger.info('Not hidden: {0}'.format(item['Name']))
+                logger.info("Not hidden: {0}".format(item["Name"]))
 
             self.template.rare_item(
-                base_text=item['Name'],
+                base_text=item["Name"],
                 background_color=background_color,
             )
             self.template.uncommon_item(
-                base_text=item['Name'],
+                base_text=item["Name"],
                 background_color=background_color,
             )
             self.template.common_item(
-                base_text=item['Name'],
+                base_text=item["Name"],
                 background_color=background_color,
             )
 
@@ -98,23 +98,23 @@ class AccessoryParser:
             # For some select accessories, we make an exception and show it for the first levels.
 
             if self.debug:
-                logger.info('Hidden: {0}'.format(item['Name']))
+                logger.info("Hidden: {0}".format(item["Name"]))
 
-            if item['Name'] in exception_list:
+            if item["Name"] in exception_list:
                 # Exception. Show for first levels, as determined by base_drop_level and rarity_level_modifier.
                 self.template.rare_item(
-                    base_text=item['Name'],
-                    item_level='<= {0}'.format(item['DropLevel'] + rare_drop_modifier),
+                    base_text=item["Name"],
+                    item_level="<= {0}".format(item["DropLevel"] + rare_drop_modifier),
                     background_color=background_color,
                 )
                 self.template.uncommon_item(
-                    base_text=item['Name'],
-                    item_level='<= {0}'.format(item['DropLevel'] + magic_drop_modifier),
+                    base_text=item["Name"],
+                    item_level="<= {0}".format(item["DropLevel"] + magic_drop_modifier),
                     background_color=background_color,
                 )
                 self.template.common_item(
-                    base_text=item['Name'],
-                    item_level='<= {0}'.format(item['DropLevel'] + normal_drop_modifier),
+                    base_text=item["Name"],
+                    item_level="<= {0}".format(item["DropLevel"] + normal_drop_modifier),
                     background_color=background_color,
                 )
 
@@ -124,43 +124,43 @@ class AccessoryParser:
         """
         self.parse_subnum += 1
 
-        self.filter_file.write('\n')
-        self.filter_file.write('# -------------------------- #\n')
+        self.filter_file.write("\n")
+        self.filter_file.write("# -------------------------- #\n")
         self.filter_file.write(
-            '# --- [{0}.{1}] - Amulets --- #\n'.format(self.parse_num, str(self.parse_subnum).zfill(2))
+            "# --- [{0}.{1}] - Amulets --- #\n".format(self.parse_num, str(self.parse_subnum).zfill(2))
         )
-        self.filter_file.write('# -------------------------- #\n')
-        self.filter_file.write('\n')
+        self.filter_file.write("# -------------------------- #\n")
+        self.filter_file.write("\n")
 
         if self.debug:
-            logger.info('')
-            logger.info('Handling amulets.')
+            logger.info("")
+            logger.info("Handling amulets.")
 
-        with open('resources/data/accessories/amulets.json', 'r') as json_file:
+        with open("resources/data/accessories/amulets.json", "r") as json_file:
 
             # Loop through all items in json.
             json_data = json.load(json_file)
             for item in json_data:
 
                 # Determine if item should get special background color, based on item type.
-                background_color = display_dict['standard_background']
-                if item['Name'] == 'Amber Amulet':
-                    background_color = display_dict['A']
-                elif item['Name'] == 'Jade Amulet':
-                    background_color = display_dict['Ev']
-                elif item['Name'] == 'Lapis Amulet':
-                    background_color = display_dict['En']
-                elif item['Name'] == 'Agate Amulet':
-                    background_color = display_dict['En/A']
-                elif item['Name'] == 'Citrine Amulet':
-                    background_color = display_dict['A/Ev']
-                elif item['Name'] == 'Turquoise Amulet':
-                    background_color = display_dict['Ev/En']
+                background_color = display_dict["standard_background"]
+                if item["Name"] == "Amber Amulet":
+                    background_color = display_dict["A"]
+                elif item["Name"] == "Jade Amulet":
+                    background_color = display_dict["Ev"]
+                elif item["Name"] == "Lapis Amulet":
+                    background_color = display_dict["En"]
+                elif item["Name"] == "Agate Amulet":
+                    background_color = display_dict["En/A"]
+                elif item["Name"] == "Citrine Amulet":
+                    background_color = display_dict["A/Ev"]
+                elif item["Name"] == "Turquoise Amulet":
+                    background_color = display_dict["Ev/En"]
 
                 # Create filter for item.
                 self.handle_accessory(
                     item,
-                    ['Coral Amulet', 'Paua Amulet'],
+                    ["Coral Amulet", "Paua Amulet"],
                     background_color,
                 )
 
@@ -170,41 +170,41 @@ class AccessoryParser:
         """
         self.parse_subnum += 1
 
-        self.filter_file.write('\n')
-        self.filter_file.write('# ------------------------ #\n')
+        self.filter_file.write("\n")
+        self.filter_file.write("# ------------------------ #\n")
         self.filter_file.write(
-            '# --- [{0}.{1}] - Belts --- #\n'.format(self.parse_num, str(self.parse_subnum).zfill(2))
+            "# --- [{0}.{1}] - Belts --- #\n".format(self.parse_num, str(self.parse_subnum).zfill(2))
         )
-        self.filter_file.write('# ------------------------ #\n')
-        self.filter_file.write('\n')
+        self.filter_file.write("# ------------------------ #\n")
+        self.filter_file.write("\n")
 
         if self.debug:
-            logger.info('')
-            logger.info('Handling belts.')
+            logger.info("")
+            logger.info("Handling belts.")
 
-        with open('resources/data/accessories/belts.json', 'r') as json_file:
+        with open("resources/data/accessories/belts.json", "r") as json_file:
 
             # Loop through all items in json.
             json_data = json.load(json_file)
             for item in json_data:
 
                 # Determine if item should get special background color, based on item type.
-                background_color = display_dict['standard_background']
-                if item['Name'] == 'Chain Belt':
-                    background_color = display_dict['En']
-                elif item['Name'] == 'Rustic Sash':
-                    background_color = display_dict['En/A']
-                elif item['Name'] == 'Heavy Belt':
-                    background_color = display_dict['A']
-                elif item['Name'] == 'Vanguard Belt':
-                    background_color = display_dict['A/Ev']
-                elif item['Name'] == 'Crystal Belt':
-                    background_color = display_dict['En']
+                background_color = display_dict["standard_background"]
+                if item["Name"] == "Chain Belt":
+                    background_color = display_dict["En"]
+                elif item["Name"] == "Rustic Sash":
+                    background_color = display_dict["En/A"]
+                elif item["Name"] == "Heavy Belt":
+                    background_color = display_dict["A"]
+                elif item["Name"] == "Vanguard Belt":
+                    background_color = display_dict["A/Ev"]
+                elif item["Name"] == "Crystal Belt":
+                    background_color = display_dict["En"]
 
                 # Create filter for item.
                 self.handle_accessory(
                     item,
-                    ['Chain Belt', 'Rustic Sash', 'Leather Belt'],
+                    ["Chain Belt", "Rustic Sash", "Leather Belt"],
                     background_color,
                 )
 
@@ -214,40 +214,40 @@ class AccessoryParser:
         """
         self.parse_subnum += 1
 
-        self.filter_file.write('\n')
-        self.filter_file.write('# ------------------------ #\n')
+        self.filter_file.write("\n")
+        self.filter_file.write("# ------------------------ #\n")
         self.filter_file.write(
-            '# --- [{0}.{1}] - Rings --- #\n'.format(self.parse_num, str(self.parse_subnum).zfill(2))
+            "# --- [{0}.{1}] - Rings --- #\n".format(self.parse_num, str(self.parse_subnum).zfill(2))
         )
-        self.filter_file.write('# ------------------------ #\n')
-        self.filter_file.write('\n')
+        self.filter_file.write("# ------------------------ #\n")
+        self.filter_file.write("\n")
 
         if self.debug:
-            logger.info('')
-            logger.info('Handling rings.')
+            logger.info("")
+            logger.info("Handling rings.")
 
-        with open('resources/data/accessories/rings.json', 'r') as json_file:
+        with open("resources/data/accessories/rings.json", "r") as json_file:
 
             # Loop through all items in json.
             json_data = json.load(json_file)
             for item in json_data:
 
                 # Determine if item should get special background color, based on item type.
-                background_color = display_dict['standard_background']
-                if item['Name'] == 'Sapphire Ring':
-                    background_color = display_dict['En']
-                elif item['Name'] == 'Topaz Ring':
-                    background_color = display_dict['A/Ev']
-                elif item['Name'] == 'Ruby Ring':
-                    background_color = display_dict['A']
-                elif item['Name'] == 'Moonstone Ring':
-                    background_color = display_dict['En']
-                elif item['Name'] == 'Amethyst Ring':
-                    background_color = display_dict['Ev']
+                background_color = display_dict["standard_background"]
+                if item["Name"] == "Sapphire Ring":
+                    background_color = display_dict["En"]
+                elif item["Name"] == "Topaz Ring":
+                    background_color = display_dict["A/Ev"]
+                elif item["Name"] == "Ruby Ring":
+                    background_color = display_dict["A"]
+                elif item["Name"] == "Moonstone Ring":
+                    background_color = display_dict["En"]
+                elif item["Name"] == "Amethyst Ring":
+                    background_color = display_dict["Ev"]
 
                 # Create filter for item.
                 self.handle_accessory(
                     item,
-                    ['Coral Ring', 'Sapphire Ring', 'Topaz Ring', 'Ruby Ring', 'Two-Stone Ring'],
+                    ["Coral Ring", "Sapphire Ring", "Topaz Ring", "Ruby Ring", "Two-Stone Ring"],
                     background_color,
                 )

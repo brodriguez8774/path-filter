@@ -25,25 +25,25 @@ logger = init_logging.get_logger(__name__)
 
 
 defense_choices = [
-    'A',
-    'Ev',
-    'En',
-    'A/Ev',
-    'Ev/En',
-    'A/En',
+    "A",
+    "Ev",
+    "En",
+    "A/Ev",
+    "Ev/En",
+    "A/En",
 ]
 weapon_choices = [
-    'OneHandMaces',
-    'TwoHandMaces',
-    'OneHandAxes',
-    'TwoHandAxes',
-    'Daggers',
-    'Claws',
-    'Bows',
-    'Quivers',
-    'Sceptres',
-    'Wands',
-    'Shields',
+    "OneHandMaces",
+    "TwoHandMaces",
+    "OneHandAxes",
+    "TwoHandAxes",
+    "Daggers",
+    "Claws",
+    "Bows",
+    "Quivers",
+    "Sceptres",
+    "Wands",
+    "Shields",
 ]
 
 
@@ -73,7 +73,7 @@ def run_filter_generation():
         if ring_help:
             display_ring_help()
 
-        logger.info('Cancelling filter generation.')
+        logger.info("Cancelling filter generation.")
     else:
         # No help arg passed. Continue with actual filter generation.
         generate_filter(args)
@@ -99,79 +99,79 @@ def generate_filter(args, test_mode=False):
     hidden_rings = get_hidden_rings(args)
 
     # Display args.
-    logger.info('')
-    logger.info('Creating filter:')
+    logger.info("")
+    logger.info("Creating filter:")
     logger.info('    Filter Name: "{0}"'.format(file_name))
-    logger.info('    Weapon Types: {0}'.format(weapons))
-    if 'Shields' in weapons:
-        logger.info('    Shield Types: {0}'.format(shield_types))
-    logger.info('    Defense Types: {0}'.format(defenses))
-    logger.info('')
-    logger.info('    Drop Level Modifiers (from item base drop level):')
-    logger.info('        Base:     +{0}'.format(base_drop_level))
-    logger.info('        Magic:    +{0}'.format(base_drop_level + level_rarity_modifier))
-    logger.info('        Rare:     +{0}'.format(base_drop_level + (level_rarity_modifier * 2)))
-    logger.info('')
+    logger.info("    Weapon Types: {0}".format(weapons))
+    if "Shields" in weapons:
+        logger.info("    Shield Types: {0}".format(shield_types))
+    logger.info("    Defense Types: {0}".format(defenses))
+    logger.info("")
+    logger.info("    Drop Level Modifiers (from item base drop level):")
+    logger.info("        Base:     +{0}".format(base_drop_level))
+    logger.info("        Magic:    +{0}".format(base_drop_level + level_rarity_modifier))
+    logger.info("        Rare:     +{0}".format(base_drop_level + (level_rarity_modifier * 2)))
+    logger.info("")
     if len(hidden_amulets) > 0 or len(hidden_belts) > 0 or len(hidden_rings) > 0:
-        logger.info('    Note: For leveling purposes, some amulets/belts/rings will display')
-        logger.info('          early on, even if set to ' '"hidden".')
+        logger.info("    Note: For leveling purposes, some amulets/belts/rings will display")
+        logger.info("          early on, even if set to " '"hidden".')
         if len(hidden_amulets) > 0:
-            logger.info('    Hidden Amulets: {0}'.format(hidden_amulets))
+            logger.info("    Hidden Amulets: {0}".format(hidden_amulets))
         if len(hidden_belts) > 0:
-            logger.info('    Hidden Belts: {0}'.format(hidden_belts))
+            logger.info("    Hidden Belts: {0}".format(hidden_belts))
         if len(hidden_rings) > 0:
-            logger.info('    Hidden Rings: {0}'.format(hidden_rings))
-        logger.info('')
+            logger.info("    Hidden Rings: {0}".format(hidden_rings))
+        logger.info("")
 
     # Create generation folder, if not present.
     try:
-        os.mkdir('./generated_filters')
+        os.mkdir("./generated_filters")
     except FileExistsError:
         pass  # Folder already exists. This is fine.
 
     # Create filter.
     parse_num = 0
-    with open('generated_filters/{0}'.format(file_name), "w") as filter_file:
-        filter_file.write('\n')
-        filter_file.write('#==============================#\n')
-        filter_file.write('# Waffyblade - POE Loot Filter #\n')
-        filter_file.write('#==============================#\n')
-        filter_file.write('#\n#\n')
-        filter_file.write('# Focuses on simplified drops, compared to other filters like Neversink Filterblade.\n')
-        filter_file.write('#\n#\n')
-        filter_file.write('# Generated with:\n')
-        filter_file.write('#     Base Drop Level: {0}\n'.format(base_drop_level))
-        filter_file.write('#     Level Rarity Modifier: {0}\n'.format(level_rarity_modifier))
-        filter_file.write('#\n')
-        filter_file.write('#     Weapons: {0}\n'.format(weapons))
-        if 'Shields' in weapons:
-            filter_file.write('#     Shields: {0}\n'.format(shield_types))
-        filter_file.write('#     Defense: {0}\n'.format(defenses))
-        filter_file.write('#     Hidden Amulets: {0}\n'.format(hidden_amulets))
-        filter_file.write('#     Hidden Belts: {0}\n'.format(hidden_belts))
-        filter_file.write('#     Hidden Rings: {0}\n'.format(hidden_rings))
-        filter_file.write('#     Show Hybrid Flasks: {0}\n'.format(hybrid_flask_bool))
-        filter_file.write('#\n')
-        filter_file.write('# Original Command:\n')
-        filter_file.write('#     python')
+    with open("generated_filters/{0}".format(file_name), "w") as filter_file:
+        filter_file.write("\n")
+        filter_file.write("#==============================#\n")
+        filter_file.write("# Waffyblade - POE Loot Filter #\n")
+        filter_file.write("#==============================#\n")
+        filter_file.write("#\n#\n")
+        filter_file.write("# Focuses on simplified drops, compared to other filters like Neversink Filterblade.\n")
+        filter_file.write("#\n#\n")
+        filter_file.write("# Generated with:\n")
+        filter_file.write("#     Base Drop Level: {0}\n".format(base_drop_level))
+        filter_file.write("#     Level Rarity Modifier: {0}\n".format(level_rarity_modifier))
+        filter_file.write("#\n")
+        filter_file.write("#     Weapons: {0}\n".format(weapons))
+        if "Shields" in weapons:
+            filter_file.write("#     Shields: {0}\n".format(shield_types))
+        filter_file.write("#     Defense: {0}\n".format(defenses))
+        filter_file.write("#     Hidden Amulets: {0}\n".format(hidden_amulets))
+        filter_file.write("#     Hidden Belts: {0}\n".format(hidden_belts))
+        filter_file.write("#     Hidden Rings: {0}\n".format(hidden_rings))
+        filter_file.write("#     Show Hybrid Flasks: {0}\n".format(hybrid_flask_bool))
+        filter_file.write("#\n")
+        filter_file.write("# Original Command:\n")
+        filter_file.write("#     python")
         orig_args = sys.argv
         for arg in orig_args:
-            if 'main.py' in arg or arg[0] == '-':
-                filter_file.write(' {0}'.format(arg))
+            if "main.py" in arg or arg[0] == "-":
+                filter_file.write(" {0}".format(arg))
             else:
                 filter_file.write(' "{0}"'.format(arg))
-        filter_file.write('\n#\n#\n')
+        filter_file.write("\n#\n#\n")
 
-        filter_file.write('# Sounds:\n')
-        filter_file.write('#     1 - Unique\n')
-        filter_file.write('#     2 - Quest Items\n')
-        filter_file.write('#     4 - League/Special Item\n')
-        filter_file.write('#     5 - Influenced Item\n')
-        filter_file.write('#     6 - High Slot Item\n')
-        filter_file.write('#     9 - Cards\n')
-        filter_file.write('#     10 - Rare Currency\n')
-        filter_file.write('#     13 - Map\n')
-        filter_file.write('#\n#\n')
+        filter_file.write("# Sounds:\n")
+        filter_file.write("#     1 - Unique\n")
+        filter_file.write("#     2 - Quest Items\n")
+        filter_file.write("#     4 - League/Special Item\n")
+        filter_file.write("#     5 - Influenced Item\n")
+        filter_file.write("#     6 - High Slot Item\n")
+        filter_file.write("#     9 - Cards\n")
+        filter_file.write("#     10 - Rare Currency\n")
+        filter_file.write("#     13 - Map\n")
+        filter_file.write("#\n#\n")
 
         if not test_mode:
             # Generate Table of Contents.
@@ -278,98 +278,98 @@ def define_argparse_args():
     """
     Defines and sets up argparse, to take in user-provided args.
     """
-    parser = argparse.ArgumentParser(description='Generates a loot filter file for path of exile.')
+    parser = argparse.ArgumentParser(description="Generates a loot filter file for path of exile.")
     parser.add_argument(
-        '-n',
-        '--name',
-        nargs='+',
-        help='Name for loot filter. ' 'Defaults to "path.filter" if not specified.',
+        "-n",
+        "--name",
+        nargs="+",
+        help="Name for loot filter. " 'Defaults to "path.filter" if not specified.',
     )
     parser.add_argument(
-        '-d',
-        '--defense',
-        nargs='+',
+        "-d",
+        "--defense",
+        nargs="+",
         choices=defense_choices,
-        help='Use to define desired armor types to show. ' 'Default shows all types.',
+        help="Use to define desired armor types to show. " "Default shows all types.",
     )
     parser.add_argument(
-        '-w',
-        '--weapons',
-        nargs='+',
+        "-w",
+        "--weapons",
+        nargs="+",
         choices=weapon_choices,
-        help='Use to define desired weapon types to show. ' 'Default shows all types.',
+        help="Use to define desired weapon types to show. " "Default shows all types.",
     )
     parser.add_argument(
-        '--shield_type',
-        nargs='+',
+        "--shield_type",
+        nargs="+",
         choices=defense_choices,
-        help='Used to define desired shield types to show. ' 'Default shows all types.',
+        help="Used to define desired shield types to show. " "Default shows all types.",
     )
     parser.add_argument(
-        '--base_drop_level',
+        "--base_drop_level",
         nargs=1,
         type=int,
-        help='Defines how many levels a weapon/armor item drop should display for, from when it starts spawning. '
-        'Defaults to 10.',
+        help="Defines how many levels a weapon/armor item drop should display for, from when it starts spawning. "
+        "Defaults to 10.",
     )
     parser.add_argument(
-        '--level_rarity_modifier',
+        "--level_rarity_modifier",
         nargs=1,
         type=int,
-        help='Defines how many additional levels to display a weapon/armor item drop, based on rarity. '
-        'Defaults to +5.',
+        help="Defines how many additional levels to display a weapon/armor item drop, based on rarity. "
+        "Defaults to +5.",
     )
     parser.add_argument(
-        '--show_hybrid_flasks',
-        action='store_true',
-        help='Determines if hybrid flasks should display or not. ' 'Defaults to false.',
+        "--show_hybrid_flasks",
+        action="store_true",
+        help="Determines if hybrid flasks should display or not. " "Defaults to false.",
     )
     parser.add_argument(
-        '--hide_amulets',
-        nargs='+',
+        "--hide_amulets",
+        nargs="+",
         choices=get_amulet_list(),
         help='Hides all passed amulets from filtering. For list of amulets, use the "--amulet_help" arg.',
     )
     parser.add_argument(
-        '--hide_belts',
-        nargs='+',
+        "--hide_belts",
+        nargs="+",
         choices=get_belt_list(),
         help='Hides all passed belts from filtering. For list of belts, use the "--belt_help" arg.',
     )
     parser.add_argument(
-        '--hide_rings',
-        nargs='+',
+        "--hide_rings",
+        nargs="+",
         choices=get_ring_list(),
         help='Hides all passed rings from filtering. For list of rings, use the "--ring_help" arg.',
     )
     parser.add_argument(
-        '--debug',
-        action='store_true',
-        help='Runs program in debug mode. ' 'Defaults to false.',
+        "--debug",
+        action="store_true",
+        help="Runs program in debug mode. " "Defaults to false.",
     )
     parser.add_argument(
-        '--amulet_help',
-        '--amulets_help',
-        '--help_amulets',
-        action='store_true',
+        "--amulet_help",
+        "--amulets_help",
+        "--help_amulets",
+        action="store_true",
         help='Displays available amulets to hide with the "--hide_amulets" command. '
-        'By default, all amulets display at all times.',
+        "By default, all amulets display at all times.",
     )
     parser.add_argument(
-        '--belt_help',
-        '--belts_help',
-        '--help_belts',
-        action='store_true',
+        "--belt_help",
+        "--belts_help",
+        "--help_belts",
+        action="store_true",
         help='Displays available belts to hide with the "--hide_belts" command. '
-        'By default, all belts display at all times.',
+        "By default, all belts display at all times.",
     )
     parser.add_argument(
-        '--ring_help',
-        '--rings_help',
-        '--help_rings',
-        action='store_true',
+        "--ring_help",
+        "--rings_help",
+        "--help_rings",
+        action="store_true",
         help='Displays available rings to hide with the "--hide_rings" command. '
-        'By default, all rings display at all times.',
+        "By default, all rings display at all times.",
     )
     return parser
 
@@ -392,19 +392,19 @@ def get_file_name(args):
     """
     if args.name is None:
         # Use default name.
-        return 'path.filter'
+        return "path.filter"
     else:
         # Use user-provided name.
-        file_name = ''
+        file_name = ""
         for item in args.name:
-            if file_name == '':
+            if file_name == "":
                 file_name = item
             else:
-                file_name += '_{0}'.format(item)
+                file_name += "_{0}".format(item)
 
         # Ensure it ends with ".filter".
         if not file_name.endswith(".filter"):
-            file_name += '.filter'
+            file_name += ".filter"
 
         return file_name
 
@@ -455,7 +455,7 @@ def get_base_drop_level(args):
     :param args: Argparse args.
     """
     if args.base_drop_level is None:
-        return filter_dict['base_drop_level']
+        return filter_dict["base_drop_level"]
     else:
         return args.base_drop_level[0]
 
@@ -467,7 +467,7 @@ def get_level_rarity_modifier(args):
     :param args: Argparse args.
     """
     if args.level_rarity_modifier is None:
-        return filter_dict['level_rarity_modifier']
+        return filter_dict["level_rarity_modifier"]
     else:
         return args.level_rarity_modifier[0]
 
@@ -558,11 +558,11 @@ def get_amulet_list():
     :return: List of all available amulets.
     """
     item_list = []
-    with open('resources/data/accessories/amulets.json', 'r') as json_file:
+    with open("resources/data/accessories/amulets.json", "r") as json_file:
         # Loop through all items in json.
         json_data = json.load(json_file)
         for item in json_data:
-            item_list.append(item['Name'])
+            item_list.append(item["Name"])
 
     return item_list
 
@@ -573,11 +573,11 @@ def get_belt_list():
     :return: List of all available belts.
     """
     item_list = []
-    with open('resources/data/accessories/belts.json', 'r') as json_file:
+    with open("resources/data/accessories/belts.json", "r") as json_file:
         # Loop through all items in json.
         json_data = json.load(json_file)
         for item in json_data:
-            item_list.append(item['Name'])
+            item_list.append(item["Name"])
 
     return item_list
 
@@ -588,11 +588,11 @@ def get_ring_list():
     :return: List of all available rings.
     """
     item_list = []
-    with open('resources/data/accessories/rings.json', 'r') as json_file:
+    with open("resources/data/accessories/rings.json", "r") as json_file:
         # Loop through all items in json.
         json_data = json.load(json_file)
         for item in json_data:
-            item_list.append(item['Name'])
+            item_list.append(item["Name"])
 
     return item_list
 
@@ -602,10 +602,10 @@ def display_amulet_help():
     Displays helper list of all available amulets.
     """
     item_list = get_amulet_list()
-    logger.info('Amulets:')
+    logger.info("Amulets:")
     for item in item_list:
-        logger.info('    {0}'.format(item))
-    logger.info('')
+        logger.info("    {0}".format(item))
+    logger.info("")
 
 
 def display_belt_help():
@@ -613,10 +613,10 @@ def display_belt_help():
     Displays helper list of all available belts.
     """
     item_list = get_belt_list()
-    logger.info('Belts:')
+    logger.info("Belts:")
     for item in item_list:
-        logger.info('    {0}'.format(item))
-    logger.info('')
+        logger.info("    {0}".format(item))
+    logger.info("")
 
 
 def display_ring_help():
@@ -624,17 +624,17 @@ def display_ring_help():
     Displays helper list of all available rings.
     """
     item_list = get_ring_list()
-    logger.info('Rings:')
+    logger.info("Rings:")
     for item in item_list:
-        logger.info('    {0}'.format(item))
-    logger.info('')
+        logger.info("    {0}".format(item))
+    logger.info("")
 
 
-if __name__ == '__main__':
-    logger.info('Starting program.')
-    logger.info('')
+if __name__ == "__main__":
+    logger.info("Starting program.")
+    logger.info("")
 
     run_filter_generation()
 
-    logger.info('')
-    logger.info('Terminating program.')
+    logger.info("")
+    logger.info("Terminating program.")

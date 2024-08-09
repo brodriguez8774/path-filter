@@ -28,11 +28,11 @@ class GemParser:
         self.debug = debug
 
         # Section Start.
-        self.filter_file.write('\n')
-        self.filter_file.write('# ==================== #\n')
-        self.filter_file.write('# === [{0}] - Gems === #\n'.format(self.parse_num))
-        self.filter_file.write('# ==================== #\n')
-        self.filter_file.write('\n')
+        self.filter_file.write("\n")
+        self.filter_file.write("# ==================== #\n")
+        self.filter_file.write("# === [{0}] - Gems === #\n".format(self.parse_num))
+        self.filter_file.write("# ==================== #\n")
+        self.filter_file.write("\n")
 
         self.rare_gems()
         self.high_quality_gems()
@@ -44,24 +44,24 @@ class GemParser:
         """
         self.parse_subnum += 1
 
-        self.filter_file.write('\n')
-        self.filter_file.write('# ---------------------------- #\n')
+        self.filter_file.write("\n")
+        self.filter_file.write("# ---------------------------- #\n")
         self.filter_file.write(
-            '# --- [{0}.{1}] - Rare Gems --- #\n'.format(self.parse_num, str(self.parse_subnum).zfill(2))
+            "# --- [{0}.{1}] - Rare Gems --- #\n".format(self.parse_num, str(self.parse_subnum).zfill(2))
         )
-        self.filter_file.write('# ---------------------------- #\n')
-        self.filter_file.write('\n')
+        self.filter_file.write("# ---------------------------- #\n")
+        self.filter_file.write("\n")
 
         self.template.special_item(
-            description='Rare gems',
-            class_text='Gem',
+            description="Rare gems",
+            class_text="Gem",
             base_text=[
-                'Empower',
-                'Enhance',
-                'Enlighten',
-                'Portal',
+                "Empower",
+                "Enhance",
+                "Enlighten",
+                "Portal",
             ],
-            border_color=display_dict['unique'],
+            border_color=display_dict["unique"],
             minimap_size=0,
         )
 
@@ -71,50 +71,50 @@ class GemParser:
         """
         self.parse_subnum += 1
 
-        self.filter_file.write('\n')
-        self.filter_file.write('# ------------------------------------ #\n')
+        self.filter_file.write("\n")
+        self.filter_file.write("# ------------------------------------ #\n")
         self.filter_file.write(
-            '# --- [{0}.{1}] - High Quality Gems --- #\n'.format(self.parse_num, str(self.parse_subnum).zfill(2))
+            "# --- [{0}.{1}] - High Quality Gems --- #\n".format(self.parse_num, str(self.parse_subnum).zfill(2))
         )
-        self.filter_file.write('# ------------------------------------ #\n')
-        self.filter_file.write('\n')
+        self.filter_file.write("# ------------------------------------ #\n")
+        self.filter_file.write("\n")
 
         # High quality between 15 and 20%.
         self.template.rare_currency(
-            description='High quality gems [15 - 20]%',
-            class_text='Gem',
-            quality='>= 15',
-            font_size=display_dict['important_font_size'],
+            description="High quality gems [15 - 20]%",
+            class_text="Gem",
+            quality=">= 15",
+            font_size=display_dict["important_font_size"],
             minimap_size=2,
-            sound='5 175',
+            sound="5 175",
         )
 
         # High quality between 10 and 15%.
         self.template.rare_currency(
-            description='High quality gems [10 - 15]%',
-            class_text='Gem',
-            quality='>= 10',
-            font_size=display_dict['rare_font_size'],
+            description="High quality gems [10 - 15]%",
+            class_text="Gem",
+            quality=">= 10",
+            font_size=display_dict["rare_font_size"],
             minimap_size=2,
-            sound='5 175',
+            sound="5 175",
         )
 
         # High quality between 5 and 10%.
         self.template.rare_currency(
-            description='High quality gems [5 - 10]%',
-            class_text='Gem',
-            quality='>= 5',
-            font_size=display_dict['uncommon_font_size'],
+            description="High quality gems [5 - 10]%",
+            class_text="Gem",
+            quality=">= 5",
+            font_size=display_dict["uncommon_font_size"],
             minimap_size=2,
-            sound='5 175',
+            sound="5 175",
         )
 
         # High quality under 5%
         self.template.rare_currency(
-            description='High quality gems [1 - 4]%',
-            class_text='Gem',
-            quality='>= 1',
-            font_size=display_dict['default_font_size'],
+            description="High quality gems [1 - 4]%",
+            class_text="Gem",
+            quality=">= 1",
+            font_size=display_dict["default_font_size"],
         )
 
     def vaal_gems(self):
@@ -123,16 +123,16 @@ class GemParser:
         """
         self.parse_subnum += 1
 
-        self.filter_file.write('\n')
-        self.filter_file.write('# ---------------------------- #\n')
+        self.filter_file.write("\n")
+        self.filter_file.write("# ---------------------------- #\n")
         self.filter_file.write(
-            '# --- [{0}.{1}] - Vaal Gems --- #\n'.format(self.parse_num, str(self.parse_subnum).zfill(2))
+            "# --- [{0}.{1}] - Vaal Gems --- #\n".format(self.parse_num, str(self.parse_subnum).zfill(2))
         )
-        self.filter_file.write('# ---------------------------- #\n')
-        self.filter_file.write('\n')
+        self.filter_file.write("# ---------------------------- #\n")
+        self.filter_file.write("\n")
 
         self.template.notable_item(
-            class_text='Gem',
-            base_text='Vaal',
-            font_size=display_dict['uncommon_font_size'],
+            class_text="Gem",
+            base_text="Vaal",
+            font_size=display_dict["uncommon_font_size"],
         )
