@@ -15,7 +15,7 @@ from resources.parsers.templates import FilterTemplates
 logger = init_logging.get_logger(__name__)
 
 
-class DefenseParser():
+class DefenseParser:
 
     def __init__(self, filter_file, parse_num, defense_types, base_drop_level, level_rarity_modifier, debug=False):
         # Set class vars.
@@ -93,7 +93,9 @@ class DefenseParser():
             # Create helmet section header.
             self.filter_file.write('\n')
             self.filter_file.write('# -------------------------------{0} #\n'.format('-' * padding_count))
-            self.filter_file.write('# --- [{0}.{1}.{2}] - {3} Helmets --- #\n'.format(self.parse_num, subnum, '01', def_type))
+            self.filter_file.write(
+                '# --- [{0}.{1}.{2}] - {3} Helmets --- #\n'.format(self.parse_num, subnum, '01', def_type)
+            )
             self.filter_file.write('# -------------------------------{0} #\n'.format('-' * padding_count))
             self.filter_file.write('\n')
 
@@ -108,7 +110,9 @@ class DefenseParser():
             # Create chest section header.
             self.filter_file.write('\n')
             self.filter_file.write('# ------------------------------{0} #\n'.format('-' * padding_count))
-            self.filter_file.write('# --- [{0}.{1}.{2}] - {3} Chests --- #\n'.format(self.parse_num, subnum, '02', def_type))
+            self.filter_file.write(
+                '# --- [{0}.{1}.{2}] - {3} Chests --- #\n'.format(self.parse_num, subnum, '02', def_type)
+            )
             self.filter_file.write('# ------------------------------{0} #\n'.format('-' * padding_count))
             self.filter_file.write('\n')
 
@@ -123,7 +127,9 @@ class DefenseParser():
             # Create glove section header.
             self.filter_file.write('\n')
             self.filter_file.write('# ------------------------------{0} #\n'.format('-' * padding_count))
-            self.filter_file.write('# --- [{0}.{1}.{2}] - {3} Gloves --- #\n'.format(self.parse_num, subnum, '03', def_type))
+            self.filter_file.write(
+                '# --- [{0}.{1}.{2}] - {3} Gloves --- #\n'.format(self.parse_num, subnum, '03', def_type)
+            )
             self.filter_file.write('# ------------------------------{0} #\n'.format('-' * padding_count))
             self.filter_file.write('\n')
 
@@ -138,7 +144,9 @@ class DefenseParser():
             # Create boot section header.
             self.filter_file.write('\n')
             self.filter_file.write('# -----------------------------{0} #\n'.format('-' * padding_count))
-            self.filter_file.write('# --- [{0}.{1}.{2}] - {3} Boots --- #\n'.format(self.parse_num, subnum, '04', def_type))
+            self.filter_file.write(
+                '# --- [{0}.{1}.{2}] - {3} Boots --- #\n'.format(self.parse_num, subnum, '04', def_type)
+            )
             self.filter_file.write('# -----------------------------{0} #\n'.format('-' * padding_count))
             self.filter_file.write('\n')
 

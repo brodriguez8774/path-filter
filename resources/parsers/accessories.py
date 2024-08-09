@@ -15,10 +15,19 @@ from resources.parsers.templates import FilterTemplates
 logger = init_logging.get_logger(__name__)
 
 
-class AccessoryParser():
+class AccessoryParser:
 
-    def __init__(self, filter_file, parse_num, hidden_amulets, hidden_belts, hidden_rings, base_drop_level,
-                 level_rarity_modifier, debug=False):
+    def __init__(
+        self,
+        filter_file,
+        parse_num,
+        hidden_amulets,
+        hidden_belts,
+        hidden_rings,
+        base_drop_level,
+        level_rarity_modifier,
+        debug=False,
+    ):
         self.filter_file = filter_file
         self.hidden_amulets = hidden_amulets
         self.hidden_belts = hidden_belts
@@ -117,7 +126,9 @@ class AccessoryParser():
 
         self.filter_file.write('\n')
         self.filter_file.write('# -------------------------- #\n')
-        self.filter_file.write('# --- [{0}.{1}] - Amulets --- #\n'.format(self.parse_num, str(self.parse_subnum).zfill(2)))
+        self.filter_file.write(
+            '# --- [{0}.{1}] - Amulets --- #\n'.format(self.parse_num, str(self.parse_subnum).zfill(2))
+        )
         self.filter_file.write('# -------------------------- #\n')
         self.filter_file.write('\n')
 
@@ -147,7 +158,11 @@ class AccessoryParser():
                     background_color = display_dict['Ev/En']
 
                 # Create filter for item.
-                self.handle_accessory(item, ['Coral Amulet', 'Paua Amulet'], background_color)
+                self.handle_accessory(
+                    item,
+                    ['Coral Amulet', 'Paua Amulet'],
+                    background_color,
+                )
 
     def parse_belts(self):
         """
@@ -157,7 +172,9 @@ class AccessoryParser():
 
         self.filter_file.write('\n')
         self.filter_file.write('# ------------------------ #\n')
-        self.filter_file.write('# --- [{0}.{1}] - Belts --- #\n'.format(self.parse_num, str(self.parse_subnum).zfill(2)))
+        self.filter_file.write(
+            '# --- [{0}.{1}] - Belts --- #\n'.format(self.parse_num, str(self.parse_subnum).zfill(2))
+        )
         self.filter_file.write('# ------------------------ #\n')
         self.filter_file.write('\n')
 
@@ -185,7 +202,11 @@ class AccessoryParser():
                     background_color = display_dict['En']
 
                 # Create filter for item.
-                self.handle_accessory(item, ['Chain Belt', 'Rustic Sash', 'Leather Belt'], background_color)
+                self.handle_accessory(
+                    item,
+                    ['Chain Belt', 'Rustic Sash', 'Leather Belt'],
+                    background_color,
+                )
 
     def parse_rings(self):
         """
@@ -195,7 +216,9 @@ class AccessoryParser():
 
         self.filter_file.write('\n')
         self.filter_file.write('# ------------------------ #\n')
-        self.filter_file.write('# --- [{0}.{1}] - Rings --- #\n'.format(self.parse_num, str(self.parse_subnum).zfill(2)))
+        self.filter_file.write(
+            '# --- [{0}.{1}] - Rings --- #\n'.format(self.parse_num, str(self.parse_subnum).zfill(2))
+        )
         self.filter_file.write('# ------------------------ #\n')
         self.filter_file.write('\n')
 

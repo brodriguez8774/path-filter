@@ -15,10 +15,11 @@ from resources.parsers.templates import FilterTemplates
 logger = init_logging.get_logger(__name__)
 
 
-class CurrencyParser():
+class CurrencyParser:
     """
     Filtering for all currency item drops.
     """
+
     def __init__(self, filter_file, parse_num, debug=False):
         self.filter_file = filter_file
         self.parse_num = str(parse_num).zfill(3)
@@ -46,7 +47,9 @@ class CurrencyParser():
 
         self.filter_file.write('\n')
         self.filter_file.write('# ----------------------------------- #\n')
-        self.filter_file.write('# --- [{0}.{1}] - General Currency --- #\n'.format(self.parse_num, str(self.parse_subnum).zfill(2)))
+        self.filter_file.write(
+            '# --- [{0}.{1}] - General Currency --- #\n'.format(self.parse_num, str(self.parse_subnum).zfill(2))
+        )
         self.filter_file.write('# ----------------------------------- #\n')
         self.filter_file.write('\n')
 
@@ -62,7 +65,7 @@ class CurrencyParser():
             minimap_color=display_dict['minimap_color_unique'],
             minimap_shape=display_dict['minimap_icon_currency'],
             sound='ShMirror 300',
-            playeffect = display_dict['minimap_color_unique'],
+            playeffect=display_dict['minimap_color_unique'],
         )
 
         # Exalted Orb.
@@ -139,13 +142,40 @@ class CurrencyParser():
         self.template.rare_currency(
             description='Misc Important Currency',
             base_text=[
-                'Cartographer\'s Chisel', 'Orb of Scouring', 'Orb of Regret', 'Silver Coin',  'Gemcutter\'s Prism',
-                'Eternal Orb', 'Master Cartographer\'s Seal', 'Albino Rhoa Feather', 'Orb of Chance', 'Sextant',
-                'Awakener\'s Orb', 'Bestiary Orb', 'Orb of Annulment', 'Ancient Orb', 'Engineer\'s Orb',
-                'Harbinger\'s Orb', 'Orb of Binding', 'Orb of Horizons', "Fracturing Shard", "Burial Medallion",
-                "Grand Eldritch Ember", "Grand Eldritch Ichor", "Greater Eldritch Ichor", "Scrap Metal", "Stacked Deck",
-                "Ancient Shard", "Astragali", "Enkindling Orb", "Exalted Shard", "Greater Eldritch Ember",
-                "Lesser Eldritch Ember", "Lesser Eldritch Ichor", "Orb of Scouring", "Orb of Unmaking",
+                'Cartographer\'s Chisel',
+                'Orb of Scouring',
+                'Orb of Regret',
+                'Silver Coin',
+                'Gemcutter\'s Prism',
+                'Eternal Orb',
+                'Master Cartographer\'s Seal',
+                'Albino Rhoa Feather',
+                'Orb of Chance',
+                'Sextant',
+                'Awakener\'s Orb',
+                'Bestiary Orb',
+                'Orb of Annulment',
+                'Ancient Orb',
+                'Engineer\'s Orb',
+                'Harbinger\'s Orb',
+                'Orb of Binding',
+                'Orb of Horizons',
+                "Fracturing Shard",
+                "Burial Medallion",
+                "Grand Eldritch Ember",
+                "Grand Eldritch Ichor",
+                "Greater Eldritch Ichor",
+                "Scrap Metal",
+                "Stacked Deck",
+                "Ancient Shard",
+                "Astragali",
+                "Enkindling Orb",
+                "Exalted Shard",
+                "Greater Eldritch Ember",
+                "Lesser Eldritch Ember",
+                "Lesser Eldritch Ichor",
+                "Orb of Scouring",
+                "Orb of Unmaking",
             ],
             font_size=display_dict['uncommon_font_size'],
             minimap_size=2,
@@ -164,9 +194,13 @@ class CurrencyParser():
         self.template.rare_currency(
             description='Misc Low Importance Currency - Low Level',
             base_text=[
-                'Orb of Alteration', 'Orb of Augmentation',
-                'Chromatic Orb', 'Jeweller\'s Orb',
-                'Armourer\'s Scrap', 'Blacksmith\'s Whetstone', 'Glassblower\'s Bauble',
+                'Orb of Alteration',
+                'Orb of Augmentation',
+                'Chromatic Orb',
+                'Jeweller\'s Orb',
+                'Armourer\'s Scrap',
+                'Blacksmith\'s Whetstone',
+                'Glassblower\'s Bauble',
             ],
             area_level='<= 49',
             font_size=display_dict['default_font_size'],
@@ -175,8 +209,11 @@ class CurrencyParser():
         self.template.notable_item(
             description='Misc Low Importance Currency',
             base_text=[
-                'Chromatic Orb', 'Jeweller\'s Orb',
-                'Armourer\'s Scrap', 'Blacksmith\'s Whetstone', 'Glassblower\'s Bauble',
+                'Chromatic Orb',
+                'Jeweller\'s Orb',
+                'Armourer\'s Scrap',
+                'Blacksmith\'s Whetstone',
+                'Glassblower\'s Bauble',
             ],
             font_size=display_dict['default_font_size'],
         )
@@ -189,7 +226,9 @@ class CurrencyParser():
 
         self.filter_file.write('\n')
         self.filter_file.write('# ---------------------------------- #\n')
-        self.filter_file.write('# --- [{0}.{1}] - League Currency --- #\n'.format(self.parse_num, str(self.parse_subnum).zfill(2)))
+        self.filter_file.write(
+            '# --- [{0}.{1}] - League Currency --- #\n'.format(self.parse_num, str(self.parse_subnum).zfill(2))
+        )
         self.filter_file.write('# ---------------------------------- #\n')
         self.filter_file.write('\n')
 
@@ -197,15 +236,27 @@ class CurrencyParser():
         self.template.special_item(
             description='Kalguur Runes',
             base_text=[
-                "Power Rune", "Time Rune", "Bounty Rune", "Journey Rune", "Mountain Rune", "River Rune", "Bound Rune",
-                "Life Rune", "Sun Rune", "War Rune", "Rune",
+                "Power Rune",
+                "Time Rune",
+                "Bounty Rune",
+                "Journey Rune",
+                "Mountain Rune",
+                "River Rune",
+                "Bound Rune",
+                "Life Rune",
+                "Sun Rune",
+                "War Rune",
+                "Rune",
             ],
         )
 
         # Trial of the Ancestors.
         self.template.special_item(
             description='Trial of the Ancestors',
-            base_text=["Omen of", 'Tattoo of ']
+            base_text=[
+                "Omen of",
+                'Tattoo of ',
+            ],
         )
 
         # Ritual.
@@ -218,17 +269,43 @@ class CurrencyParser():
         # Heist.
         self.template.special_item(
             description='Heist Classes',
-            class_text=["Heist Cloaks", "Heist Brooches", "Heist Gear", "Heist Tools", "Heist Target"]
+            class_text=[
+                "Heist Cloaks",
+                "Heist Brooches",
+                "Heist Gear",
+                "Heist Tools",
+                "Heist Target",
+            ],
         )
         self.template.special_item(
             description='Heist Bases',
             base_text=[
-                "Whisper-woven Cloak", "Hooded Cloak", "Foliate Brooch", "Enamel Brooch", "Burst Band",
-                "Obsidian Sharpening Stone", "Precise Arrowhead", "Grandmaster Keyring", "Master Lockpick",
-                "Regicide Disguise Kit", "Silkweave Sole", "Steel Bracers", "Thaumaturgical Sensing Charm",
-                "Thaumaturgical Ward", "Thaumetic Blowtorch", "Thaumetic Flashpowder", "Azurite Flashpowder",
-                "Espionage Disguise Kit", "Fine Lockpick", "Polished Sensing Charm", "Runed Bracers", "Shining Ward",
-                "Skeleton Keyring", "Sulphur Blowtorch", "Winged Sole", "Rogue's Marker",
+                "Whisper-woven Cloak",
+                "Hooded Cloak",
+                "Foliate Brooch",
+                "Enamel Brooch",
+                "Burst Band",
+                "Obsidian Sharpening Stone",
+                "Precise Arrowhead",
+                "Grandmaster Keyring",
+                "Master Lockpick",
+                "Regicide Disguise Kit",
+                "Silkweave Sole",
+                "Steel Bracers",
+                "Thaumaturgical Sensing Charm",
+                "Thaumaturgical Ward",
+                "Thaumetic Blowtorch",
+                "Thaumetic Flashpowder",
+                "Azurite Flashpowder",
+                "Espionage Disguise Kit",
+                "Fine Lockpick",
+                "Polished Sensing Charm",
+                "Runed Bracers",
+                "Shining Ward",
+                "Skeleton Keyring",
+                "Sulphur Blowtorch",
+                "Winged Sole",
+                "Rogue's Marker",
             ],
         )
 
@@ -255,8 +332,13 @@ class CurrencyParser():
         self.template.special_item(
             description='Metamorph',
             base_text=[
-                'Abrasive Catalyst', 'Fertile Catalyst', 'Imbued Catalyst', 'Intrinsic Catalyst', 'Prismatic Catalyst',
-                'Tempering Catalyst', 'Turbulent Catalyst',
+                'Abrasive Catalyst',
+                'Fertile Catalyst',
+                'Imbued Catalyst',
+                'Intrinsic Catalyst',
+                'Prismatic Catalyst',
+                'Tempering Catalyst',
+                'Turbulent Catalyst',
             ],
         )
 
@@ -264,8 +346,18 @@ class CurrencyParser():
         self.template.special_item(
             description='Blight',
             base_text=[
-                'Amber Oil', 'Azure Oil', 'Black Oil', 'Clear Oil', 'Crimson Oil', 'Golden Oil', 'Opalescent Oil',
-                'Sepia Oil', 'Silver Oil', 'Teal Oil', 'Verdant Oil', 'Violet Oil',
+                'Amber Oil',
+                'Azure Oil',
+                'Black Oil',
+                'Clear Oil',
+                'Crimson Oil',
+                'Golden Oil',
+                'Opalescent Oil',
+                'Sepia Oil',
+                'Silver Oil',
+                'Teal Oil',
+                'Verdant Oil',
+                'Violet Oil',
             ],
         )
 
@@ -277,8 +369,11 @@ class CurrencyParser():
         self.template.special_item(
             description='Legion Bases',
             base_text=[
-                'Timeless Eternal Empire Splinter', 'Timeless Karui Splinter', 'Timeless Maraketh Splinter',
-                'Timeless Templar Splinter', 'Timeless Vaal Splinter',
+                'Timeless Eternal Empire Splinter',
+                'Timeless Karui Splinter',
+                'Timeless Maraketh Splinter',
+                'Timeless Templar Splinter',
+                'Timeless Vaal Splinter',
             ],
             font_size=display_dict['uncommon_font_size'],
             minimap_size=2,
@@ -295,8 +390,9 @@ class CurrencyParser():
         self.template.special_item(
             description='General Delve Currency',
             class_text=[
-                'Delve Socketable Currency', "Delve Stackable Socketable Currency"
-            ]
+                'Delve Socketable Currency',
+                "Delve Stackable Socketable Currency",
+            ],
         )
         self.template.special_item(
             description='Delve Fossils',
@@ -316,8 +412,15 @@ class CurrencyParser():
         self.template.special_item(
             description='Incursion Bases',
             base_text=[
-                'Vial of Dominance', 'Vial of Summoning', 'Vial of Awakening', 'Vial of the Ritual', 'Vial of Fate',
-                'Vial of Consequence', 'Vial of Transcendence', 'Vial of the Ghost', 'Vial of Sacrifice',
+                'Vial of Dominance',
+                'Vial of Summoning',
+                'Vial of Awakening',
+                'Vial of the Ritual',
+                'Vial of Fate',
+                'Vial of Consequence',
+                'Vial of Transcendence',
+                'Vial of the Ghost',
+                'Vial of Sacrifice',
             ],
         )
         self.template.special_item(
@@ -325,7 +428,7 @@ class CurrencyParser():
             base_text='Stone of Passage',
             font_size=display_dict['unique_font_size'],
             minimap_size=0,
-            sound='4 300'
+            sound='4 300',
         )
 
         # Harbringer.
@@ -336,9 +439,16 @@ class CurrencyParser():
         self.template.special_item(
             description='Breach',
             base_text=[
-                'Blessing of Xoph', 'Blessing of Tul', 'Blessing of Esh', 'Blessing of Uul-Netol',
-                'Blessing of Chayula', 'Splinter of Xoph', 'Splinter of Tul', 'Splinter of Esh',
-                'Splinter of Uul-Netol', 'Splinter of Chayula',
+                'Blessing of Xoph',
+                'Blessing of Tul',
+                'Blessing of Esh',
+                'Blessing of Uul-Netol',
+                'Blessing of Chayula',
+                'Splinter of Xoph',
+                'Splinter of Tul',
+                'Splinter of Esh',
+                'Splinter of Uul-Netol',
+                'Splinter of Chayula',
             ],
             font_size=display_dict['uncommon_font_size'],
             minimap_size=2,
@@ -377,7 +487,16 @@ class CurrencyParser():
         # Other.
         self.template.special_item(
             description='Other/Misc Special Currency',
-            base_text=["Deregulation Scroll", "Electroshock Scroll", "Fragmentation Scroll", "Haemocombustion Scroll", "Specularity Scroll", "Time-light Scroll", "Imprint", "Unshaping Orb"],
+            base_text=[
+                "Deregulation Scroll",
+                "Electroshock Scroll",
+                "Fragmentation Scroll",
+                "Haemocombustion Scroll",
+                "Specularity Scroll",
+                "Time-light Scroll",
+                "Imprint",
+                "Unshaping Orb",
+            ],
         )
 
     def quest_like_items(self):
@@ -388,32 +507,42 @@ class CurrencyParser():
 
         self.filter_file.write('\n')
         self.filter_file.write('# ---------------------------------- #\n')
-        self.filter_file.write('# --- [{0}.{1}] - Quest-like Items --- #\n'.format(self.parse_num, str(self.parse_subnum).zfill(2)))
+        self.filter_file.write(
+            '# --- [{0}.{1}] - Quest-like Items --- #\n'.format(self.parse_num, str(self.parse_subnum).zfill(2))
+        )
         self.filter_file.write('# ---------------------------------- #\n')
         self.filter_file.write('\n')
 
         # Labyrinth classes.
         self.template.special_item(
             description='Labyrinth Classes',
-            class_text=['Labyrinth', 'Labyrinth Item', 'Labyrinth Trinket']
+            class_text=[
+                'Labyrinth',
+                'Labyrinth Item',
+                'Labyrinth Trinket',
+            ],
         )
 
         # Labyrinth base types.
         self.template.special_item(
             description='Labyrinth Bases',
-            base_text=['Key', 'Offering to the Goddess', 'Divine Vessel']
+            base_text=[
+                'Key',
+                'Offering to the Goddess',
+                'Divine Vessel',
+            ],
         )
 
         # Labyrinth classes.
         self.template.special_item(
             description='Quest-like Classes',
-            class_text=["Incursion Items"]
+            class_text=["Incursion Items"],
         )
 
         # Labyrinth base types.
         self.template.special_item(
             description='Quest-like Bases',
-            base_text=["Maven's"]
+            base_text=["Maven's"],
         )
 
     def currency_catchall(self):
@@ -424,19 +553,26 @@ class CurrencyParser():
 
         self.filter_file.write('\n')
         self.filter_file.write('# ------------------------------------- #\n')
-        self.filter_file.write('# --- [{0}.{1}] - Currency Catch-All --- #\n'.format(self.parse_num, str(self.parse_subnum).zfill(2)))
+        self.filter_file.write(
+            '# --- [{0}.{1}] - Currency Catch-All --- #\n'.format(self.parse_num, str(self.parse_subnum).zfill(2))
+        )
         self.filter_file.write('# ------------------------------------- #\n')
         self.filter_file.write('\n')
 
         self.template.common_item(
-            class_text=['Currency', 'Stackable Currency', 'Leaguestone'],
+            class_text=[
+                'Currency',
+                'Stackable Currency',
+                'Leaguestone',
+            ],
         )
 
 
-class PreEquipment_CurrencyParser():
+class PreEquipment_CurrencyParser:
     """
     Filtering for all equipment/weapon drops that should unconditionally show as currency.
     """
+
     def __init__(self, filter_file, parse_num, debug=False):
         self.filter_file = filter_file
         self.parse_num = str(parse_num).zfill(3)
@@ -452,10 +588,11 @@ class PreEquipment_CurrencyParser():
         self.filter_file.write('\n')
 
 
-class PostEquipment_CurrencyParser():
+class PostEquipment_CurrencyParser:
     """
     Filtering for all equipment/weapons drops that should only show if other filters do not match.
     """
+
     def __init__(self, filter_file, parse_num, debug=False):
         self.filter_file = filter_file
         self.parse_num = str(parse_num).zfill(3)
@@ -486,15 +623,17 @@ class PostEquipment_CurrencyParser():
 
         self.filter_file.write('\n')
         self.filter_file.write('# ------------------------------------- #\n')
-        self.filter_file.write('# --- [{0}.{1}] - Quality Currencies --- #\n'.format(self.parse_num, str(self.parse_subnum).zfill(2)))
+        self.filter_file.write(
+            '# --- [{0}.{1}] - Quality Currencies --- #\n'.format(self.parse_num, str(self.parse_subnum).zfill(2))
+        )
         self.filter_file.write('# ------------------------------------- #\n')
         self.filter_file.write('# Involves selling any single item of full 20% quality.\n')
-        self.filter_file.write('# Alternatively, sell any combination of items (of the same quality type) that sum up to 40% quality.\n')
+        self.filter_file.write(
+            '# Alternatively, sell any combination of items (of the same quality type) that sum up to 40% quality.\n'
+        )
         self.filter_file.write('\n')
 
-        self.template.notable_item(
-            quality=20,
-        )
+        self.template.notable_item(quality=20)
 
     def parse_chromatic(self):
         """
@@ -505,9 +644,13 @@ class PostEquipment_CurrencyParser():
 
         self.filter_file.write('\n')
         self.filter_file.write('# ----------------------------- #\n')
-        self.filter_file.write('# --- [{0}.{1}] - RGB Linked --- #\n'.format(self.parse_num, str(self.parse_subnum).zfill(2)))
+        self.filter_file.write(
+            '# --- [{0}.{1}] - RGB Linked --- #\n'.format(self.parse_num, str(self.parse_subnum).zfill(2))
+        )
         self.filter_file.write('# ----------------------------- #\n')
-        self.filter_file.write('# Involves item of 3 or more linked slots, with at least one red, green, and blue slot.\n')
+        self.filter_file.write(
+            '# Involves item of 3 or more linked slots, with at least one red, green, and blue slot.\n'
+        )
         self.filter_file.write('\n')
 
         self.parse_high_level_chromatic()
@@ -540,12 +683,24 @@ class PostEquipment_CurrencyParser():
         Displaying of rgb recipe at lower levels.
         """
         # Loop through all defense types.
-        def_types = ['A', 'A/Ev', 'Ev', 'Ev/En', 'En', 'En/A']
+        def_types = [
+            'A',
+            'A/Ev',
+            'Ev',
+            'Ev/En',
+            'En',
+            'En/A',
+        ]
         for def_type in def_types:
             def_file = def_type.replace('/', '_')
 
             # Loop through all defense slots.
-            def_slots = ['helmets', 'chests', 'gloves', 'boots']
+            def_slots = [
+                'helmets',
+                'chests',
+                'gloves',
+                'boots',
+            ]
 
             for def_slot in def_slots:
                 slot_list = []
@@ -589,7 +744,9 @@ class PostEquipment_CurrencyParser():
 
         self.filter_file.write('\n')
         self.filter_file.write('# ---------------------------- #\n')
-        self.filter_file.write('# --- [{0}.{1}] - Regal Orb --- #\n'.format(self.parse_num, str(self.parse_subnum).zfill(2)))
+        self.filter_file.write(
+            '# --- [{0}.{1}] - Regal Orb --- #\n'.format(self.parse_num, str(self.parse_subnum).zfill(2))
+        )
         self.filter_file.write('# ---------------------------- #\n')
         self.filter_file.write('# Involves getting a rare item for each slot, with all items level 75 or above.\n')
         self.filter_file.write('\n')
@@ -606,7 +763,15 @@ class PostEquipment_CurrencyParser():
         # Gear Slots.
         self.template.currency_recipe_high_level(
             description='Gear Slots',
-            class_text=['Helmets', 'Body Armours', 'Gloves', 'Boots', 'Ring', 'Belt', 'Amulet'],
+            class_text=[
+                'Helmets',
+                'Body Armours',
+                'Gloves',
+                'Boots',
+                'Ring',
+                'Belt',
+                'Amulet',
+            ],
             item_level='>= 75',
             rarity='Rare',
         )
@@ -620,7 +785,9 @@ class PostEquipment_CurrencyParser():
 
         self.filter_file.write('\n')
         self.filter_file.write('# ---------------------------- #\n')
-        self.filter_file.write('# --- [{0}.{1}] - Chaos Orb --- #\n'.format(self.parse_num, str(self.parse_subnum).zfill(2)))
+        self.filter_file.write(
+            '# --- [{0}.{1}] - Chaos Orb --- #\n'.format(self.parse_num, str(self.parse_subnum).zfill(2))
+        )
         self.filter_file.write('# ---------------------------- #\n')
         self.filter_file.write('# Involves getting a rare item for each slot, with all items level 60 to 74.\n')
         self.filter_file.write('\n')
@@ -637,7 +804,15 @@ class PostEquipment_CurrencyParser():
         # Gear Slots.
         self.template.currency_recipe_high_level(
             description='Gear Slots',
-            class_text=['Helmets', 'Body Armours', 'Gloves', 'Boots', 'Ring', 'Belt', 'Amulet'],
+            class_text=[
+                'Helmets',
+                'Body Armours',
+                'Gloves',
+                'Boots',
+                'Ring',
+                'Belt',
+                'Amulet',
+            ],
             item_level='>= 65',
             rarity='Rare',
         )
@@ -650,7 +825,9 @@ class PostEquipment_CurrencyParser():
 
         self.filter_file.write('\n')
         self.filter_file.write('# ------------------------------------- #\n')
-        self.filter_file.write('# --- [{0}.{1}] - Low Level Currency --- #\n'.format(self.parse_num, str(self.parse_subnum).zfill(2)))
+        self.filter_file.write(
+            '# --- [{0}.{1}] - Low Level Currency --- #\n'.format(self.parse_num, str(self.parse_subnum).zfill(2))
+        )
         self.filter_file.write('# ------------------------------------- #\n')
         self.filter_file.write('# General items that can be good to sell early game.\n')
         self.filter_file.write('\n')

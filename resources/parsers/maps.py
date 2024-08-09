@@ -15,10 +15,11 @@ from resources.parsers.templates import FilterTemplates
 logger = init_logging.get_logger(__name__)
 
 
-class MapParser():
+class MapParser:
     """
     Filtering for all map drops.
     """
+
     def __init__(self, filter_file, parse_num, debug=False):
         self.filter_file = filter_file
         self.parse_num = str(parse_num).zfill(3)
@@ -93,15 +94,17 @@ class MapParser():
         # Misc map items.
         self.template.notable_item(
             description='Misc Map Item Classes',
-            class_text=[
-                "Vault Keys",
-            ],
+            class_text=["Vault Keys"],
             font_size=display_dict['rare_font_size'],
         )
         self.template.notable_item(
             description='Misc Map Item Bases',
             base_text=[
-                "Reliquary Key", "Chronicle of Atzoatl", "Inscribed Ultimatum", "Mirrored Tablet", "Primeval Remnant",
+                "Reliquary Key",
+                "Chronicle of Atzoatl",
+                "Inscribed Ultimatum",
+                "Mirrored Tablet",
+                "Primeval Remnant",
                 "Primordial Remnant",
             ],
             font_size=display_dict['rare_font_size'],
@@ -111,14 +114,15 @@ class MapParser():
         self.template.notable_item(
             description='Map-like Item Classes',
             class_text=[
-                "Blueprints", "Contracts", "Memories", "Sanctum Research",
+                "Blueprints",
+                "Contracts",
+                "Memories",
+                "Sanctum Research",
             ],
             font_size=display_dict['rare_font_size'],
         )
         self.template.notable_item(
             description='Map-like Item Bases',
-            class_text=[
-                "Expedition Logbook",
-            ],
+            class_text=["Expedition Logbook"],
             font_size=display_dict['rare_font_size'],
         )

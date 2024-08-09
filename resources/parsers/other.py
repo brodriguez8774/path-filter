@@ -15,10 +15,11 @@ from resources.parsers.templates import FilterTemplates
 logger = init_logging.get_logger(__name__)
 
 
-class QuestItemParser():
+class QuestItemParser:
     """
     Filtering for all quest items.
     """
+
     def __init__(self, filter_file, parse_num, debug=False):
         self.filter_file = filter_file
         self.parse_num = str(parse_num).zfill(3)
@@ -35,7 +36,11 @@ class QuestItemParser():
 
         self.template.quest_item(
             description='General Quest Items',
-            class_text=['Quest', 'Quest Items', 'Pantheon Soul'],
+            class_text=[
+                'Quest',
+                'Quest Items',
+                'Pantheon Soul',
+            ],
         )
 
         self.template.quest_item(
@@ -44,10 +49,11 @@ class QuestItemParser():
         )
 
 
-class UniqueParser():
+class UniqueParser:
     """
     Filtering for all uniques.
     """
+
     def __init__(self, filter_file, parse_num, debug=False):
         self.filter_file = filter_file
         self.parse_num = str(parse_num).zfill(3)
@@ -80,15 +86,14 @@ class UniqueParser():
         )
 
         # General Unique Items.
-        self.template.unique_item(
-            description='General Unique Items',
-        )
+        self.template.unique_item(description='General Unique Items')
 
 
-class NotableGearParser():
+class NotableGearParser:
     """
     Filtering for all extra-notable equipment drops that should show unconditionally.
     """
+
     def __init__(self, filter_file, parse_num, debug=False):
         self.filter_file = filter_file
         self.parse_num = str(parse_num).zfill(3)
@@ -230,14 +235,23 @@ class NotableGearParser():
 
         self.filter_file.write('\n')
         self.filter_file.write('# ----------------------------------- #\n')
-        self.filter_file.write('# --- [{0}.{1}] - Influenced Items --- #\n'.format(self.parse_num, str(self.parse_subnum).zfill(2)))
+        self.filter_file.write(
+            '# --- [{0}.{1}] - Influenced Items --- #\n'.format(self.parse_num, str(self.parse_subnum).zfill(2))
+        )
         self.filter_file.write('# ----------------------------------- #\n')
         self.filter_file.write('\n')
 
         # General map influence types.
         self.template.rare_item(
             description='Map-Influenced Types',
-            has_influence=['Shaper', 'Elder', 'Crusader', 'Hunter', 'Redeemer', 'Warlord'],
+            has_influence=[
+                'Shaper',
+                'Elder',
+                'Crusader',
+                'Hunter',
+                'Redeemer',
+                'Warlord',
+            ],
             minimap_size=0,
             minimap_color=display_dict['minimap_color_notable'],
             minimap_shape=display_dict['minimap_icon_influenced'],
@@ -246,7 +260,14 @@ class NotableGearParser():
         )
         self.template.uncommon_item(
             description='Map-Influenced Types',
-            has_influence=['Shaper', 'Elder', 'Crusader', 'Hunter', 'Redeemer', 'Warlord'],
+            has_influence=[
+                'Shaper',
+                'Elder',
+                'Crusader',
+                'Hunter',
+                'Redeemer',
+                'Warlord',
+            ],
             minimap_size=0,
             minimap_color=display_dict['minimap_color_notable'],
             minimap_shape=display_dict['minimap_icon_influenced'],
@@ -255,7 +276,14 @@ class NotableGearParser():
         )
         self.template.common_item(
             description='Map-Influenced Types',
-            has_influence=['Shaper', 'Elder', 'Crusader', 'Hunter', 'Redeemer', 'Warlord'],
+            has_influence=[
+                'Shaper',
+                'Elder',
+                'Crusader',
+                'Hunter',
+                'Redeemer',
+                'Warlord',
+            ],
             minimap_size=0,
             minimap_color=display_dict['minimap_color_notable'],
             minimap_shape=display_dict['minimap_icon_influenced'],
@@ -387,13 +415,13 @@ class NotableGearParser():
 
         self.filter_file.write('\n')
         self.filter_file.write('# ------------------------------- #\n')
-        self.filter_file.write('# --- [{0}.{1}] - Veiled Items --- #\n'.format(self.parse_num, str(self.parse_subnum).zfill(2)))
+        self.filter_file.write(
+            '# --- [{0}.{1}] - Veiled Items --- #\n'.format(self.parse_num, str(self.parse_subnum).zfill(2))
+        )
         self.filter_file.write('# ------------------------------- #\n')
         self.filter_file.write('\n')
 
-        self.template.special_item(
-            has_mod='Veil',
-        )
+        self.template.special_item(has_mod='Veil')
 
     def parse_fishing_rods(self):
         """
@@ -403,19 +431,20 @@ class NotableGearParser():
 
         self.filter_file.write('\n')
         self.filter_file.write('# ------------------------------- #\n')
-        self.filter_file.write('# --- [{0}.{1}] - Fishing Rods --- #\n'.format(self.parse_num, str(self.parse_subnum).zfill(2)))
+        self.filter_file.write(
+            '# --- [{0}.{1}] - Fishing Rods --- #\n'.format(self.parse_num, str(self.parse_subnum).zfill(2))
+        )
         self.filter_file.write('# ------------------------------- #\n')
         self.filter_file.write('\n')
 
-        self.template.special_item(
-            class_text='Fishing Rods',
-        )
+        self.template.special_item(class_text='Fishing Rods')
 
 
-class FinalParser():
+class FinalParser:
     """
     End of filter parsing.
     """
+
     def __init__(self, filter_file, parse_num, debug=False):
         self.filter_file = filter_file
         self.parse_num = str(parse_num).zfill(3)
@@ -433,7 +462,15 @@ class FinalParser():
         # Hide any gear that has not yet been parsed.
         self.template.hidden_item(
             description='Hide remaining gear that has not yet been parsed.',
-            class_text=["Helmets", "Body Armours", "Gloves", "Boots", "Ring", "Belt", "Amulet"]
+            class_text=[
+                "Helmets",
+                "Body Armours",
+                "Gloves",
+                "Boots",
+                "Ring",
+                "Belt",
+                "Amulet",
+            ],
         )
 
         # Kalguur gold currency.

@@ -15,10 +15,11 @@ from resources.parsers.templates import FilterTemplates
 logger = init_logging.get_logger(__name__)
 
 
-class FlaskParser():
+class FlaskParser:
     """
     Filtering for all flask drops.
     """
+
     def __init__(self, filter_file, parse_num, show_hybrid_flasks, debug=False):
         self.filter_file = filter_file
         self.parse_num = str(parse_num).zfill(3)
@@ -94,14 +95,22 @@ class FlaskParser():
 
         self.filter_file.write('\n')
         self.filter_file.write('# -------------------------------------- #\n')
-        self.filter_file.write('# --- [{0}.{1}] - High Quality Flasks --- #\n'.format(self.parse_num, str(self.parse_subnum).zfill(2)))
+        self.filter_file.write(
+            '# --- [{0}.{1}] - High Quality Flasks --- #\n'.format(self.parse_num, str(self.parse_subnum).zfill(2))
+        )
         self.filter_file.write('# -------------------------------------- #\n')
         self.filter_file.write('\n')
 
         # High quality between 15 and 20%.
         self.template.notable_item(
             description='High quality gems [15 - 20]%',
-            class_text=['Life Flasks', 'Mana Flasks', 'Hybrid Flasks', 'Utility Flasks', 'Critical Utility Flasks'],
+            class_text=[
+                'Life Flasks',
+                'Mana Flasks',
+                'Hybrid Flasks',
+                'Utility Flasks',
+                'Critical Utility Flasks',
+            ],
             quality='>= 15',
             font_size=display_dict['rare_font_size'],
             minimap_size=1,
@@ -113,7 +122,13 @@ class FlaskParser():
         # High quality between 10 and 15%.
         self.template.notable_item(
             description='High quality gems [10 - 15]%',
-            class_text=['Life Flasks', 'Mana Flasks', 'Hybrid Flasks', 'Utility Flasks', 'Critical Utility Flasks'],
+            class_text=[
+                'Life Flasks',
+                'Mana Flasks',
+                'Hybrid Flasks',
+                'Utility Flasks',
+                'Critical Utility Flasks',
+            ],
             quality='>= 10',
             font_size=display_dict['uncommon_font_size'],
             minimap_size=1,
@@ -125,7 +140,13 @@ class FlaskParser():
         # High quality between 5 and 10%.
         self.template.notable_item(
             description='High quality gems [10 - 15]%',
-            class_text=['Life Flasks', 'Mana Flasks', 'Hybrid Flasks', 'Utility Flasks', 'Critical Utility Flasks'],
+            class_text=[
+                'Life Flasks',
+                'Mana Flasks',
+                'Hybrid Flasks',
+                'Utility Flasks',
+                'Critical Utility Flasks',
+            ],
             quality='>= 10',
             font_size=display_dict['default_font_size'],
             minimap_size=1,
@@ -142,7 +163,9 @@ class FlaskParser():
 
         self.filter_file.write('\n')
         self.filter_file.write('# ------------------------------ #\n')
-        self.filter_file.write('# --- [{0}.{1}] - Life Flasks --- #\n'.format(self.parse_num, str(self.parse_subnum).zfill(2)))
+        self.filter_file.write(
+            '# --- [{0}.{1}] - Life Flasks --- #\n'.format(self.parse_num, str(self.parse_subnum).zfill(2))
+        )
         self.filter_file.write('# ------------------------------ #\n')
         self.filter_file.write('\n')
 
@@ -161,7 +184,9 @@ class FlaskParser():
 
         self.filter_file.write('\n')
         self.filter_file.write('# ------------------------------ #\n')
-        self.filter_file.write('# --- [{0}.{1}] - Mana Flasks --- #\n'.format(self.parse_num, str(self.parse_subnum).zfill(2)))
+        self.filter_file.write(
+            '# --- [{0}.{1}] - Mana Flasks --- #\n'.format(self.parse_num, str(self.parse_subnum).zfill(2))
+        )
         self.filter_file.write('# ------------------------------ #\n')
         self.filter_file.write('\n')
 
@@ -180,7 +205,9 @@ class FlaskParser():
 
         self.filter_file.write('\n')
         self.filter_file.write('# -------------------------------- #\n')
-        self.filter_file.write('# --- [{0}.{1}] - Hybrid Flasks --- #\n'.format(self.parse_num, str(self.parse_subnum).zfill(2)))
+        self.filter_file.write(
+            '# --- [{0}.{1}] - Hybrid Flasks --- #\n'.format(self.parse_num, str(self.parse_subnum).zfill(2))
+        )
         self.filter_file.write('# -------------------------------- #\n')
         self.filter_file.write('\n')
 
@@ -199,7 +226,9 @@ class FlaskParser():
 
         self.filter_file.write('\n')
         self.filter_file.write('# --------------------------------- #\n')
-        self.filter_file.write('# --- [{0}.{1}] - Utility Flasks --- #\n'.format(self.parse_num, str(self.parse_subnum).zfill(2)))
+        self.filter_file.write(
+            '# --- [{0}.{1}] - Utility Flasks --- #\n'.format(self.parse_num, str(self.parse_subnum).zfill(2))
+        )
         self.filter_file.write('# --------------------------------- #\n')
         self.filter_file.write('\n')
 
@@ -219,7 +248,9 @@ class FlaskParser():
 
         self.filter_file.write('\n')
         self.filter_file.write('# ---------------------------- #\n')
-        self.filter_file.write('# --- [{0}.{1}] - Tinctures --- #\n'.format(self.parse_num, str(self.parse_subnum).zfill(2)))
+        self.filter_file.write(
+            '# --- [{0}.{1}] - Tinctures --- #\n'.format(self.parse_num, str(self.parse_subnum).zfill(2))
+        )
         self.filter_file.write('# ---------------------------- #\n')
         self.filter_file.write('\n')
 

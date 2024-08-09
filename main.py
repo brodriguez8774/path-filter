@@ -24,14 +24,26 @@ from resources.data.value_dictionary import filter_dict
 logger = init_logging.get_logger(__name__)
 
 
-defense_choices = ['A', 'Ev', 'En', 'A/Ev', 'Ev/En', 'A/En']
+defense_choices = [
+    'A',
+    'Ev',
+    'En',
+    'A/Ev',
+    'Ev/En',
+    'A/En',
+]
 weapon_choices = [
-    'OneHandMaces', 'TwoHandMaces',
-    'OneHandAxes', 'TwoHandAxes',
-    'Daggers', 'Claws',
-    'Bows', 'Quivers',
-    'Sceptres', 'Wands',
-    'Shields'
+    'OneHandMaces',
+    'TwoHandMaces',
+    'OneHandAxes',
+    'TwoHandAxes',
+    'Daggers',
+    'Claws',
+    'Bows',
+    'Quivers',
+    'Sceptres',
+    'Wands',
+    'Shields',
 ]
 
 
@@ -67,7 +79,7 @@ def run_filter_generation():
         generate_filter(args)
 
 
-def generate_filter(args ,test_mode=False):
+def generate_filter(args, test_mode=False):
     """
     Logic to actually generate filter file.
     :param args: Argparse args.
@@ -102,7 +114,7 @@ def generate_filter(args ,test_mode=False):
     logger.info('')
     if len(hidden_amulets) > 0 or len(hidden_belts) > 0 or len(hidden_rings) > 0:
         logger.info('    Note: For leveling purposes, some amulets/belts/rings will display')
-        logger.info('          early on, even if set to ''"hidden".')
+        logger.info('          early on, even if set to ' '"hidden".')
         if len(hidden_amulets) > 0:
             logger.info('    Hidden Amulets: {0}'.format(hidden_amulets))
         if len(hidden_belts) > 0:
@@ -125,7 +137,7 @@ def generate_filter(args ,test_mode=False):
         filter_file.write('# Waffyblade - POE Loot Filter #\n')
         filter_file.write('#==============================#\n')
         filter_file.write('#\n#\n')
-        filter_file.write('# Focuses on simplified drops, compared to other filters like Neversink Filterblade.')
+        filter_file.write('# Focuses on simplified drops, compared to other filters like Neversink Filterblade.\n')
         filter_file.write('#\n#\n')
         filter_file.write('# Generated with:\n')
         filter_file.write('#     Base Drop Level: {0}\n'.format(base_drop_level))
@@ -164,7 +176,14 @@ def generate_filter(args ,test_mode=False):
         if not test_mode:
             # Generate Table of Contents.
             parse_num += 1
-            TableOfContentsGenerator(filter_file, weapons, defenses, shield_types, hybrid_flask_bool, debug=debug)
+            TableOfContentsGenerator(
+                filter_file,
+                weapons,
+                defenses,
+                shield_types,
+                hybrid_flask_bool,
+                debug=debug,
+            )
 
             # Generate Quest Item Filtering.
             parse_num += 1
@@ -217,11 +236,26 @@ def generate_filter(args ,test_mode=False):
 
             # Generate Weapon Filtering.
             parse_num += 1
-            WeaponParser(filter_file, parse_num, weapons, shield_types, base_drop_level, level_rarity_modifier, debug=debug)
+            WeaponParser(
+                filter_file,
+                parse_num,
+                weapons,
+                shield_types,
+                base_drop_level,
+                level_rarity_modifier,
+                debug=debug,
+            )
 
             # Generate Defense Filtering.
             parse_num += 1
-            DefenseParser(filter_file, parse_num, defenses, base_drop_level, level_rarity_modifier, debug=debug)
+            DefenseParser(
+                filter_file,
+                parse_num,
+                defenses,
+                base_drop_level,
+                level_rarity_modifier,
+                debug=debug,
+            )
 
             # Generate Post-Equipment Currency Filtering.
             parse_num += 1
@@ -246,93 +280,96 @@ def define_argparse_args():
     """
     parser = argparse.ArgumentParser(description='Generates a loot filter file for path of exile.')
     parser.add_argument(
-        '-n', '--name',
+        '-n',
+        '--name',
         nargs='+',
-        help='Name for loot filter. '
-             'Defaults to "path.filter" if not specified.',
+        help='Name for loot filter. ' 'Defaults to "path.filter" if not specified.',
     )
     parser.add_argument(
-        '-d', '--defense',
+        '-d',
+        '--defense',
         nargs='+',
         choices=defense_choices,
-        help='Use to define desired armor types to show. '
-             'Default shows all types.',
+        help='Use to define desired armor types to show. ' 'Default shows all types.',
     )
     parser.add_argument(
-        '-w', '--weapons',
+        '-w',
+        '--weapons',
         nargs='+',
         choices=weapon_choices,
-        help='Use to define desired weapon types to show. '
-             'Default shows all types.',
+        help='Use to define desired weapon types to show. ' 'Default shows all types.',
     )
     parser.add_argument(
         '--shield_type',
         nargs='+',
         choices=defense_choices,
-        help='Used to define desired shield types to show. '
-             'Default shows all types.'
+        help='Used to define desired shield types to show. ' 'Default shows all types.',
     )
     parser.add_argument(
         '--base_drop_level',
         nargs=1,
         type=int,
         help='Defines how many levels a weapon/armor item drop should display for, from when it starts spawning. '
-             'Defaults to 10.'
+        'Defaults to 10.',
     )
     parser.add_argument(
         '--level_rarity_modifier',
         nargs=1,
         type=int,
         help='Defines how many additional levels to display a weapon/armor item drop, based on rarity. '
-             'Defaults to +5.'
+        'Defaults to +5.',
     )
     parser.add_argument(
         '--show_hybrid_flasks',
         action='store_true',
-        help='Determines if hybrid flasks should display or not. '
-             'Defaults to false.'
+        help='Determines if hybrid flasks should display or not. ' 'Defaults to false.',
     )
     parser.add_argument(
         '--hide_amulets',
         nargs='+',
         choices=get_amulet_list(),
-        help='Hides all passed amulets from filtering. For list of amulets, use the "--amulet_help" arg.'
+        help='Hides all passed amulets from filtering. For list of amulets, use the "--amulet_help" arg.',
     )
     parser.add_argument(
         '--hide_belts',
         nargs='+',
         choices=get_belt_list(),
-        help='Hides all passed belts from filtering. For list of belts, use the "--belt_help" arg.'
+        help='Hides all passed belts from filtering. For list of belts, use the "--belt_help" arg.',
     )
     parser.add_argument(
         '--hide_rings',
         nargs='+',
         choices=get_ring_list(),
-        help='Hides all passed rings from filtering. For list of rings, use the "--ring_help" arg.'
+        help='Hides all passed rings from filtering. For list of rings, use the "--ring_help" arg.',
     )
     parser.add_argument(
         '--debug',
         action='store_true',
-        help='Runs program in debug mode. '
-             'Defaults to false.',
+        help='Runs program in debug mode. ' 'Defaults to false.',
     )
     parser.add_argument(
-        '--amulet_help', '--amulets_help', '--help_amulets',
+        '--amulet_help',
+        '--amulets_help',
+        '--help_amulets',
         action='store_true',
         help='Displays available amulets to hide with the "--hide_amulets" command. '
-             'By default, all amulets display at all times.'
+        'By default, all amulets display at all times.',
     )
     parser.add_argument(
-        '--belt_help', '--belts_help', '--help_belts',
+        '--belt_help',
+        '--belts_help',
+        '--help_belts',
         action='store_true',
         help='Displays available belts to hide with the "--hide_belts" command. '
-             'By default, all belts display at all times.'
+        'By default, all belts display at all times.',
     )
     parser.add_argument(
-        '--ring_help', '--rings_help', '--help_rings',
+        '--ring_help',
+        '--rings_help',
+        '--help_rings',
         action='store_true',
         help='Displays available rings to hide with the "--hide_rings" command. '
-             'By default, all rings display at all times.'
+        'By default, all rings display at all times.',
     )
     return parser
 

@@ -15,10 +15,11 @@ from resources.parsers.templates import FilterTemplates
 logger = init_logging.get_logger(__name__)
 
 
-class JewelParser():
+class JewelParser:
     """
     Filtering for all jewel drops.
     """
+
     def __init__(self, filter_file, parse_num, debug=False):
         self.filter_file = filter_file
         self.parse_num = str(parse_num).zfill(3)
@@ -43,7 +44,9 @@ class JewelParser():
 
         self.filter_file.write('\n')
         self.filter_file.write('# ---------------------------------- #\n')
-        self.filter_file.write('# --- [{0}.{1}] - Standard Jewels --- #\n'.format(self.parse_num, str(self.parse_subnum).zfill(2)))
+        self.filter_file.write(
+            '# --- [{0}.{1}] - Standard Jewels --- #\n'.format(self.parse_num, str(self.parse_subnum).zfill(2))
+        )
         self.filter_file.write('# ---------------------------------- #\n')
         self.filter_file.write('\n')
 
@@ -59,7 +62,9 @@ class JewelParser():
 
         self.filter_file.write('\n')
         self.filter_file.write('# ------------------------------- #\n')
-        self.filter_file.write('# --- [{0}.{1}] - Abyss Jewels --- #\n'.format(self.parse_num, str(self.parse_subnum).zfill(2)))
+        self.filter_file.write(
+            '# --- [{0}.{1}] - Abyss Jewels --- #\n'.format(self.parse_num, str(self.parse_subnum).zfill(2))
+        )
         self.filter_file.write('# ------------------------------- #\n')
         self.filter_file.write('\n')
 
@@ -75,7 +80,9 @@ class JewelParser():
 
         self.filter_file.write('\n')
         self.filter_file.write('# --------------------------------- #\n')
-        self.filter_file.write('# --- [{0}.{1}] - Cluster Jewels --- #\n'.format(self.parse_num, str(self.parse_subnum).zfill(2)))
+        self.filter_file.write(
+            '# --- [{0}.{1}] - Cluster Jewels --- #\n'.format(self.parse_num, str(self.parse_subnum).zfill(2))
+        )
         self.filter_file.write('# --------------------------------- #\n')
         self.filter_file.write('\n')
 

@@ -16,7 +16,7 @@ import logging.config
 LOG_VERSION = 2.0
 first_logging_call = True
 log_handler_class = 'logging.handlers.RotatingFileHandler'
-log_handler_file_max_bytes = 1024*1024*10
+log_handler_file_max_bytes = 1024 * 1024 * 10
 log_handler_file_backup_count = 10
 
 
@@ -66,8 +66,8 @@ def _initialize_logger_settings(debug=False):
     # Load dictionary of settings into logger.
     logging.config.dictConfig(_create_logging_dict(log_dir))
 
-    # Now that logging has been initialized once, we don't need to call this function again for the duration of program
-    # runtime. Set "first_logging_call" variable accordingly.
+    # Now that logging has been initialized once, we don't need to call this function
+    # again for the duration of program runtime. Set "first_logging_call" variable accordingly.
     global first_logging_call
     first_logging_call = False
 
@@ -163,7 +163,6 @@ def _create_logging_dict(log_directory):
                 'backupCount': log_handler_file_backup_count,
                 'formatter': 'verbose',
             },
-
         },
         'loggers': {
             # All basic logging.
@@ -204,11 +203,11 @@ def add_logging_level(levelName, levelNum, methodName=None):
         methodName = levelName.lower()
 
     if hasattr(logging, levelName):
-       raise AttributeError('{} already defined in logging module'.format(levelName))
+        raise AttributeError('{} already defined in logging module'.format(levelName))
     if hasattr(logging, methodName):
-       raise AttributeError('{} already defined in logging module'.format(methodName))
+        raise AttributeError('{} already defined in logging module'.format(methodName))
     if hasattr(logging.getLoggerClass(), methodName):
-       raise AttributeError('{} already defined in logger class'.format(methodName))
+        raise AttributeError('{} already defined in logger class'.format(methodName))
 
     # This method was inspired by the answers to Stack Overflow post
     # http://stackoverflow.com/q/2183233/2988730, especially
@@ -216,6 +215,7 @@ def add_logging_level(levelName, levelNum, methodName=None):
     def logForLevel(self, message, *args, **kwargs):
         if self.isEnabledFor(levelNum):
             self._log(levelNum, message, args, **kwargs)
+
     def logToRoot(message, *args, **kwargs):
         logging.log(levelNum, message, *args, **kwargs)
 
@@ -225,13 +225,15 @@ def add_logging_level(levelName, levelNum, methodName=None):
     setattr(logging, methodName, logToRoot)
 
 
-#region Logging Filters
+# region Logging Filters
+
 
 class _ExcludeInfoPlusFilter(logging.Filter):
     """
     Class to filter out log messages of a given level.
     See https://stackoverflow.com/a/53257669 for more info.
     """
+
     def filter(self, record):
         """
         Filters out log messages with log level(s):
@@ -245,6 +247,7 @@ class _ExcludeWarningsPlusFilter(logging.Filter):
     Class to filter out log messages of a given level.
     See https://stackoverflow.com/a/53257669 for more info.
     """
+
     def filter(self, record):
         """
         Filters out log messages with log level(s):
@@ -266,4 +269,5 @@ class _ExcludeErrorPlusFilter(logging.Filter):
         """
         return record.levelno < 40
 
-#endregion Logging Filters
+
+# endregion Logging Filters

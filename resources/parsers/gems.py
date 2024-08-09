@@ -15,10 +15,11 @@ from resources.parsers.templates import FilterTemplates
 logger = init_logging.get_logger(__name__)
 
 
-class GemParser():
+class GemParser:
     """
     Filtering for all gem drops.
     """
+
     def __init__(self, filter_file, parse_num, debug=False):
         self.filter_file = filter_file
         self.parse_num = str(parse_num).zfill(3)
@@ -45,14 +46,21 @@ class GemParser():
 
         self.filter_file.write('\n')
         self.filter_file.write('# ---------------------------- #\n')
-        self.filter_file.write('# --- [{0}.{1}] - Rare Gems --- #\n'.format(self.parse_num, str(self.parse_subnum).zfill(2)))
+        self.filter_file.write(
+            '# --- [{0}.{1}] - Rare Gems --- #\n'.format(self.parse_num, str(self.parse_subnum).zfill(2))
+        )
         self.filter_file.write('# ---------------------------- #\n')
         self.filter_file.write('\n')
 
         self.template.special_item(
             description='Rare gems',
             class_text='Gem',
-            base_text=['Empower', 'Enhance', 'Enlighten', 'Portal'],
+            base_text=[
+                'Empower',
+                'Enhance',
+                'Enlighten',
+                'Portal',
+            ],
             border_color=display_dict['unique'],
             minimap_size=0,
         )
@@ -65,7 +73,9 @@ class GemParser():
 
         self.filter_file.write('\n')
         self.filter_file.write('# ------------------------------------ #\n')
-        self.filter_file.write('# --- [{0}.{1}] - High Quality Gems --- #\n'.format(self.parse_num, str(self.parse_subnum).zfill(2)))
+        self.filter_file.write(
+            '# --- [{0}.{1}] - High Quality Gems --- #\n'.format(self.parse_num, str(self.parse_subnum).zfill(2))
+        )
         self.filter_file.write('# ------------------------------------ #\n')
         self.filter_file.write('\n')
 
@@ -115,7 +125,9 @@ class GemParser():
 
         self.filter_file.write('\n')
         self.filter_file.write('# ---------------------------- #\n')
-        self.filter_file.write('# --- [{0}.{1}] - Vaal Gems --- #\n'.format(self.parse_num, str(self.parse_subnum).zfill(2)))
+        self.filter_file.write(
+            '# --- [{0}.{1}] - Vaal Gems --- #\n'.format(self.parse_num, str(self.parse_subnum).zfill(2))
+        )
         self.filter_file.write('# ---------------------------- #\n')
         self.filter_file.write('\n')
 
