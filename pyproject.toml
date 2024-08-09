@@ -1,0 +1,11 @@
+
+[project]
+name = "Path Filter"
+version = ""
+description = "Path of Exile item filter generator"
+readme = "readme.md"
+
+
+[tool.black]
+line-length = 120
+skip-string-normalization = 1
