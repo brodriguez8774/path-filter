@@ -463,13 +463,31 @@ class FinalParser:
         self.template.hidden_item(
             description="Hide remaining gear that has not yet been parsed.",
             class_text=[
+                # Weapons.
+                "One Hand Maces",
+                "Two Hand Maces",
+                "One Hand Axes",
+                "Two Hand Axes",
+                "Daggers",
+                "Claws",
+                "One Hand Swords",
+                "Two Hand Swords",
+                "Bows",
+                "Quivers",
+                "Sceptres",
+                "Wands",
+                "Staves",
+                "Shields",
+                # Armor.
                 "Helmets",
                 "Body Armours",
                 "Gloves",
                 "Boots",
+                # Accessories.
                 "Ring",
                 "Belt",
                 "Amulet",
+                "Talisman",
             ],
         )
 

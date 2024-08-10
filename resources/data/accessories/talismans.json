@@ -3,7 +3,7 @@
         "Type": "Accessory",
         "Class": "Talisman",
         "Name": "Ashscale Talisman",
-        "ImplicitType": "Increased Fire Damage",
+        "ImplicitType": "% Increased Fire Damage",
         "ImplicitValue": [20, 30],
         "DropLevel": 1
     },
@@ -11,7 +11,7 @@
         "Type": "Accessory",
         "Class": "Talisman",
         "Name": "Avian Twins Talisman",
-        "ImplicitType": "Element Damage Taken to Other Element",
+        "ImplicitType": "% Element Damage Taken to Other Element",
         "ImplicitValue": [50],
         "DropLevel": 1
     },
@@ -27,7 +27,7 @@
         "Type": "Accessory",
         "Class": "Talisman",
         "Name": "Bonespire Talisman",
-        "ImplicitType": "Increased Maximum Mana",
+        "ImplicitType": "% Increased Maximum Mana",
         "ImplicitValue": [20, 30],
         "DropLevel": 1
     },
@@ -35,7 +35,7 @@
         "Type": "Accessory",
         "Class": "Talisman",
         "Name": "Breakrib Talisman",
-        "ImplicitType": "Increased Global Physical Damage",
+        "ImplicitType": "% Increased Global Physical Damage",
         "ImplicitValue": [20, 30],
         "DropLevel": 1
     },
@@ -43,7 +43,7 @@
         "Type": "Accessory",
         "Class": "Talisman",
         "Name": "Chrysalis Talisman",
-        "ImplicitType": "Increased Spell Damage",
+        "ImplicitType": "% Increased Spell Damage",
         "ImplicitValue": [20, 30],
         "DropLevel": 1
     },
@@ -51,7 +51,7 @@
         "Type": "Accessory",
         "Class": "Talisman",
         "Name": "Clutching Talisman",
-        "ImplicitType": "Increased Global Defenses",
+        "ImplicitType": "% Increased Global Defenses",
         "ImplicitValue": [15, 25],
         "DropLevel": 1
     },
@@ -59,7 +59,7 @@
         "Type": "Accessory",
         "Class": "Talisman",
         "Name": "Deadhand Talisman",
-        "ImplicitType": "Increased Chaos Damage",
+        "ImplicitType": "% Increased Chaos Damage",
         "ImplicitValue": [19, 31],
         "DropLevel": 1
     },
@@ -67,7 +67,7 @@
         "Type": "Accessory",
         "Class": "Talisman",
         "Name": "Deep One Talisman",
-        "ImplicitType": "Increased Cold Damage",
+        "ImplicitType": "% Increased Cold Damage",
         "ImplicitValue": [20, 30],
         "DropLevel": 1
     },
@@ -75,23 +75,15 @@
         "Type": "Accessory",
         "Class": "Talisman",
         "Name": "Fangjaw Talisman",
-        "ImplicitType": "Increased Max Life",
+        "ImplicitType": "% Increased Max Life",
         "ImplicitValue": [8, 12],
         "DropLevel": 1
     },
     {
         "Type": "Accessory",
         "Class": "Talisman",
-        "Name": "Greatwolf Talisman",
-        "ImplicitType": "Random Talisman Implicit Modifiers",
-        "ImplicitValue": [2],
-        "DropLevel": 1
-    },
-    {
-        "Type": "Accessory",
-        "Class": "Talisman",
         "Name": "Hexclaw Talisman",
-        "ImplicitType": "Increased Global Critical Strike Chance",
+        "ImplicitType": "% Increased Global Critical Strike Chance",
         "ImplicitValue": [40, 50],
         "DropLevel": 1
     },
@@ -107,7 +99,7 @@
         "Type": "Accessory",
         "Class": "Talisman",
         "Name": "Lone Antler Talisman",
-        "ImplicitType": "Increased Lightning Damage",
+        "ImplicitType": "% Increased Lightning Damage",
         "ImplicitValue": [20, 30],
         "DropLevel": 1
     },
@@ -115,7 +107,7 @@
         "Type": "Accessory",
         "Class": "Talisman",
         "Name": "Longtooth Talisman",
-        "ImplicitType": "Additional Damage Reduction",
+        "ImplicitType": "% Additional Damage Reduction",
         "ImplicitValue": [4, 6],
         "DropLevel": 1
     },
@@ -123,7 +115,7 @@
         "Type": "Accessory",
         "Class": "Talisman",
         "Name": "Mandible Talisman",
-        "ImplicitType": "Increased Attack and Cast Speed",
+        "ImplicitType": "% Increased Attack and Cast Speed",
         "ImplicitValue": [6, 10],
         "DropLevel": 1
     },
@@ -131,7 +123,7 @@
         "Type": "Accessory",
         "Class": "Talisman",
         "Name": "Monkey Paw Talisman",
-        "ImplicitType": "Chance to Gain Charge on Kill",
+        "ImplicitType": "% Chance to Gain Charge on Kill",
         "ImplicitValue": [10],
         "DropLevel": 1
     },
@@ -139,7 +131,7 @@
         "Type": "Accessory",
         "Class": "Talisman",
         "Name": "Monkey Twins Talisman",
-        "ImplicitType": "Increased Area of Effect",
+        "ImplicitType": "% Increased Area of Effect",
         "ImplicitValue": [5, 8],
         "DropLevel": 1
     },
@@ -155,7 +147,7 @@
         "Type": "Accessory",
         "Class": "Talisman",
         "Name": "Rot Head Talisman",
-        "ImplicitType": "Increased Fish Bite Sensitivity",
+        "ImplicitType": "% Increased Fish Bite Sensitivity",
         "ImplicitValue": [30, 40],
         "DropLevel": 1
     },
@@ -163,7 +155,7 @@
         "Type": "Accessory",
         "Class": "Talisman",
         "Name": "Rotfeather Talisman",
-        "ImplicitType": "Increased Damage",
+        "ImplicitType": "% Increased Damage",
         "ImplicitValue": [25, 35],
         "DropLevel": 1
     },
@@ -179,7 +171,7 @@
         "Type": "Accessory",
         "Class": "Talisman",
         "Name": "Splitnewt Talisman",
-        "ImplicitType": "Chance to Inflict Ailment",
+        "ImplicitType": "% Chance to Inflict Ailment",
         "ImplicitValue": [4, 6],
         "DropLevel": 1
     },
@@ -195,7 +187,7 @@
         "Type": "Accessory",
         "Class": "Talisman",
         "Name": "Three Rat Talisman",
-        "ImplicitType": "Increased Attributes",
+        "ImplicitType": "% Increased Attributes",
         "ImplicitValue": [12, 16],
         "DropLevel": 1
     },
@@ -211,7 +203,7 @@
         "Type": "Accessory",
         "Class": "Talisman",
         "Name": "Wereclaw Talisman",
-        "ImplicitType": "Global Critical Strike Multiplier",
+        "ImplicitType": "% Global Critical Strike Multiplier",
         "ImplicitValue": [24, 36],
         "DropLevel": 1
     },
@@ -219,7 +211,7 @@
         "Type": "Accessory",
         "Class": "Talisman",
         "Name": "Writhing Talisman",
-        "ImplicitType": "Increased Attack Damage",
+        "ImplicitType": "% Increased Attack Damage",
         "ImplicitValue": [20, 30],
         "DropLevel": 1
     }

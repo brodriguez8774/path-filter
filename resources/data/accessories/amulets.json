@@ -82,10 +82,34 @@
     {
         "Type": "Accessory",
         "Class": "Amulet",
+        "Name": "Simplex Amulet",
+        "ImplicitType": "-1 Prefix and Suffix, 25% Increased Explicit Modifier Magnitudes",
+        "ImplicitValue": [],
+        "DropLevel": 24
+    },
+    {
+        "Type": "Accessory",
+        "Class": "Amulet",
+        "Name": "Astrolabe Amulet",
+        "ImplicitType": "Has Elder, Shaper, and All Conqueror Influences",
+        "ImplicitValue": [],
+        "DropLevel": 69
+    },
+    {
+        "Type": "Accessory",
+        "Class": "Amulet",
         "Name": "Marble Amulet",
         "ImplicitType": "Regen Life % Per Second",
         "ImplicitValue": [1.2, 1.6],
         "DropLevel": 74
+    },
+    {
+        "Type": "Accessory",
+        "Class": "Amulet",
+        "Name": "Seaglass Amulet",
+        "ImplicitType": "% Faster Start of Energy Shield Recharge",
+        "ImplicitValue": [10, 15],
+        "DropLevel": 24
     },
     {
         "Type": "Accessory",

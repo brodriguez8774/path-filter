@@ -72,19 +72,19 @@
     {
         "Type": "Weapon",
         "Class": "Quiver",
-        "Name": "Ornate Quiver",
+        "Name": "Spike-Point Arrow Quiver",
         "Damage": [],
-        "ImplicitType": "Has 1 Socket",
-        "ImplicitValue": [],
+        "ImplicitType": "Increased Global Critical Strike Chance",
+        "ImplicitValue": [20, 30],
         "DropLevel": 45,
         "MaxLevel": true
     },
     {
         "Type": "Weapon",
         "Class": "Quiver",
-        "Name": "Spike-Point Arrow Quiver",
+        "Name": "Artillery Quiver",
         "Damage": [],
-        "ImplicitType": "Increased Global Critical Strike Chance",
+        "ImplicitType": "% Increased Totem Placement Speed",
         "ImplicitValue": [20, 30],
         "DropLevel": 45,
         "MaxLevel": true

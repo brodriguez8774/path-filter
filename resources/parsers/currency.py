@@ -306,6 +306,7 @@ class CurrencyParser:
                 "Sulphur Blowtorch",
                 "Winged Sole",
                 "Rogue's Marker",
+                "Thief's Trinket",
             ],
         )
 

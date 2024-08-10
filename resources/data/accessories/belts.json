@@ -58,6 +58,22 @@
     {
         "Type": "Accessory",
         "Class": "Belt",
+        "Name": "Micro-Distillery Belt",
+        "ImplicitType": "Can't Use Flaks in Fifth Slot, Other Flasks have 20% Increased Effect",
+        "ImplicitValue": [],
+        "DropLevel": 24
+    },
+    {
+        "Type": "Accessory",
+        "Class": "Belt",
+        "Name": "Mechalarm Belt",
+        "ImplicitType": "Trigger Level 20 Summon Taunting Contraption When You Use a Flask",
+        "ImplicitValue": [],
+        "DropLevel": 16
+    },
+    {
+        "Type": "Accessory",
+        "Class": "Belt",
         "Name": "Vanguard Belt",
         "ImplicitType": "+ Armor and Evasion",
         "ImplicitValue": [260, 320],

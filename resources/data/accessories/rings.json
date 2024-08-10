@@ -91,16 +91,120 @@
         "Type": "Accessory",
         "Class": "Ring",
         "Name": "Two-Stone Ring",
-        "ImplicitType": "+ to Two all Elemental Resistances",
+        "ImplicitType": "+ to Two Elemental Resistances",
         "ImplicitValue": [12, 16],
         "DropLevel": 20
     },
     {
         "Type": "Accessory",
         "Class": "Ring",
+        "Name": "Cogwork Ring",
+        "ImplicitType": "-1 Prefix Modifier, +1 Suffix Modifier, 25% Increased Suffix Magnitudes",
+        "ImplicitValue": [],
+        "DropLevel": 24
+    },
+    {
+        "Type": "Accessory",
+        "Class": "Ring",
+        "Name": "Composite Ring",
+        "ImplicitType": "+3 Prefix Modifier, -3 Suffix Modifier",
+        "ImplicitValue": [],
+        "DropLevel": 24
+    },
+    {
+        "Type": "Accessory",
+        "Class": "Ring",
+        "Name": "Dusk Ring",
+        "ImplicitType": "Left Slot: 15% Reduced Skill Effect Duration, Right Slot: 15% Increased Skill Effect Duration",
+        "ImplicitValue": [],
+        "DropLevel": 24
+    },
+    {
+        "Type": "Accessory",
+        "Class": "Ring",
+        "Name": "Geodesic Ring",
+        "ImplicitType": "+1 Prefix Modifier, -1 Suffix Modifier, 25% increased Prefix Magnitudes",
+        "ImplicitValue": [],
+        "DropLevel": 24
+    },
+    {
+        "Type": "Accessory",
+        "Class": "Ring",
+        "Name": "Gloam Ring",
+        "ImplicitType": "Left Slot: Minions Take 15% Reduced Damage, Right Slot: Minions Take 15% Increased Damage",
+        "ImplicitValue": [],
+        "DropLevel": 24
+    },
+    {
+        "Type": "Accessory",
+        "Class": "Ring",
+        "Name": "Helical Ring",
+        "ImplicitType": "-2 Prefix Modifier, +1 Suffix Modifier, 50% increased Suffix Magnitudes",
+        "ImplicitValue": [],
+        "DropLevel": 24
+    },
+    {
+        "Type": "Accessory",
+        "Class": "Ring",
+        "Name": "Manifold Ring",
+        "ImplicitType": "+1 Prefix Modifier, -2 Suffix Modifier, 50% increased Prefix Magnitudes",
+        "ImplicitValue": [],
+        "DropLevel": 24
+    },
+    {
+        "Type": "Accessory",
+        "Class": "Ring",
+        "Name": "Nameless Ring",
+        "ImplicitType": "50% Increased Elemental Ailment Duration, 50% Reduced Effect of Curses",
+        "ImplicitValue": [],
+        "DropLevel": 24
+    },
+    {
+        "Type": "Accessory",
+        "Class": "Ring",
+        "Name": "Penumbra Ring",
+        "ImplicitType": "Left Slot: 30% Reduced Effect of Curses, Right Slot: 30% Increased of Curses",
+        "ImplicitValue": [],
+        "DropLevel": 24
+    },
+    {
+        "Type": "Accessory",
+        "Class": "Ring",
+        "Name": "Ratcheting Ring",
+        "ImplicitType": "-3 Prefix Modifier, +3 Suffix Modifier",
+        "ImplicitValue": [],
+        "DropLevel": 24
+    },
+    {
+        "Type": "Accessory",
+        "Class": "Ring",
+        "Name": "Shadowed Ring",
+        "ImplicitType": "25% of One Element Taken as Another Element",
+        "ImplicitValue": [],
+        "DropLevel": 24
+    },
+    {
+        "Type": "Accessory",
+        "Class": "Ring",
+        "Name": "Tenebrous Ring",
+        "ImplicitType": "Left Slot: 30% Reduced Duration of Ailments, Right Slot: 30% Increased Duration of Ailments",
+        "ImplicitValue": [],
+        "DropLevel": 24
+    },
+    {
+        "Type": "Accessory",
+        "Class": "Ring",
+        "Name": "Bone Ring",
+        "ImplicitType": "Minions Have % To All Elemental Resistances",
+        "ImplicitValue": [10, 15],
+        "DropLevel": 24
+    },
+    {
+        "Type": "Accessory",
+        "Class": "Ring",
         "Name": "Amethyst Ring",
         "ImplicitType": "+ Chaos Resistance",
-        "ImplicitValue": [9, 13],
+        "ImplicitValue": [17, 23],
         "DropLevel": 30
     },
     {
@@ -117,6 +221,14 @@
         "Name": "Cerulean Ring",
         "ImplicitType": "Increased Maximum Mana",
         "ImplicitValue": [8, 10],
+        "DropLevel": 80
+    },
+    {
+        "Type": "Accessory",
+        "Class": "Ring",
+        "Name": "Iolite Ring",
+        "ImplicitType": "Increased Chaos Damage",
+        "ImplicitValue": [17, 23],
         "DropLevel": 80
     },
     {
