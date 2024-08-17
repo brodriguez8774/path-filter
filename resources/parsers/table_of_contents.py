@@ -304,10 +304,10 @@ class TableOfContentsGenerator:
                     ),
                 )
 
-            if "A/En" in self.shield_types:
+            if "En/A" in self.shield_types:
                 parse_subsubnum += 1
                 self.filter_file.write(
-                    "# [{0}.{1}.{2}] - A/En Shields\n".format(
+                    "# [{0}.{1}.{2}] - En/A Shields\n".format(
                         str(parse_num).zfill(3),
                         str(parse_subnum).zfill(2),
                         str(parse_subsubnum).zfill(2),

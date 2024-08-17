@@ -61,7 +61,7 @@ class DefenseParser:
             self.parse_subnum += 1
             self.parse_en()
 
-        if "A/En" in self.defense_types:
+        if "En/A" in self.defense_types:
             self.parse_subnum += 1
             self.parse_en_a()
 

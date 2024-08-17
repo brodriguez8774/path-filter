@@ -30,7 +30,7 @@ defense_choices = [
     "En",
     "A/Ev",
     "Ev/En",
-    "A/En",
+    "En/A",
 ]
 weapon_choices = [
     "OneHandMaces",

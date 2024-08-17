@@ -718,14 +718,14 @@ class WeaponParser:
                     # Parse item.
                     self.parse_item(item, display_dict["En"])
 
-        if "A/En" in self.shield_types:
+        if "En/A" in self.shield_types:
             # Parse Armor/Energy Shield shields.
             subsubnum += 1
 
             self.filter_file.write("\n")
             self.filter_file.write("# --------------------------------- #\n")
             self.filter_file.write(
-                "# --- [{0}.{1}.{2}] - A/En Shields --- #\n".format(
+                "# --- [{0}.{1}.{2}] - En/A Shields --- #\n".format(
                     self.parse_num, str(self.parse_subnum).zfill(2), subsubnum
                 )
             )
