@@ -1,0 +1,242 @@
+[
+    {
+        "Type": "Weapon",
+        "Class": "Two Hand Sword",
+        "Name": "Corroded Blade",
+        "Damage": [8, 16],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 1,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "Two Hand Sword",
+        "Name": "Longsword",
+        "Damage": [11, 26],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 8,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "Two Hand Sword",
+        "Name": "Bastard Sword",
+        "Damage": [17, 29],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 12,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "Two Hand Sword",
+        "Name": "Two-Handed Sword",
+        "Damage": [20, 38],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 17,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "Two Hand Sword",
+        "Name": "Etched Greatsword",
+        "Damage": [23, 48],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 22,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "Two Hand Sword",
+        "Name": "Ornate Sword",
+        "Damage": [30, 50],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 27,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "Two Hand Sword",
+        "Name": "Spectral Sword",
+        "Damage": [31, 65],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 32,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "Two Hand Sword",
+        "Name": "Curved Blade",
+        "Damage": [41, 68],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 35,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "Two Hand Sword",
+        "Name": "Butcher Sword",
+        "Damage": [34, 79],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 36,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "Two Hand Sword",
+        "Name": "Footman Sword",
+        "Damage": [39, 65],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 40,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "Two Hand Sword",
+        "Name": "Highland Blade",
+        "Damage": [45, 84],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 44,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "Two Hand Sword",
+        "Name": "Engraved Greatsword",
+        "Damage": [49, 102],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 48,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "Two Hand Sword",
+        "Name": "Blasting Blade",
+        "Damage": [47, 87],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 50,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "Two Hand Sword",
+        "Name": "Tiger Sword",
+        "Damage": [54, 89],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 51,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "Two Hand Sword",
+        "Name": "Wraith Sword",
+        "Damage": [52, 109],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 54,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "Two Hand Sword",
+        "Name": "Lithe Blade",
+        "Damage": [63, 104],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 56,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "Two Hand Sword",
+        "Name": "Headman's Sword",
+        "Damage": [55, 128],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 57,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "Two Hand Sword",
+        "Name": "Reaver Sword",
+        "Damage": [62, 104],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 59,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "Two Hand Sword",
+        "Name": "Ezomyte Blade",
+        "Damage": [62, 115],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 61,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "Two Hand Sword",
+        "Name": "Vaal Greatsword",
+        "Damage": [68, 142],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 63,
+        "MaxLevel": true
+    },
+    {
+        "Type": "Weapon",
+        "Class": "Two Hand Sword",
+        "Name": "Lion Sword",
+        "Damage": [69, 115],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 65,
+        "MaxLevel": true
+    },
+    {
+        "Type": "Weapon",
+        "Class": "Two Hand Sword",
+        "Name": "Infernal Sword",
+        "Damage": [62, 129],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 67,
+        "MaxLevel": true
+    },
+    {
+        "Type": "Weapon",
+        "Class": "Two Hand Sword",
+        "Name": "Banishing Blade",
+        "Damage": [55, 102],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 70,
+        "MaxLevel": true
+    },
+    {
+        "Type": "Weapon",
+        "Class": "Two Hand Sword",
+        "Name": "Exquisite Blade",
+        "Damage": [67, 112],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 70,
+        "MaxLevel": true
+    }
+]

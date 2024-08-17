@@ -487,7 +487,6 @@ class FinalParser:
                 "Ring",
                 "Belt",
                 "Amulet",
-                "Talisman",
             ],
         )
 

@@ -59,6 +59,15 @@ class WeaponParser:
         if "Daggers" in self.weapon_types:
             self.parse_daggers()
 
+        if "OneHandSwords" in self.weapon_types:
+            self.parse_one_hand_swords()
+
+        if "OneHandThrustingSwords" in self.weapon_types:
+            self.parse_one_hand_thrusting_swords()
+
+        if "TwoHandSwords" in self.weapon_types:
+            self.parse_two_hand_swords()
+
         if "Claws" in self.weapon_types:
             self.parse_claws()
 
@@ -73,6 +82,9 @@ class WeaponParser:
 
         if "Wands" in self.weapon_types:
             self.parse_wands()
+
+        if "Staves" in self.weapon_types:
+            self.parse_staves()
 
         if "Shields" in self.weapon_types:
             self.parse_shields()
@@ -348,6 +360,86 @@ class WeaponParser:
                 # Parse item.
                 self.parse_item(item, display_dict["Ev/En"])
 
+    def parse_one_hand_swords(self):
+        """
+        Parses all "OneHandSword" type weapons.
+        """
+        if self.debug:
+            logger.info("Parsing one handed swords.")
+
+        self.parse_subnum += 1
+
+        # Section Start.
+        self.filter_file.write("\n")
+        self.filter_file.write("# ----------------------------------- #\n")
+        self.filter_file.write(
+            "# --- [{0}.{1}] - One Handed Swords --- #\n".format(self.parse_num, str(self.parse_subnum).zfill(2))
+        )
+        self.filter_file.write("# ----------------------------------- #\n")
+        self.filter_file.write("\n")
+
+        # Parse wands.
+        with open("resources/data/hand/one_hand_swords.json", "r") as json_file:
+            # Loop through all items in json.
+            json_data = json.load(json_file)
+            for item in json_data:
+                # Parse item.
+                self.parse_item(item, display_dict["A/Ev"])
+
+    def parse_one_hand_thrusting_swords(self):
+        """
+        Parses all "OneHandSword" type weapons.
+        """
+        if self.debug:
+            logger.info("Parsing one handed thrusting swords.")
+
+        self.parse_subnum += 1
+
+        # Section Start.
+        self.filter_file.write("\n")
+        self.filter_file.write("# ----------------------------------- #\n")
+        self.filter_file.write(
+            "# --- [{0}.{1}] - One Handed Thrusting Swords --- #\n".format(
+                self.parse_num, str(self.parse_subnum).zfill(2)
+            )
+        )
+        self.filter_file.write("# ----------------------------------- #\n")
+        self.filter_file.write("\n")
+
+        # Parse wands.
+        with open("resources/data/hand/one_hand_thrusting_swords.json", "r") as json_file:
+            # Loop through all items in json.
+            json_data = json.load(json_file)
+            for item in json_data:
+                # Parse item.
+                self.parse_item(item, display_dict["Ev"])
+
+    def parse_two_hand_swords(self):
+        """
+        Parses all "TwoHandSword" type weapons.
+        """
+        if self.debug:
+            logger.info("Parsing two handed swords.")
+
+        self.parse_subnum += 1
+
+        # Section Start.
+        self.filter_file.write("\n")
+        self.filter_file.write("# ----------------------------------- #\n")
+        self.filter_file.write(
+            "# --- [{0}.{1}] - Two Handed Swords --- #\n".format(self.parse_num, str(self.parse_subnum).zfill(2))
+        )
+        self.filter_file.write("# ----------------------------------- #\n")
+        self.filter_file.write("\n")
+
+        # Parse wands.
+        with open("resources/data/hand/two_hand_swords.json", "r") as json_file:
+            # Loop through all items in json.
+            json_data = json.load(json_file)
+            for item in json_data:
+                # Parse item.
+                self.parse_item(item, display_dict["A/Ev"])
+
     def parse_claws(self):
         """
         Parses all "Claw" type weapons.
@@ -475,6 +567,32 @@ class WeaponParser:
             for item in json_data:
                 # Parse item.
                 self.parse_item(item, display_dict["En"])
+
+    def parse_staves(self):
+        """
+        Parses all "Staff" type weapons.
+        """
+        if self.debug:
+            logger.info("Parsing staves.")
+
+        self.parse_subnum += 1
+
+        # Section Start.
+        self.filter_file.write("\n")
+        self.filter_file.write("# ------------------------ #\n")
+        self.filter_file.write(
+            "# --- [{0}.{1}] - Staves --- #\n".format(self.parse_num, str(self.parse_subnum).zfill(2))
+        )
+        self.filter_file.write("# ------------------------ #\n")
+        self.filter_file.write("\n")
+
+        # Parse wands.
+        with open("resources/data/hand/staves.json", "r") as json_file:
+            # Loop through all items in json.
+            json_data = json.load(json_file)
+            for item in json_data:
+                # Parse item.
+                self.parse_item(item, display_dict["En/A"])
 
     def parse_shields(self):
         """

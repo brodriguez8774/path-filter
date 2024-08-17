@@ -1,0 +1,282 @@
+[
+    {
+        "Type": "Weapon",
+        "Class": "Warstaves",
+        "Name": "Gnarled Branch",
+        "Damage": [9, 19],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 1,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "Warstaves",
+        "Name": "Primitive Staff",
+        "Damage": [10, 31],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 9,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "Warstaves",
+        "Name": "Long Staff",
+        "Damage": [24, 41],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 18,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "Warstaves",
+        "Name": "Royal Staff",
+        "Damage": [27, 81],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 28,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "Warstaves",
+        "Name": "Transformer Staff",
+        "Damage": [36, 66],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 30,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "Warstaves",
+        "Name": "Crescent Staff",
+        "Damage": [41, 85],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 36,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "Warstaves",
+        "Name": "Woodful Staff",
+        "Damage": [34, 102],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 37,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "Warstaves",
+        "Name": "Quarterstaff",
+        "Damage": [51, 86],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 45,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "Warstaves",
+        "Name": "Reciprocation Staff",
+        "Damage": [55, 102],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 50,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "Warstaves",
+        "Name": "Highborn Staff",
+        "Damage": [48, 145],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 52,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "Warstaves",
+        "Name": "Moon Staff",
+        "Damage": [66, 138],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 57,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "Warstaves",
+        "Name": "Primordial Staff",
+        "Damage": [55, 165],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 58,
+        "MaxLevel": true
+    },
+    {
+        "Type": "Weapon",
+        "Class": "Warstaves",
+        "Name": "Lathi",
+        "Damage": [72, 120],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 62,
+        "MaxLevel": true
+    },
+    {
+        "Type": "Weapon",
+        "Class": "Warstaves",
+        "Name": "Imperial Staff",
+        "Damage": [57, 171],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 66,
+        "MaxLevel": true
+    },
+    {
+        "Type": "Weapon",
+        "Class": "Warstaves",
+        "Name": "Battery Staff",
+        "Damage": [65, 120],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 70,
+        "MaxLevel": true
+    },
+    {
+        "Type": "Weapon",
+        "Class": "Warstaves",
+        "Name": "Eclipse Staff",
+        "Damage": [70, 145],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 70,
+        "MaxLevel": true
+    },
+    {
+        "Type": "Weapon",
+        "Class": "Warstaves",
+        "Name": "Iron Staff",
+        "Damage": [14, 42],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 13,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "Warstaves",
+        "Name": "Coiled Staff",
+        "Damage": [27, 57],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 23,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "Warstaves",
+        "Name": "Capacity Rod",
+        "Damage": [39, 73],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 30,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "Warstaves",
+        "Name": "Vile Staff",
+        "Damage": [41, 76],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 33,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "Warstaves",
+        "Name": "Military Staff",
+        "Damage": [38, 114],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 41,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "Warstaves",
+        "Name": "Serpentine Staff",
+        "Damage": [56, 117],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 49,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "Warstaves",
+        "Name": "Potentiality Rod",
+        "Damage": [61, 113],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 50,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "Warstaves",
+        "Name": "Foul Staff",
+        "Damage": [65, 121],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 55,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "Warstaves",
+        "Name": "Ezomyte Staff",
+        "Damage": [53, 160],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 60,
+        "MaxLevel": false
+    },
+    {
+        "Type": "Weapon",
+        "Class": "Warstaves",
+        "Name": "Maelström Staff",
+        "Damage": [71, 147],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 64,
+        "MaxLevel": true
+    },
+    {
+        "Type": "Weapon",
+        "Class": "Warstaves",
+        "Name": "Judgement Staff",
+        "Damage": [73, 136],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 68,
+        "MaxLevel": true
+    },
+    {
+        "Type": "Weapon",
+        "Class": "Warstaves",
+        "Name": "Eventuality Rod",
+        "Damage": [78, 144],
+        "ImplicitType": "",
+        "ImplicitValue": [],
+        "DropLevel": 70,
+        "MaxLevel": true
+    }
+]

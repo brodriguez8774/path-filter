@@ -38,11 +38,15 @@ weapon_choices = [
     "OneHandAxes",
     "TwoHandAxes",
     "Daggers",
+    "OneHandSwords",
+    "OneHandThrustingSwords",
+    "TwoHandSwords",
     "Claws",
     "Bows",
     "Quivers",
     "Sceptres",
     "Wands",
+    "Staves",
     "Shields",
 ]
 

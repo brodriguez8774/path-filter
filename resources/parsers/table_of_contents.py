@@ -163,6 +163,33 @@ class TableOfContentsGenerator:
                 )
             )
 
+        if "OneHandSwords" in self.weapon_types:
+            parse_subnum += 1
+            self.filter_file.write(
+                "# [{0}.{1}] - One Handed Swords\n".format(
+                    str(parse_num).zfill(3),
+                    str(parse_subnum).zfill(2),
+                )
+            )
+
+        if "OneHandThrustingSwords" in self.weapon_types:
+            parse_subnum += 1
+            self.filter_file.write(
+                "# [{0}.{1}] - One Handed Thrusting Swords\n".format(
+                    str(parse_num).zfill(3),
+                    str(parse_subnum).zfill(2),
+                )
+            )
+
+        if "TwoHandSwords" in self.weapon_types:
+            parse_subnum += 1
+            self.filter_file.write(
+                "# [{0}.{1}] - Two Handed Swords\n".format(
+                    str(parse_num).zfill(3),
+                    str(parse_subnum).zfill(2),
+                )
+            )
+
         if "Claws" in self.weapon_types:
             parse_subnum += 1
             self.filter_file.write(
@@ -190,10 +217,28 @@ class TableOfContentsGenerator:
                 ),
             )
 
+        if "Septres" in self.weapon_types:
+            parse_subnum += 1
+            self.filter_file.write(
+                "# [{0}.{1}] - Septres\n".format(
+                    str(parse_num).zfill(3),
+                    str(parse_subnum).zfill(2),
+                ),
+            )
+
         if "Wands" in self.weapon_types:
             parse_subnum += 1
             self.filter_file.write(
                 "# [{0}.{1}] - Wands\n".format(
+                    str(parse_num).zfill(3),
+                    str(parse_subnum).zfill(2),
+                ),
+            )
+
+        if "Staves" in self.weapon_types:
+            parse_subnum += 1
+            self.filter_file.write(
+                "# [{0}.{1}] - Staves\n".format(
                     str(parse_num).zfill(3),
                     str(parse_subnum).zfill(2),
                 ),
