@@ -263,7 +263,6 @@ class CurrencyParser:
         self.template.special_item(
             description="Ritual",
             class_text="Corpses",
-            base_text="Gold",
         )
 
         # Heist.
@@ -586,6 +585,10 @@ class PreEquipment_CurrencyParser:
         self.filter_file.write("# ============================================== #\n")
         self.filter_file.write("# === [{0}] - Pre-Equipment Currency Recipes === #\n".format(self.parse_num))
         self.filter_file.write("# ============================================== #\n")
+        self.filter_file.write("\n")
+
+        self.filter_file.write("# None so far.")
+        self.filter_file.write("\n")
         self.filter_file.write("\n")
 
 

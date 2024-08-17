@@ -574,8 +574,12 @@ class FilterTemplates:
             description=description,
             class_text=class_text,
             base_text=base_text,
+            background_color="0 0 0 0",
+            border_color="0 0 0 0",
+            text_color="0 0 0 0",
             font_size=display_dict["min_font_size"],
             sound="None",
+            disable_drop_sound=True,
         )
 
 
@@ -622,6 +626,7 @@ class BaseTemplate:
         minimap_color=None,
         minimap_shape=None,
         sound=None,
+        disable_drop_sound=None,
         playeffect=None
     ):
         """
@@ -655,6 +660,7 @@ class BaseTemplate:
         :param minimap_color: Filter application to set minimap color of item.
         :param minimap_shape: Filter applciation to set minimap shape of item.
         :param sound: Filter application to set drop sound of item.
+        :param disable_drop_sound: Bool indicating if sounds play at all or not for item.
         :param playeffect: Filter application to set glow aura of item.
         """
         if description is not None:
@@ -717,6 +723,8 @@ class BaseTemplate:
             self.filter_file.write("    SetFontSize {0}\n".format(str(font_size).strip()))
         if sound is not None:
             self.filter_file.write("    PlayAlertSound {0}\n".format(str(sound).strip()))
+        if disable_drop_sound is not None:
+            self.filter_file.write("    DisableDropSound {0}\n".format(bool(str(disable_drop_sound).strip())))
         if minimap_size is not None or minimap_color is not None or minimap_shape is not None:
             # Check that all three are present.
             if minimap_color is None or minimap_size is None or minimap_shape is None:
