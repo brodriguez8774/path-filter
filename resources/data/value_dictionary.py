@@ -5,7 +5,7 @@ Dictionary of general values used repeatedly in program.
 # Dictionary for filter value variables.
 filter_dict = {
     # Leveling attributes.
-    "base_drop_level": 10,  # By default, show items that are within 10 levels of the initial drop level.
+    "base_drop_level": 15,  # By default, show items that are within 10 levels of the initial drop level.
     "level_rarity_modifier": 5,  # By default, show uncommon by +5 levels above and rare by +10 levels above.
 }
 
@@ -20,18 +20,18 @@ display_dict = {
     "text": "127 127 127",
     "quest": "74 230 58",
     # Custom armor-class colors.
-    "A": "48 3 3",
-    "A/Ev": "73 73 4",
-    "Ev": "3 48 26",
-    "Ev/En": "3 33 48",
-    "En": "10 3 48",
-    "En/A": "48 3 48",
+    "A": "92 10 10",  # 5c0a0a
+    "A/Ev": "92 78 10",  # 5c4e0a
+    "Ev": "10 92 28",  # 0a5c1c
+    "Ev/En": "10 81 92",  # 0a515c
+    "En": "22 10 92",  # 160a5c
+    "En/A": "48 3 48",  # 5c0a5c
     # Custom other colors.
     "standard_background": "25 25 25",
     "dark_grey_background": "75 75 75",
     "unique_background": "66 30 30",
     "normal_border": "140 140 140",
-    "notable_border": "200 200 200",
+    "notable_border": "220 220 220",
     "rare_currency_border": "255 215 0",
     "currency_orb_border": "0 0 0",
     "league_border": "128 0 128",
