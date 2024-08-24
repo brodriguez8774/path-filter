@@ -349,34 +349,34 @@ class NotableGearParser:
             playeffect=display_dict["minimap_color_notable"],
         )
 
-        # Mirrored types.
-        self.template.rare_item(
-            description="Mirror Types",
-            is_mirrored=True,
-            minimap_size=0,
-            minimap_color=display_dict["minimap_color_notable"],
-            minimap_shape=display_dict["minimap_icon_influenced"],
-            sound="5 300",
-            playeffect=display_dict["minimap_color_notable"],
-        )
-        self.template.uncommon_item(
-            description="Mirror Types",
-            is_mirrored=True,
-            minimap_size=0,
-            minimap_color=display_dict["minimap_color_notable"],
-            minimap_shape=display_dict["minimap_icon_influenced"],
-            sound="5 300",
-            playeffect=display_dict["minimap_color_notable"],
-        )
-        self.template.common_item(
-            description="Mirror Types",
-            is_mirrored=True,
-            minimap_size=0,
-            minimap_color=display_dict["minimap_color_notable"],
-            minimap_shape=display_dict["minimap_icon_influenced"],
-            sound="5 300",
-            playeffect=display_dict["minimap_color_notable"],
-        )
+        # # Mirrored types.
+        # self.template.rare_item(
+        #     description="Mirror Types",
+        #     is_mirrored=True,
+        #     minimap_size=0,
+        #     minimap_color=display_dict["minimap_color_notable"],
+        #     minimap_shape=display_dict["minimap_icon_influenced"],
+        #     sound="5 300",
+        #     playeffect=display_dict["minimap_color_notable"],
+        # )
+        # self.template.uncommon_item(
+        #     description="Mirror Types",
+        #     is_mirrored=True,
+        #     minimap_size=0,
+        #     minimap_color=display_dict["minimap_color_notable"],
+        #     minimap_shape=display_dict["minimap_icon_influenced"],
+        #     sound="5 300",
+        #     playeffect=display_dict["minimap_color_notable"],
+        # )
+        # self.template.common_item(
+        #     description="Mirror Types",
+        #     is_mirrored=True,
+        #     minimap_size=0,
+        #     minimap_color=display_dict["minimap_color_notable"],
+        #     minimap_shape=display_dict["minimap_icon_influenced"],
+        #     sound="5 300",
+        #     playeffect=display_dict["minimap_color_notable"],
+        # )
 
         # Replica types.
         self.template.rare_item(
