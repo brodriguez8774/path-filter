@@ -752,12 +752,12 @@ class PostEquipment_CurrencyParser:
             "# --- [{0}.{1}] - Regal Orb --- #\n".format(self.parse_num, str(self.parse_subnum).zfill(2))
         )
         self.filter_file.write("# ---------------------------- #\n")
-        self.filter_file.write("# Involves getting a rare item for each slot, with all items level 75 or above.\n")
+        self.filter_file.write("# Involves getting a rare item for each gear slot, with all items level 75 or above.\n")
         self.filter_file.write("\n")
 
         # Weapon Slots.
         self.template.currency_recipe_high_level(
-            description="Prioritize Small Weapons",
+            description="Prioritize Small Weapons for Regal Orb recipes.",
             item_level=">= 75",
             rarity="Rare",
             height="<= 3",
@@ -766,7 +766,7 @@ class PostEquipment_CurrencyParser:
 
         # Gear Slots.
         self.template.currency_recipe_high_level(
-            description="Gear Slots",
+            description="Gear Slots for Regal Orb recipes.",
             class_text=[
                 "Helmets",
                 "Body Armours",
@@ -793,12 +793,12 @@ class PostEquipment_CurrencyParser:
             "# --- [{0}.{1}] - Chaos Orb --- #\n".format(self.parse_num, str(self.parse_subnum).zfill(2))
         )
         self.filter_file.write("# ---------------------------- #\n")
-        self.filter_file.write("# Involves getting a rare item for each slot, with all items level 60 to 74.\n")
+        self.filter_file.write("# Involves getting a rare item for each gear slot, with all items level 60 to 74.\n")
         self.filter_file.write("\n")
 
         # Weapon slots.
         self.template.currency_recipe_high_level(
-            description="Prioritize Small Weapons",
+            description="Prioritize Small Weapons for Chaos Orb recipes.",
             item_level=">= 65",
             rarity="Rare",
             height="<= 3",
@@ -807,7 +807,7 @@ class PostEquipment_CurrencyParser:
 
         # Gear Slots.
         self.template.currency_recipe_high_level(
-            description="Gear Slots",
+            description="Gear Slots for Chaos Orb recipes.",
             class_text=[
                 "Helmets",
                 "Body Armours",
