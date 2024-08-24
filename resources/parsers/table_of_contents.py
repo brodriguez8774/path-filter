@@ -114,10 +114,19 @@ class TableOfContentsGenerator:
         self.filter_file.write("# [{0}.03] - Rings\n".format(str(parse_num).zfill(3)))
         self.filter_file.write("#\n")
 
+        # Weapon Toc.
         parse_num += 1
+        parse_subnum = 0
         self.filter_file.write("# [{0}] - Weapons\n".format(str(parse_num).zfill(3)))
 
-        parse_subnum = 0
+        parse_subnum += 1
+        self.filter_file.write(
+            "# [{0}.{1}] - Early Weapon Socket Links\n".format(
+                str(parse_num).zfill(3),
+                str(parse_subnum).zfill(2),
+            ),
+        )
+
         if "OneHandMaces" in self.weapon_types:
             parse_subnum += 1
             self.filter_file.write(
@@ -316,12 +325,21 @@ class TableOfContentsGenerator:
 
             self.filter_file.write("#\n")
 
+        # Armor ToC.
         parse_num += 1
+        parse_subnum = 0
         self.filter_file.write(
             "# [{0}] - Armors\n".format(str(parse_num).zfill(3)),
         )
 
-        parse_subnum = 0
+        parse_subnum += 1
+        self.filter_file.write(
+            "# [{0}.{1}] - Early Armor Socket Links\n".format(
+                str(parse_num).zfill(3),
+                str(parse_subnum).zfill(2),
+            ),
+        )
+
         if "A" in self.defense_types:
             parse_subnum += 1
             self.filter_file.write(

@@ -43,6 +43,9 @@ class WeaponParser:
         self.filter_file.write("# ======================= #\n")
         self.filter_file.write("\n")
 
+        # Parse all weapon drops on selected weapons for low level socket connections.
+        self.parse_low_level_sockets(weapon_types)
+
         # Handle for all present weapon types. Note that parse order is order that values show up in filter.
         if "OneHandMaces" in self.weapon_types:
             self.parse_one_hand_maces()
@@ -88,6 +91,227 @@ class WeaponParser:
 
         if "Shields" in self.weapon_types:
             self.parse_shields()
+
+    def parse_low_level_sockets(self, weapon_types):
+        """
+        Parses low level armor for linked sockets.
+        """
+        if self.debug:
+            logger.info("Parsing low level armor sockets.")
+
+        self.parse_subnum += 1
+        parse_subnum = str(self.parse_subnum).zfill(2)
+        section_name = "Early Weapon Socket Links"
+        padding_count = len(section_name) - 1
+
+        for weapon in weapon_types:
+            logger.info("WEAPON: {0}".format(weapon))
+
+        three_link_weapon_slots = {}
+        six_link_weapon_slots = {}
+        selected_weapon_classes = []
+
+        # Weapons tend to be directly tied to skills.
+        # So only display linked weapons as indicated by the select type.
+        if "OneHandMaces" in weapon_types:
+            selected_weapon_classes.append("One Hand Maces")
+            three_link_weapon_slots["One Hand Maces"] = "A"
+
+        if "TwoHandMaces" in weapon_types:
+            selected_weapon_classes.append("Two Hand Maces")
+            three_link_weapon_slots["Two Hand Maces"] = "A"
+            six_link_weapon_slots["Two Hand Maces"] = "A"
+
+        if "OneHandAxes" in weapon_types:
+            selected_weapon_classes.append("One Hand Axes")
+            three_link_weapon_slots["One Hand Axes"] = "A/Ev"
+
+        if "TwoHandAxes" in weapon_types:
+            selected_weapon_classes.append("Two Hand Axes")
+            three_link_weapon_slots["Two Hand Axes"] = "A/Ev"
+            six_link_weapon_slots["Two Hand Axes"] = "A/Ev"
+
+        if "Daggers" in weapon_types:
+            selected_weapon_classes.append("Daggers")
+            three_link_weapon_slots["Daggers"] = "Ev/En"
+
+        if "OneHandSwords" in weapon_types:
+            selected_weapon_classes.append("One Hand Swords")
+            three_link_weapon_slots["One Hand Swords"] = "A/Ev"
+
+        if "OneHandThrustingSwords" in weapon_types:
+            selected_weapon_classes.append("Thrusting One Hand Swords")
+            three_link_weapon_slots["Thrusting One Hand Swords"] = "Ev"
+
+        if "TwoHandSwords" in weapon_types:
+            selected_weapon_classes.append("Two Hand Swords")
+            three_link_weapon_slots["Two Hand Swords"] = "A/Ev"
+            six_link_weapon_slots["Two Hand Swords"] = "A/Ev"
+
+        if "Claws" in weapon_types:
+            selected_weapon_classes.append("Claws")
+            three_link_weapon_slots["Claws"] = "Ev/En"
+
+        if "Bows" in weapon_types:
+            selected_weapon_classes.append("Bows")
+            three_link_weapon_slots["Bows"] = "Ev"
+            six_link_weapon_slots["Bows"] = "Ev"
+
+        if "Sceptres" in weapon_types:
+            selected_weapon_classes.append("Sceptres")
+            three_link_weapon_slots["Sceptres"] = "En/A"
+
+        if "Wands" in weapon_types:
+            selected_weapon_classes.append("Wands")
+            three_link_weapon_slots["Wands"] = "En"
+
+        if "Staves" in weapon_types:
+            selected_weapon_classes.append("Staves")
+            three_link_weapon_slots["Staves"] = "En/A"
+            six_link_weapon_slots["Staves"] = "En/A"
+
+        if "Shields" in weapon_types:
+            selected_weapon_classes.append("Shields")
+            three_link_weapon_slots["Shields"] = None
+
+        # Section Start.
+        self.filter_file.write("\n")
+        self.filter_file.write("# --------------------{0} #\n".format("-" * padding_count))
+        self.filter_file.write("# --- [{0}.{1}] - {2} --- #\n".format(self.parse_num, parse_subnum, section_name))
+        self.filter_file.write("# --------------------{0} #\n".format("-" * padding_count))
+        self.filter_file.write("\n")
+        self.filter_file.write("# Displays more variety of low-level gear with good early socket connections.\n")
+        self.filter_file.write("# To help builds out early game.\n")
+        self.filter_file.write("\n")
+
+        for weapon_class in selected_weapon_classes:
+            weapon_class_attr = three_link_weapon_slots[weapon_class]
+
+            # Filter for 3-socket max items early on.
+            self.template.common_item(
+                description="Early 3-Linked-Socket Linked RGB",
+                class_text=weapon_class,
+                item_level="<= 25",
+                socket_group='"RGB"',
+                background_color=display_dict[weapon_class_attr] if weapon_class_attr else None,
+                border_color=display_dict["notable_border"],
+                font_size=display_dict["rare_font_size"],
+            )
+            self.template.rare_item(
+                description="Early 3-Linked-Socket Slot Rares",
+                class_text=weapon_class,
+                item_level="<= 25",
+                linked_sockets="3",
+                background_color=display_dict[weapon_class_attr] if weapon_class_attr else None,
+                border_color=display_dict["notable_border"],
+                font_size=display_dict["important_font_size"],
+            )
+            self.template.uncommon_item(
+                description="Early 3-Linked-Socket Slot Uncommons",
+                class_text=weapon_class,
+                item_level="<= 25",
+                linked_sockets="3",
+                background_color=display_dict[weapon_class_attr] if weapon_class_attr else None,
+                border_color=display_dict["notable_border"],
+                font_size=display_dict["rare_font_size"],
+            )
+            self.template.common_item(
+                description="Early 3-Linked-Socket Slot Normals",
+                class_text=weapon_class,
+                item_level="<= 25",
+                linked_sockets="3",
+                background_color=display_dict[weapon_class_attr] if weapon_class_attr else None,
+                border_color=display_dict["notable_border"],
+                font_size=display_dict["uncommon_font_size"],
+            )
+
+            # Weapons of 6 socket size.
+            if len(six_link_weapon_slots) > 0:
+
+                try:
+                    weapon_class_attr = six_link_weapon_slots[weapon_class]
+
+                    # Filter for 4-socket max items early on.
+                    self.template.common_item(
+                        description="Early 4-Linked-Socket Linked RGB",
+                        class_text=weapon_class,
+                        item_level="<= 40",
+                        socket_group='"RGB"',
+                        linked_sockets="4",
+                        background_color=display_dict[weapon_class_attr],
+                        border_color=display_dict["notable_border"],
+                        font_size=display_dict["rare_font_size"],
+                    )
+                    self.template.rare_item(
+                        description="Early 4-Linked-Socket Slot Rares",
+                        class_text=weapon_class,
+                        item_level="<= 40",
+                        linked_sockets="4",
+                        background_color=display_dict[weapon_class_attr],
+                        border_color=display_dict["notable_border"],
+                        font_size=display_dict["important_font_size"],
+                    )
+                    self.template.uncommon_item(
+                        description="Early 4-Linked-Socket Slot Uncommons",
+                        class_text=weapon_class,
+                        item_level="<= 40",
+                        linked_sockets="4",
+                        background_color=display_dict[weapon_class_attr],
+                        border_color=display_dict["notable_border"],
+                        font_size=display_dict["rare_font_size"],
+                    )
+                    self.template.common_item(
+                        description="Early 4-Linked-Socket Slot Normals",
+                        class_text=weapon_class,
+                        item_level="<= 40",
+                        linked_sockets="4",
+                        background_color=display_dict[weapon_class_attr],
+                        border_color=display_dict["notable_border"],
+                        font_size=display_dict["uncommon_font_size"],
+                    )
+
+                    # Filter for 5-socket max items early on.
+                    self.template.common_item(
+                        description="Early 5-Linked-Socket Linked RGB",
+                        class_text=weapon_class,
+                        item_level="<= 60",
+                        socket_group='"RGB"',
+                        linked_sockets="5",
+                        background_color=display_dict[weapon_class_attr],
+                        border_color=display_dict["notable_border"],
+                        font_size=display_dict["important_font_size"],
+                    )
+                    self.template.rare_item(
+                        description="Early 5-Linked-Socket Slot Rares",
+                        class_text=weapon_class,
+                        item_level="<= 60",
+                        linked_sockets="5",
+                        background_color=display_dict[weapon_class_attr],
+                        border_color=display_dict["notable_border"],
+                        font_size=display_dict["important_font_size"],
+                    )
+                    self.template.uncommon_item(
+                        description="Early 5-Linked-Socket Slot Uncommons",
+                        class_text=weapon_class,
+                        item_level="<= 60",
+                        linked_sockets="5",
+                        background_color=display_dict[weapon_class_attr],
+                        border_color=display_dict["notable_border"],
+                        font_size=display_dict["rare_font_size"],
+                    )
+                    self.template.common_item(
+                        description="Early 5-Linked-Socket Slot Normals",
+                        class_text=weapon_class,
+                        item_level="<= 60",
+                        linked_sockets="5",
+                        background_color=display_dict[weapon_class_attr],
+                        border_color=display_dict["notable_border"],
+                        font_size=display_dict["uncommon_font_size"],
+                    )
+
+                except KeyError:
+                    # If we made it here, then weapon type only went up to 3 sockets max.
+                    pass
 
     def parse_item(self, item, background_color):
         """
@@ -198,17 +422,20 @@ class WeaponParser:
         """
         drop_level = filter_dict["base_drop_level"] + filter_dict["level_rarity_modifier"]
 
-        if item["MaxLevel"] is True:
-            self.template.uncommon_item(
-                base_text=item["Name"],
-                background_color=background_color,
-            )
-        else:
-            self.template.uncommon_item(
-                base_text=item["Name"],
-                background_color=background_color,
-                item_level="<= {0}".format(item["DropLevel"] + drop_level),
-            )
+        # Only explicitly show uncommons if low level.
+        # Otherwise, they'll show up as currency drops if relevant.
+        if item["DropLevel"] <= 25:
+            if item["MaxLevel"] is True:
+                self.template.uncommon_item(
+                    base_text=item["Name"],
+                    background_color=background_color,
+                )
+            else:
+                self.template.uncommon_item(
+                    base_text=item["Name"],
+                    background_color=background_color,
+                    item_level="<= {0}".format(item["DropLevel"] + drop_level),
+                )
 
     def parse_item_base(self, item, background_color):
         """

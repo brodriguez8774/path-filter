@@ -40,7 +40,10 @@ class DefenseParser:
         self.filter_file.write("# ====================== #\n")
         self.filter_file.write("\n")
 
-        # Handle for all present weapon types. Note that parse order is order that values show up in filter.
+        # Parse all defence drops for low level socket connections.
+        self.parse_low_level_sockets()
+
+        # Handle for all present armor types. Note that parse order is order that values show up in filter.
         if "A" in self.defense_types:
             self.parse_subnum += 1
             self.parse_a()
@@ -64,6 +67,140 @@ class DefenseParser:
         if "En/A" in self.defense_types:
             self.parse_subnum += 1
             self.parse_en_a()
+
+    def parse_low_level_sockets(self):
+        """
+        Parses low level armor for linked sockets.
+        """
+        if self.debug:
+            logger.info("Parsing low level armor sockets.")
+
+        self.parse_subnum += 1
+        parse_subnum = str(self.parse_subnum).zfill(2)
+        section_name = "Early Armor Socket Links"
+        padding_count = len(section_name) - 1
+
+        three_link_armor_slots = [
+            "Shields",
+            "Helmets",
+            "Body Armours",
+            "Gloves",
+            "Boots",
+        ]
+
+        # Section Start.
+        self.filter_file.write("\n")
+        self.filter_file.write("# --------------------{0} #\n".format("-" * padding_count))
+        self.filter_file.write("# --- [{0}.{1}] - {2} --- #\n".format(self.parse_num, parse_subnum, section_name))
+        self.filter_file.write("# --------------------{0} #\n".format("-" * padding_count))
+        self.filter_file.write("\n")
+        self.filter_file.write("# Displays more variety of low-level gear with good early socket connections.\n")
+        self.filter_file.write("# To help builds out early game.\n")
+        self.filter_file.write("\n")
+
+        # Filter for 3-socket max items early on.
+        self.template.common_item(
+            description="Early 3-Linked-Socket Linked RGB",
+            class_text=three_link_armor_slots,
+            item_level="<= 25",
+            socket_group='"RGB"',
+            border_color=display_dict["notable_border"],
+            font_size=display_dict["rare_font_size"],
+        )
+        self.template.rare_item(
+            description="Early 3-Linked-Socket Slot Rares",
+            class_text=three_link_armor_slots,
+            item_level="<= 25",
+            linked_sockets="3",
+            border_color=display_dict["notable_border"],
+            font_size=display_dict["important_font_size"],
+        )
+        self.template.uncommon_item(
+            description="Early 3-Linked-Socket Slot Uncommons",
+            class_text=three_link_armor_slots,
+            item_level="<= 25",
+            linked_sockets="3",
+            border_color=display_dict["notable_border"],
+            font_size=display_dict["rare_font_size"],
+        )
+        self.template.common_item(
+            description="Early 3-Linked-Socket Slot Normals",
+            class_text=three_link_armor_slots,
+            item_level="<= 25",
+            linked_sockets="3",
+            border_color=display_dict["notable_border"],
+            font_size=display_dict["uncommon_font_size"],
+        )
+
+        # Filter for 4-socket max items early on.
+        self.template.common_item(
+            description="Early 4-Linked-Socket Linked RGB",
+            class_text="Body Armours",
+            item_level="<= 40",
+            socket_group='"RGB"',
+            linked_sockets="4",
+            border_color=display_dict["notable_border"],
+            font_size=display_dict["rare_font_size"],
+        )
+        self.template.rare_item(
+            description="Early 4-Linked-Socket Slot Rares",
+            class_text="Body Armours",
+            item_level="<= 40",
+            linked_sockets="4",
+            border_color=display_dict["notable_border"],
+            font_size=display_dict["important_font_size"],
+        )
+        self.template.uncommon_item(
+            description="Early 4-Linked-Socket Slot Uncommons",
+            class_text="Body Armours",
+            item_level="<= 40",
+            linked_sockets="4",
+            border_color=display_dict["notable_border"],
+            font_size=display_dict["rare_font_size"],
+        )
+        self.template.common_item(
+            description="Early 4-Linked-Socket Slot Normals",
+            class_text="Body Armours",
+            item_level="<= 40",
+            linked_sockets="4",
+            border_color=display_dict["notable_border"],
+            font_size=display_dict["uncommon_font_size"],
+        )
+
+        # Filter for 5-socket max items early on.
+        self.template.common_item(
+            description="Early 5-Linked-Socket Linked RGB",
+            class_text="Body Armours",
+            item_level="<= 60",
+            socket_group='"RGB"',
+            linked_sockets="5",
+            border_color=display_dict["notable_border"],
+            font_size=display_dict["important_font_size"],
+        )
+        self.template.rare_item(
+            description="Early 5-Linked-Socket Slot Rares",
+            class_text="Body Armours",
+            item_level="<= 60",
+            linked_sockets="5",
+            border_color=display_dict["notable_border"],
+            font_size=display_dict["important_font_size"],
+        )
+        self.template.uncommon_item(
+            description="Early 5-Linked-Socket Slot Uncommons",
+            class_text="Body Armours",
+            item_level="<= 60",
+            linked_sockets="5",
+            border_color=display_dict["notable_border"],
+            font_size=display_dict["rare_font_size"],
+        )
+        self.template.common_item(
+            description="Early 5-Linked-Socket Slot Normals",
+            class_text="Body Armours",
+            item_level="<= 60",
+            linked_sockets="5",
+            border_color=display_dict["notable_border"],
+            font_size=display_dict["uncommon_font_size"],
+        )
 
     def parse_section(self, def_type, subnum):
         """
@@ -261,17 +398,20 @@ class DefenseParser:
         """
         drop_level = filter_dict["base_drop_level"] + filter_dict["level_rarity_modifier"]
 
-        if item["MaxLevel"] is True:
-            self.template.uncommon_item(
-                base_text=item["Name"],
-                background_color=display_dict[def_type],
-            )
-        else:
-            self.template.uncommon_item(
-                base_text=item["Name"],
-                item_level="<= {0}".format(item["DropLevel"] + drop_level),
-                background_color=display_dict[def_type],
-            )
+        # Only show uncommons if low level.
+        # Otherwise, they'll show up as currency drops if relevant.
+        if item["DropLevel"] <= 25:
+            if item["MaxLevel"] is True:
+                self.template.uncommon_item(
+                    base_text=item["Name"],
+                    background_color=display_dict[def_type],
+                )
+            else:
+                self.template.uncommon_item(
+                    base_text=item["Name"],
+                    item_level="<= {0}".format(item["DropLevel"] + drop_level),
+                    background_color=display_dict[def_type],
+                )
 
     def parse_item_base(self, def_type, item):
         """

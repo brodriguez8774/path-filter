@@ -471,6 +471,7 @@ class FinalParser:
                 "Daggers",
                 "Claws",
                 "One Hand Swords",
+                "Thrusting One Hand Swords",
                 "Two Hand Swords",
                 "Bows",
                 "Quivers",
