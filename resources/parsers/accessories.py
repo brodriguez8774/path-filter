@@ -52,11 +52,10 @@ class AccessoryParser:
         self.parse_belts()
         self.parse_rings()
 
-    def handle_accessory(self, item, exception_list, background_color):
+    def handle_accessory(self, item, background_color):
         """
         Creates filtering for passed accessory.
         :param item: Accessory item to determine filtering on.
-        :param exception_list: List of exceptions. If item is set to hide but in this list, then show for first levels.
         """
         item_type = item["Class"]
 
@@ -92,31 +91,29 @@ class AccessoryParser:
                 base_text=item["Name"],
                 background_color=background_color,
             )
-
-        else:
-            # Accessory set to always hide.
-            # For some select accessories, we make an exception and show it for the first levels.
+        elif item["DropLevel"] <= 25:
+            # Accessory is an early game drop.
+            # Show for at least a few levels (regardless of provided options),
+            # so the player has time to build up a base gear set.
 
             if self.debug:
                 logger.info("Hidden: {0}".format(item["Name"]))
 
-            if item["Name"] in exception_list:
-                # Exception. Show for first levels, as determined by base_drop_level and rarity_level_modifier.
-                self.template.rare_item(
-                    base_text=item["Name"],
-                    item_level="<= {0}".format(item["DropLevel"] + rare_drop_modifier),
-                    background_color=background_color,
-                )
-                self.template.uncommon_item(
-                    base_text=item["Name"],
-                    item_level="<= {0}".format(item["DropLevel"] + magic_drop_modifier),
-                    background_color=background_color,
-                )
-                self.template.common_item(
-                    base_text=item["Name"],
-                    item_level="<= {0}".format(item["DropLevel"] + normal_drop_modifier),
-                    background_color=background_color,
-                )
+            self.template.rare_item(
+                base_text=item["Name"],
+                item_level="<= {0}".format(item["DropLevel"] + rare_drop_modifier),
+                background_color=background_color,
+            )
+            self.template.uncommon_item(
+                base_text=item["Name"],
+                item_level="<= {0}".format(item["DropLevel"] + magic_drop_modifier),
+                background_color=background_color,
+            )
+            self.template.common_item(
+                base_text=item["Name"],
+                item_level="<= {0}".format(item["DropLevel"] + normal_drop_modifier),
+                background_color=background_color,
+            )
 
     def parse_amulets(self):
         """
@@ -160,7 +157,6 @@ class AccessoryParser:
                 # Create filter for item.
                 self.handle_accessory(
                     item,
-                    ["Coral Amulet", "Paua Amulet"],
                     background_color,
                 )
 
@@ -204,7 +200,6 @@ class AccessoryParser:
                 # Create filter for item.
                 self.handle_accessory(
                     item,
-                    ["Chain Belt", "Rustic Sash", "Leather Belt"],
                     background_color,
                 )
 
@@ -248,6 +243,5 @@ class AccessoryParser:
                 # Create filter for item.
                 self.handle_accessory(
                     item,
-                    ["Coral Ring", "Sapphire Ring", "Topaz Ring", "Ruby Ring", "Two-Stone Ring"],
                     background_color,
                 )

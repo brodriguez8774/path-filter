@@ -109,7 +109,7 @@
         "Name": "Seaglass Amulet",
         "ImplicitType": "% Faster Start of Energy Shield Recharge",
         "ImplicitValue": [10, 15],
-        "DropLevel": 24
+        "DropLevel": 74
     },
     {
         "Type": "Accessory",
